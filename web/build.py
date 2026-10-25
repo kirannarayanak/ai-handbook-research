@@ -145,6 +145,13 @@ ICONS = {
     "chart": '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
 }
 
+LOGO = """<svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c6cff"/><stop offset=".55" stop-color="#2ee6d6"/><stop offset="1" stop-color="#9dffb0"/></linearGradient></defs><rect x="4" y="4" width="17" height="17" rx="5" fill="url(#lg1)"/><rect x="27" y="4" width="17" height="17" rx="5" fill="currentColor" opacity=".22"/><rect x="4" y="27" width="17" height="17" rx="5" fill="currentColor" opacity=".22"/><rect x="27" y="27" width="17" height="17" rx="5" fill="url(#lg1)"/><path d="M24 14.5l2.4 7.1 7.1 2.4-7.1 2.4L24 33.5l-2.4-7.1-7.1-2.4 7.1-2.4z" fill="#fff"/></svg>"""
+
+import hashlib as _h
+def asset_v(name):
+    f = HERE / "assets" / name
+    return _h.md5(f.read_bytes()).hexdigest()[:8] if f.exists() else "0"
+
 def icon(name, cls="ico"):
     return f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>'
 
@@ -170,7 +177,7 @@ def nav_html(root):
 <header class="site-header" id="top">
   <a class="skip" href="#main">Skip to content</a>
   <nav class="nav" aria-label="Primary">
-    <a class="brand" href="{root}"><span class="brand-mark">{icon('grid','ico')}</span><span class="brand-text">{esc(C.SITE_NAME)}<small>{esc(C.SITE_SUB)}</small></span></a>
+    <a class="brand" href="{root}" aria-label="{esc(C.SITE_NAME)} home"><span class="brand-mark">{LOGO}</span><span class="brand-text">Skill<b>Grid</b></span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">{icon('menu')}</button>
     <ul class="nav-menu" id="nav-menu">
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Learn <span class="caret"></span></button>
@@ -196,7 +203,7 @@ def footer_html(root):
     return f"""
 <footer class="site-footer">
   <div class="wrap foot-grid">
-    <div><a class="brand" href="{root}"><span class="brand-mark">{icon('grid')}</span><span class="brand-text">{esc(C.SITE_NAME)}<small>{esc(C.SITE_SUB)}</small></span></a>
+    <div><a class="brand" href="{root}"><span class="brand-mark">{LOGO}</span><span class="brand-text">Skill<b>Grid</b></span></a>
       <p class="muted">Companion to the Corporate AI Tools &amp; Training Handbook (60 departments, 57 tools, {esc(C.AS_OF)}). Every profile cites the pages a researcher opened; unverified claims are labelled.</p><p><a class="btn btn-ghost" href="{root}faq/">New here? Read the FAQ {icon('arrow','ico-s')}</a></p></div>
     <div><p class="foot-head">Learn</p><ul>{''.join(f'<li><a href="{root}learn/{c["slug"]}/">{esc(c["title"])}</a></li>' for c in C.CHAPTERS)}</ul></div>
     <div><p class="foot-head">Explore</p><ul><li><a href="{root}tools/">Tools</a></li><li><a href="{root}departments/">Departments</a></li><li><a href="{root}matrix/">Matrix</a></li><li><a href="{root}compare/">Compare</a></li><li><a href="{root}tools/more/">More tools</a></li><li><a href="{root}departments/more/">More functions</a></li></ul></div>
@@ -221,7 +228,7 @@ def page(path, title, body, *, desc="", extra_head="", extra_js=(), kind="page",
         items = [f'<li><a href="{root}">Home</a></li>'] + [
             (f'<li><a href="{root}{h}">{esc(t)}</a></li>' if h else f'<li aria-current="page">{esc(t)}</li>') for t, h in crumbs]
         crumb_html = f'<nav class="crumbs wrap" aria-label="Breadcrumb"><ol>{"".join(items)}</ol></nav>'
-    scripts = "".join(f'<script src="{root}assets/{s}" defer></script>' for s in ("site.js",) + tuple(extra_js))
+    scripts = "".join(f'<script src="{root}assets/{s}?v={asset_v(s)}" defer></script>' for s in ("site.js",) + tuple(extra_js))
     doc = f"""<!doctype html>
 <html lang="en" data-theme="auto">
 <head>
@@ -230,13 +237,13 @@ def page(path, title, body, *, desc="", extra_head="", extra_js=(), kind="page",
 <title>{esc(title)} · {esc(C.SITE_NAME)}</title>
 <meta name="description" content="{esc(short(desc or C.TAGLINE, 160))}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(short(desc or C.TAGLINE, 200))}"><meta property="og:type" content="website"><meta property="og:url" content="{esc(url)}"><meta property="og:site_name" content="{esc(C.SITE_NAME)}">
-<meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070a16" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f4f6fc" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="{esc(url)}">
-<link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{root}assets/favicon.svg?v={asset_v('favicon.svg')}" type="image/svg+xml">
 <link rel="manifest" href="{root}manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{root}assets/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{root}assets/site.css?v={asset_v('site.css')}">
 <script>(function(){{try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
 <meta name="site-root" content="{root}">
 {extra_head}
@@ -443,7 +450,7 @@ def build_home():
   <p class="kicker">{esc(H['kicker'])}</p>
   <h1 class="display">{esc(H['title'])}</h1>
   <p class="lead">{esc(H['lead'])}</p>
-  <div class="hero-actions">{btn('learn/', 'Start the learning path', True)}{btn('departments/', 'Find my department', False, 'org')}{btn('matrix/', 'Open the matrix', False, 'grid')}</div>
+  <div class="hero-actions">{btn('learn/', 'Start the learning path', True)}{btn('matrix/', 'Open the matrix', False, 'grid')}{btn('compare/', 'Compare tools', False, 'scale')}</div>
   <div class="finder">{finder}<span class="muted small">or</span>{btn('learn/foundations/', 'I am new to AI at work')}</div>
   <div class="stats">{stats}</div>
 </div></section>
@@ -852,7 +859,7 @@ def build_misc():
     (OUT / "search.json").write_text(json.dumps(SEARCH, separators=(",", ":")), encoding="utf-8")
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{esc(u)}</loc></url>" for u in SITEMAP) + "</urlset>", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}sitemap.xml\n", encoding="utf-8")
-    (OUT / "manifest.webmanifest").write_text(json.dumps({"name": f"{C.SITE_NAME} · {C.SITE_SUB}", "short_name": C.SITE_NAME, "start_url": "./", "display": "standalone", "background_color": "#0b1020", "theme_color": "#0b1020", "icons": [{"src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}), encoding="utf-8")
+    (OUT / "manifest.webmanifest").write_text(json.dumps({"name": f"{C.SITE_NAME} · {C.SITE_SUB}", "short_name": C.SITE_NAME, "start_url": "./", "display": "standalone", "background_color": "#070a16", "theme_color": "#070a16", "icons": [{"src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
 def main():
