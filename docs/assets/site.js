@@ -120,3 +120,13 @@
   // expose small helpers for page scripts
   window.AIH = { siteRoot, esc, $, $$ };
 })();
+/* Remember closed first-visit guides; department finder on the home page */
+(function () {
+  document.querySelectorAll('details.guide').forEach(d => {
+    const k = 'aih-guide-' + d.id;
+    try { if (localStorage.getItem(k) === 'closed') d.open = false; } catch (e) {}
+    d.addEventListener('toggle', () => { try { localStorage.setItem(k, d.open ? 'open' : 'closed'); } catch (e) {} });
+  });
+  const f = document.getElementById('dept-finder');
+  if (f) f.addEventListener('change', () => { if (f.value) location.href = (document.querySelector('meta[name="site-root"]') || {}).content + f.value; });
+})();

@@ -1,8 +1,9 @@
 """Authored site copy. Markdown strings are rendered at build time.
 Everything here summarises the research doc; detail pages carry the sources."""
 
-SITE_NAME = "Enterprise AI Handbook"
-TAGLINE = "60 departments. 57 tools. One verified learning path."
+SITE_NAME = "SkillGrid"
+SITE_SUB = "Enterprise AI learning map"
+TAGLINE = "Which AI tools, for which jobs, and how to learn them. 60 departments, 57 tools, every claim checked."
 DOC_URL = "https://claude.ai/artifact/PzB4eRd3Trt1TU4GsT6hrH"
 REPO_URL = "https://github.com/kirannarayanak/ai-handbook-research"
 AS_OF = "October 2026"
@@ -10,6 +11,11 @@ AS_OF = "October 2026"
 HOME = {
     "kicker": "Corporate AI Tools & Training, revised October 2026",
     "title": "Learn the AI your department actually uses.",
+    "how": [
+        ("Find your department", "Pick it from the list or the finder below. You get the tools the handbook recommends, the real use cases, and a capstone to build."),
+        ("Learn the tools in order", "Every department page lists what to learn first, with the official course for each tool and the hours to budget."),
+        ("Check before you trust", "Every fact links to the page a researcher opened, and every page says how confident we are. If something is not verified, it says so."),
+    ],
     "lead": "A department-by-department guide to enterprise AI: which tools fit which roles, what the data rules are, and how to train for it. Every claim is traced to a page a researcher opened.",
     "stats": [
         ("60", "departments mapped"),
@@ -421,3 +427,83 @@ Every profile page links the pages a researcher opened. Where a claim could not 
 
 The underlying research is dated 24-25 October 2026. Tool names, prices and agent availability change monthly; the gaps page lists what had already moved. Plan a quarterly refresh.
 """
+
+
+# ---- plain-language layer -------------------------------------------------
+
+GLOSSARY = [
+    ("AI assistant", ["general assistant", "chatbot"], "A tool you talk to in plain language (Claude, Gemini, ChatGPT, Microsoft Copilot). It drafts, summarises and answers, but it can be wrong, so you check its work."),
+    ("Agent", ["agentic", "agents"], "An AI that does not just answer but takes actions: runs code, opens tickets, sends messages, edits systems. Agents need an approval step for anything that cannot be undone."),
+    ("Prompt", ["prompting", "prompts"], "The instruction or question you give an AI tool. Clear prompts with context and a desired format get better results."),
+    ("Hallucination", ["hallucinate", "hallucinations"], "When an AI states something false with confidence, including invented quotes, numbers or links. The fix is to open the source before you repeat it."),
+    ("Prompt injection", ["injection"], "A trick where text inside an email, web page or document secretly instructs an AI agent to do something harmful. It is why agents should not act on content you do not trust."),
+    ("Shadow AI", ["unsanctioned AI", "personal AI apps"], "Staff using AI tools the company has not approved, often personal accounts, which can leak confidential data."),
+    ("Tier", ["Core", "Advanced", "Specialist"], "The handbook's training depth: Core (6-10 hours per tool), Advanced (12-20), Specialist (20-40+). A department's tier sets how long to budget."),
+    ("Confidence", ["high confidence", "medium confidence", "low confidence"], "How well a fact-checker could verify a page. High: two or more independent sources agree. Medium: core facts verified, details not. Low: a key page could not be opened or only one source exists."),
+    ("Verified", ["not verified"], "Verified means a researcher opened the page and read the claim on it. Not verified means it came from a search snippet or a page that would not load, so treat it with care."),
+    ("Vendor claim", ["vendor-reported", "vendor-stated", "self-reported"], "A figure published by the company that sells the tool. It may be true, but no one independent has checked it."),
+    ("Data residency", ["residency", "in-region"], "Where your data is stored and processed. Some tools keep EU or UK data in Europe; some process everything in the US. This matters for privacy law."),
+    ("Retention", ["retained", "retention period"], "How long a tool keeps your prompts and outputs. Enterprise plans usually let an administrator set this."),
+    ("Training on your data", ["model training", "train on"], "Whether the vendor uses what you type to improve its AI model. Business and enterprise plans almost always say no by default; free consumer plans often say yes."),
+    ("Enterprise plan", ["enterprise tier", "business tier", "consumer tier"], "The paid company version of a tool, with admin controls, audit logs and contracts. Consumer and free versions have weaker protections; business plans sit in between."),
+    ("RAG", ["retrieval-augmented generation", "grounded"], "Retrieval-augmented generation: the AI looks up your documents first and answers from them, which reduces but does not remove errors."),
+    ("MCP", ["Model Context Protocol", "connectors"], "Model Context Protocol: a standard way to connect an AI tool to other systems (files, tickets, databases). Powerful, so access should be scoped carefully."),
+    ("Copilot", ["Copilots"], "Microsoft's name for its AI assistants inside Word, Excel, Teams, Power BI, security tools and Azure. One licence covers several of them."),
+    ("SOC", ["security operations", "SIEM"], "Security Operations Centre: the team that watches for cyber attacks. SIEM is the software that collects their security logs."),
+    ("Capstone", ["capstone deliverable"], "The one real piece of work a learner produces to pass the training, with their prompts, a check of every figure and a time comparison documented."),
+    ("KPI", ["adoption KPIs", "KPIs"], "Key performance indicator: a number you track to see whether the training changed anything, such as hours saved per report or error rate on review."),
+    ("EU AI Act", ["Article 4", "Digital Omnibus", "Annex III"], "The European Union's AI law. Article 4 requires employers to support staff AI literacy (keep your training records); Annex III adds stricter duties for AI used in hiring and employment from December 2027."),
+    ("GDPR", ["personal data"], "The EU's data protection law. Any AI use involving information about identifiable people has to respect it."),
+    ("Credits / SCUs", ["credits", "Security Compute Units", "consumption pricing", "metered"], "Many AI features are not priced per user but by usage, measured in credits or compute units. Costs can rise with use and need monitoring."),
+    ("Semantic model", ["semantic layer"], "A prepared, named description of a company's data that lets AI answer business questions accurately. Unprepared data gives unreliable answers."),
+    ("IDE", ["IDEs"], "Integrated development environment: the program developers write code in (VS Code, JetBrains). Coding assistants live inside it."),
+    ("Open source", ["Apache 2.0", "open-source"], "Software whose code is public and free to use. You run it yourself, so security depends on your own setup."),
+]
+
+FAQ = [
+    ("Is this an official document from the tool vendors?", "No. It is an independent research companion to the Corporate AI Tools & Training Handbook. Every fact links to the page a researcher opened, often a vendor page, but vendors did not write or approve it."),
+    ("I have never used an AI tool. Where do I start?", "Read the first chapter of the learning path (Foundations, about eight minutes). Then open your department page and follow the 'What to learn, in order' list. Step one is always the one general assistant your company has approved."),
+    ("Which tool should I learn first?", "The general assistant your company already licenses: Microsoft Copilot, Gemini, Claude or ChatGPT Enterprise. Learn that one well. Everything else on your department page comes after it, and specialist tools only matter if your organisation runs that platform."),
+    ("What do the confidence labels mean?", "They are the fact-checker's rating of how well a page could be verified. High: two or more independent sources agree. Medium: the core facts are verified but some details are not, or the only sources are the vendor's own. Low: a key page could not be opened or only one source exists. A low rating does not mean the tool is bad; it means check before you rely on the detail."),
+    ("What does 'not verified' mean?", "A researcher could not open the page that would prove the claim, so it came from a search snippet or an earlier run. It is kept only where useful and always labelled. Treat it as a lead, not a fact."),
+    ("Why do some tools have different names here than in the handbook?", "Vendors renamed or retired at least fourteen tools between the handbook's writing and this research. Pages use the handbook name with the current name explained; the Gaps and renames page lists them all."),
+    ("How are the hours estimated?", "From the handbook's tier bands (Core 6-10, Advanced 12-20, Specialist 20-40+ hours per tool) and each tool's capability surface. They are planning ranges, not measured training times. The shared foundation module is counted once."),
+    ("Can I put company data into these tools?", "Only into the enterprise plan your company has approved, and only the kinds of data your policy allows. Never into free or personal accounts. The Foundations chapter explains the three tiers; each tool page has an 'Enterprise data handling' section."),
+    ("Are the courses and certifications free?", "Many vendor foundation courses are free (for example Anthropic's Claude 101, HubSpot Academy, Google Skillshop). Formal certification exams usually cost money. Each entry shows the cost as the vendor page stated it, or 'not stated' if it did not."),
+    ("How current is this?", "Research ran on 24-25 October 2026. AI products change monthly, so prices, names and availability may have moved. The Gaps page lists what had already changed by then."),
+    ("How do I use the matrix?", "Start in the high-level view: rows are department clusters, columns are tool families, numbers are how many recommendations fall in each cell. Switch to the detailed grid to see every department against every tool, then click a cell to open either page."),
+    ("How do I compare tools?", "Open Compare, type a tool name to add it (up to four), or click a preset such as 'General assistants'. The table lines up pricing, data handling, confidence and department fit. The URL updates so you can share the comparison."),
+]
+
+EXPLAIN = {
+    # tool page sections
+    "learn": "The official courses, learning paths and certifications for this tool, in the order a learner should take them. Verified means a researcher opened the page.",
+    "what": "What the tool is and where it lives, in plain language.",
+    "caps": "The main things it can do today.",
+    "data": "What happens to the information you type in: whether the vendor trains on it, where it is stored, how long it is kept, and which security standards it meets.",
+    "price": "How it is paid for: per user, per usage, or bundled with something you already own.",
+    "integ": "The other systems it connects to, and which handbook departments that matters for.",
+    "dev": "What changed recently, including renames and products being retired.",
+    "fit": "Which departments get the most from it, and where it is a weak fit.",
+    "train": "What a learner must be able to do, and how many hours to budget.",
+    "caveats": "The things most likely to go wrong or surprise a buyer.",
+    "sources": "Every page a researcher opened to write this profile. Numbers in square brackets refer to this list.",
+    # department page sections
+    "tools": "The handbook's recommended tools for this team. Click any chip to open the profile.",
+    "path": "A suggested order for learning them, with the first course for each.",
+    "uses": "How teams like this actually use AI today, each with its source.",
+    "capstone": "The one real piece of work a learner produces to pass. It follows the handbook's assignment template.",
+    "risks": "The sensitive data this team handles, the law that applies, and the rules that follow.",
+    "kpis": "Numbers to track so you know whether the training changed anything.",
+    "curriculum": "Where the hours should go, and which tools to prioritise.",
+    "toolfit": "Whether the handbook's tool list suits this team, and what it misses.",
+}
+
+CHAPTER_TAKEAWAYS = {
+    "foundations": ["Learn one approved assistant well before anything else.", "Treat every AI output as a draft and open the source before you repeat it.", "Never put confidential data into a free or personal AI account."],
+    "tools": ["57 tools fall into ten families; two are horizontal, eight are specialist.", "Train on the platform your company already owns, not every entrant.", "At least fourteen handbook names are already out of date."],
+    "departments": ["Sixty departments group into eight clusters that can share training.", "Every AI use case is one of four moves: summarise, draft, classify, analyse.", "Assess the capstone's validation log, not the prompt."],
+    "governance": ["EU AI Act Article 4 already requires you to support staff AI literacy: keep training records.", "US state laws reach HR tools first, from 2026 and 2027.", "Data residency and retention differ between assistants; check before you choose."],
+    "adoption": ["Role-specific use cases and a clear policy drive adoption; generic courses do not.", "Measure with diaries plus telemetry, like the UK government trial.", "AI tools help neurodiverse staff most; build to accessibility standards."],
+    "gaps": ["Eight tools and one department are low confidence; verify before teaching them.", "Collapse overlapping tools and use current names in the matrix.", "Re-check names, prices and availability every quarter."],
+}

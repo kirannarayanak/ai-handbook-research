@@ -1,4 +1,4 @@
-# AI handbook deep research
+# AI handbook deep research (SkillGrid)
 
 **Website:** https://kirannarayanak.github.io/ai-handbook-research/ (GitHub Pages, built from `docs/`)
 

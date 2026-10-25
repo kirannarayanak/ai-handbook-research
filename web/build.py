@@ -152,10 +152,12 @@ def badge(kind, text):
     return f'<span class="badge badge-{esc(kind)}">{esc(text)}</span>'
 
 def conf_badge(c):
-    return badge(f"conf-{c}", CONF_LABEL.get(c, c))
+    return f'<span class="badge badge-conf-{esc(c)}" title="{esc(CONF_MEANING.get(c, ""))}">{esc(CONF_LABEL.get(c, c))}</span>'
+
+TIER_MEANING = {"Core": "Core tier: everyday use, 6-10 hours per tool", "Advanced": "Advanced tier: role-specific depth, 12-20 hours per tool", "Specialist": "Specialist tier: platform ownership, 20-40+ hours per tool"}
 
 def tier_badge(t):
-    return badge(f"tier-{t.lower()}", f"{t} · {TIER_HOURS.get(t, '')}")
+    return f'<span class="badge badge-tier-{t.lower()}" title="{esc(TIER_MEANING.get(t, ""))}">{esc(t)} · {esc(TIER_HOURS.get(t, ""))}</span>'
 
 def nav_html(root):
     def link(h, t, desc=None):
@@ -168,7 +170,7 @@ def nav_html(root):
 <header class="site-header" id="top">
   <a class="skip" href="#main">Skip to content</a>
   <nav class="nav" aria-label="Primary">
-    <a class="brand" href="{root}"><span class="brand-mark">{icon('spark','ico')}</span><span class="brand-text">{esc(C.SITE_NAME)}</span></a>
+    <a class="brand" href="{root}"><span class="brand-mark">{icon('grid','ico')}</span><span class="brand-text">{esc(C.SITE_NAME)}<small>{esc(C.SITE_SUB)}</small></span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">{icon('menu')}</button>
     <ul class="nav-menu" id="nav-menu">
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Learn <span class="caret"></span></button>
@@ -180,7 +182,7 @@ def nav_html(root):
       <li><a class="nav-link" href="{root}matrix/">Matrix</a></li>
       <li><a class="nav-link" href="{root}compare/">Compare</a></li>
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Reference <span class="caret"></span></button>
-        <div class="dd"><div class="dd-col"><ul>{link('themes/','Cross-cutting themes','Regulation, residency, cost, verification, adoption')}{link('gaps/','Gaps and renames','Confidence, outdated names, recommendations')}{link('sources/','Sources and method','All 626 pages opened, and how')}{link('about/','About','What this site is and how to use it')}</ul></div></div></li>
+        <div class="dd"><div class="dd-col"><ul>{link('faq/','New here? Start with the FAQ','Plain answers to the questions everyone asks first')}{link('glossary/','Glossary','Every term on the site, in plain English')}{link('themes/','Cross-cutting themes','Regulation, residency, cost, verification, adoption')}{link('gaps/','Gaps and renames','Confidence, outdated names, recommendations')}{link('sources/','Sources and method','All 626 pages opened, and how')}{link('about/','About','What this site is and how to use it')}</ul></div></div></li>
     </ul>
     <div class="nav-actions">
       <button class="icon-btn" id="search-btn" aria-label="Search (Ctrl+K)" title="Search (Ctrl+K)">{icon('search')}<kbd class="kbd">⌘K</kbd></button>
@@ -194,11 +196,11 @@ def footer_html(root):
     return f"""
 <footer class="site-footer">
   <div class="wrap foot-grid">
-    <div><a class="brand" href="{root}"><span class="brand-mark">{icon('spark')}</span><span class="brand-text">{esc(C.SITE_NAME)}</span></a>
-      <p class="muted">Companion to the Corporate AI Tools &amp; Training Handbook (60 departments, 57 tools, {esc(C.AS_OF)}). Every profile cites the pages a researcher opened; unverified claims are labelled.</p></div>
+    <div><a class="brand" href="{root}"><span class="brand-mark">{icon('grid')}</span><span class="brand-text">{esc(C.SITE_NAME)}<small>{esc(C.SITE_SUB)}</small></span></a>
+      <p class="muted">Companion to the Corporate AI Tools &amp; Training Handbook (60 departments, 57 tools, {esc(C.AS_OF)}). Every profile cites the pages a researcher opened; unverified claims are labelled.</p><p><a class="btn btn-ghost" href="{root}faq/">New here? Read the FAQ {icon('arrow','ico-s')}</a></p></div>
     <div><p class="foot-head">Learn</p><ul>{''.join(f'<li><a href="{root}learn/{c["slug"]}/">{esc(c["title"])}</a></li>' for c in C.CHAPTERS)}</ul></div>
     <div><p class="foot-head">Explore</p><ul><li><a href="{root}tools/">Tools</a></li><li><a href="{root}departments/">Departments</a></li><li><a href="{root}matrix/">Matrix</a></li><li><a href="{root}compare/">Compare</a></li><li><a href="{root}tools/more/">More tools</a></li><li><a href="{root}departments/more/">More functions</a></li></ul></div>
-    <div><p class="foot-head">Reference</p><ul><li><a href="{root}themes/">Themes</a></li><li><a href="{root}gaps/">Gaps and renames</a></li><li><a href="{root}sources/">Sources and method</a></li><li><a href="{root}about/">About</a></li><li><a href="{esc(C.DOC_URL)}" rel="noopener">Long-form document</a></li><li><a href="{esc(C.REPO_URL)}" rel="noopener">Source on GitHub</a></li></ul></div>
+    <div><p class="foot-head">Reference</p><ul><li><a href="{root}faq/">FAQ</a></li><li><a href="{root}glossary/">Glossary</a></li><li><a href="{root}themes/">Themes</a></li><li><a href="{root}gaps/">Gaps and renames</a></li><li><a href="{root}sources/">Sources and method</a></li><li><a href="{root}about/">About</a></li><li><a href="{esc(C.DOC_URL)}" rel="noopener">Long-form document</a></li><li><a href="{esc(C.REPO_URL)}" rel="noopener">Source on GitHub</a></li></ul></div>
   </div>
   <div class="wrap foot-bottom"><span>Research dated 24-25 October 2026. Not purchase or legal advice.</span><a href="#top">Back to top ↑</a></div>
 </footer>
@@ -288,6 +290,61 @@ def sources_list(sources):
 def deflist(pairs):
     return '<dl class="facts">' + "".join(f"<div><dt>{esc(k)}</dt><dd>{v}</dd></div>" for k, v in pairs if v) + "</dl>"
 
+# ---------------------------------------------------------------- plain-language layer
+
+CONF_MEANING = {
+    "high": "two or more independent sources agree on the core facts",
+    "medium": "core facts verified; some details rest on the vendor's own pages or were not re-checked",
+    "low": "a key page could not be opened or only one source exists; check before relying on detail",
+}
+
+def first_sentence(s, n=170):
+    s = clean(s)
+    m = re.match(r"(.+?[.!?])(\s|$)", s)
+    out = m.group(1) if m and len(m.group(1)) >= 40 else s
+    return short(out, n)
+
+def sec(id_, title):
+    """Section heading with a one-line plain-English explainer."""
+    ex = C.EXPLAIN.get(id_, "")
+    return f'<h2 id="{id_}">{esc(title)}</h2>' + (f'<p class="explain">{esc(ex)}</p>' if ex else "")
+
+def glance(items):
+    """At-a-glance card: list of (label, html_value, icon)."""
+    tiles = "".join(f'<div class="glance-tile"><span class="glance-ico">{icon(i)}</span><div><p class="glance-l">{esc(l)}</p><div class="glance-v">{v}</div></div></div>' for l, v, i in items if v)
+    return f'<section class="glance" aria-label="At a glance"><p class="foot-head">At a glance</p><div class="glance-grid">{tiles}</div></section>'
+
+_GLOSS_INDEX = []
+for term, aliases, defn in C.GLOSSARY:
+    keys = [term] + list(aliases)
+    _GLOSS_INDEX.append((term, defn, [re.compile(r"(?<![\w-])" + re.escape(k) + r"(?![\w-])", re.I) for k in keys]))
+
+def jargon_box(html_text, root, limit=8):
+    """Sidebar box listing glossary terms that appear in this page's text."""
+    text = re.sub(r"<[^>]+>", " ", html_text)
+    found = []
+    for term, defn, pats in _GLOSS_INDEX:
+        if any(p.search(text) for p in pats):
+            found.append((term, defn))
+        if len(found) >= limit: break
+    if not found: return ""
+    items = "".join(f'<li><b>{esc(t)}</b><span>{esc(d)}</span></li>' for t, d in found)
+    return f'<div class="side-box jargon"><p class="foot-head">Jargon on this page</p><ul class="jargon-list">{items}</ul><a class="small" href="{root}glossary/">Full glossary →</a></div>'
+
+def guide(id_, title, steps, open_=True):
+    """First-visit guide panel; the site script remembers when it is closed."""
+    lis = "".join(f'<li><span class="step-n">{i+1}</span><div><b>{esc(h)}</b><p>{esc(d)}</p></div></li>' for i, (h, d) in enumerate(steps))
+    return f'<details class="guide" id="guide-{id_}"{" open" if open_ else ""}><summary>{icon("spark","ico-s")} {esc(title)} <span class="muted small">(click to hide; stays hidden on this browser)</span></summary><ol class="guide-steps">{lis}</ol></details>'
+
+def legend_box(kind):
+    if kind == "tools":
+        rows = [("Confidence", "How well a fact-checker could verify the profile. High, medium or low; hover any label for the meaning."), ("Departments", "How many of the 60 handbook departments list the tool."), ("Filters", "Type a name, or click a confidence level. Family chips in the header jump to that group.")]
+    elif kind == "depts":
+        rows = [("Tier", "Core, Advanced or Specialist: the training depth and the hours to budget per tool."), ("Confidence", "How well the department's use cases could be verified."), ("Chips", "The first four recommended tools; open the department for the full list and the learning order.")]
+    else:
+        rows = [("Pass 1 and 2", "Which research pass found the entry; both were fact-checked the same way."), ("Confidence", "Mostly medium here, because adoption evidence is usually a vendor's own announcement."), ("Open a card", "Click a card to see the evidence, suggested departments and sources.")]
+    return '<details class="legend-box"><summary>' + icon("spark", "ico-s") + ' How to read this page</summary><dl>' + "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in rows) + "</dl></details>"
+
 # ---------------------------------------------------------------- certifications / learning paths
 
 CERTS = {}       # tool name -> {summary, recommended_order, paths, confidence, sources}
@@ -340,7 +397,7 @@ def dept_path(d, root):
     steps = []
     hours = TIER_HOURS.get(d["tier"], "")
     steps.append(("Foundation module", f"{root}learn/foundations/", "Shared by every department: one approved assistant, verification, data classification, agent safety.", "4-6 h Core · 6-8 h Advanced and Specialist", None))
-    ordered = sorted(d["tools"], key=lambda x: (GROUPS.index(next(g for g in GROUPS if g["name"] == TOOL_BY_NAME[x]["group"])) if x in TOOL_BY_NAME else 99, x))
+    ordered = sorted(d["tools"], key=lambda x: (GROUPS.index(next(g for g in GROUPS if g["name"] == TOOL_BY_NAME[x]["group"])) if x in TOOL_BY_NAME else 99, d["tools"].index(x)))
     for x in ordered:
         t = TOOL_BY_NAME.get(x)
         if not t:
@@ -379,13 +436,20 @@ def build_home():
     groups = "".join(f'<a class="chip chip-lg" href="tools/#{g["slug"]}">{esc(g["name"])}<span class="chip-n">{len(g["tools"])}</span></a>' for g in GROUPS)
     chapters = "".join(f'<a class="step reveal" href="learn/{c["slug"]}/"><span class="step-n">{i+1}</span><div><h3>{esc(c["title"])}</h3><p>{esc(c["summary"])}</p><span class="muted">{c["minutes"]} min</span></div></a>' for i, c in enumerate(C.CHAPTERS))
     renames = "".join(f'<li><b>{esc(a)}</b> → {esc(short(b, 70))}</li>' for a, b, _, _ in C.RENAMES[:6])
+    how = "".join(f'<div class="how-step reveal"><span class="step-n">{i+1}</span><h3>{esc(t)}</h3><p>{esc(d)}</p></div>' for i, (t, d) in enumerate(H["how"]))
+    finder = '<select id="dept-finder" aria-label="Find my department"><option value="">Find my department…</option>' + "".join(f'<optgroup label="{esc(c["name"])}">' + "".join(f'<option value="departments/{d["slug"]}/">{d["num2"]} {esc(d["name"])}</option>' for d in c["depts"]) + "</optgroup>" for c in CLUSTERS) + "</select>"
     body = f"""
 <section class="hero hero-home"><div class="hero-bg" aria-hidden="true"></div><div class="wrap">
   <p class="kicker">{esc(H['kicker'])}</p>
   <h1 class="display">{esc(H['title'])}</h1>
   <p class="lead">{esc(H['lead'])}</p>
   <div class="hero-actions">{btn('learn/', 'Start the learning path', True)}{btn('departments/', 'Find my department', False, 'org')}{btn('matrix/', 'Open the matrix', False, 'grid')}</div>
+  <div class="finder">{finder}<span class="muted small">or</span>{btn('learn/foundations/', 'I am new to AI at work')}</div>
   <div class="stats">{stats}</div>
+</div></section>
+<section class="section section-alt"><div class="wrap">
+  <h2 class="section-title">How it works, in 30 seconds</h2>
+  <div class="how">{how}</div>
 </div></section>
 <section class="section"><div class="wrap">
   <h2 class="section-title">Where do you want to start?</h2>
@@ -429,8 +493,10 @@ def build_learn():
         nav += f'<a class="pager-next" href="../{nxt["slug"]}/"><span class="muted">Next</span><b>{esc(nxt["title"])}</b></a>' if nxt else f'<a class="pager-next" href="../../departments/"><span class="muted">Next</span><b>Find your department</b></a>'
         nav += "</div>"
         links = "".join(f'<li><a href="../../{h}">{esc(t)} {icon("arrow","ico-s")}</a></li>' for t, h in c["next_links"])
+        take = "".join(f"<li>{esc(x)}</li>" for x in C.CHAPTER_TAKEAWAYS.get(c["slug"], []))
+        article = f'<div class="takeaways"><p class="foot-head">If you read nothing else</p><ul class="ticks">{take}</ul></div>' + md(c["body"])
         body = hero(f"Chapter {i+1} of {len(C.CHAPTERS)} · {c['minutes']} min", esc(c["title"]), esc(c["summary"]), cls="hero-sm")
-        body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{md(c["body"])}</article><aside class="side"><div class="side-box"><p class="foot-head">Go deeper</p><ul class="linklist">{links}</ul></div><div class="side-box"><button class="btn btn-primary btn-block" id="mark-done" data-chapter="{c["slug"]}">{icon("check","ico-s")} Mark chapter done</button><p class="muted small">Saved in this browser only.</p></div></aside></div><div class="wrap">{nav}</div></section>'
+        body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{article}</article><aside class="side"><div class="side-box"><p class="foot-head">Go deeper</p><ul class="linklist">{links}</ul></div><div class="side-box"><button class="btn btn-primary btn-block" id="mark-done" data-chapter="{c["slug"]}">{icon("check","ico-s")} Mark chapter done</button><p class="muted small">Saved in this browser only.</p></div>{jargon_box(article, "../../")}</aside></div><div class="wrap">{nav}</div></section>'
         page(f"learn/{c['slug']}/", c["title"], body, desc=c["summary"], crumbs=[("Learn", "learn/"), (c["title"], None)], kind="article", extra_js=("learn.js",))
         add_search(f"Chapter {i+1}: {c['title']}", f"learn/{c['slug']}/", "Learn", c["summary"])
 
@@ -447,7 +513,7 @@ def build_tools():
         fc = f'<details class="factcheck"><summary>Fact-check notes · {g["corrections"]} corrections applied</summary><p>{esc(g["verification"])}</p></details>' if g["verification"] else ""
         sections += f'<section class="group" id="{g["slug"]}"><div class="group-head"><h2>{esc(g["name"])}</h2><p>{esc(g["overview"])}</p>{fc}</div><div class="grid grid-3">{"".join(tool_card(t, "../") for t in g["tools"])}</div></section>'
     body = hero("Tool catalogue", "57 tools, profiled and fact-checked", "Each profile covers what the tool is, how it handles enterprise data, how it is priced, what changed in 2025-2026, and which departments it fits. Confidence is the fact-checker's rating.", meta=f'<div class="chips">{toc}</div>')
-    body += f'<section class="section"><div class="wrap">{filters}{sections}<p class="empty" id="empty" hidden>No tools match.</p></div></section>'
+    body += f'<section class="section"><div class="wrap">{legend_box("tools")}{filters}{sections}<p class="empty" id="empty" hidden>No tools match.</p></div></section>'
     page("tools/", "Tools", body, desc="Profiles of all 57 handbook tools with pricing, data handling, developments and sources.", crumbs=[("Tools", None)], extra_js=("filters.js",))
     add_search("All tools", "tools/", "Tools", "Catalogue of the 57 handbook tools by family")
     for g in GROUPS:
@@ -472,26 +538,39 @@ def build_tool(t, i):
     cert_src = ""
     if cert and cert.get("sources"):
         cert_src = f'<details class="factcheck"><summary>Pages opened for this learning path ({len(cert["sources"])})</summary>{sources_list(cert["sources"])}</details>'
+    bc = best_credential(t["name"])
+    start_html = f'<a href="{esc(bc[0]["url"])}" rel="noopener" target="_blank">{esc(clean(bc[0]["title"]))}</a> <span class="muted small">({esc(clean(bc[0]["provider"]))})</span>' if bc else '<span class="muted">No official course found; start with the vendor documentation.</span>'
+    glance_html = glance([
+        ("Best for", esc(first_sentence(t["best_fit_departments"])), "org"),
+        ("Keep in mind", esc(first_sentence(t["caveats"])), "shield"),
+        ("Start learning with", start_html, "book"),
+        ("How it is paid for", esc(first_sentence(t["licensing_pricing"])), "chart"),
+        ("How sure are we", f'{conf_badge(t["confidence"])} <span class="small">{esc(CONF_MEANING[t["confidence"]].capitalize())}.</span>', "check"),
+        ("Who uses it", f'<b>{len(t["dept_nums"])}</b> of 60 handbook departments', "grid"),
+    ])
+    jargon_html = jargon_box(" ".join(str(t.get(k, "")) for k in ("what_it_is", "enterprise_data_handling", "licensing_pricing", "integrations", "recent_developments", "training_notes", "caveats")) + " ".join(t.get("key_capabilities", [])), "../../")
     toc_html = "".join(f'<li><a href="#{a}">{esc(l)}</a></li>' for a, l in toc)
     body += f"""
 <section class="section"><div class="wrap prose-wrap">
 <article class="prose detail">
-  <h2 id="learn">Learning path and certifications</h2>{cert_intro}{cert_cards(t, "../../")}{cert_src}
-  <h2 id="what">What it is</h2><p>{esc(clean(t['what_it_is']))}</p>
+  {glance_html}
+  {sec('learn', 'Learning path and certifications')}{cert_intro}{cert_cards(t, "../../")}{cert_src}
+  {sec('what', 'What it is')}<p>{esc(clean(t['what_it_is']))}</p>
   {deflist([("Vendor and product family", esc(t['vendor_full'])), ("Handbook category", esc(t['handbook_category']))])}
-  <h2 id="caps">Key capabilities</h2><ul class="ticks">{caps}</ul>
-  <h2 id="data">Enterprise data handling</h2><p>{esc(clean(t['enterprise_data_handling']))}</p>
-  <h2 id="price">Licensing and pricing</h2><p>{esc(clean(t['licensing_pricing']))}</p>
-  <h2 id="integ">Integrations</h2><p>{esc(clean(t['integrations']))}</p>
-  <h2 id="dev">2025-2026 developments</h2><p>{esc(clean(t['recent_developments']))}</p>
-  <h2 id="fit">Best-fit handbook departments</h2><p>{esc(clean(t['best_fit_departments']))}</p>
+  {sec('caps', 'Key capabilities')}<ul class="ticks">{caps}</ul>
+  {sec('data', 'Enterprise data handling')}<p>{esc(clean(t['enterprise_data_handling']))}</p>
+  {sec('price', 'Licensing and pricing')}<p>{esc(clean(t['licensing_pricing']))}</p>
+  {sec('integ', 'Integrations')}<p>{esc(clean(t['integrations']))}</p>
+  {sec('dev', '2025-2026 developments')}<p>{esc(clean(t['recent_developments']))}</p>
+  {sec('fit', 'Best-fit handbook departments')}<p>{esc(clean(t['best_fit_departments']))}</p>
   <h3>Listed for these departments in the handbook</h3><div class="chips">{depts}</div>
-  <h2 id="train">Training notes</h2><p>{esc(clean(t['training_notes']))}</p>
-  <h2 id="caveats">Caveats</h2><div class="callout callout-warn">{esc(clean(t['caveats']))}</div>
-  <h2 id="sources">Sources</h2>{sources_list(t.get('sources'))}
+  {sec('train', 'Training notes')}<p>{esc(clean(t['training_notes']))}</p>
+  {sec('caveats', 'Caveats')}<div class="callout callout-warn">{esc(clean(t['caveats']))}</div>
+  {sec('sources', 'Sources')}{sources_list(t.get('sources'))}
 </article>
 <aside class="side">
   <div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc_html}</ul></div>
+  {jargon_html}
   <div class="side-box"><p class="foot-head">Same family</p><ul class="linklist">{related}</ul><a class="small" href="../#{grp['slug']}">All {esc(grp['name'].lower())} →</a></div>
 </aside></div>
 <div class="wrap">{pager}</div></section>"""
@@ -511,7 +590,7 @@ def build_departments():
         sections += f'<section class="group" id="{c["slug"]}"><div class="group-head"><h2>{esc(c["name"])}</h2><p>{esc(c["overview"])}</p>{fc}</div><div class="grid grid-3">{"".join(dept_card(d, "../") for d in c["depts"])}</div></section>'
     tiers = " · ".join(f"{TIER_COUNT.get(t,0)} {t}" for t in ("Core", "Advanced", "Specialist"))
     body = hero("Department directory", "60 departments, eight clusters", f"For each department: real AI use cases with sources, a capstone that fits the handbook's assignment template, the data rules the function must follow, adoption KPIs, where the hours should go, and whether the handbook's tool list fits. {tiers}.", meta=f'<div class="chips">{toc}</div>')
-    body += f'<section class="section"><div class="wrap">{filters}{sections}<p class="empty" id="empty" hidden>No departments match.</p></div></section>'
+    body += f'<section class="section"><div class="wrap">{legend_box("depts")}{filters}{sections}<p class="empty" id="empty" hidden>No departments match.</p></div></section>'
     page("departments/", "Departments", body, desc="All 60 handbook departments with AI use cases, capstones, data rules, KPIs and sources.", crumbs=[("Departments", None)], extra_js=("filters.js",))
     add_search("All departments", "departments/", "Departments", "Directory of the 60 handbook departments by cluster")
     for c in CLUSTERS:
@@ -531,23 +610,38 @@ def build_dept(d, i):
     actions = btn(f"../../compare/?d={d['slug']}", "Compare this department", True, "scale") + btn(f"../../matrix/?dept={d['num2']}", "Show in matrix", False, "grid")
     toc = [("tools", "Recommended tools"), ("path", "What to learn, in order"), ("uses", "AI use cases in practice"), ("capstone", "Capstone deliverable"), ("data", "Data risks and rules"), ("kpis", "Adoption KPIs"), ("curriculum", "Curriculum emphasis"), ("fit", "Tool-list fit"), ("sources", "Sources")]
     path_html, path_total = dept_path(d, "../../")
+    first_tool = next((x for x in sorted(d["tools"], key=lambda x: (GROUPS.index(next(g for g in GROUPS if g["name"] == TOOL_BY_NAME[x]["group"])) if x in TOOL_BY_NAME else 99, d["tools"].index(x)))), None)
+    ft = TOOL_BY_NAME.get(first_tool) if first_tool else None
+    bc = best_credential(first_tool) if first_tool else None
+    learn_first = (f'<a href="../../tools/{ft["slug"]}/">{esc(first_tool)}</a>' if ft else esc(first_tool or "")) + (f' <span class="small">via <a href="{esc(bc[0]["url"])}" rel="noopener" target="_blank">{esc(clean(bc[0]["title"]))}</a></span>' if bc else "")
+    glance_html = glance([
+        ("What this team uses AI for", esc(d["app"]), "spark"),
+        ("Training depth", f'{tier_badge(d["tier"])} <span class="small">{esc(TIER_MEANING[d["tier"]].split(": ")[1].capitalize())}; about {esc(path_total)} in total.</span>', "chart"),
+        ("Learn first", learn_first, "book"),
+        ("Biggest data risk", esc(first_sentence(d["data_risks"])), "shield"),
+        ("How sure are we", f'{conf_badge(d["confidence"])} <span class="small">{esc(CONF_MEANING[d["confidence"]].capitalize())}.</span>', "check"),
+        ("Tools recommended", f'<b>{len(d["tools"])}</b>, in cluster {esc(cl["name"])}', "grid"),
+    ])
+    jargon_html = jargon_box(" ".join(str(d.get(k, "")) for k in ("capstone_deliverable", "data_risks", "adoption_kpis", "curriculum_emphasis", "tool_fit_commentary")) + " ".join(d.get("ai_use_cases", [])), "../../")
     toc_html = "".join(f'<li><a href="#{a}">{esc(l)}</a></li>' for a, l in toc)
     body = hero(f"Department {d['num2']} · {esc(cl['name'])}", esc(d["name"]), esc(d["app"]), actions=actions, meta=meta, cls="hero-sm")
     body += f"""
 <section class="section"><div class="wrap prose-wrap">
 <article class="prose detail">
-  <h2 id="tools">Recommended tools</h2><p class="muted">From the handbook. Tier {esc(d['tier'])}, {TIER_HOURS[d['tier']]} per tool as a planning band.</p><div class="chips chips-lg">{tools}</div>
-  <h2 id="path">What to learn, in order</h2><p class="muted">Foundation first, then the general assistant, then the productivity surfaces, then the specialist platform. Each step links to the tool's official courses and certifications. Planning total: about {path_total} including the shared foundation module, less overlaps within one licence.</p>{path_html}
-  <h2 id="uses">AI use cases in practice</h2><ul class="ticks">{uses}</ul>
-  <h2 id="capstone">Capstone deliverable</h2><div class="callout callout-info">{esc(clean(d['capstone_deliverable']))}</div>
-  <h2 id="data">Data risks and rules</h2><div class="callout callout-warn">{esc(clean(d['data_risks']))}</div>
-  <h2 id="kpis">Adoption KPIs</h2><p>{esc(clean(d['adoption_kpis']))}</p>
-  <h2 id="curriculum">Curriculum emphasis</h2><p>{esc(clean(d['curriculum_emphasis']))}</p>
-  <h2 id="fit">Tool-list fit</h2><p>{esc(clean(d['tool_fit_commentary']))}</p>
-  <h2 id="sources">Sources</h2>{sources_list(d.get('sources'))}
+  {glance_html}
+  {sec('tools', 'Recommended tools')}<p class="muted">From the handbook. Tier {esc(d['tier'])}, {TIER_HOURS[d['tier']]} per tool as a planning band.</p><div class="chips chips-lg">{tools}</div>
+  {sec('path', 'What to learn, in order')}<p class="muted">Foundation first, then the general assistant, then the productivity surfaces, then the specialist platform. Each step links to the tool's official courses and certifications. Planning total: about {path_total} including the shared foundation module, less overlaps within one licence.</p>{path_html}
+  {sec('uses', 'AI use cases in practice')}<ul class="ticks">{uses}</ul>
+  {sec('capstone', 'Capstone deliverable')}<div class="callout callout-info">{esc(clean(d['capstone_deliverable']))}</div>
+  {sec('risks', 'Data risks and rules').replace('id="risks"', 'id="data"')}<div class="callout callout-warn">{esc(clean(d['data_risks']))}</div>
+  {sec('kpis', 'Adoption KPIs')}<p>{esc(clean(d['adoption_kpis']))}</p>
+  {sec('curriculum', 'Curriculum emphasis')}<p>{esc(clean(d['curriculum_emphasis']))}</p>
+  {sec('toolfit', 'Tool-list fit').replace('id="toolfit"', 'id="fit"')}<p>{esc(clean(d['tool_fit_commentary']))}</p>
+  {sec('sources', 'Sources')}{sources_list(d.get('sources'))}
 </article>
 <aside class="side">
   <div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc_html}</ul></div>
+  {jargon_html}
   <div class="side-box"><p class="foot-head">Same cluster</p><ul class="linklist">{sib}</ul></div>
 </aside></div>
 <div class="wrap">{pager}</div></section>"""
@@ -565,7 +659,7 @@ def build_more_tools():
 <summary><div><h3>{esc(t['name'])}</h3><p class="muted small">{esc(short(t['vendor'], 70))} · {esc(t['category'])}</p></div><div class="card-meta">{badge('tier-'+t['suggested_tier'].lower(), t['suggested_tier'])}{conf_badge(t['confidence'])}<span class="badge">Pass {t['pass_no']}</span></div></summary>
 <div class="more-body"><p>{esc(clean(t['what_it_is']))}</p>{deflist([("Why include", esc(clean(t['why_include']))), ("Overlaps with", esc(clean(t['overlaps_with']))), ("Enterprise data note", esc(clean(t['enterprise_data_note'])))])}<p class="foot-head">Suggested departments</p><div class="chips">{deps}</div>{srcs}</div></details>"""
     body = hero("Beyond the handbook", f"{len(ADD_TOOLS)} more tools large organisations run", "Found in two research passes, each candidate fact-checked against pages a researcher opened and de-duplicated against the handbook's 57. Most adoption evidence is vendor-reported analyst placements, so confidence clusters at medium.", meta=f'<div class="chips" id="lens-chips"><button class="chip chip-btn on" data-lens="">All lenses</button>{lens_chips}</div>')
-    body += f'<section class="section"><div class="wrap"><div class="filters" id="filters"><input type="search" id="filter-q" placeholder="Filter by name…" aria-label="Filter"><div class="seg" role="group"><button data-conf="" class="on">All</button><button data-conf="high">High</button><button data-conf="medium">Medium</button><button data-conf="low">Low</button></div></div><div class="more-list">{cards}</div><p class="empty" id="empty" hidden>Nothing matches.</p></div></section>'
+    body += f'<section class="section"><div class="wrap">{legend_box("more")}<div class="filters" id="filters"><input type="search" id="filter-q" placeholder="Filter by name…" aria-label="Filter"><div class="seg" role="group"><button data-conf="" class="on">All</button><button data-conf="high">High</button><button data-conf="medium">Medium</button><button data-conf="low">Low</button></div></div><div class="more-list">{cards}</div><p class="empty" id="empty" hidden>Nothing matches.</p></div></section>'
     page("tools/more/", "More tools", body, desc=f"{len(ADD_TOOLS)} widely adopted enterprise AI tools absent from the handbook, with evidence and suggested departments.", crumbs=[("Tools", "tools/"), ("More tools", None)], extra_js=("filters.js",))
     for t in ADD_TOOLS:
         add_search(t["name"], f"tools/more/#{t['slug']}", "Additional tool", t["what_it_is"], f"t: {t['vendor']} {t['category']}")
@@ -581,7 +675,7 @@ def build_more_depts():
 <summary><div><h3>{esc(d['name'])}</h3><p class="muted small">{esc(short(d['typical_org_types'], 90))}</p></div><div class="card-meta">{badge('tier-'+d['suggested_tier'].lower(), d['suggested_tier'])}{conf_badge(d['confidence'])}<span class="badge">Pass {d['pass_no']}</span></div></summary>
 <div class="more-body">{deflist([("Why it is missing", esc(clean(d['why_missing']))), ("Workplace application", esc(clean(d['workplace_application']))), ("Evidence of AI use", esc(clean(d['ai_use_evidence']))), ("Data risks", esc(clean(d['data_risks'])))])}<p class="foot-head">Recommended tools</p><div class="chips">{tools}</div>{sources_list(d.get('sources'))}</div></details>"""
     body = hero("Beyond the handbook", f"{len(ADD_DEPTS)} more functions with documented AI use", "Functions large organisations commonly staff that the handbook's 60 departments do not cover, found under seven research lenses, fact-checked and de-duplicated. Each carries a starting tool list, the evidence, and the data it handles.")
-    body += f'<section class="section"><div class="wrap"><div class="filters" id="filters"><input type="search" id="filter-q" placeholder="Filter by name…" aria-label="Filter"><div class="seg" role="group"><button data-tier="" class="on">All tiers</button><button data-tier="Core">Core</button><button data-tier="Advanced">Advanced</button><button data-tier="Specialist">Specialist</button></div></div><div class="more-list">{cards}</div><p class="empty" id="empty" hidden>Nothing matches.</p></div></section>'
+    body += f'<section class="section"><div class="wrap">{legend_box("more")}<div class="filters" id="filters"><input type="search" id="filter-q" placeholder="Filter by name…" aria-label="Filter"><div class="seg" role="group"><button data-tier="" class="on">All tiers</button><button data-tier="Core">Core</button><button data-tier="Advanced">Advanced</button><button data-tier="Specialist">Specialist</button></div></div><div class="more-list">{cards}</div><p class="empty" id="empty" hidden>Nothing matches.</p></div></section>'
     page("departments/more/", "More functions", body, desc=f"{len(ADD_DEPTS)} functions absent from the handbook's 60 departments, with AI-use evidence and tool suggestions.", crumbs=[("Departments", "departments/"), ("More functions", None)], extra_js=("filters.js",))
     for d in ADD_DEPTS:
         add_search(d["name"], f"departments/more/#{d['slug']}", "Additional function", d["workplace_application"], f"d: {d['typical_org_types']}")
@@ -625,6 +719,11 @@ def build_matrix():
     body = hero("Coverage matrix", "Who uses what, at a glance", "Start high: eight clusters against ten tool families, coloured by how many department-tool recommendations fall in each cell. Then drill into the full 60-by-57 grid, filter by tier or family, and click any cell to open the department or the tool.", cls="hero-sm")
     body += """
 <section class="section"><div class="wrap">
+""" + guide("matrix", "First time here? How to read the matrix", [
+        ("Rows are teams, columns are tool families", "The high-level view groups 60 departments into eight clusters and 57 tools into ten families. A number is how many handbook recommendations land in that cell; darker means more."),
+        ("Switch to the detailed grid", "Click 'Detailed grid' to see every department against every tool. A filled dot means the handbook recommends that tool for that department."),
+        ("Filter, then click", "Narrow by tier, family or cluster. Tick 'Hide the six general assistants' to see the specialist pattern. Click any cell or name to open the department or tool."),
+    ]) + """
 <div class="matrix-controls">
   <div class="seg" role="group" aria-label="View"><button data-view="high" class="on">High level</button><button data-view="detail">Detailed grid</button></div>
   <div class="seg" role="group" aria-label="Tier"><button data-tier="" class="on">All tiers</button><button data-tier="Core">Core</button><button data-tier="Advanced">Advanced</button><button data-tier="Specialist">Specialist</button></div>
@@ -669,6 +768,11 @@ def build_compare():
     body = hero("Compare", "Side by side, up to four at once", "Pick tools to compare pricing models, data handling, confidence and department fit. Or switch to departments to compare tiers, tool lists, capstones and data rules. Share the URL to keep the selection.", cls="hero-sm")
     body += f"""
 <section class="section"><div class="wrap">
+""" + guide("compare", "First time here? How to compare", [
+        ("Choose tools or departments", "The switch below changes what you compare. Tools line up pricing, data handling and fit; departments line up tier, tool lists, capstones and data rules."),
+        ("Add up to four", "Type a name in the box and pick from the list, or click a preset such as 'General assistants'. Remove one with the cross."),
+        ("Read down each column", "Rows are the same for every item, so you can scan one attribute across all of them. The web address updates, so you can share the comparison."),
+    ]) + """
 <div class="seg seg-lg" role="group" aria-label="Compare what"><button data-mode="tools" class="on">Tools</button><button data-mode="depts">Departments</button></div>
 <div class="cmp-pick">
   <div class="cmp-search"><input id="cmp-q" type="search" placeholder="Add a tool…" aria-label="Add item" autocomplete="off"><ul id="cmp-suggest" class="suggest" hidden></ul></div>
@@ -717,6 +821,25 @@ def build_reference():
     body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{md(C.METHOD_MD)}<h2 id="all">Every page cited</h2><input type="search" id="src-filter" class="src-filter" placeholder="Filter sources by title or domain…" aria-label="Filter sources">{secs}</article><aside class="side"><div class="side-box sticky"><p class="foot-head">Sections</p><ul class="toc"><li><a href="#how-the-research-was-done">Method</a></li><li><a href="#verification-labels">Labels</a></li><li><a href="#known-failures">Known failures</a></li>{"".join(f"<li><a href=\'#{slugify(s["title"])}\'>{esc(s["title"].replace("Pages opened for the ", "").capitalize())}</a></li>" for s in SOURCES)}</ul></div></aside></div></section>'
     page("sources/", "Sources and method", body, desc=f"All {N_SOURCES} pages opened in the research, the method, and the verification labels.", crumbs=[("Reference", None), ("Sources", None)], kind="article", extra_js=("sources.js",))
     add_search("Sources and method", "sources/", "Reference", f"All {N_SOURCES} pages opened, method and labels")
+    # glossary
+    letters = {}
+    for term, aliases, defn in sorted(C.GLOSSARY, key=lambda x: x[0].lower()):
+        letters.setdefault(term[0].upper(), []).append((term, aliases, defn))
+    gl = "".join(f'<h2 id="g-{k}">{k}</h2><dl class="gloss">' + "".join(f'<div id="{slugify(t)}"><dt>{esc(t)}' + (f' <span class="muted small">also: {esc(", ".join(a))}</span>' if a else "") + f'</dt><dd>{esc(d)}</dd></div>' for t, a, d in v) + "</dl>" for k, v in letters.items())
+    body = hero("Reference", "Glossary", "Every technical term used on this site, explained in one or two plain sentences. The jargon panel on each page pulls from this list.", cls="hero-sm")
+    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose"><input type="search" id="src-filter" class="src-filter" placeholder="Filter terms…" aria-label="Filter glossary"><div class="gloss-wrap">{gl}</div></article><aside class="side"><div class="side-box sticky"><p class="foot-head">Jump to</p><div class="chips">{"".join(f"<a class=\'chip chip-xs\' href=\'#g-{k}\'>{k}</a>" for k in letters)}</div></div></aside></div></section>'
+    page("glossary/", "Glossary", body, desc="Plain-English definitions of every technical term used on the site.", crumbs=[("Reference", None), ("Glossary", None)], kind="article", extra_js=("sources.js",))
+    add_search("Glossary", "glossary/", "Reference", "Plain-English definitions of AI terms used on the site")
+    for term, aliases, defn in C.GLOSSARY:
+        add_search(term, f"glossary/#{slugify(term)}", "Glossary", defn, " ".join(aliases))
+    # faq
+    faq = "".join(f'<details class="faq" id="q{i+1}"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for i, (q, a) in enumerate(C.FAQ))
+    body = hero("Reference", "Questions everyone asks first", "Plain answers about how to use the site, what the labels mean, and where to begin.", cls="hero-sm")
+    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{faq}</article><aside class="side"><div class="side-box"><p class="foot-head">Still unsure?</p><ul class="linklist"><li><a href="../learn/foundations/">Start the first chapter →</a></li><li><a href="../departments/">Find your department →</a></li><li><a href="../glossary/">Look up a term →</a></li></ul></div></aside></div></section>'
+    page("faq/", "FAQ", body, desc="Plain answers to the questions people ask first about the site, the labels and where to begin.", crumbs=[("Reference", None), ("FAQ", None)], kind="article")
+    add_search("FAQ: questions everyone asks first", "faq/", "Reference", "How to use the site, what labels mean, where to begin")
+    for i, (q, a) in enumerate(C.FAQ):
+        add_search(q, f"faq/#q{i+1}", "FAQ", a)
     # about
     body = hero("Reference", "About this site", C.TAGLINE, cls="hero-sm") + f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{md(C.ABOUT_MD)}<p>{btn(C.DOC_URL, "Open the long-form document")} {btn(C.REPO_URL, "View the research repository")}</p></article></div></section>'
     page("about/", "About", body, desc="What this site is, who it is for, and how to keep it current.", crumbs=[("Reference", None), ("About", None)], kind="article")
@@ -729,7 +852,7 @@ def build_misc():
     (OUT / "search.json").write_text(json.dumps(SEARCH, separators=(",", ":")), encoding="utf-8")
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{esc(u)}</loc></url>" for u in SITEMAP) + "</urlset>", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}sitemap.xml\n", encoding="utf-8")
-    (OUT / "manifest.webmanifest").write_text(json.dumps({"name": C.SITE_NAME, "short_name": "AI Handbook", "start_url": "./", "display": "standalone", "background_color": "#0b1020", "theme_color": "#0b1020", "icons": [{"src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}), encoding="utf-8")
+    (OUT / "manifest.webmanifest").write_text(json.dumps({"name": f"{C.SITE_NAME} · {C.SITE_SUB}", "short_name": C.SITE_NAME, "start_url": "./", "display": "standalone", "background_color": "#0b1020", "theme_color": "#0b1020", "icons": [{"src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
 def main():
