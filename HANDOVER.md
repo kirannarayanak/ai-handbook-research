@@ -45,6 +45,10 @@ after the last block id the ack returns (or insert in reverse order after a fixe
 - `research/run_more_tools.json`, `research/run_more_depts.json` – second expansion pass (6 tool lenses, 4 department lenses), rendered by `research/gen2.py` into `out/more_tools_*.md` and `out/more_depts_*.md`; `out/sources_more.md` lists the 110 new pages.
 - `workflows/*.js` – Workflow scripts (tools, departments, expansion, critic, redo-depts, more-expansion). Agents ran on Sonnet at medium effort, the critic on Opus at high.
 
+## Website
+
+`web/build.py` generates the GitHub Pages site into `docs/` (live at https://kirannarayanak.github.io/ai-handbook-research/). `research/run_certs.json` holds the fact-checked courses and certifications per tool (164 paths, 45 certifications); tool pages render them under "Learning path and certifications" and department pages derive an ordered "What to learn" path from them. Rebuild and commit `docs/` after any change.
+
 ## Known limits to carry forward
 
 - Vendor pages that returned 403: openai.com, canva.com, adobe.com pricing/legal FAQ, gainsight.com, business.meta.com, gartner.com, EC AI literacy Q&A, EBU/BBC study, Redress, docs.servicenow.com, Tableau and Google AI Studio pricing. Claims that depended on them are labelled not verified in the doc.

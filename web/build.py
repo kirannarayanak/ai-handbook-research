@@ -316,19 +316,24 @@ def cert_cards(t, root):
     for i, p in enumerate(paths):
         v = '<span class="badge badge-conf-high">Verified</span>' if p.get("verified") else '<span class="badge badge-conf-low">Not verified</span>'
         meta = "".join(f'<span class="badge">{esc(x)}</span>' for x in (KIND_LABEL.get(p["kind"], p["kind"]), p["level"], p["duration"], p["cost"]) if x and x.lower() != "not stated")
-        out += f'<li class="path-step"><span class="step-n">{i+1}</span><div><h4><a href="{esc(p["url"])}" rel="noopener" target="_blank">{esc(clean(p["title"]))}</a> <span class="muted small">· {esc(clean(p["provider"]))}</span></h4><div class="chips">{meta}{v}</div><p class="small">{esc(clean(p["audience"]))}{(" " + esc(clean(p["note"]))) if p.get("note") else ""}</p></div></li>'
+        out += f'<li class="path-step"><span class="step-n">{i+1}</span><div><h4><a href="{esc(p["url"])}" rel="noopener" target="_blank">{esc(clean(p["title"]))}</a> <span class="muted small">· {esc(clean(p["provider"]))}</span></h4><div class="chips">{meta}{v}</div><p class="small"><b>For:</b> {esc(clean(p["audience"]))}{(" · " + esc(clean(p["note"]))) if p.get("note") else ""}</p></div></li>'
     out += "</ol>"
     return out
 
 def best_credential(name):
-    """The strongest single entry for a tool: a verified certification, else the first verified course."""
+    """(start, credential): the first step of the recommended order, and a verified certification if one exists."""
     c = CERTS.get(name)
-    if not c: return None
-    ps = [p for p in c.get("paths", []) if p.get("verified")]
-    for kind in ("certification", "learning path", "course", "documentation", "community"):
-        for p in ps:
-            if p["kind"] == kind: return p
-    return c["paths"][0] if c.get("paths") else None
+    if not c or not c.get("paths"): return None
+    ps = c["paths"]
+    order = [clean(x) for x in c.get("recommended_order") or []]
+    start = None
+    for o in order:
+        start = next((p for p in ps if clean(p["title"]) == o), None)
+        if start: break
+    if not start:
+        start = next((p for p in ps if p.get("verified") and p["kind"] in ("course", "learning path")), ps[0])
+    cert = next((p for p in ps if p["kind"] == "certification" and p.get("verified") and p is not start), None)
+    return (start, cert)
 
 def dept_path(d, root):
     """Ordered learning path for a department: foundation, general assistant, productivity, specialist tools."""
@@ -348,7 +353,11 @@ def dept_path(d, root):
         link = f'<a href="{href}">{esc(title)}</a>' if href else esc(title)
         credh = ""
         if cred:
-            credh = f'<p class="small"><b>Credential:</b> <a href="{esc(cred["url"])}" rel="noopener" target="_blank">{esc(clean(cred["title"]))}</a> <span class="muted">({esc(clean(cred["provider"]))}, {esc(KIND_LABEL.get(cred["kind"], cred["kind"]))})</span> · <a href="{href}#learn">all paths</a></p>'
+            start, cert = cred
+            credh = f'<p class="small"><b>Start with:</b> <a href="{esc(start["url"])}" rel="noopener" target="_blank">{esc(clean(start["title"]))}</a> <span class="muted">({esc(clean(start["provider"]))}, {esc(KIND_LABEL.get(start["kind"], start["kind"]).lower())})</span>'
+            if cert:
+                credh += f' · <b>Credential:</b> <a href="{esc(cert["url"])}" rel="noopener" target="_blank">{esc(clean(cert["title"]))}</a>'
+            credh += f' · <a href="{href}#learn">all paths</a></p>'
         elif href and i > 0:
             credh = f'<p class="small muted">No official credential found; use the vendor documentation on the <a href="{href}#learn">tool page</a>.</p>'
         out += f'<li class="path-step"><span class="step-n">{i}</span><div><h4>{link} <span class="badge">{esc(hrs)}</span></h4><p class="small">{esc(desc)}</p>{credh}</div></li>'

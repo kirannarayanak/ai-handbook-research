@@ -1,0 +1,1831 @@
+{
+  "summary": "Find official learning paths, courses and certifications for each handbook tool, with adversarial fact-checking",
+  "agentCount": 10,
+  "logs": [
+    "groups done: 5/5; tools: 27"
+  ],
+  "result": {
+    "groups": [
+      {
+        "group": "Sales and marketing AI",
+        "overview": "Most tools in this group have free vendor academies (Gong Academy, HubSpot Academy, LinkedIn training portals, Google Skillshop, Meta Blueprint). Credentials are mostly completion certificates. Google Ads has formal exams on Skillshop. HubSpot Academy course pages render client-side and could not be read, so only the HubSpot AEO certifications page (offers.hubspot.com) is verified.",
+        "tools": [
+          {
+            "tool": "Gong AI",
+            "summary": "Learn Gong through Gong Academy (live and on-demand training for reps, managers and admins). A community post describes Getting Started badges and manager certifications, and a Gong Empower certification workshop (Builder/Architect) was offered at the Celebrate event. No paid public exam was confirmed.",
+            "recommended_order": [
+              "Gong Academy (training hub)",
+              "Gong Academy Getting Started path and badges",
+              "Gong Manager Enable Essentials and Engage Certifications",
+              "Gong Empower Certification (Builder, Architect)"
+            ],
+            "paths": [
+              {
+                "title": "Gong Academy training hub",
+                "provider": "Gong",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Revenue professionals, managers and admins",
+                "url": "https://www.gong.io/training-and-education",
+                "verified": true,
+                "note": "Page opened; describes live and on-demand training for reps, managers and admins. Catalog and pricing not listed."
+              },
+              {
+                "title": "Gong Academy Getting Started path (with badges) and manager certifications",
+                "provider": "Gong",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "New customers, admins and frontline managers",
+                "url": "https://visioneers.gong.io/gong-education-training-51/academy-updates-and-new-content-1467",
+                "verified": true,
+                "note": "Gong community post (Aug 15, 2025) opened: badges launched for all Getting Started content; Manager Enable Essentials Certification and Manager Engage Certification released; Academy planned to open to non-customers. Post is over a year old and the academy.gong.io portal itself shows only a browser-not-supported message, so current catalog is unconfirmed."
+              },
+              {
+                "title": "Gong Empower Certification (Builder, Architect)",
+                "provider": "Gong",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "Half-day workshop (Builder); optional six-week virtual cohort (Architect)",
+                "cost": "not stated",
+                "audience": "Enablement/RevOps owners of Gong with business and technical admin permissions",
+                "url": "https://www.gong.io/events/celebrate/certification",
+                "verified": true,
+                "note": "Page opened. Offered at Gong Celebrate on Sept 29 (2026), which has already passed as of Oct 25, 2026; check for future cohorts. Requires an implemented Gong instance."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Gong Academy",
+                "url": "https://www.gong.io/training-and-education"
+              },
+              {
+                "title": "Gong community: Academy Updates",
+                "url": "https://visioneers.gong.io/gong-education-training-51/academy-updates-and-new-content-1467"
+              },
+              {
+                "title": "Gong Celebrate certification",
+                "url": "https://www.gong.io/events/celebrate/certification"
+              }
+            ]
+          },
+          {
+            "tool": "HubSpot AI",
+            "summary": "HubSpot Academy is HubSpot's free learning portal. The only AI credentials confirmed here are two free AEO (answer engine optimization) certifications. Other Academy AI courses could not be opened because the pages render client-side.",
+            "recommended_order": [
+              "AEO Fundamentals Certification",
+              "Implementing AEO With HubSpot",
+              "HubSpot Academy course library (browse AI courses)"
+            ],
+            "paths": [
+              {
+                "title": "AEO Fundamentals Certification",
+                "provider": "HubSpot Academy",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Marketers new to AEO, on any platform",
+                "url": "https://offers.hubspot.com/academy-aeo-certifications",
+                "verified": true,
+                "note": "Page opened; free, product-agnostic certification on how answer engines surface content and AEO metrics."
+              },
+              {
+                "title": "Implementing AEO With HubSpot",
+                "provider": "HubSpot Academy",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Users of HubSpot AEO tool or Marketing Hub Pro/Enterprise",
+                "url": "https://offers.hubspot.com/academy-aeo-certifications",
+                "verified": true,
+                "note": "Page opened; free, HubSpot-specific. Completing both earns an AEO Dual Certified badge."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "HubSpot Academy AEO certifications",
+                "url": "https://offers.hubspot.com/academy-aeo-certifications"
+              }
+            ]
+          },
+          {
+            "tool": "LinkedIn Recruiter AI",
+            "summary": "Learn through the LinkedIn Talent Solutions Learning Center and its AI Empowerment Center, which offer self-paced learning paths, live webinars and a certificate option. Aimed at Recruiter customers. No paid exam found.",
+            "recommended_order": [
+              "LinkedIn Talent Solutions Learning Center",
+              "AI Empowerment Center: Learn path",
+              "Achieve: Message In Momentum"
+            ],
+            "paths": [
+              {
+                "title": "LinkedIn Talent Solutions Learning Center",
+                "provider": "LinkedIn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Recruiters, admins, hiring managers",
+                "url": "https://training.talent.linkedin.com",
+                "verified": true,
+                "note": "Catalog opened; includes Recruiter onboarding and product filters for Recruiter and Hiring Assistant."
+              },
+              {
+                "title": "AI Empowerment Center: Learn learning path",
+                "provider": "LinkedIn",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "5 courses, over 15 min",
+                "cost": "not stated",
+                "audience": "Recruiters using AI-assisted features",
+                "url": "https://training.talent.linkedin.com/page/ai-empowerment-center",
+                "verified": true,
+                "note": "Page opened; 5-course learning path, live webinars, and the page mentions earning a certificate."
+              },
+              {
+                "title": "Achieve: Message In Momentum",
+                "provider": "LinkedIn",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "Four weeks, 7 courses",
+                "cost": "not stated",
+                "audience": "Recruiters sending AI-assisted messages",
+                "url": "https://training.talent.linkedin.com/page/ai-empowerment-center",
+                "verified": true,
+                "note": "Page opened; four-week mission with guided practice and recognition. Certificate wording is generic on the page, not specific to this path."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Talent Solutions Learning Center",
+                "url": "https://training.talent.linkedin.com"
+              },
+              {
+                "title": "AI Empowerment Center",
+                "url": "https://training.talent.linkedin.com/page/ai-empowerment-center"
+              }
+            ]
+          },
+          {
+            "tool": "LinkedIn Sales Navigator AI",
+            "summary": "LinkedIn's Sales Navigator training site offers free certificate courses: Essentials and Best Practices. No exam; certificates are issued on completing all items.",
+            "recommended_order": [
+              "Sales Navigator: Essentials Certificate Course",
+              "Sales Navigator Best Practices Certificate Course"
+            ],
+            "paths": [
+              {
+                "title": "Sales Navigator: Essentials Certificate Course",
+                "provider": "LinkedIn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "Items of 3-4 min plus a 45 min Essentials Course",
+                "cost": "not stated",
+                "audience": "New and existing Sales Navigator users",
+                "url": "https://training.sales.linkedin.com/path/sales-navigator-essentials-skillset",
+                "verified": true,
+                "note": "Page opened; quick start guide, video, learning path and survey required for the Essentials Certificate. Includes an AI features item."
+              },
+              {
+                "title": "Sales Navigator Best Practices Certificate Course",
+                "provider": "LinkedIn",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated (guide is 8 min)",
+                "cost": "not stated",
+                "audience": "Sales professionals and team leaders",
+                "url": "https://training.sales.linkedin.com/path/sales-navigator-best-practices-skillset",
+                "verified": true,
+                "note": "Page opened; completing all items earns a Best Practices Completion Certificate."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Essentials Certificate Course",
+                "url": "https://training.sales.linkedin.com/path/sales-navigator-essentials-skillset"
+              },
+              {
+                "title": "Best Practices Certificate Course",
+                "url": "https://training.sales.linkedin.com/path/sales-navigator-best-practices-skillset"
+              }
+            ]
+          },
+          {
+            "tool": "Google Ads AI",
+            "summary": "Learn Google Ads on Google Skillshop (free) and the Google Ads Help Center, which covers Performance Max, AI Max and generative AI tools. Skillshop offers Google Ads certification tracks (Search, Display, Measurement, Video, Shopping, Apps).",
+            "recommended_order": [
+              "Google Ads Help Center",
+              "Google Skillshop Google Ads training",
+              "Google Ads certifications on Skillshop"
+            ],
+            "paths": [
+              {
+                "title": "Google Ads Help Center (AI features and Skillshop training)",
+                "provider": "Google",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Advertisers and agencies",
+                "url": "https://support.google.com/google-ads/answer/7539883",
+                "verified": true,
+                "note": "Page opened; Help Center lists Performance Max, AI Max, generative AI tools and Google Ads training on Skillshop."
+              },
+              {
+                "title": "Google Skillshop: Google Ads training and certification",
+                "provider": "Google",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Advertisers and marketers",
+                "url": "https://skillshop.withgoogle.com/",
+                "verified": true,
+                "note": "Page opened; lists Google Ads Search, Display, Measurement, Video, Shopping, Apps training with Get Certified. Exam names, durations and costs not shown on the home page."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Google Skillshop",
+                "url": "https://skillshop.withgoogle.com/"
+              },
+              {
+                "title": "Google Ads Help: training on Skillshop",
+                "url": "https://support.google.com/google-ads/answer/7539883"
+              }
+            ]
+          },
+          {
+            "tool": "Meta Advantage+",
+            "summary": "Learn Advantage+ through Meta Blueprint's free short courses and live webinars. Meta's certification page showed content unavailable, so current exam status is unconfirmed.",
+            "recommended_order": [
+              "Meta Blueprint catalog: Manage ads with automated tools",
+              "Meta Blueprint live webinars on Advantage+"
+            ],
+            "paths": [
+              {
+                "title": "Meta Blueprint course catalog",
+                "provider": "Meta",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "Short courses of 1-3 minutes",
+                "cost": "not stated",
+                "audience": "Advertisers and marketers",
+                "url": "https://www.facebookblueprint.com/student/catalog",
+                "verified": true,
+                "note": "Page opened; includes 'Use Advantage+ audience to connect with the right people' (1m, Intermediate) and Manage ads with automated tools topic."
+              },
+              {
+                "title": "Meta Blueprint live webinars",
+                "provider": "Meta",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Advertisers and agencies",
+                "url": "https://www.facebookblueprint.com/student/catalog",
+                "verified": false,
+                "note": "Webinars tab exists on the catalog; the Oct 27 Advantage+ session claim was not re-confirmed in the portion opened."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Meta Blueprint catalog",
+                "url": "https://www.facebookblueprint.com/student/catalog"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "Gong, LinkedIn, Skillshop and the Blueprint catalog pages were opened and mostly match. HubSpot Academy course pages return no text in this environment, so the four original HubSpot paths were removed and replaced with two AEO certifications confirmed on an official HubSpot page. Durations and costs are mostly not stated on the pages; the Gong community post is over a year old and the Meta webinars entry remains unverified.",
+        "removed_or_corrected": [
+          "Gong Academy portal (academy.gong.io): removed; page shows only a browser-not-supported message. Replaced with a Getting Started/manager-certification entry verified via the Gong community post.",
+          "Gong Program Manager Certification: removed; the cited community post does not mention it. It lists Manager Enable Essentials and Manager Engage Certifications instead.",
+          "Gong Empower Certification: corrected to a six-week cohort (not five), Builder/Architect credentials, admin-permission prerequisite; event date Sept 29 2026 has passed; set verified=true.",
+          "HubSpot Academy certifications overview, AI-Readiness Accelerator Workshop, AI-Augmented Stack Mini-Series, Marketing AI Micro-Internship: removed; pages returned no text and could not be confirmed.",
+          "HubSpot: added AEO Fundamentals and Implementing AEO With HubSpot certifications (free) from the official HubSpot offers page, as replacements for the removed HubSpot paths.",
+          "Sales Navigator Essentials: duration corrected to include a 45 min Essentials Course.",
+          "Google Ads AI-Powered Performance Ads certification: removed as a named exam; it was shown only by third-party sources. Merged the two Skillshop entries to avoid duplicates.",
+          "Meta Blueprint certifications page: removed; page shows Content Unavailable. Meta webinars entry set to verified=false because the Oct 27 session was not re-confirmed.",
+          "LinkedIn Message In Momentum: note clarified that certificate wording on the page is generic."
+        ]
+      },
+      {
+        "group": "Customer service and experience AI",
+        "overview": "All four vendors run their own academies with credentials. Fin Academy courses are free, with badges and certificates. Gainsight, Zendesk and Qualtrics charge exam fees. None has a dedicated AI exam; AI is covered inside product courses (Zendesk lists AI ethics and trust in CX, Fin Academy is built around Fin).",
+        "tools": [
+          {
+            "tool": "Gainsight AI",
+            "summary": "Learn Gainsight through Gainsight University (admin, end-user, PX tracks), then take a paid certification exam. The Pulse+ subscription covers customer-success professional credentials. No standalone Gainsight AI exam exists on the page.",
+            "recommended_order": [
+              "Gainsight University: End User training (Getting Started with Gainsight)",
+              "Gainsight Associate Admin Certificate (Level 1)",
+              "Gainsight NXT Admin Certificate (Level 3)",
+              "Pulse+ CSM Certified Professional"
+            ],
+            "paths": [
+              {
+                "title": "Gainsight University: Customer Success training directory (Admin, End User, PX, Communities, Customer Education)",
+                "provider": "Gainsight",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "CSMs, admins, PX and community managers",
+                "url": "https://gainsight-university.northpass.com/app/certification-programs",
+                "verified": true,
+                "note": "Page opened and lists the training tracks (Admin, End User, PX, Communities, Customer Education); courses themselves not opened. Page footer is dated 2024."
+              },
+              {
+                "title": "Gainsight Associate Admin Certificate: Level 1",
+                "provider": "Gainsight",
+                "kind": "certification",
+                "level": "Admin",
+                "duration": "not stated (36-question exam)",
+                "cost": "$70 USD exam fee",
+                "audience": "Gainsight administrators",
+                "url": "https://gainsight-university.northpass.com/app/certification-programs",
+                "verified": true,
+                "note": "Page confirms 36 multiple-choice questions, 85% pass, after self-paced Admin training. Level 2 topic certificates (Reporting & Dashboards, or Journey Orchestrator & Surveys) are practical exams at $125."
+              },
+              {
+                "title": "Gainsight NXT Admin Certificate (Level 3)",
+                "provider": "Gainsight",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "not stated (60-question proctored exam)",
+                "cost": "$300 USD exam fee",
+                "audience": "Experienced Gainsight admins",
+                "url": "https://gainsight-university.northpass.com/app/certification-programs",
+                "verified": true,
+                "note": "70% to pass; Level 1 and 2 recommended first."
+              },
+              {
+                "title": "Gainsight End User Certification",
+                "provider": "Gainsight",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated (32-question exam)",
+                "cost": "$99 USD exam fee",
+                "audience": "Day-to-day Gainsight users",
+                "url": "https://gainsight-university.northpass.com/app/certification-programs",
+                "verified": true,
+                "note": "80% to pass. PX Level 1 certification is $70 (also 32 questions)."
+              },
+              {
+                "title": "Pulse+ Customer Success Professional credentials (CSM Certified Professional, CSM Advanced, CS Leader, CS Ops)",
+                "provider": "Gainsight",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated (30 to 54 question exams)",
+                "cost": "Requires Pulse+ subscription; exam fee not stated",
+                "audience": "Customer success professionals and leaders",
+                "url": "https://gainsight-university.northpass.com/app/certification-programs",
+                "verified": true,
+                "note": "Page confirms curriculum on the Pulse+ site and exams of 35, 54, 44 and 30 questions; pass marks 70-85%. Pricing not shown on the page."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Gainsight University certification programs",
+                "url": "https://gainsight-university.northpass.com/app/certification-programs"
+              }
+            ]
+          },
+          {
+            "tool": "Zendesk AI",
+            "summary": "Learn Zendesk through the free Zendesk Academy catalog and free certification prep paths, then take a proctored paid exam. Certifications are role-based (admin, agent specialists, analyst, developer); no dedicated AI exam, though the catalog includes AI courses such as AI ethics and trust in CX.",
+            "recommended_order": [
+              "Zendesk Academy catalog: AI and CX courses",
+              "Free certification prep path and practice test",
+              "Omnichannel agent specialist or Knowledge specialist",
+              "Support admin expert"
+            ],
+            "paths": [
+              {
+                "title": "Zendesk Academy course catalog",
+                "provider": "Zendesk",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "varies by course (e.g. AI ethics and trust in CX is 19 min)",
+                "cost": "not stated",
+                "audience": "Agents, admins, analysts, developers, CX leaders",
+                "url": "https://academy.zendesk.com/",
+                "verified": true,
+                "note": "Page opened; lists role-based paths and AI-tagged courses such as AI ethics and trust in CX (19 min) and admin copilot. Per-course cost not shown."
+              },
+              {
+                "title": "Zendesk certification preparation paths and practice tests",
+                "provider": "Zendesk",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Exam candidates",
+                "url": "https://zendesk-sandbox.skilljar.com/page/certifications",
+                "verified": true,
+                "note": "The page that opened is a skilljar sandbox-hosted copy (the live academy.zendesk.com/certifications URL returned 404). It says prep paths and practice tests are free; confirm on the live Academy certifications menu."
+              },
+              {
+                "title": "Zendesk Support admin expert certification",
+                "provider": "Zendesk",
+                "kind": "certification",
+                "level": "Admin",
+                "duration": "not stated",
+                "cost": "$350",
+                "audience": "Zendesk Support administrators",
+                "url": "https://zendesk-sandbox.skilljar.com/page/certifications",
+                "verified": true,
+                "note": "Timed, proctored online multiple-choice exam; certification valid two years. CX analyst expert and App developer I expert are also $350. Source is the sandbox copy."
+              },
+              {
+                "title": "Zendesk specialist certifications (Omnichannel agent, Knowledge, Chat, Voice)",
+                "provider": "Zendesk",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "Guide specialist exam listed at 30-60 min on the catalog",
+                "cost": "$199 each; $499 for any three",
+                "audience": "Agents and support specialists",
+                "url": "https://zendesk-sandbox.skilljar.com/page/certifications",
+                "verified": true,
+                "note": "Purchase includes one attempt, to be taken within six months. Source is the sandbox copy."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Zendesk Academy",
+                "url": "https://academy.zendesk.com/"
+              },
+              {
+                "title": "Zendesk certifications (sandbox-hosted copy)",
+                "url": "https://zendesk-sandbox.skilljar.com/page/certifications"
+              }
+            ]
+          },
+          {
+            "tool": "Intercom Fin",
+            "summary": "Learn Fin through the free Fin Academy, which awards badges for courses and Accredible certificates for passing certification assessments. Intercom offers Support agent and Support manager certifications; the Intercom developer docs cover integration work.",
+            "recommended_order": [
+              "Fin Academy: sign up and foundation courses (Launch Fin, Fundamentals for support agents or managers)",
+              "Fin Academy optimization courses (Optimize Fin, Build Fin Procedures)",
+              "Intercom Certification: Support agent or Support manager",
+              "Intercom developer documentation"
+            ],
+            "paths": [
+              {
+                "title": "Fin Academy (academy.fin.ai)",
+                "provider": "Intercom",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Support teams, managers, admins",
+                "url": "https://academy.fin.ai/page/faqs",
+                "verified": true,
+                "note": "FAQ says courses are free, with badges for courses and Accredible certificates for passing assessments. Home page lists Launch Fin, Fundamentals for support agents/managers, Optimize Fin and Build Fin Procedures."
+              },
+              {
+                "title": "Intercom Certification (Support agent and Support manager certifications)",
+                "provider": "Intercom",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Support agents and support managers",
+                "url": "https://academy.fin.ai/page/certification",
+                "verified": true,
+                "note": "New: page opened and names Support agent certification and Support manager certification. Cost, duration and exam format not shown."
+              },
+              {
+                "title": "Signing up for Fin Academy",
+                "provider": "Intercom",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "New learners",
+                "url": "https://www.intercom.com/help/en/articles/4322438-signing-up-for-fin-academy",
+                "verified": true,
+                "note": "Explains signing in with an Intercom account and authorizing access to take courses."
+              },
+              {
+                "title": "Intercom developer documentation",
+                "provider": "Intercom",
+                "kind": "documentation",
+                "level": "Advanced",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers and integrators",
+                "url": "https://developers.intercom.com/",
+                "verified": true,
+                "note": "Page opened; hub for APIs, SDKs, Messenger installation and building apps. Not a certification."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Fin Academy FAQs",
+                "url": "https://academy.fin.ai/page/faqs"
+              },
+              {
+                "title": "Intercom Certification",
+                "url": "https://academy.fin.ai/page/certification"
+              },
+              {
+                "title": "Signing up for Fin Academy",
+                "url": "https://www.intercom.com/help/en/articles/4322438-signing-up-for-fin-academy"
+              },
+              {
+                "title": "Intercom for Developers",
+                "url": "https://developers.intercom.com/"
+              }
+            ]
+          },
+          {
+            "tool": "Qualtrics AI",
+            "summary": "Learn Qualtrics on XM Basecamp, with certification at two levels: foundational (Level 1) and expert (Level 2). Each requires a paid exam. Qualtrics AI has an overview section in support docs but no separate AI exam.",
+            "recommended_order": [
+              "Qualtrics Platform Essentials (Level 1)",
+              "XM Fundamentals Certification (Level 1)",
+              "XM for Customer Experience Expert (Level 2)",
+              "Qualtrics support documentation for Qualtrics AI"
+            ],
+            "paths": [
+              {
+                "title": "Qualtrics Platform Essentials (Level 1)",
+                "provider": "Qualtrics",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "$100 (exam and final project)",
+                "audience": "Anyone new to XM and Qualtrics",
+                "url": "https://www.qualtrics.com/certification/",
+                "verified": true,
+                "note": "Page opened (redirects to qualtrics.com/training/certification/). No prerequisites. Online proctored exam per page's how-it-works steps."
+              },
+              {
+                "title": "Qualtrics Fundamentals Certification (XM Institute, Level 1)",
+                "provider": "Qualtrics XM Institute",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "$100 (exam)",
+                "audience": "Anyone new to XM, CX and EX principles",
+                "url": "https://www.qualtrics.com/certification/",
+                "verified": true,
+                "note": "Page title is Fundamentals Certification, not 'XM Fundamentals'. No prerequisites. Both foundational certifications bundle for $100."
+              },
+              {
+                "title": "XM for Customer Experience Expert (Level 2)",
+                "provider": "Qualtrics",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "not stated",
+                "cost": "$500 (exam and final project)",
+                "audience": "CX program owners",
+                "url": "https://www.qualtrics.com/certification/",
+                "verified": true,
+                "note": "Recommended prerequisite Platform Essentials. Strategy & Research and Employee Experience expert tracks are also $500; XM Professional Certification (XMP) is $595 and needs 3 years of XM experience."
+              },
+              {
+                "title": "Qualtrics support documentation (including Qualtrics AI)",
+                "provider": "Qualtrics",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All Qualtrics users",
+                "url": "https://www.qualtrics.com/support/",
+                "verified": true,
+                "note": "Page opened; has a Qualtrics AI highlight and get-started links for CX, Strategy & Research and EX."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Qualtrics Certification on XM Basecamp",
+                "url": "https://www.qualtrics.com/certification/"
+              },
+              {
+                "title": "Qualtrics Support",
+                "url": "https://www.qualtrics.com/support/"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "Gainsight, Qualtrics, Fin Academy FAQ, the Intercom sign-up article and developer hub, and the Zendesk Academy home opened and matched the claims. The Gainsight page footer is dated 2024, so prices may have changed. Zendesk certification prices come only from a skilljar sandbox-hosted copy, because the live academy.zendesk.com certifications URLs returned 404; treat them as likely but confirm on the live site. Durations are mostly not stated on vendor pages.",
+        "removed_or_corrected": [
+          "Intercom Fin: replaced the claim that no certification program was found. academy.fin.ai/page/certification opened and lists Support agent and Support manager certifications; added as a path (cost and duration not shown) and updated the summary and order.",
+          "Intercom developer documentation: removed the 'academy certifications page returned 404' remark; it is a documentation hub, not a certification.",
+          "Gainsight Associate Admin: corrected the title to 'Gainsight Associate Admin Certificate: Level 1' and added the 36-question exam length from the page.",
+          "Gainsight Pulse+ credentials: exam lengths confirmed as 35, 54, 44 and 30 questions; pricing remains not stated.",
+          "Qualtrics: renamed 'XM Fundamentals Certification' to 'Fundamentals Certification' as titled on the page; noted the XMP credential at $595.",
+          "Zendesk: noted the live certifications URL 404s so cost data rests on the sandbox copy; added a 30-60 min exam duration for the Guide specialist and a 19 min duration for the AI ethics course from the catalog.",
+          "Zendesk Academy and specialist durations were filled where the page showed them; Zendesk Academy kept as verified with the caveat on per-course cost."
+        ]
+      },
+      {
+        "group": "Legal, audit and GRC AI",
+        "overview": "Optro (formerly AuditBoard) has the only verified formal path: Optro Academy learning paths with CPE-eligible badges and certification exams. Thomson Reuters CoCounsel has vendor training but no public certification found, and Datasite has no public academy or certification found.",
+        "tools": [
+          {
+            "tool": "Thomson Reuters CoCounsel",
+            "summary": "Learn CoCounsel through Thomson Reuters product training (on-demand webinars, legal learning hub) and the product pages. No public CoCounsel certification was found.",
+            "recommended_order": [
+              "CoCounsel help page (product training and on-demand webinars)",
+              "CoCounsel product hub"
+            ],
+            "paths": [
+              {
+                "title": "CoCounsel getting started sessions and on-demand training",
+                "provider": "Thomson Reuters Training and Support",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Lawyers and legal staff new to CoCounsel",
+                "url": "https://training.thomsonreuters.com/media/CoCounsel+getting+started%3A+Civil+litigation/1_sdvl8jdl",
+                "verified": false,
+                "note": "Page returned HTTP 403 and could not be opened. The 30-minute figure came only from a search snippet and has been removed. The CoCounsel help page does list product training, on-demand webinars and a legal learning hub, but names no specific course or duration."
+              },
+              {
+                "title": "CoCounsel product and resources hub",
+                "provider": "Thomson Reuters",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Buyers and users evaluating CoCounsel",
+                "url": "https://www.thomsonreuters.com/en/cocounsel",
+                "verified": true,
+                "note": "Page opened and is the product overview, not a course; no certification is listed."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "Thomson Reuters CoCounsel",
+                "url": "https://www.thomsonreuters.com/en/cocounsel"
+              },
+              {
+                "title": "Thomson Reuters CoCounsel help (product training, webinars)",
+                "url": "https://www.thomsonreuters.com/en-us/help/cocounsel.html"
+              }
+            ]
+          },
+          {
+            "tool": "Datasite AI",
+            "summary": "No public Datasite academy or certification was found. Ask your Datasite account team about onboarding and training, and use the Datasite site for product information.",
+            "recommended_order": [
+              "Datasite product site"
+            ],
+            "paths": [
+              {
+                "title": "Datasite product site (agentic AI, data room, Connect)",
+                "provider": "Datasite",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Deal teams and admins evaluating or using Datasite",
+                "url": "https://www.datasite.com/en/",
+                "verified": true,
+                "note": "Page opened and is a marketing/product overview; it shows no course or certification."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "Datasite",
+                "url": "https://www.datasite.com/en/"
+              }
+            ]
+          },
+          {
+            "tool": "AuditBoard AI (now Optro)",
+            "summary": "AuditBoard is now Optro. Optro Academy offers role-based learning paths (about 6 to 7+ hours each, CPE eligible) with live training sessions, a certification exam and a badge. Start with the product 101 course, then the team member or administrator path, then the exam.",
+            "recommended_order": [
+              "Optro Community Hub (Academy)",
+              "OpsAudit Team Member Learning Path",
+              "Controls Management Administrator Learning Path",
+              "Optro Academy certifications overview"
+            ],
+            "paths": [
+              {
+                "title": "Optro Academy certifications overview",
+                "provider": "Optro (formerly AuditBoard)",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Optro platform users, administrators and team members",
+                "url": "https://optro.ai/blog/learn-with-auditboard-academy-certifications",
+                "verified": true,
+                "note": "Blog (Nov 2025) lists Core Administrator, SOXHUB Administrator and Team Member, OpsAudit Administrator and Team Member, RiskOversight Administrator, and a CrossComply micro-certification. Self-paced and open-book; digital badge, certificate and 100 Community Hub points. Cost not stated."
+              },
+              {
+                "title": "OpsAudit Team Member Learning Path and Optro Certified OpsAudit Team Member Exam",
+                "provider": "Optro",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "7+ hours",
+                "cost": "not stated",
+                "audience": "OpsAudit team members and auditors",
+                "url": "https://optro.ai/exchange/opsaudit-team-member-learning-path",
+                "verified": true,
+                "note": "Page confirms: starts with OpsAudit 101, includes live training sessions and the exam; CPE eligible; credential is the Learning Path Badge. Duration 7+ hours matches."
+              },
+              {
+                "title": "Controls Management Administrator Learning Path and Optro Certified Controls Management Administrator Exam",
+                "provider": "Optro",
+                "kind": "learning path",
+                "level": "Admin",
+                "duration": "6+ hours",
+                "cost": "not stated",
+                "audience": "Platform administrators of the controls program",
+                "url": "https://optro.ai/exchange/soxhub-administrator-learning-path",
+                "verified": true,
+                "note": "Page confirms: begins with Controls Management 101; CPE eligible; 6+ hours; prepares for the administrator exam. Older blog calls this SOXHUB; the page now uses Controls Management."
+              },
+              {
+                "title": "Optro Community Hub and Academy",
+                "provider": "Optro",
+                "kind": "community",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "All Optro customers",
+                "url": "https://optro.ai/community-hub",
+                "verified": true,
+                "note": "Page opened; lists self-paced Academy courses, instructor-led training and certifications alongside forums. Customer login is likely needed to start courses."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Optro Academy certifications",
+                "url": "https://optro.ai/blog/learn-with-auditboard-academy-certifications"
+              },
+              {
+                "title": "OpsAudit Team Member Learning Path",
+                "url": "https://optro.ai/exchange/opsaudit-team-member-learning-path"
+              },
+              {
+                "title": "Controls Management Administrator Learning Path",
+                "url": "https://optro.ai/exchange/soxhub-administrator-learning-path"
+              },
+              {
+                "title": "Optro Community Hub",
+                "url": "https://optro.ai/community-hub"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "Opened and checked the Optro blog, both learning-path pages, the community hub, the CoCounsel hub and help page, and the Datasite home page. Optro details match their pages; cost is not stated anywhere. The Thomson Reuters training page is blocked (403) so it stays unverified. The Datasite customer-training entry was removed because no page supports it.",
+        "removed_or_corrected": [
+          "Removed Datasite customer training (instructor-led, via account team): only inferred from job postings; no public page shows it, and it pointed at the generic home page.",
+          "CoCounsel Getting Started: kept verified=false (HTTP 403); dropped the unconfirmed 30-minute duration from a search snippet.",
+          "CoCounsel: added the Thomson Reuters help page as a source, which lists product training and on-demand webinars.",
+          "OpsAudit path: exam renamed to match the page, 'Optro Certified OpsAudit Team Member Exam'.",
+          "Controls Management Administrator path: exam renamed to 'Optro Certified Controls Management Administrator Exam' per the page.",
+          "Optro certifications overview: note now lists the certifications named on the blog and corrects the earlier 'live training/exam' claim, since the blog says certifications are self-paced and open-book.",
+          "Community Hub: recommended order now uses the Community Hub URL, since the direct /academy URL was reported as 404."
+        ]
+      },
+      {
+        "group": "Security, cloud operations and observability AI",
+        "overview": "Microsoft tools (Security Copilot, Purview, Azure Copilot) have the clearest vendor paths on Microsoft Learn, with a real exam only for Purview. Google, Datadog and Dynatrace offer academies with free courses and general product certifications, but none is specific to their AI features. CrowdStrike University training sits behind a login, so no Charlotte AI course could be verified.",
+        "tools": [
+          {
+            "tool": "Microsoft Security Copilot",
+            "summary": "Learn Security Copilot through the free self-paced Microsoft Learn course SC-5006 and the product documentation hub. No exam is tied to Security Copilot itself, so SC-900 is only the nearest general credential.",
+            "recommended_order": [
+              "Microsoft Security Copilot documentation hub",
+              "SC-5006: Enhance security operations by using Microsoft Security Copilot",
+              "Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)"
+            ],
+            "paths": [
+              {
+                "title": "SC-5006: Enhance security operations by using Microsoft Security Copilot",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "1 day",
+                "cost": "not stated (self-directed course on Microsoft Learn)",
+                "audience": "Security operations analysts, security engineers, business owners",
+                "url": "https://learn.microsoft.com/en-us/training/courses/sc-5006",
+                "verified": true,
+                "note": "Page opened; Beginner, 1 day, self-directed, achievement code offered, no exam. Official title is 'Course SC-5006-A: Enhance security operations by using Microsoft Security Copilot'."
+              },
+              {
+                "title": "Microsoft Security Copilot documentation hub",
+                "provider": "Microsoft Learn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Analysts and admins getting started",
+                "url": "https://learn.microsoft.com/en-us/copilot/security/",
+                "verified": true,
+                "note": "Page opened; covers how-to guides, plugins, promptbooks and embedded experiences in Defender XDR and Entra. Cost not printed on the page; Learn docs are publicly readable."
+              },
+              {
+                "title": "Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)",
+                "provider": "Microsoft",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "45 minutes (exam)",
+                "cost": "not stated (price depends on country or region)",
+                "audience": "Business stakeholders, IT professionals, students",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/",
+                "verified": true,
+                "note": "Page opened; Beginner, 45-minute exam, updated 10/21/2026. General Microsoft security fundamentals, not Security Copilot specific."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "SC-5006",
+                "url": "https://learn.microsoft.com/en-us/training/courses/sc-5006"
+              },
+              {
+                "title": "Security Copilot docs",
+                "url": "https://learn.microsoft.com/en-us/copilot/security/"
+              },
+              {
+                "title": "SC-900 certification",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/security-compliance-and-identity-fundamentals/"
+              }
+            ]
+          },
+          {
+            "tool": "CrowdStrike Charlotte AI",
+            "summary": "CrowdStrike University is the official training portal, but its learning pages need a login and no Charlotte AI specific course or exam could be confirmed. Use the Charlotte AI product page and sign in to University to confirm course names.",
+            "recommended_order": [
+              "CrowdStrike University",
+              "Charlotte AI product page"
+            ],
+            "paths": [
+              {
+                "title": "CrowdStrike University (training and calendar)",
+                "provider": "CrowdStrike",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Falcon customers, SOC analysts, partners",
+                "url": "https://www.crowdstrike.com/en-us/crowdstrike-university/",
+                "verified": true,
+                "note": "Marketing page opened; it confirms the University exists but the learning portal returned no content, so no Charlotte AI course was confirmed."
+              },
+              {
+                "title": "Charlotte AI product overview",
+                "provider": "CrowdStrike",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Security teams evaluating the tool",
+                "url": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+                "verified": true,
+                "note": "Page now opened; product marketing page under Agentic SOC. Earlier 'Free' cost was not shown on the page and was changed to not stated. It is not training content."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "CrowdStrike University",
+                "url": "https://www.crowdstrike.com/en-us/crowdstrike-university/"
+              },
+              {
+                "title": "Charlotte AI",
+                "url": "https://www.crowdstrike.com/en-us/platform/charlotte-ai/"
+              }
+            ]
+          },
+          {
+            "tool": "Google Gemini in Security",
+            "summary": "Start with the free 45-minute Gemini for Security Engineers course on Google Skills, which earns a badge. The Professional Security Operations Engineer certification is the nearest credential but is not Gemini specific.",
+            "recommended_order": [
+              "Gemini for Security Engineers",
+              "Google Skills platform",
+              "Professional Security Operations Engineer certification"
+            ],
+            "paths": [
+              {
+                "title": "Gemini for Security Engineers",
+                "provider": "Google Skills (Cloud Skills Boost)",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "45 minutes",
+                "cost": "not stated on page (sign-in required; earlier 'No cost' not shown)",
+                "audience": "Cloud security engineers",
+                "url": "https://www.skills.google/course_templates/886",
+                "verified": true,
+                "note": "Page opened; Introductory, 45 minutes, hands-on lab, badge, updated about 1 year ago. Page notes Duet AI was renamed Gemini."
+              },
+              {
+                "title": "Google Skills learning platform",
+                "provider": "Google Cloud",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Cloud and security learners",
+                "url": "https://www.skills.google/",
+                "verified": true,
+                "note": "Page opened; shows catalog, skill badges and certificates. The GEAR credits claim was not re-confirmed in the text checked."
+              },
+              {
+                "title": "Professional Security Operations Engineer certification",
+                "provider": "Google Cloud",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Security operations engineers",
+                "url": "https://cloud.google.com/learn/certification/security-operations-engineer",
+                "verified": false,
+                "note": "Page opened and the exam exists, but duration, cost and level did not render, so those are unconfirmed. The earlier 2-hour figure is dropped."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Gemini for Security Engineers",
+                "url": "https://www.skills.google/course_templates/886"
+              },
+              {
+                "title": "Google Skills",
+                "url": "https://www.skills.google/"
+              },
+              {
+                "title": "Professional Security Operations Engineer",
+                "url": "https://cloud.google.com/learn/certification/security-operations-engineer"
+              }
+            ]
+          },
+          {
+            "tool": "Microsoft Purview",
+            "summary": "Learn Purview through the Microsoft Learn documentation and the SC-401T00 course. The Information Security Administrator Associate certification (exam SC-401) is the formal credential covering information protection, DLP and insider risk, including protecting data used by AI services.",
+            "recommended_order": [
+              "Microsoft Purview documentation",
+              "SC-401T00 course",
+              "Microsoft Certified: Information Security Administrator Associate (SC-401)"
+            ],
+            "paths": [
+              {
+                "title": "Microsoft Purview documentation hub",
+                "provider": "Microsoft Learn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Data security, compliance and governance staff",
+                "url": "https://learn.microsoft.com/en-us/purview/",
+                "verified": true,
+                "note": "Page opened; covers data governance, security and compliance solutions."
+              },
+              {
+                "title": "SC-401T00: Protect sensitive information with Microsoft Purview in the AI era",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "4 days",
+                "cost": "not stated (self-directed learning offered)",
+                "audience": "Information protection and compliance administrators, risk practitioners",
+                "url": "https://learn.microsoft.com/training/courses/sc-401t00",
+                "verified": true,
+                "note": "Page opened; corrected title (formerly listed as 'Information Security Administrator course'), Intermediate, 4 days, linked to the SC-401 certification."
+              },
+              {
+                "title": "Microsoft Certified: Information Security Administrator Associate (SC-401)",
+                "provider": "Microsoft",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "100 minutes (exam)",
+                "cost": "not stated (price depends on country or region)",
+                "audience": "Administrators who plan and implement information security",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/information-security-administrator/",
+                "verified": true,
+                "note": "Page opened; Intermediate, 100-minute proctored exam, updated 10/14/2026, includes protecting data used by AI services; retake after 24 hours."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Purview docs",
+                "url": "https://learn.microsoft.com/en-us/purview/"
+              },
+              {
+                "title": "SC-401 certification",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/information-security-administrator/"
+              },
+              {
+                "title": "SC-401T00 course",
+                "url": "https://learn.microsoft.com/training/courses/sc-401t00"
+              }
+            ]
+          },
+          {
+            "tool": "Azure Copilot",
+            "summary": "Learn Azure Copilot with the Introduction to Azure Copilot module and the product documentation. No exam is specific to it, so the standard Azure certifications are the credential route.",
+            "recommended_order": [
+              "Introduction to Azure Copilot",
+              "What is Azure Copilot documentation"
+            ],
+            "paths": [
+              {
+                "title": "Introduction to Azure Copilot",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "6 units; minutes not stated",
+                "cost": "Free",
+                "audience": "Developers and Azure operators",
+                "url": "https://learn.microsoft.com/en-us/training/modules/introduction-microsoft-copilot-azure/",
+                "verified": true,
+                "note": "Page opened; Beginner module, 6 units, with assessment; prerequisites are Azure and AI concepts. Cost not printed; Learn modules are free to access."
+              },
+              {
+                "title": "What is Azure Copilot?",
+                "provider": "Microsoft Learn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Azure users and admins",
+                "url": "https://learn.microsoft.com/en-us/azure/copilot/overview",
+                "verified": true,
+                "note": "Page opened; overview documentation."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Introduction to Azure Copilot",
+                "url": "https://learn.microsoft.com/en-us/training/modules/introduction-microsoft-copilot-azure/"
+              },
+              {
+                "title": "Azure Copilot overview",
+                "url": "https://learn.microsoft.com/en-us/azure/copilot/overview"
+              }
+            ]
+          },
+          {
+            "tool": "Datadog Bits AI",
+            "summary": "Datadog offers a 60-minute Bits AI enablement session and the free Learning Center for core skills. Certifications cover Fundamentals, Log Management and APM, but none is Bits AI specific.",
+            "recommended_order": [
+              "Foundation Enablement: AI-Powered Observability and Security with Datadog",
+              "Core Skills Learning Path",
+              "Datadog Fundamentals Certification Learning Path"
+            ],
+            "paths": [
+              {
+                "title": "Foundation Enablement: AI-Powered Observability and Security with Datadog",
+                "provider": "Datadog",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "60 minutes",
+                "cost": "not stated",
+                "audience": "SREs, developers, security engineers",
+                "url": "https://www.datadoghq.com/technical-enablement/sessions/bits-ai",
+                "verified": true,
+                "note": "Page opened; 60 minutes; objectives cover Bits AI SRE, Bits AI Dev Agent and the Datadog MCP Server."
+              },
+              {
+                "title": "Core Skills Learning Path",
+                "provider": "Datadog Learning Center",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "6 courses",
+                "cost": "Free",
+                "audience": "New Datadog users",
+                "url": "https://learn.datadoghq.com/",
+                "verified": true,
+                "note": "Page opened; 6 courses on navigation, tagging, metrics, monitors and dashboards; platform described as free."
+              },
+              {
+                "title": "Datadog Fundamentals Certification Learning Path",
+                "provider": "Datadog",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "16 courses; exam of 90 multiple-choice questions",
+                "cost": "Enrollment free; exam US$100",
+                "audience": "Datadog practitioners",
+                "url": "https://learn.datadoghq.com/pages/certification",
+                "verified": true,
+                "note": "Page opened; exam booked via webassessor, US$100 per attempt, Credly badge. FAQ lists three exams (Fundamentals, APM, Log Management) though a Cloud SIEM path also appears. Not Bits AI specific."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Datadog Bits AI session",
+                "url": "https://www.datadoghq.com/technical-enablement/sessions/bits-ai"
+              },
+              {
+                "title": "Datadog certification",
+                "url": "https://learn.datadoghq.com/pages/certification"
+              },
+              {
+                "title": "Datadog Learning Center",
+                "url": "https://learn.datadoghq.com/"
+              }
+            ]
+          },
+          {
+            "tool": "Dynatrace Davis AI",
+            "summary": "Dynatrace University has an Associate certification learning plan, and the Associate, Implementation Professional and Administration Professional exams are free at Perform 2027 (Feb 16-18, 2027). University pages do not render, so plan details are unconfirmed. Dynatrace now refers to 'Dynatrace Intelligence' on its Perform page.",
+            "recommended_order": [
+              "Dynatrace Associate Certification Learning Plan",
+              "Perform 2027 certification testing"
+            ],
+            "paths": [
+              {
+                "title": "Dynatrace Associate Certification Learning Plan",
+                "provider": "Dynatrace University",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "about 3h 15m (unconfirmed)",
+                "cost": "Free (unconfirmed)",
+                "audience": "Dynatrace practitioners",
+                "url": "https://university.dynatrace.com/learn/public/learning_plan/view/47/dynatrace-associate-certification-learning-plan",
+                "verified": false,
+                "note": "Page opened but rendered no content; duration and cost come from an earlier search snippet only."
+              },
+              {
+                "title": "Perform 2027 certification testing",
+                "provider": "Dynatrace",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "No cost at Perform 2027",
+                "audience": "Perform registrants",
+                "url": "https://www.dynatrace.com/perform/training/",
+                "verified": true,
+                "note": "Page opened; Associate, Implementation Professional and Administration Professional exams at Perform, Feb 16-18, 2027, no cost; prerequisites due a week before."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "Dynatrace Perform training",
+                "url": "https://www.dynatrace.com/perform/training/"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "Microsoft, Datadog and Google course pages were opened and their level, duration and exam details match the pages. CrowdStrike and Dynatrace University portals render no content, so Charlotte AI and Dynatrace plan details remain weak. Costs for Microsoft exams are country-priced and not stated on the pages. The Google certification page exists but its exam details did not render.",
+        "removed_or_corrected": [
+          "Removed Davis AI documentation (docs.dynatrace.com/.../davis-ai): HTTP 404.",
+          "Corrected SC-401T00 to its official title 'Protect sensitive information with Microsoft Purview in the AI era', Intermediate, 4 days; now verified.",
+          "Corrected SC-900: exam length 45 minutes added.",
+          "Corrected Datadog Fundamentals exam cost to US$100 (90 questions); FAQ lists three exams, not Cloud SIEM.",
+          "Charlotte AI product page: opened, verified=true; cost changed from Free to not stated.",
+          "Gemini for Security Engineers: cost 'No cost' not shown on page, changed to not stated.",
+          "Google Skills: removed unconfirmed GEAR credits claim; cost set to not stated.",
+          "Google Professional Security Operations Engineer: dropped unconfirmed 2-hour exam figure; stays verified=false.",
+          "Dynatrace Associate plan: stays verified=false, details marked unconfirmed; summary notes the Dynatrace Intelligence naming."
+        ]
+      },
+      {
+        "group": "Data, analytics and AI development platforms",
+        "overview": "Each platform has a vendor academy or docs hub, and most have a formal credential. Databricks, Snowflake, AWS and Microsoft have exams. Tableau Pulse uses free Trailhead modules and has no dedicated exam. Google AI Studio and MLflow have docs and free paths but no dedicated certification. Exam costs and durations appear only where an opened page stated them.",
+        "tools": [
+          {
+            "tool": "Databricks Assistant",
+            "summary": "Learn through Databricks Academy training, then hands-on work in Databricks. The certification page lists Data Analyst, Data Engineer, ML, Generative AI Engineer and Context Engineer tracks; none is specific to the Assistant.",
+            "recommended_order": [
+              "Databricks Academy training",
+              "Databricks Certified Data Analyst Associate",
+              "Databricks Certified Generative AI Engineer Associate"
+            ],
+            "paths": [
+              {
+                "title": "Databricks Academy training home",
+                "provider": "Databricks",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Analysts, engineers and business users new to Databricks",
+                "url": "https://www.databricks.com/learn/training/home",
+                "verified": true,
+                "note": "Page opened; it is the vendor training hub. Per-course cost not extracted."
+              },
+              {
+                "title": "Databricks Certified Data Analyst Associate",
+                "provider": "Databricks",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Analysts using Databricks SQL, including Assistant-aided queries",
+                "url": "https://www.databricks.com/learn/training/certification",
+                "verified": true,
+                "note": "Page opened; Associate-level exam on Databricks SQL for introductory analysis tasks. Fee and duration are not shown there."
+              },
+              {
+                "title": "Databricks Certified Generative AI Engineer Associate",
+                "provider": "Databricks",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Engineers building GenAI solutions on Databricks",
+                "url": "https://www.databricks.com/learn/training/certification",
+                "verified": true,
+                "note": "Page opened; it assesses designing, building and deploying GenAI solutions on Databricks. Fee and duration are not shown."
+              },
+              {
+                "title": "Databricks Certified Context Engineering Associate",
+                "provider": "Databricks",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Engineers designing context for AI agents on Databricks",
+                "url": "https://www.databricks.com/learn/training/certification",
+                "verified": true,
+                "note": "Page opened; it assesses designing, assembling and governing context for AI agent systems. Fee and duration are not shown."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Databricks training",
+                "url": "https://www.databricks.com/learn/training/home"
+              },
+              {
+                "title": "Databricks certification",
+                "url": "https://www.databricks.com/learn/training/certification"
+              }
+            ]
+          },
+          {
+            "tool": "Snowflake Cortex AI",
+            "summary": "Learn from the Cortex AI Functions docs and Snowflake University. The certifications page lists SnowPro Core and a Specialty series that includes Gen AI.",
+            "recommended_order": [
+              "Cortex AI Functions documentation",
+              "Snowflake training and certifications hub",
+              "SnowPro Specialty: Gen AI"
+            ],
+            "paths": [
+              {
+                "title": "Cortex AI Functions (AISQL) documentation",
+                "provider": "Snowflake",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Data analysts and engineers using Cortex AI functions",
+                "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/aisql",
+                "verified": true,
+                "note": "Page opened; it is the official reference for the Cortex AI functions. Free is assumed for public docs."
+              },
+              {
+                "title": "Snowflake training and certifications hub",
+                "provider": "Snowflake University",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "All Snowflake users",
+                "url": "https://www.snowflake.com/en/resources/learn/training/",
+                "verified": true,
+                "note": "Page opened; it is the vendor training hub."
+              },
+              {
+                "title": "SnowPro Specialty: Gen AI",
+                "provider": "Snowflake",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Practitioners with Snowflake Gen AI experience",
+                "url": "https://learn.snowflake.com/en/certifications/",
+                "verified": true,
+                "note": "Listed on the opened certifications page as one of three Specialty exams (Snowpark, Native Apps, Gen AI). Fee, duration and exact level are not shown there."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Snowflake training",
+                "url": "https://www.snowflake.com/en/resources/learn/training/"
+              },
+              {
+                "title": "Snowflake certifications",
+                "url": "https://learn.snowflake.com/en/certifications/"
+              },
+              {
+                "title": "Cortex AI Functions docs",
+                "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/aisql"
+              }
+            ]
+          },
+          {
+            "tool": "Tableau Pulse",
+            "summary": "Learn through free Salesforce Trailhead modules. No Tableau Pulse specific exam was found.",
+            "recommended_order": [
+              "Tableau Pulse: Quick Look",
+              "Tableau Pulse Fundamentals",
+              "Unlock Actionable Data Insights with Tableau Next"
+            ],
+            "paths": [
+              {
+                "title": "Tableau Pulse: Quick Look",
+                "provider": "Salesforce Trailhead",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "about 5 minutes",
+                "cost": "Free",
+                "audience": "Data analysts",
+                "url": "https://trailhead.salesforce.com/content/learn/modules/tableau-pulse-quick-look",
+                "verified": true,
+                "note": "Page opened; Foundational badge, ~5 mins. Free is assumed for Trailhead."
+              },
+              {
+                "title": "Tableau Pulse Fundamentals",
+                "provider": "Salesforce Trailhead",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "about 35 minutes",
+                "cost": "Free",
+                "audience": "Business analysts creating metrics",
+                "url": "https://trailhead.salesforce.com/content/learn/modules/tableau-pulse-fundamentals",
+                "verified": true,
+                "note": "Page opened; Foundational badge, ~35 mins, four units."
+              },
+              {
+                "title": "Unlock Actionable Data Insights with Tableau Next",
+                "provider": "Salesforce Trailhead",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "about 1 hour 30 minutes",
+                "cost": "Free",
+                "audience": "Business analysts",
+                "url": "https://trailhead.salesforce.com/content/learn/trails/unlock-actionable-data-insights-with-tableau-next",
+                "verified": true,
+                "note": "Page opened; Foundational trail, ~1 hr 30 mins. It covers Tableau Next rather than Pulse itself."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Tableau Pulse Fundamentals",
+                "url": "https://trailhead.salesforce.com/content/learn/modules/tableau-pulse-fundamentals"
+              },
+              {
+                "title": "Tableau Pulse: Quick Look",
+                "url": "https://trailhead.salesforce.com/content/learn/modules/tableau-pulse-quick-look"
+              }
+            ]
+          },
+          {
+            "tool": "Google AI Studio",
+            "summary": "Learn from Google Cloud Skills Boost generative AI content. No certification specific to AI Studio was found, and the Gemini API docs and AI Studio pages could not be opened.",
+            "recommended_order": [
+              "Beginner: Introduction to Generative AI"
+            ],
+            "paths": [
+              {
+                "title": "Beginner: Introduction to Generative AI",
+                "provider": "Google Cloud Skills Boost",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "4 activities (time not stated)",
+                "cost": "not stated",
+                "audience": "Anyone new to generative AI",
+                "url": "https://www.skills.google/paths/118",
+                "verified": true,
+                "note": "Page opened; it covers LLM fundamentals through responsible AI, not AI Studio itself."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "Google Skills path 118",
+                "url": "https://www.skills.google/paths/118"
+              }
+            ]
+          },
+          {
+            "tool": "Azure AI Foundry",
+            "summary": "Learn via Microsoft Learn Foundry docs and training. The AI-102 certification is retired; the AI-103 Azure AI Apps and Agents Developer Associate is the current Foundry-based credential.",
+            "recommended_order": [
+              "Microsoft Foundry documentation",
+              "Azure AI Apps and Agents Developer Associate (AI-103)"
+            ],
+            "paths": [
+              {
+                "title": "Microsoft Foundry documentation",
+                "provider": "Microsoft Learn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers and architects",
+                "url": "https://learn.microsoft.com/en-us/azure/foundry/",
+                "verified": true,
+                "note": "Page opened; Azure AI Foundry now appears under the Microsoft Foundry name."
+              },
+              {
+                "title": "Microsoft Certified: Azure AI Apps and Agents Developer Associate (AI-103)",
+                "provider": "Microsoft",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "120 minutes",
+                "cost": "Varies by country or region",
+                "audience": "Developers building AI apps and agents on Azure",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/",
+                "verified": true,
+                "note": "Page opened; Intermediate, 120-minute proctored exam, study guide and practice assessment. Price is set by exam country."
+              },
+              {
+                "title": "Microsoft Certified: Azure AI Engineer Associate (AI-102)",
+                "provider": "Microsoft",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Legacy holders",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/",
+                "verified": true,
+                "note": "Page opened; it states this certification and the renewal assessment are retired. Do not pursue new."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "AI-103 certification",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/"
+              },
+              {
+                "title": "Foundry docs",
+                "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+              }
+            ]
+          },
+          {
+            "tool": "Amazon Bedrock",
+            "summary": "Start with the Bedrock User Guide, then AWS Skill Builder prep. AWS Certified AI Practitioner is the foundational credential and covers AI and generative AI on AWS broadly.",
+            "recommended_order": [
+              "Amazon Bedrock User Guide",
+              "AWS Certified AI Practitioner"
+            ],
+            "paths": [
+              {
+                "title": "Amazon Bedrock User Guide",
+                "provider": "AWS",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers and architects",
+                "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html",
+                "verified": true,
+                "note": "Page opened; official overview of the service."
+              },
+              {
+                "title": "AWS Certified AI Practitioner",
+                "provider": "AWS Training and Certification",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "90 minutes",
+                "cost": "100 USD",
+                "audience": "Anyone exploring AI/ML and generative AI on AWS",
+                "url": "https://aws.amazon.com/certification/certified-ai-practitioner/",
+                "verified": true,
+                "note": "Page opened; Foundational, 90 minutes, 100 USD. It covers AWS AI broadly rather than Bedrock alone."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "AWS AI Practitioner",
+                "url": "https://aws.amazon.com/certification/certified-ai-practitioner/"
+              },
+              {
+                "title": "Bedrock guide",
+                "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html"
+              }
+            ]
+          },
+          {
+            "tool": "MLflow",
+            "summary": "MLflow is open source and learned from its official docs, split into LLMs and Agents and Machine Learning. No MLflow-specific certification was found; the Databricks ML Associate is the nearest credential.",
+            "recommended_order": [
+              "MLflow documentation",
+              "MLflow GenAI documentation",
+              "Databricks Certified Machine Learning Associate"
+            ],
+            "paths": [
+              {
+                "title": "MLflow documentation",
+                "provider": "MLflow project",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "ML engineers and data scientists",
+                "url": "https://mlflow.org/docs/latest/index.html",
+                "verified": true,
+                "note": "Page opened."
+              },
+              {
+                "title": "MLflow GenAI documentation",
+                "provider": "MLflow project",
+                "kind": "documentation",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "LLM and agent developers",
+                "url": "https://mlflow.org/docs/latest/genai/",
+                "verified": true,
+                "note": "Page opened; titled LLMs and Agents."
+              },
+              {
+                "title": "Databricks Certified Machine Learning Associate",
+                "provider": "Databricks",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "ML practitioners on Databricks",
+                "url": "https://www.databricks.com/learn/training/certification",
+                "verified": true,
+                "note": "Page opened; it is not an MLflow-specific exam."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "MLflow docs",
+                "url": "https://mlflow.org/docs/latest/index.html"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "Most entries were confirmed by opening the vendor page. Exam fees and durations are given only where the page showed them (AWS and Microsoft AI-103 duration). Google AI Studio is weakest: the Gemini API docs failed with a redirect loop and aistudio.google.com returned no text. Free cost for documentation is assumed rather than stated on the page.",
+        "removed_or_corrected": [
+          "Snowflake: removed SnowPro Associate: Platform; page 404s and the opened certifications page does not list it. Replaced with SnowPro Specialty: Gen AI, which that page lists.",
+          "Snowflake: removed unsupported $100 cost claim along with the removed entry.",
+          "Databricks: removed the unverified third-party $200 and 90 minute claim for the GenAI Engineer exam.",
+          "Tableau Pulse: Quick Look and Tableau Next trail now opened and verified; trail duration corrected from 1 hr 47 mins to about 1 hr 30 mins.",
+          "Google AI Studio: removed Gemini API docs (redirect loop) and aistudio.google.com (no content) as unverifiable.",
+          "Google AI Studio: path 118 retitled to Beginner: Introduction to Generative AI, 4 activities.",
+          "Azure: AI-103 cost set to varies by country; the 'beta' claim was not seen on the page. AI-102 duration of 100 minutes was not confirmed, set to not stated.",
+          "Amazon Bedrock: removed product page entry because it was not reopened in this check.",
+          "Tableau Pulse: removed the claim that no exam exists as a verified fact; it is a not-found statement only."
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "certs: Sales and marketing AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ad8de876605508603",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931639525,
+      "queuedAt": 1792931639484,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Sales and marketing AI",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Sales and marketing AI. Tools: Gong AI; HubSpot AI; LinkedIn Recruiter AI; LinkedIn Sales Navigator AI; Google Ads AI; Meta Advantage+.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2026-10-25:\n- vendor academies a…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931699450,
+      "tokens": 73590,
+      "toolCalls": 10,
+      "durationMs": 58726,
+      "resultPreview": "{\"group\":\"Sales and marketing AI\",\"overview\":\"Most tools in this group have free vendor academies (Gong Academy, HubSpot Academy, LinkedIn training portals, Google Skillshop, Meta Blueprint). Credentials are mostly completion certificates. Google Ads is the exception, with formal certification exams on Skillshop. Several HubSpot and Gong pages render client-side and returned no text, so those path…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "certs: Customer service and experience AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a6c2e37920967ae55",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931639525,
+      "queuedAt": 1792931639485,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Customer service and experience AI",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Customer service and experience AI. Tools: Gainsight AI; Zendesk AI; Intercom Fin; Qualtrics AI.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2026-10-25:\n- vendor academies and learning portals (for example Anthro…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931698028,
+      "tokens": 69682,
+      "toolCalls": 10,
+      "durationMs": 57303,
+      "resultPreview": "{\"group\":\"Customer service and experience AI\",\"overview\":\"All four vendors run their own academies and each has credentials, but exams are mostly paid. Fin Academy is free and gives badges and certificates, while Gainsight, Zendesk and Qualtrics charge exam fees. Gainsight and Zendesk have no dedicated AI exam. Their AI features are covered inside product courses.\",\"tools\":[{\"tool\":\"Gainsight AI\",…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "certs: Legal, audit and GRC AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "af00f9678f2ac6c83",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931698039,
+      "queuedAt": 1792931639485,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Legal, audit and GRC AI",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Legal, audit and GRC AI. Tools: Thomson Reuters CoCounsel; Datasite AI; AuditBoard AI.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2026-10-25:\n- vendor academies and learning portals (for example Anthropic Academ…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931745915,
+      "tokens": 63839,
+      "toolCalls": 8,
+      "durationMs": 47876,
+      "resultPreview": "{\"group\":\"Legal, audit and GRC AI\",\"overview\":\"Optro (formerly AuditBoard) has the clearest formal path: Optro Academy learning paths with CPE-eligible badges and certification exams. Thomson Reuters CoCounsel offers free vendor-led training sessions but no public certification, and Datasite has no public academy or certification found. Several vendor training pages were blocked or missing, so tho…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "certs: Security, cloud operations and observability AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ad984888a2ffa30c5",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931699461,
+      "queuedAt": 1792931639485,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Security, cloud operations and observability AI",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Security, cloud operations and observability AI. Tools: Microsoft Security Copilot; CrowdStrike Charlotte AI; Google Gemini in Security; Microsoft Purview; Azure Copilot; Datadog Bits AI; Dynatrace Davis AI.\n\nFor EACH tool, find the official and widely used ways …",
+      "promptFramed": true,
+      "lastProgressAt": 1792931773556,
+      "tokens": 80705,
+      "toolCalls": 16,
+      "durationMs": 74095,
+      "resultPreview": "{\"group\":\"Security, cloud operations and observability AI\",\"overview\":\"Microsoft tools (Security Copilot, Purview, Azure Copilot) have the clearest vendor paths on Microsoft Learn, with a real exam only for Purview. Google, Datadog and Dynatrace offer academies with free courses and general product certifications but no certification specific to their AI features. CrowdStrike University requires a…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "certs: Data, analytics and AI development platforms",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a9781d6bce6779938",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931745921,
+      "queuedAt": 1792931639486,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Data, analytics and AI development platforms",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Data, analytics and AI development platforms. Tools: Databricks Assistant; Snowflake Cortex AI; Tableau Pulse; Google AI Studio; Azure AI Foundry; Amazon Bedrock; MLflow.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as …",
+      "promptFramed": true,
+      "lastProgressAt": 1792931801019,
+      "tokens": 67544,
+      "toolCalls": 9,
+      "durationMs": 55098,
+      "resultPreview": "{\"group\":\"Data, analytics and AI development platforms\",\"overview\":\"Each platform has a vendor academy or docs hub, and most have a formal credential. Databricks, Snowflake, AWS and Microsoft have exams. Tableau Pulse uses free Trailhead modules and no dedicated exam. Google AI Studio and MLflow have docs and free paths but no dedicated certification. Exam costs and durations are cited only where …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify certs: Customer service and experience AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a29fba2f8081a6057",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931773610,
+      "queuedAt": 1792931698081,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Customer service and experience AI",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Customer service and experience AI\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a page, ru…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931819425,
+      "tokens": 71073,
+      "toolCalls": 4,
+      "durationMs": 45814,
+      "resultPreview": "{\"group\":\"Customer service and experience AI\",\"overview\":\"All four vendors run their own academies with credentials. Fin Academy courses are free, with badges and certificates. Gainsight, Zendesk and Qualtrics charge exam fees. None has a dedicated AI exam; AI is covered inside product courses (Zendesk lists AI ethics and trust in CX, Fin Academy is built around Fin).\",\"tools\":[{\"tool\":\"Gainsight …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify certs: Sales and marketing AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aefd9e10528eeaa59",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931801030,
+      "queuedAt": 1792931699506,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Sales and marketing AI",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Sales and marketing AI\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a page, run with the B…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931871811,
+      "tokens": 78869,
+      "toolCalls": 9,
+      "durationMs": 70780,
+      "resultPreview": "{\"group\":\"Sales and marketing AI\",\"overview\":\"Most tools in this group have free vendor academies (Gong Academy, HubSpot Academy, LinkedIn training portals, Google Skillshop, Meta Blueprint). Credentials are mostly completion certificates. Google Ads has formal exams on Skillshop. HubSpot Academy course pages render client-side and could not be read, so only the HubSpot AEO certifications page (of…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify certs: Legal, audit and GRC AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ae8b41bb1162cb09e",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931819431,
+      "queuedAt": 1792931745959,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Legal, audit and GRC AI",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Legal, audit and GRC AI\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a page, run with the …",
+      "promptFramed": true,
+      "lastProgressAt": 1792931849580,
+      "tokens": 64897,
+      "toolCalls": 4,
+      "durationMs": 30149,
+      "resultPreview": "{\"group\":\"Legal, audit and GRC AI\",\"overview\":\"Optro (formerly AuditBoard) has the only verified formal path: Optro Academy learning paths with CPE-eligible badges and certification exams. Thomson Reuters CoCounsel has vendor training but no public certification found, and Datasite has no public academy or certification found.\",\"tools\":[{\"tool\":\"Thomson Reuters CoCounsel\",\"summary\":\"Learn CoCounse…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "verify certs: Security, cloud operations and observability AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a23b7c00844cb71ec",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931849587,
+      "queuedAt": 1792931773644,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Security, cloud operations and observability AI",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Security, cloud operations and observability AI\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OP…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931905711,
+      "tokens": 72354,
+      "toolCalls": 6,
+      "durationMs": 56124,
+      "resultPreview": "{\"group\":\"Security, cloud operations and observability AI\",\"overview\":\"Microsoft tools (Security Copilot, Purview, Azure Copilot) have the clearest vendor paths on Microsoft Learn, with a real exam only for Purview. Google, Datadog and Dynatrace offer academies with free courses and general product certifications, but none is specific to their AI features. CrowdStrike University training sits behi…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "verify certs: Data, analytics and AI development platforms",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "aad5790aa3951249c",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931871817,
+      "queuedAt": 1792931801062,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Data, analytics and AI development platforms",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Data, analytics and AI development platforms\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN …",
+      "promptFramed": true,
+      "lastProgressAt": 1792931928441,
+      "tokens": 75498,
+      "toolCalls": 6,
+      "durationMs": 56624,
+      "resultPreview": "{\"group\":\"Data, analytics and AI development platforms\",\"overview\":\"Each platform has a vendor academy or docs hub, and most have a formal credential. Databricks, Snowflake, AWS and Microsoft have exams. Tableau Pulse uses free Trailhead modules and has no dedicated exam. Google AI Studio and MLflow have docs and free paths but no dedicated certification. Exam costs and durations appear only where…"
+    }
+  ],
+  "totalTokens": 718051,
+  "totalToolCalls": 82
+}
