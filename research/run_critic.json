@@ -1,0 +1,403 @@
+{
+  "summary": "Completeness critique of the verified AI handbook research, then targeted gap-fill research",
+  "agentCount": 7,
+  "logs": [
+    "Critic found 6 gaps",
+    "Gap fill complete: 6 of 6 gaps researched"
+  ],
+  "result": {
+    "critic": {
+      "overall_assessment": "The tool research is mostly solid. Pricing and product status are well sourced for Claude, Figma, the coding assistants, Workday and UiPath, and the expansion list (41 tools, 18 departments) is broad. The department side has a structural hole: departments 52 (Research, Innovation & Emerging Technology) and 53 (Enterprise Architecture & Integration) are missing from condensed.json entirely. The Operations/PMO cluster is self-described as an unsourced draft, with departments 55 and 57-60 resting on general practice, and departments 18, 19, 34, 35, 42, 45 and 46 are also low confidence. Eight handbook tools are low confidence, mainly because vendor sites returned 403. That includes ChatGPT Enterprise (1 source, all data-handling claims unverified), which a CIO will treat as a blocking gap for a flagship horizontal tool. The cross-cutting topics a CHRO, CIO or L&D director expects are close to absent: the research never mentions the EU AI Act Article 4 literacy duty, accessibility, vendor lock-in or training-ROI method, and it has one passing mention each of prompt injection, shadow AI and hallucination. There is also no consolidated rationalisation view of the overlapping tools (six general assistants, four Microsoft surfaces of one licence, four coding IDEs, two Perplexity entries), and no current-name table, even though at least ten handbook tool names have been renamed or are being retired.",
+      "gaps": [
+        {
+          "area": "Missing and unsourced departments (52, 53 and Operations cluster 55, 57-60)",
+          "description": "Departments 52 Research, Innovation & Emerging Technology and 53 Enterprise Architecture & Integration have no entry in the research at all. In the Operations, PMO and transformation cluster, departments 55, 57, 58, 59 and 60 have no opened source supporting their use cases, so their content is generic general-practice reasoning that a reader would find unspecific.",
+          "research_task": "For each of these seven handbook departments, find at least two independent, openable sources dated 2025-2026 (analyst, professional-body, peer-reviewed or named-customer case study, not only vendor marketing) that describe concrete generative-AI use cases: 52 Research, Innovation & Emerging Technology; 53 Enterprise Architecture & Integration; 55 Service Delivery & Managed Services; 57 Business Transformation & Change Management; 58 Quality Management & Process Compliance (QMS: CAPA, deviations, audit findings); 59 Business Continuity & Disaster Recovery; 60 Supply Chain, Logistics & Inventory. Try PMI, Prosci, APQC, ASQ, BCI (Business Continuity Institute), ASCM, Gartner/Forrester summaries, The Open Group/TOGAF and LeanIX/Ardoq material, ServiceNow/Jira Service Management docs, Kinaxis/o9/Blue Yonder docs, and MasterControl/Veeva QMS. For each department return: 3-5 specific use cases tied to named work artefacts; fit commentary on the handbook's assigned tools; any dedicated tools omitted (e.g. LeanIX AI, Ardoq, Fusion Risk Management, Everbridge, Kinaxis Maestro, o9, MasterControl); data risks; a confidence rating; and the URLs opened.",
+          "priority": "high"
+        },
+        {
+          "area": "AI regulation obligations for employers in 2026",
+          "description": "The EU AI Act is mentioned only in passing in the HR cluster. The research has nothing on the Article 4 AI-literacy obligation, which directly governs this training programme, nothing on Article 26 deployer duties, the Article 50 transparency duties from 2 August 2026, or the status of the EU Digital Omnibus changes to timelines and literacy. US state and other employment-AI laws are not mapped to departments or tools.",
+          "research_task": "Produce an employer-facing obligations table, current as of October 2026, from primary or authoritative sources: EUR-Lex, the European Commission AI Office (including its AI literacy Q&A and the living repository of literacy practices), EU Parliament/Council press releases on the Digital Omnibus, state legislatures, and the UK ICO/DSIT. Cover: (1) EU AI Act Article 4 AI literacy (in force 2 Feb 2025), including whether the Digital Omnibus has changed it from a deployer duty, and what documentation of training regulators expect; (2) Article 26 deployer obligations and the Annex III employment category, with the current application date for high-risk obligations after any Omnibus delay; (3) Article 50 transparency and Article 5 prohibitions relevant to workplaces (emotion recognition at work); (4) US: NYC Local Law 144, Illinois HB 3773 (effective 1 Jan 2026), the Colorado AI Act's current effective date and status, California CPPA ADMT regulations and the California Civil Rights Council FEHA automated-decision rules, and any federal preemption developments; (5) UK and one APAC jurisdiction (e.g. South Korea's AI Basic Act, effective Jan 2026). For each item give the obligation, effective date, who it binds, which handbook departments and tools it touches (e.g. LinkedIn Recruiter AI, Workday AI, Teams recap), what it means for training content, and the source URL.",
+          "priority": "high"
+        },
+        {
+          "area": "Horizontal assistants: ChatGPT Enterprise verification, cost models, data residency, rationalisation and lock-in",
+          "description": "ChatGPT Enterprise is low confidence with one third-party source; its training defaults, retention, residency, certifications and BAA are all unverified because openai.com returned 403. There is no side-by-side licensing cost model, residency matrix or rationalisation guidance for the six horizontal tools (Gemini, Claude, ChatGPT Enterprise, NotebookLM/Gemini Notebook, Perplexity, Perplexity Enterprise) plus Microsoft Copilot, and nothing on vendor lock-in or exit.",
+          "research_task": "(a) Verify ChatGPT Enterprise and ChatGPT Business from sources other than openai.com if it stays blocked: trust.openai.com, the OpenAI enterprise privacy page via a web archive snapshot, the OpenAI Services Agreement and DPA PDFs, Microsoft/Azure OpenAI docs, and reputable press from 2026. Cover training default, admin-set retention, data-residency regions, SOC 2/ISO 27001/27701/42001, the BAA, seat minimum, price model (seat vs credits/tokens) and the Team-to-Business rename. (b) Build a comparison table for Gemini (Workspace and Gemini Enterprise), Claude Enterprise, ChatGPT Enterprise, Microsoft Copilot (M365), Gemini Notebook Enterprise and Perplexity Enterprise. Columns: list price or published model, seat minimum, usage-metered components, EU/UK/other residency options for stored data and for inference, training default, retention controls, SSO/SCIM, and audit-log/eDiscovery export. Add a worked annual cost estimate for a 1,000-seat organisation under two adoption scenarios. (c) Summarise overlap and rationalisation guidance from analyst or practitioner sources (e.g. Gartner, Forrester, Directions on Microsoft, Redress): when to run one versus two assistants, and the redundancy of separate Perplexity and Perplexity Enterprise entries. Also cover lock-in factors and exit provisions: data and conversation export, custom GPT/Gem/Project portability, MCP/connector portability, contract term and price-protection clauses.",
+          "priority": "high"
+        },
+        {
+          "area": "Hallucination/verification practice, prompt injection and shadow AI",
+          "description": "These are core safe-use training topics, and the research covers each in only one passing mention. Many handbook tools are now agentic (Claude Code, Cursor, Copilot Agent Mode, Perplexity Comet/Computer, Agentforce, MCP connectors), so the handbook needs a sourced cross-cutting module rather than per-tool caveats.",
+          "research_task": "Compile a cross-cutting evidence brief from authoritative sources dated 2024-2026. (1) Hallucination and verification: measured error and citation-accuracy rates for enterprise assistants and research tools, e.g. the Stanford RegLab/HAI legal-research hallucination study, Columbia Tow Center AI-search citation study, Vectara hallucination leaderboard, EBU/BBC news-integrity study, and any 2026 updates. Also find practical verification techniques recommended by NIST AI 600-1, the UK government AI Playbook or major vendors. (2) Prompt injection and agent risk: OWASP Top 10 for LLM Applications 2025 (LLM01) and the OWASP Top 10 for Agentic Applications, UK NCSC and CISA guidance, documented 2025-2026 incidents involving indirect prompt injection through email, documents, browsers or MCP servers (e.g. EchoLeak in M365 Copilot, AI-browser injection research), and vendor mitigations (Microsoft Prompt Shields, Anthropic and Perplexity statements). (3) Shadow AI: survey data on unsanctioned AI use and data leakage (e.g. Microsoft Work Trend Index, Cyberhaven, Netskope, IBM Cost of a Data Breach 2025 shadow-AI figures, Software AG), and recommended controls (approved-tool lists, DLP, browser controls, Purview DSPM for AI). Return a one-page employee rule set plus a manager/IT control checklist, each item cited.",
+          "priority": "high"
+        },
+        {
+          "area": "Adoption, change management, training ROI, accessibility and L&D tooling",
+          "description": "An L&D director will expect evidence on what makes AI training stick and how to measure it. The research has two passing mentions of ROI and adoption, and no coverage of accessibility (WCAG, the European Accessibility Act, assistive use of AI) or of AI tools for building the training itself (AI video and authoring, LMS and skills-platform AI), which the L&D department entry itself flags as omitted.",
+          "research_task": "(1) Adoption and change management: summarise rigorous 2024-2026 evidence on what drives sustained enterprise gen-AI adoption and productivity, e.g. the Harvard/BCG 'jagged frontier' field experiment, Brynjolfsson et al. on customer support, the Microsoft/Accenture Copilot RCTs, MIT NANDA 'GenAI Divide' (2025), BCG AI at Work 2025/2026, Prosci AI-adoption research, the Microsoft Work Trend Index 2026 and UK government Copilot trial results. Extract the practices that matter: champions networks, manager modelling, role-specific use cases, time allocation. (2) Training ROI: how to measure AI-training impact using Kirkpatrick/Phillips ROI and telemetry (Microsoft Copilot Analytics/Viva Insights, Gemini and Claude admin usage dashboards, GitHub Copilot metrics API), with recommended KPIs and baseline design. (3) Accessibility: the obligations and good practice for AI tools and AI-generated training content under WCAG 2.2, the European Accessibility Act (applicable since 28 June 2025) and US Section 508/ADA Title II rule. Note the accessibility features and gaps of the main handbook tools, and evidence on AI as assistive technology for disabled and neurodivergent employees (e.g. UK Department for Business and Trade Copilot trial findings). (4) L&D tooling: identify 4-6 widely used AI tools for building and delivering training (e.g. Synthesia, HeyGen, Articulate AI Assistant, Docebo/Cornerstone/Degreed AI, LinkedIn Learning AI coaching), each with pricing model, enterprise data handling and confidence.",
+          "priority": "medium"
+        },
+        {
+          "area": "Low-confidence tool re-verification and outdated tool names",
+          "description": "Eight handbook tools are low confidence: ChatGPT Enterprise is covered above; the other seven are Canva Magic Studio, Adobe Firefly, Adobe Acrobat AI Assistant, ServiceNow Now Assist, Gainsight AI, Meta Advantage+ and Google AI Studio. Tableau Pulse, Snowflake Cortex, CrowdStrike Charlotte, Datadog Bits AI and MLflow rest on only 2-3 sources. Many handbook names are outdated, but the renames are scattered through notes rather than given as a table, and several remain unverified (Canva AI, AuditBoard to Optro, Databricks Assistant to Genie Code, Workday Illuminate to Sana). The Microsoft group also omits Copilot Studio and Agent 365, the agent-building and agent-governance layer.",
+          "research_task": "(1) For Canva, Adobe Firefly, Adobe Acrobat AI Assistant/Acrobat Studio, ServiceNow Now Assist, Gainsight AI, Meta Advantage+, Google AI Studio and Tableau Pulse, confirm current product name, pricing model, training default for business tiers, IP indemnity (Adobe, Canva) and certifications. Where vendor sites return 403, use alternative routes: vendor docs/help subdomains (helpx.adobe.com, docs.servicenow.com, support.gainsight.com, ai.google.dev, help.tableau.com), vendor PDFs (trust fact sheets, product terms), web-archive snapshots, investor filings and 2026 analyst or press coverage. (2) Produce a 'current name vs handbook name' table with effective date and source URL for every handbook tool that has been renamed, rebundled or put on a sunset path. Cover at least: NotebookLM to Gemini Notebook; Microsoft 365 Copilot to Microsoft Copilot; Canva Magic Studio to Canva AI; Jira Atlassian Intelligence to Rovo; Salesforce Einstein to Agentforce; Azure AI Foundry to Microsoft Foundry; Gemini Code Assist to Antigravity; Amazon Q Developer to Kiro; Workday AI to Sana; AuditBoard to Optro; Databricks Assistant to Genie Code; Vertex AI to Gemini Enterprise Agent Platform; Microsoft Playwright Testing to Azure App Testing. Confirm or reject each with an opened page. (3) Write a short profile of Microsoft Copilot Studio and Agent 365 (pricing in Copilot Credits, governance features, overlap with Power Automate and Agentforce/ServiceNow AI Control Tower).",
+          "priority": "medium"
+        }
+      ]
+    },
+    "gapFills": [
+      {
+        "area": "Missing and unsourced departments (52, 53 and Operations cluster 55, 57-60)",
+        "confidence": "low",
+        "findings_markdown": "Only 53, 58 and 59 reach two opened sources dated 2025-2026. 55, 57 and 60 have one each, and 52 has none that are usable, so no department here is fully evidenced. Several analyst pages (Gartner, PDA, Business Wire) returned 403 and are not cited.\n\n- **52 Research and Innovation:** One opened source, WIPO. GenAI patent filings roughly doubled from 18,862 in 2024 to 37,808 in 2025, which supports patent-landscape and horizon-scanning work [11]. The Schaeffler scouting-tool paper is 2024 and unreadable, so it is not verified. Dedicated tools omitted: not verified. Data risk: unpublished invention disclosures.\n- **53 Enterprise Architecture:** Ardoq (28 May 2026) launched an assistant, an AI Import Builder and custom agents, claims about 40% of routine EA work can be automated, and cites a Tenneco 292% ROI. These are vendor claims [1]. SAP says LeanIX hosts its AI Agent Hub [2]. Use cases are application-rationalisation analysis, dependency tracing and agent-inventory governance. Omitted tools: LeanIX AI and Ardoq. Risk: stale repository data.\n- **58 Quality (QMS):** Copilot-drafted deviation reports need review and archiving by qualified staff. KPIs include CAPA cycle time [3]. An LLM-assisted deviation triage tool cited a superseded SOP, which the QMS had no category for [4]. Omitted tools: MasterControl and Veeva Vault QMS. Risk: GxP validation and audit trail.\n- **59 BC/DR:** A DRJ article (27 April 2026, consultant-authored) reports figures from the author's own projects, not independent evidence. They cover control-gap mapping to ISO 22301 (40% less effort), business impact analysis RTO conflict detection (30%), vendor SLA review (25%), playbooks (50%) and test scenarios (60%) [5]. The BCI launched a GenAI white paper, but only event coverage was opened [6]. Omitted tools: Fusion Risk Management and Everbridge, not verified. Risk: plan and contract data; the author recommends local models [5].\n- **57 Transformation and Change:** Prosci says leaders report communicating AI strategy more than employees observe [7]. That supports communications drafting and sentiment checks, but use-case detail is thin. Omitted tool: Prosci Kaiya, whose launch was in 2024 and is therefore not cited.\n- **60 Supply Chain:** Kinaxis says about 10% of customers have Maestro Agents (Q2 2026) [8]. Zoomlogi agents chase missing tracker data and triage after-hours carrier calls, and Gartner predicts 60% adoption by 2030 [9]. Omitted tools: Kinaxis Maestro, o9. Risk: supplier and pricing data.\n- **55 Service Delivery:** Getronics' automation of about 1M tickets a year is a vendor claim [10]. ServiceNow documentation did not render. Omitted tools: ServiceNow Now Assist and Jira Service Management. Risk: client data cross-contamination.",
+        "sources": [
+          {
+            "title": "Ardoq Launches AI-First Enterprise Architecture Platform (Business Wire, 28 May 2026)",
+            "url": "https://www.finanznachrichten.de/nachrichten-2026-05/68618111-ardoq-launches-ai-first-enterprise-architecture-platform-004.htm"
+          },
+          {
+            "title": "SAP LeanIX 2026: Enterprise Architecture Becomes the Control Plane (SAVIC, 20 May 2026)",
+            "url": "https://www.savictech.com/insights/sap-leanix-enterprise-architecture-ai-autonomous-enterprise-2026/"
+          },
+          {
+            "title": "How Generative AI is Transforming Deviation Management (ISPE iSpeak, 20 Nov 2025)",
+            "url": "https://ispe.org/pharmaceutical-engineering/ispeak/how-generative-ai-transforming-deviation-management-lessons"
+          },
+          {
+            "title": "You Can't CAPA What You Can't Classify (Pharmaceutical Online, 16 Sep 2026)",
+            "url": "https://www.pharmaceuticalonline.com/doc/you-can-t-capa-what-you-can-t-classify-0001"
+          },
+          {
+            "title": "5 Generative AI Resilience Use Cases Transforming Business Continuity (DRJ, 27 Apr 2026)",
+            "url": "https://drj.com/journal_main/generative-ai-resilience-use-cases/"
+          },
+          {
+            "title": "BCAW+R 2025 opens with predictive analytics in focus (BCI)",
+            "url": "https://www.thebci.org/news/forecasting-the-future-bcaw-r-2025-opens-with-predictive-analytics-in-focus.html"
+          },
+          {
+            "title": "Enterprise AI adoption best practices (Prosci, updated 6 Oct 2026)",
+            "url": "https://www.prosci.com/blog/enterprise-ai-adoption-best-practices"
+          },
+          {
+            "title": "Kinaxis Q2 Earnings Call Highlights (MarketBeat, 9 Aug 2026)",
+            "url": "https://www.marketbeat.com/instant-alerts/kinaxis-q2-earnings-call-highlights-2026-08-09/"
+          },
+          {
+            "title": "Why AI's clearest supply chain wins are in the basics (Pharmaceutical Commerce, Oct 2026)",
+            "url": "https://www.pharmaceuticalcommerce.com/view/why-ai-s-clearest-supply-chain-wins-are-in-the-basics"
+          },
+          {
+            "title": "OneReach.ai IT service desk page with Getronics case",
+            "url": "https://onereach.ai/solutions/it-service-desk/"
+          },
+          {
+            "title": "Top Generative AI Patent Trends in 2025 (WIPO)",
+            "url": "https://www.wipo.int/en/web/patent-analytics/generative-ai/2025"
+          }
+        ]
+      },
+      {
+        "area": "AI regulation obligations for employers in 2026",
+        "findings_markdown": "The Digital Omnibus on AI was published in the Official Journal on 24 July 2026 and entered into force 27 July 2026 [1].\n\n| Item | Obligation / date | Training and department impact |\n|---|---|---|\n| EU Art. 4 literacy | Applied from 2 Feb 2025. Now providers and deployers must \"take measures supporting\" staff AI literacy, not guarantee a \"sufficient level\". In practice that means documenting training and awareness programmes, not certifying individuals [1][2]. | Keep this programme's content, attendance and dates as records. It is still mandatory and covers all departments. |\n| EU Art. 26 / Annex III | Annex III high-risk duties (recruitment, employment) moved from 2 Aug 2026 to 2 Dec 2027. Annex I products move to 2 Aug 2028. Art. 26(2) keeps specific competence and training duties for high-risk deployers [1][2]. | HR, Recruiting and Workday or LinkedIn Recruiter AI users need oversight training before Dec 2027. |\n| EU Art. 50 / Art. 5 | Art. 50 disclosure that users are interacting with AI applies from 2 Aug 2026. Machine-readable marking of AI output applies to older systems from 2 Dec 2026. A new Art. 5 ban on \"nudifier\" and CSAM generation was added [1][2]. I did not open a source on the existing Art. 5 emotion-recognition-at-work ban, so that point is not verified. | Marketing and Comms content tools. Chatbot disclosure. |\n| Colorado | SB 26-189 repealed and replaced the 2024 Act (signed 14 May 2026), effective 1 Jan 2027. It covers ADMT that materially influences employment decisions. Deployers must give pre-use notice and an adverse-decision explanation within 30 days, and keep records for 3 years. Draft rules have a hearing and comment deadline of 26 Oct 2026 [2][3]. | HR and ADMT screening tools: notice and human-review procedures. |\n| Illinois HB 3773 | In force 1 Jan 2026. Requires notice when AI is used in employment decisions and bans ZIP-code proxies. IDHR withdrew its draft rules on 2 June 2026 [3]. | Hiring managers and recruiters. |\n| California | CPPA ADMT rules apply from 1 Jan 2027: pre-use notice, opt-out and a risk assessment. SB 947 and SB 951 are pending in the Assembly [3]. | HR, performance management and layoff tools. |\n| Connecticut | SB 5 employment-AI provisions apply to tools deployed from 1 Oct 2027 [3]. | HR. |\n| South Korea | The AI Basic Act took effect 22 Jan 2026. Hiring is listed as high-impact AI, which carries explainability duties and advance user notice [4]. Reported fines run up to KRW 30m, with a grace period of at least a year; this comes from a search summary only and is not verified. | Korean HR and recruiting. |\n\nNot verified: NYC Local Law 144, California Civil Rights Council FEHA rules, federal preemption developments, and UK ICO/DSIT guidance. I did not open primary sources for these. The Commission AI literacy Q&A page returned HTTP 403, so regulator documentation expectations rest on law-firm commentary [1].",
+        "sources": [
+          {
+            "title": "Lewis Silkin: The Digital Omnibus on AI enters into force today",
+            "url": "https://www.lewissilkin.com/insights/2026/07/27/the-digital-omnibus-on-ai-enters-into-force-today-102nedo"
+          },
+          {
+            "title": "Gibson Dunn: EU AI Act Omnibus Agreement",
+            "url": "https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/"
+          },
+          {
+            "title": "Covington Inside Global Tech: ADMT Law Round-Up for Employers (18 Aug 2026)",
+            "url": "https://www.insideglobaltech.com/2026/08/18/admt-law-round-up-what-employers-need-to-know-about-recent-admt-laws/"
+          },
+          {
+            "title": "Cooley: South Korea's AI Basic Act overview",
+            "url": "https://www.cooley.com/news/insight/2026/2026-01-27-south-koreas-ai-basic-act-overview-and-key-takeaways"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "area": "Horizontal assistants: ChatGPT Enterprise verification, cost models, data residency, rationalisation and lock-in",
+        "findings_markdown": "openai.com and help.openai.com returned 403, so ChatGPT claims rest on two UK-consultancy pages that say they quote OpenAI's own tables (second-hand, medium confidence).\n\n- **ChatGPT Enterprise:** no training on workspace data by default, which also applies to Business [1][2]. Retention is configurable only for \"qualifying organisations\" [1]. Residency covers UK, EU and eight other regions at rest. In-region inference is offered for the US or Europe only, so UK processing is not covered [1]. Residency is provisioned at workspace creation and cannot be added later. Whether an in-place Business-to-Enterprise upgrade counts as a new workspace is not publicly stated [2]. The ISO 27001/27017/27018/27701 certificate covers Enterprise and Edu, not Business. Enterprise has SCIM, RBAC and a Compliance API for audit and eDiscovery export, but retains logs only 30 days [2]. The OpenAI DPA counterparty is the US entity, OpenAI OpCo [2].\n- **ChatGPT Business:** SOC 2 Type 2 and SAML SSO, but no SCIM, audit logs, ISO or residency, and no invoice billing [2]. The Team-to-Business rename (29 Aug 2025), seat minimum, seat-versus-credits price model, ISO 42001 and the BAA are not verified from opened pages.\n- **Claude Team/Enterprise:** no training by default, admin-set retention, workspace geo \"us\" only, no EU/UK region on the first-party product, and ISO 42001 and a BAA [1]. Price is custom, starting around $60 per user per month at minimum-seat commitments [4]. SSO, SCIM and audit logs are listed [4].\n- **Gemini (Workspace):** no training without customer permission. Gemini Enterprise lists at $30 per user per month on top of Workspace. Residency is not stated for Gemini, and data-region settings do not apply to Gemini Notebook [1][4].\n- **Microsoft 365 Copilot:** $30 per user per month on top of E3/E5, with a BAA under Microsoft's wider terms and Purview/Sentinel audit [4].\n- **Perplexity Enterprise and Gemini Notebook Enterprise price, seat minimum, retention and SSO:** not verified, because no opened source covers them.\n\nWorked estimate for 1,000 seats at list price (derived from [4]):\n\n| Scenario | Annual licence |\n|---|---|\n| A: single assistant, Copilot for all | 1,000 × $30 × 12 = $360k |\n| B: Copilot for all, plus 200 Claude at ~$60, plus 50 Gemini at $30 | $360k + $144k + $18k = $522k |\n\nBoth exclude the base M365 licence and metered usage.\n\nRationalisation: Gartner's May 2026 guidance is to match assistants to use case and worker type, weighing capability, cost and trust. Its Sept 2026 Magic Quadrant and ChatGPT Enterprise-vs-Copilot paper are paywalled [3]. Forrester sees 2026 as a consolidation year, with 25% of planned AI spend deferred to 2027, while the cited analyst advice is a diversified toolkit [3]. A Microsoft partner (a biased source) says most Fortune 500 firms run two of three assistants [4]. Plain Perplexity and Perplexity Enterprise are not verified as redundant.\n\nLock-in, exit rights and price-protection clauses: no opened source covers them, because the Redress page failed. Not verified.",
+        "sources": [
+          {
+            "title": "Where your data actually goes: UK residency and GDPR for ChatGPT, Claude, Gemini, Grok and Muse (SpotDev, Sept/Oct 2026)",
+            "url": "https://www.spotdev.co.uk/blog/ai-data-residency-uk-chatgpt-claude-gemini-grok-muse"
+          },
+          {
+            "title": "The ChatGPT Business and Enterprise gap that surfaces during procurement (SpotDev, Jul 2026)",
+            "url": "https://www.spotdev.co.uk/blog/chatgpt-business-vs-enterprise-governance-gap"
+          },
+          {
+            "title": "AI Assistants Compared 2026 (IT Daily, 4 May 2026)",
+            "url": "https://en.it-daily.net/it-management-en/ai-en/ai-assistants-compared-2026"
+          },
+          {
+            "title": "Microsoft Copilot vs Google Gemini vs Anthropic Claude Enterprise (EPC Group, Oct 2026)",
+            "url": "https://www.epcgroup.net/microsoft-copilot-vs-gemini-vs-claude-enterprise-decision-framework-2026"
+          }
+        ],
+        "confidence": "low"
+      },
+      {
+        "area": "Hallucination/verification practice, prompt injection and shadow AI",
+        "findings_markdown": "**Hallucination and verification**\n- Stanford RegLab/HAI (May 2024): paid legal-research AI still hallucinated; Lexis+ AI and Ask Practical Law AI were wrong over 17% of the time, Westlaw AI-Assisted Research over 34%. General chatbots hallucinated 58-82% on legal queries. Retrieval (RAG) reduced but did not remove errors [1].\n- Columbia Tow Center (March 2025): eight AI search tools gave incorrect answers to over 60% of news-citation queries (Perplexity 37%, Grok 3 94%). Premium tiers had higher error rates because they answered confidently instead of declining, and tools fabricated links [2].\n- Not verified: EBU/BBC (Oct 2025) \"45% of answers had a significant issue\" is from search snippets only, as the primary page returned 403. Vectara, NIST AI 600-1 and UK AI Playbook verification advice were not opened.\n\n**Prompt injection and agents**\n- OWASP LLM01:2025 says injected instructions can be imperceptible to humans, and that RAG and fine-tuning do not fully mitigate injection [3].\n- EchoLeak (CVE-2025-32711, M365 Copilot, June 2025): one crafted email enabled zero-click data exfiltration by chaining bypasses of Microsoft's XPIA classifier and a Teams proxy allowed by the content security policy. The paper recommends least privilege, output validation and strict CSP [4].\n- UK NCSC (8 Dec 2025): LLMs do not separate instructions from data, so injection may never be fully mitigated. It advises deterministic, non-LLM limits on actions, dropping tool privileges when processing untrusted parties' content, distrusting deny-lists and \"stops injection\" products, and logging inputs, outputs and tool calls [5].\n- Not verified: OWASP Agentic Top 10, CISA guidance, Prompt Shields, and Anthropic and Perplexity statements.\n\n**Shadow AI**\n- IBM Cost of a Data Breach 2025: high shadow AI added USD 670,000 to average breach cost; 63% of 600 organizations had no AI governance policy; 97% of those with AI incidents lacked AI access controls [6].\n- Netskope 2026: 47% of genAI users still used personal AI apps (down from 78%); sensitive-data policy incidents doubled to an average of 223 per month per organization [7].\n- Not verified: Microsoft Work Trend Index, Cyberhaven, Software AG, Purview DSPM.\n\n**Employee rules**\n1. Use only approved, company-account AI tools [6][7].\n2. Treat citations and quotes as unverified until you open the source [2].\n3. Check high-stakes output (legal, financial, customer-facing) against primary sources; do not trust a \"grounded\" tool by default [1].\n4. Do not let agents act on email, web or document content you do not trust [4][5].\n\n**Manager/IT checklist**\n- Publish an AI policy and an approved-tool list, and provision managed accounts [6][7].\n- Give agents least privilege, with deterministic approval gates for sends and writes [4][5].\n- Log prompts, outputs and tool calls [5].\n- Monitor for sensitive data going to personal AI apps [7].",
+        "sources": [
+          {
+            "title": "Stanford HAI: AI on Trial, Legal Models Hallucinate in 1 out of 6 (or More) Benchmarking Queries",
+            "url": "https://hai.stanford.edu/news/ai-trial-legal-models-hallucinate-1-out-6-or-more-benchmarking-queries"
+          },
+          {
+            "title": "CJR Tow Center: AI Search Has a Citation Problem",
+            "url": "https://www.cjr.org/tow_center/we-compared-eight-ai-search-engines-theyre-all-bad-at-citing-news.php"
+          },
+          {
+            "title": "OWASP LLM01:2025 Prompt Injection",
+            "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+          },
+          {
+            "title": "EchoLeak: The First Real-World Zero-Click Prompt Injection Exploit in a Production LLM System (arXiv)",
+            "url": "https://arxiv.org/html/2509.10540v1"
+          },
+          {
+            "title": "NCSC: Prompt injection is not SQL injection (it may be worse)",
+            "url": "https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection"
+          },
+          {
+            "title": "IBM: 2025 Cost of a Data Breach Report, Navigating the AI rush without sidelining security",
+            "url": "https://www.ibm.com/think/x-force/2025-cost-of-a-data-breach-navigating-ai"
+          },
+          {
+            "title": "Netskope Cloud and Threat Report 2026",
+            "url": "https://www.netskope.com/resources/cloud-and-threat-reports/cloud-and-threat-report-2026"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "area": "Adoption, change management, training ROI, accessibility and L&D tooling",
+        "findings_markdown": "**Coverage note:** only sources I opened are cited. BCG, MIT NANDA, Brynjolfsson, Prosci, Work Trend Index, Kirkpatrick/Phillips, vendor telemetry docs and most L&D vendors' pricing were not opened, so those are not verified here.\n\n**Adoption (UK DBT Copilot trial, the one opened rigorous case)**\n- 1,000 licences were allocated for three months from October 2024, evaluated by diary study, interviews, observed tasks and a live usage dashboard [1].\n- 72% of diary respondents were satisfied. Time was saved on drafting, research summaries, meeting transcription, information search and brainstorming. Image generation, scheduling and PowerPoint creation saved no time [1].\n- Benefit was role-specific: HR and Commercial gained more, Policy and Legal less. Security and acceptable-use uncertainty made users cautious, and the evaluation stressed training and support [1]. This supports role-specific use cases and clear usage policy.\n\n**Training ROI**\n- DBT's design is a usable template: pair self-reported diaries (use case, time saved, accuracy, satisfaction) with usage telemetry [1]. Phillips-style ROI and vendor dashboards (Viva Insights, GitHub metrics API) are recommended practice, but I did not verify them.\n\n**Accessibility**\n- The EAA applies from 28 June 2025. Its covered services include e-commerce, consumer banking, e-books and electronic communications. Internal training platforms are not obviously listed, so scope needs legal review [3].\n- US ADA Title II web rule: WCAG 2.1 AA, with deadlines of 24 April 2026 (population 50,000 or more) and 26 April 2027 (smaller bodies) per a February 2026 bulletin [5]. A later one-year extension appears in search results but is not verified. Title II covers public bodies only, so private employers rely on other law.\n- Assistive use: DBT's evaluation found benefits for neurodiverse staff, people with hearing or vision impairments, and non-native English speakers [1]. Neurodivergent staff described Copilot as reducing cognitive load by summarising long email chains and meeting jargon, and DBT included specific questions for them in the evaluation [2].\n\n**L&D tooling**\n- Synthesia is an AI avatar video platform with 230+ avatars in 140+ languages, aimed at L&D and compliance training [4]. Its SOC 2 Type II and ISO 42001 claims came from search snippets only, and its pricing (Starter reported around $19 to $30 per month, Enterprise custom) is unverified.\n- Articulate, Docebo, Cornerstone, Degreed and LinkedIn Learning: not researched.",
+        "sources": [
+          {
+            "title": "Discover DBT's M365 Copilot evaluation report",
+            "url": "https://digitaltrade.blog.gov.uk/2025/09/25/discover-dbts-m365-copilot-evaluation-report/"
+          },
+          {
+            "title": "Flying with Co-Pilot: how AI is helping neurodiverse staff thrive in DBT",
+            "url": "https://digitaltrade.blog.gov.uk/2025/05/19/flying-with-co-pilot-how-ai-is-helping-neurodiverse-staff-thrive-in-dbt/"
+          },
+          {
+            "title": "European Accessibility Act: June 2025 deadline has arrived",
+            "url": "https://www.insideglobaltech.com/2025/06/10/european-accessibility-act-june-2025-deadline-has-arrived/"
+          },
+          {
+            "title": "Synthesia ISO 27001 certification post (site navigation)",
+            "url": "https://www.synthesia.io/post/synthesia-is-iso-27001-certified"
+          },
+          {
+            "title": "New ADA Title II Web Content and Mobile Accessibility Deadlines (LCW)",
+            "url": "https://www.lcwlegal.com/news/new-ada-title-ii-web-content-and-mobile-accessibility-deadlines/"
+          }
+        ],
+        "confidence": "low"
+      },
+      {
+        "area": "Low-confidence tool re-verification and outdated tool names",
+        "findings_markdown": "Coverage is partial: only four pages opened. Adobe's legal FAQ PDF and the Gartner note returned 403 and are not cited.\n\n**Renames confirmed with an opened page**\n| Handbook name | Current name | Effective | Source |\n|---|---|---|---|\n| AuditBoard | Optro | 9 Mar 2026 | [1][2] |\n| Databricks Assistant | Genie Code | Mar 2026 (MVP post dated 24 Mar 2026) | [3] |\n\n- Optro's press release says AuditBoard \"today announced it has rebranded as Optro\" and gives the date and venue [1]. The rebrand coincides with its FairNow (AI governance) acquisition [1]. Accounting Today's headline independently reports it [2].\n- The Databricks post is titled \"Databricks Assistant is now Genie Code\". The author says Genie is now aware of your data and file structure [3]. This is a community MVP post, not a vendor release note.\n\n**Not verified (no opened page):** NotebookLM to Gemini Notebook, Microsoft 365 Copilot to Microsoft Copilot, Canva Magic Studio to Canva AI, Atlassian Intelligence to Rovo, Einstein to Agentforce, Azure AI Foundry to Microsoft Foundry, Gemini Code Assist to Antigravity, Amazon Q Developer to Kiro, Workday to Sana, Vertex AI to Gemini Enterprise Agent Platform, and Playwright Testing to Azure App Testing. Search snippets did not confirm Canva AI. The same goes for pricing, training defaults and certifications for Canva, Adobe, ServiceNow, Gainsight, Meta Advantage+, Google AI Studio and Tableau Pulse. For Adobe indemnity, only unopened search snippets suggest it needs a separate entitlement, so it is not verified.\n\n**Copilot Studio and Agent 365 profile**\n- Copilot Studio is billed in Copilot Credits: $200 for a 25,000-credit pack, or pay-as-you-go through Azure at $0.01 per credit [4].\n- Employee-facing agents used by people with a Microsoft 365 Copilot licence are included at no extra credit cost, subject to fair usage limits. External-facing use is billed in credits [4].\n- Agent 365 became generally available on 1 May 2026. It costs $15 per user per month standalone, or $99 per user per month inside Microsoft 365 E7 [4].\n- It covers agent discovery and registry sync, and uses Defender for threat protection and Purview for data security. It also covers audit logging and run-time and session reporting [4].\n- It is a governance layer, not a build tool. The Agent 365 licence does not cover agent runtime consumption [4].\n- Overlap with Power Automate, Agentforce and ServiceNow AI Control Tower was not verified.",
+        "sources": [
+          {
+            "title": "Meet Optro: AuditBoard Unveils New Identity as AI Transforms GRC (PRNewswire, 9 Mar 2026)",
+            "url": "https://tools.prnewswire.com/en-us/live/20823/release/20260309EN03678"
+          },
+          {
+            "title": "AuditBoard now styles itself Optro (Accounting Today)",
+            "url": "https://www.accountingtoday.com/news/auditboard-now-styles-itself-optro"
+          },
+          {
+            "title": "Databricks Assistant is now Genie Code (Databricks Community MVP Articles, 24 Mar 2026)",
+            "url": "https://community.databricks.com/t5/mvp-articles/databricks-assistant-is-now-genie-code/td-p/151896"
+          },
+          {
+            "title": "Understanding Microsoft Agent 365 pricing (Rencore)",
+            "url": "https://rencore.com/en/blog/understanding-microsoft-agent-365-pricing"
+          }
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Critique"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Gap fill"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "completeness critic",
+      "phaseIndex": 1,
+      "phaseTitle": "Critique",
+      "agentId": "ab5deda600cc7f653",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1792921670046,
+      "queuedAt": 1792921669994,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The tool research is mostly solid. Pricing and product stat…",
+      "promptPreview": "You are the completeness critic for a deep-research document that expands a corporate AI training handbook covering 57 AI tools and 60 departments, and proposes additional tools and departments. Today is 2026-10-25. A condensed view of the verified research so far is in the JSON file at /home/user/ai-handbook-research/research/condensed.json; read it with the Read tool first.\n\nAsk: what is missing…",
+      "promptFramed": true,
+      "lastProgressAt": 1792921775401,
+      "tokens": 99497,
+      "toolCalls": 7,
+      "durationMs": 105353,
+      "resultPreview": "{\"overall_assessment\":\"The tool research is mostly solid. Pricing and product status are well sourced for Claude, Figma, the coding assistants, Workday and UiPath, and the expansion list (41 tools, 18 departments) is broad. The department side has a structural hole: departments 52 (Research, Innovation & Emerging Technology) and 53 (Enterprise Architecture & Integration) are missing from condensed…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "gap: Missing and unsourced departments (52, 53 and Operations cluster 55, 57-60)",
+      "phaseIndex": 2,
+      "phaseTitle": "Gap fill",
+      "agentId": "a07f5c974e12e7d60",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792921775444,
+      "queuedAt": 1792921775411,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Missing and unsourced departments (52, 53 and Operations cl…",
+      "promptPreview": "You are filling a gap in a deep-research document that expands a corporate AI training handbook (57 AI tools, 60 departments). Today is 2026-10-25.\n\nGap area: Missing and unsourced departments (52, 53 and Operations cluster 55, 57-60)\nWhy it matters: Departments 52 Research, Innovation & Emerging Technology and 53 Enterprise Architecture & Integration have no entry in the research at all. In the O…",
+      "promptFramed": true,
+      "lastProgressAt": 1792921893672,
+      "tokens": 125799,
+      "toolCalls": 28,
+      "durationMs": 118227,
+      "resultPreview": "{\"area\":\"Missing and unsourced departments (52, 53 and Operations cluster 55, 57-60)\",\"confidence\":\"low\",\"findings_markdown\":\"Only 53, 58 and 59 reach two opened sources dated 2025-2026. 55, 57 and 60 have one each, and 52 has none that are usable, so no department here is fully evidenced. Several analyst pages (Gartner, PDA, Business Wire) returned 403 and are not cited.\\n\\n- **52 Research and In…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "gap: AI regulation obligations for employers in 2026",
+      "phaseIndex": 2,
+      "phaseTitle": "Gap fill",
+      "agentId": "a988d20b857c14c41",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792921775445,
+      "queuedAt": 1792921775411,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "AI regulation obligations for employers in 2026",
+      "promptPreview": "You are filling a gap in a deep-research document that expands a corporate AI training handbook (57 AI tools, 60 departments). Today is 2026-10-25.\n\nGap area: AI regulation obligations for employers in 2026\nWhy it matters: The EU AI Act is mentioned only in passing in the HR cluster. The research has nothing on the Article 4 AI-literacy obligation, which directly governs this training programme, n…",
+      "promptFramed": true,
+      "lastProgressAt": 1792921827542,
+      "tokens": 75989,
+      "toolCalls": 12,
+      "durationMs": 50638,
+      "resultPreview": "{\"area\":\"AI regulation obligations for employers in 2026\",\"findings_markdown\":\"The Digital Omnibus on AI was published in the Official Journal on 24 July 2026 and entered into force 27 July 2026 [1].\\n\\n| Item | Obligation / date | Training and department impact |\\n|---|---|---|\\n| EU Art. 4 literacy | Applied from 2 Feb 2025. Now providers and deployers must \\\"take measures supporting\\\" staff AI …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "gap: Horizontal assistants: ChatGPT Enterprise verification, cost models, data residency, rationalisation and lock-in",
+      "phaseIndex": 2,
+      "phaseTitle": "Gap fill",
+      "agentId": "abc44546b65764e27",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792921827546,
+      "queuedAt": 1792921775411,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Horizontal assistants: ChatGPT Enterprise verification, cos…",
+      "promptPreview": "You are filling a gap in a deep-research document that expands a corporate AI training handbook (57 AI tools, 60 departments). Today is 2026-10-25.\n\nGap area: Horizontal assistants: ChatGPT Enterprise verification, cost models, data residency, rationalisation and lock-in\nWhy it matters: ChatGPT Enterprise is low confidence with one third-party source; its training defaults, retention, residency, c…",
+      "promptFramed": true,
+      "lastProgressAt": 1792921882438,
+      "tokens": 81742,
+      "toolCalls": 11,
+      "durationMs": 54892,
+      "resultPreview": "{\"area\":\"Horizontal assistants: ChatGPT Enterprise verification, cost models, data residency, rationalisation and lock-in\",\"findings_markdown\":\"openai.com and help.openai.com returned 403, so ChatGPT claims rest on two UK-consultancy pages that say they quote OpenAI's own tables (second-hand, medium confidence).\\n\\n- **ChatGPT Enterprise:** no training on workspace data by default, which also appl…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "gap: Hallucination/verification practice, prompt injection and shadow AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Gap fill",
+      "agentId": "ad46d3ac1fcb7cdd8",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792921882442,
+      "queuedAt": 1792921775411,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Hallucination/verification practice, prompt injection and s…",
+      "promptPreview": "You are filling a gap in a deep-research document that expands a corporate AI training handbook (57 AI tools, 60 departments). Today is 2026-10-25.\n\nGap area: Hallucination/verification practice, prompt injection and shadow AI\nWhy it matters: These are core safe-use training topics, and the research covers each in only one passing mention. Many handbook tools are now agentic (Claude Code, Cursor, …",
+      "promptFramed": true,
+      "lastProgressAt": 1792921926113,
+      "tokens": 77471,
+      "toolCalls": 11,
+      "durationMs": 43671,
+      "resultPreview": "{\"area\":\"Hallucination/verification practice, prompt injection and shadow AI\",\"findings_markdown\":\"**Hallucination and verification**\\n- Stanford RegLab/HAI (May 2024): paid legal-research AI still hallucinated; Lexis+ AI and Ask Practical Law AI were wrong over 17% of the time, Westlaw AI-Assisted Research over 34%. General chatbots hallucinated 58-82% on legal queries. Retrieval (RAG) reduced bu…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "gap: Adoption, change management, training ROI, accessibility and L&D tooling",
+      "phaseIndex": 2,
+      "phaseTitle": "Gap fill",
+      "agentId": "ac062f8e0baea4ec9",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792921893676,
+      "queuedAt": 1792921775412,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Adoption, change management, training ROI, accessibility an…",
+      "promptPreview": "You are filling a gap in a deep-research document that expands a corporate AI training handbook (57 AI tools, 60 departments). Today is 2026-10-25.\n\nGap area: Adoption, change management, training ROI, accessibility and L&D tooling\nWhy it matters: An L&D director will expect evidence on what makes AI training stick and how to measure it. The research has two passing mentions of ROI and adoption, a…",
+      "promptFramed": true,
+      "lastProgressAt": 1792921947251,
+      "tokens": 76863,
+      "toolCalls": 12,
+      "durationMs": 53574,
+      "resultPreview": "{\"area\":\"Adoption, change management, training ROI, accessibility and L&D tooling\",\"findings_markdown\":\"**Coverage note:** only sources I opened are cited. BCG, MIT NANDA, Brynjolfsson, Prosci, Work Trend Index, Kirkpatrick/Phillips, vendor telemetry docs and most L&D vendors' pricing were not opened, so those are not verified here.\\n\\n**Adoption (UK DBT Copilot trial, the one opened rigorous case…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "gap: Low-confidence tool re-verification and outdated tool names",
+      "phaseIndex": 2,
+      "phaseTitle": "Gap fill",
+      "agentId": "a48abdab92ecadf95",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792921926117,
+      "queuedAt": 1792921775412,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Low-confidence tool re-verification and outdated tool names",
+      "promptPreview": "You are filling a gap in a deep-research document that expands a corporate AI training handbook (57 AI tools, 60 departments). Today is 2026-10-25.\n\nGap area: Low-confidence tool re-verification and outdated tool names\nWhy it matters: Eight handbook tools are low confidence: ChatGPT Enterprise is covered above; the other seven are Canva Magic Studio, Adobe Firefly, Adobe Acrobat AI Assistant, Serv…",
+      "promptFramed": true,
+      "lastProgressAt": 1792921976942,
+      "tokens": 71758,
+      "toolCalls": 12,
+      "durationMs": 50824,
+      "resultPreview": "{\"area\":\"Low-confidence tool re-verification and outdated tool names\",\"findings_markdown\":\"Coverage is partial: only four pages opened. Adobe's legal FAQ PDF and the Gartner note returned 403 and are not cited.\\n\\n**Renames confirmed with an opened page**\\n| Handbook name | Current name | Effective | Source |\\n|---|---|---|---|\\n| AuditBoard | Optro | 9 Mar 2026 | [1][2] |\\n| Databricks Assistant …"
+    }
+  ],
+  "totalTokens": 609119,
+  "totalToolCalls": 93
+}
