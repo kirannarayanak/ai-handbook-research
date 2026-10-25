@@ -1,0 +1,773 @@
+{
+  "summary": "Re-research and fact-check the handbook departments the first pass dropped or left unsourced (52, 53 and the Operations cluster)",
+  "agentCount": 10,
+  "logs": [
+    "Re-researching 14 departments in 5 jobs",
+    "Got 14 departments; missing: none"
+  ],
+  "result": {
+    "clusters": [
+      {
+        "cluster": "Security, data and AI",
+        "cluster_overview": "Both departments use AI mainly for first drafts and synthesis (technology scans, patent-trend reading, ADRs), with humans owning the judgement and the final decision. Shared risks are unverified or hallucinated output, which the Equal Experts ADR experience documents, and leakage of confidential roadmaps, designs or invention details into general-purpose LLMs. Both functions should log AI use, require source checking, and use enterprise-approved tools.",
+        "departments": [
+          {
+            "num": "52",
+            "name": "Research, Innovation & Emerging Technology",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "Startup and technology scouting: companies must look at thousands of startups a year, at the right maturity (TRL 1-9), to funnel down to the few worth co-innovating with; Mind the Bridge has built an AI scouting engine for this and scouting platforms are being 'productized'. [1]",
+              "Generative AI helps corporates define their own innovation challenges (Mind the Bridge says it has included such capabilities). [1]",
+              "AI-assisted idea generation and early-stage investment screening: algorithms crunch data from databases such as Crunchbase, Pitchbook and DealRoom, plus web conversation data, to spot emerging market niches. [1]",
+              "Patent-landscape reading: WIPO's 2026 GenAI update reports published families rising from about 14,000 (2023) to over 37,000 (2025) and LLMs overtaking GANs. An innovation team can summarise such reports into a scan with an LLM, checking figures against the source. [2]",
+              "Competitive-signal tracking: the same report names Nvidia, State Grid, Inspur and Bosch as new entrants, signalling industrial and utility firms entering GenAI patenting. This is useful for scanning adjacent-industry entrants. [2]"
+            ],
+            "capstone_deliverable": "A 6-8 page technology scan on one emerging technology of the learner's choice. It includes a shortlist of 5 vendors or startups scored by TRL, at least 8 cited and validated sources (patent or analyst data checked against the originals), a one-page prototype plan with success metrics, the documented prompts used, and a measured time-saved comparison against a manual baseline. Sized for Advanced-tier hours.",
+            "data_risks": "Unpublished R&D ideas, invention disclosures and partner or NDA material. Patentability can be lost if inventions are disclosed publicly, so no invention details go into consumer AI tools (handbook guidance, not from the cited sources). Startup data under NDA must stay in enterprise tools. Scouting output may include personal data about founders (GDPR). Third-party data licences (Crunchbase, Pitchbook) may restrict AI use (not verified). Every figure needs source verification, because vendor-claimed scouting results are self-reported.",
+            "adoption_kpis": "Hours per technology scan versus baseline; number of candidate startups screened per quarter; share of scan claims traced to a primary source; share of scouted leads reaching pilot; percentage of team using approved enterprise AI tools weekly.",
+            "curriculum_emphasis": "Spend most hours on source-grounded research and verification (Perplexity Enterprise, Claude or Gemini), then on structured synthesis into a scan and prototype plan. Add a short block on prototyping with GitHub Copilot and on experiment documentation. Treat Gamma as a presentation convenience only. Cover confidentiality and IP rules first.",
+            "tool_fit_commentary": "The list suits desk research and synthesis. Gamma is a weak fit for the substantive work. The Körber article names dedicated scouting platforms that the handbook omits, including Glassdollar, Tracxn, Pitchbook and Mind the Bridge [1]. Whether WIPO's patent analytics services are listed or relevant is not verified. Both sources were opened, but neither tests the listed tools.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Körber: Open Innovation is also about to be AI-driven",
+                "url": "https://www.koerber.com/en/insights-and-events/ai-driven-open-innovation"
+              },
+              {
+                "title": "WIPO: The GenAI Landscape Is Getting Bigger And More Competitive (2026)",
+                "url": "https://www.wipo.int/en/web/patent-analytics/w/news/2026/the-genai-landscape-is-getting-bigger-and-more-competitive-according-to-new-wipo-report"
+              }
+            ]
+          },
+          {
+            "num": "53",
+            "name": "Enterprise Architecture & Integration",
+            "tier": "Specialist",
+            "ai_use_cases": [
+              "Retroactive ADR generation: Equal Experts turned one-line decision statements into full ADRs with a metaprompt in Gemini 2.5 and ChatGPT. Outcome: dozens of ADRs in a single morning. [1]",
+              "Inferring missing ADRs: pasting high-level designs, slide packs or code into an LLM to propose implicit decisions that should be recorded, building a backlog of one-line candidates. [1]",
+              "Quality-checking ADRs: a different LLM prompt acts as a judge to critique generated ADRs for logical flaws before human review. A coding agent was also tried to find contradictions across ADRs, with variable success. [1]",
+              "Option and trade-off analysis: an architect supplies the criteria and AI researches and formats alternatives against the Salesforce Well-Architected Framework, using prompt chaining. Example single-org versus multi-org ADRs were drafted with Gemini 2.5 and reviewed by the named decision-makers. [2]",
+              "Suggesting reviewers: the prompt flags when security, networking or data privacy roles should review a given ADR. [1]"
+            ],
+            "capstone_deliverable": "A set of 3 ADRs for a real or realistic integration decision (for example, API gateway versus event bus), each with at least 3 options scored against stated criteria. Each is generated from a documented metaprompt, then fact-checked, with every reference link verified and an AI-usage disclosure line. Include a short log of errors found in the AI draft and the time saved against writing one ADR manually.",
+            "data_risks": "Confidential solution designs, data models and business requirements; Salesforce warns that putting these into public LLMs risks data leakage and IP exposure, so check terms of service, disable training on inputs and use approved enterprise tools [2]. Network and security architecture, vendor contract terms, need-to-know access and GDPR or data-residency review are handbook guidance, not stated in the sources. Hallucinated references and invented product features are a documented risk [1]; Salesforce also warns that LLMs can make things up [2].",
+            "adoption_kpis": "ADRs produced per quarter and share with a recorded AI-usage disclosure; hours per ADR versus baseline; defects (wrong facts or dead links) found in review per ADR; backlog of undocumented decisions closed; time from decision to approved ADR.",
+            "curriculum_emphasis": "Prioritise Claude and ChatGPT Enterprise for metaprompted ADR drafting and a second-model critique pass, GitHub Copilot for inferring decisions from code, and Microsoft 365 Copilot for finding source documents. Most hours go on the review discipline: fact-checking, reference checking and keeping human ownership of the decision.",
+            "tool_fit_commentary": "General LLMs fit ADR drafting, as both sources show. Gamma is a weak fit for architecture work. Architecture-specific tooling (SAP LeanIX, ServiceNow Now Assist for Enterprise Architecture, Ardoq) may be absent from the list, but their AI capabilities were not verified here.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Equal Experts: Accelerating ADRs with Generative AI",
+                "url": "https://www.equalexperts.com/blog/ai/accelerating-architectural-decision-records-adrs-with-generative-ai/"
+              },
+              {
+                "title": "Salesforce Architecture Blog: Architectural Decisions, a Human-Led, AI-Powered Approach",
+                "url": "https://www.salesforce.com/blog/architectural-decisions-human-led-ai-powered-approach/?bc=OTH"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "All four cited pages opened and broadly support the use cases; WIPO figures, the Körber platform list and the Equal Experts guardrails and 'dozens of ADRs in a morning' match the sources. Corrections were mostly overstated or unsupported wording and unverified vendor claims. Only the two cited sources per department were opened, so tool-fit statements about other products remain unverified; confidence stays medium.",
+        "removed_or_corrected": [
+          "52: use case 1 reworded; Körber says companies look at thousands of startups and that Mind the Bridge built an AI engine, not that AI engines screen thousands a year",
+          "52: removed 'shorter, wider longlist' and 'clearer briefs' outcome claims; no opened source supports them",
+          "52: use case 5 corrected to list Nvidia as well and describe industrial/utility entrants; DealRoom added to databases",
+          "52: Crunchbase/Pitchbook licence restriction on AI use and patentability-loss point marked as not from sources",
+          "52: WIPO patent analytics services 'not listed' claim marked not verified",
+          "53: judge prompt corrected to 'a different LLM prompt' per Equal Experts; reviewer roles say 'data privacy'",
+          "53: data_risks trimmed; Salesforce names business requirements, data models, solution designs, not network/security architecture or vendor contracts; need-to-know and GDPR marked as handbook guidance",
+          "53: LeanIX, ServiceNow and Ardoq capability statements removed as unverified (page did not load or lacked detail)"
+        ]
+      },
+      {
+        "cluster": "Operations, PMO and transformation",
+        "cluster_overview": "Across these departments AI is used mainly for summarising, drafting and pattern-spotting inside the system of record (service desk, QMS, BCM or planning platform), with a human approving the output. The shared risks are inaccurate or incomplete underlying data, regulated records (GxP, SLA and contract data, personal data in change and incident records), and over-reliance on vendor-reported productivity claims. The sources opened were mostly vendor documents, vendor-commissioned studies and trade-press summaries, so outcome figures should be treated as claims, not benchmarks.",
+        "departments": [
+          {
+            "num": "55",
+            "name": "Service Delivery & Managed Services",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "A virtual service agent handles tier-one requests such as password resets and software access, deflecting tickets; Thumbtack reports 15% of requests handled without human involvement and SLA compliance raised from 90% to 95% on Jira Service Management (customer case study, vendor-published) [1].",
+              "The virtual agent gathers initial details so tickets arrive pre-populated, and offers 24/7 availability (home-services IT director interviewed in a Forrester TEI study) [2].",
+              "Agent-assist features: issue summarisation, response generation, sentiment analysis and recommended actions to cut handling effort [2].",
+              "AIOps-style support for incident and change management to make better-informed decisions [2].",
+              "Intent and template suggestions generated from historical request data to speed service-desk setup and expose service gaps [2].",
+              "Not verified: ServiceNow Now Assist case summaries and resolution notes (documentation pages did not load)."
+            ],
+            "capstone_deliverable": "A monthly SLA and incident-pattern report for one real (anonymised) queue: AI-drafted narrative, a table of the top 5 recurring incident themes, and 3 proposed knowledge articles. Includes a validation log checking every figure against the source export, the documented prompts, and measured time saved versus the manual report (Advanced tier hours).",
+            "data_risks": "Tickets contain employee and customer personal data (GDPR), credentials or system details pasted by users, and contractual SLA and pricing terms. Rules: use only the approved in-platform or enterprise AI, strip personal data and secrets before pasting elsewhere, never share client-confidential data across client tenants, and have a human verify SLA figures before they go into customer reports. Forrester interviewees noted AI quality depends on knowledge content, so keep articles current [2].",
+            "adoption_kpis": "Virtual-agent deflection or auto-resolution rate; SLA compliance percentage; agent handling time per ticket; share of tickets with AI-assisted summary accepted unedited; knowledge articles created or refreshed per month.",
+            "curriculum_emphasis": "Spend most hours on hands-on work with the service platform's embedded AI (ServiceNow Now Assist where ServiceNow is the platform) for summarisation and knowledge, then Power BI Copilot for SLA reporting, and Claude or Gemini for incident-pattern analysis on exported, anonymised data. Prioritise verification habits, since automation outcomes depend on data and knowledge quality.",
+            "tool_fit_commentary": "ServiceNow Now Assist fits where ServiceNow is the ITSM platform, but the opened evidence is for Jira Service Management, which the handbook omits for this department [1][2]. Jira Service Management's AI is used for service desks (Thumbtack, Forrester TEI study; both vendor-commissioned or vendor-published). Ensure the training covers whichever ITSM platform the learner actually uses. Microsoft 365 Copilot and Gemini are general-purpose and not evidenced by these sources.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "How Thumbtack automatically resolves 15% of tickets with AI and saves 60% on tooling with Jira Service Management",
+                "url": "https://www.atlassian.com/customers/thumbtack"
+              },
+              {
+                "title": "The Value Of AI In Jira Service Management From Atlassian (Forrester TEI abstract)",
+                "url": "https://tei.forrester.com/go/Atlassian/JSMAISpotlight/?lang=en-us"
+              }
+            ]
+          },
+          {
+            "num": "57",
+            "name": "Business Transformation & Change Management",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "Guided change blueprints and change plans from a change-management-specific assistant (Prosci Kaiya); beta users reported two-hour sessions becoming ten-minute tasks (vendor claim) [1].",
+              "Drafting key change messages and tailoring communications to different audiences [1].",
+              "Developing resistance-management tactics for a given initiative [1].",
+              "Sentiment analysis, communication drafting and risk flagging as AI becomes part of everyday change work, per a vendor trends report [3].",
+              "Analysing change-adoption data against Gartner's finding that only 32% of leaders say their last change achieved healthy adoption, to target manager enablement and pacing [2][3]."
+            ],
+            "capstone_deliverable": "A change impact assessment and communications pack for one real or case-study initiative: AI-assisted impact matrix by stakeholder group, three audience-specific messages, and an adoption-tracking plan. Includes checked sources, documented prompts and time saved against a manual baseline.",
+            "data_risks": "Change work touches restructuring plans (employment law, consultation duties), employee survey and sentiment data (GDPR), and material non-public information on M&A or reorganisations (securities rules). Rules: no named-individual data in public models, aggregate and anonymise survey comments, keep unannounced restructuring out of non-enterprise tools, and have HR or Legal review any message that affects roles.",
+            "adoption_kpis": "Time to produce a change plan or communication pack; share of initiatives with a documented impact assessment; adoption rate at 30/60/90 days; manager participation in change activities; employee sentiment trend.",
+            "curriculum_emphasis": "Prioritise Claude or ChatGPT Enterprise for impact analysis and audience-specific messaging, Microsoft 365 Copilot for working inside decks and mail, and Power BI Copilot for adoption analysis. Teach prompt design for communication tailoring and verification of any claimed statistics.",
+            "tool_fit_commentary": "The handbook list is broadly general-purpose and fits. It omits Prosci's Kaiya, a change-management-specific assistant drawing on Prosci research, available to enterprise clients [1]. Canva Magic Studio and Gamma are plausible for communications but are not evidenced in the opened sources. Note that the Gartner figure was seen only via a trade-press summary and Prosci material via its own press release.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Prosci Launches New GenAI Tool, Kaiya",
+                "url": "https://prosci.com/news/prosci-launches-kaiya-new-gen-ai-tool"
+              },
+              {
+                "title": "Only one third of business leaders report healthy change adoption (Gartner survey coverage)",
+                "url": "https://www.processexcellencenetwork.com/change-management/news/only-one-third-of-business-leaders-report-healthy-change-adoption/amp"
+              },
+              {
+                "title": "2025-2026 Organizational Change Management (OCM) Trends Report",
+                "url": "https://www.ocmsolution.com/organizational-change-management-ocm-trends-report/"
+              }
+            ]
+          },
+          {
+            "num": "58",
+            "name": "Quality Management & Process Compliance",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "Generate a narrative summary of a deviation investigation or CAPA plan from related Investigation, Root Cause and CAPA Action records (Veeva Vault QMS Deviation Agent, in Vaults using Vault AI for Quality); the user reviews and saves it [1].",
+              "Answer questions about a deviation record through an in-product AI chat [1].",
+              "Surface similar past deviations and shared factors to support root-cause analysis; the quality engineer stays in control (vendor article) [3].",
+              "AI-supported CAPA and deviation work under human accountability; a consultancy blog summarises the draft EU Annex 22 as requiring transparency, model validation and continuous performance monitoring, and Annex 11 as extending validation, access control and audit trail to AI-enabled systems [2]. Not verified: that draft Annex 22 covers generative drafting of CAPA content.",
+              "Not verified: quantified time savings for any of these."
+            ],
+            "capstone_deliverable": "A quality audit summary and root-cause analysis for a de-identified deviation or audit finding set: AI-drafted summary, 5-Whys or fishbone, proposed SOP changes, and a human review log showing every AI statement checked against records. Includes documented prompts and time saved.",
+            "data_risks": "Quality records are GxP or regulated records with batch, patient-safety, supplier and audit data; in pharma, data integrity and Annex 11 or 21 CFR Part 11-type controls apply, and complaints may carry personal or health data (GDPR, HIPAA). Rules: only validated or approved tools for regulated records, maintain audit trail of AI use and reviewer, AI drafts but never approves a CAPA, and no confidential batch or supplier data in public tools [2].",
+            "adoption_kpis": "Time to draft investigation or CAPA summaries; share of AI drafts accepted after review; CAPA cycle time; recurrence rate of similar deviations; audit findings on AI-assisted records.",
+            "curriculum_emphasis": "Emphasise review discipline and traceability over generation. Prioritise Claude for document summarisation and root-cause structuring on de-identified inputs, Microsoft 365 Copilot for SOP drafting, and Power BI Copilot for quality trend views. Cover validation expectations.",
+            "tool_fit_commentary": "The handbook list is general-purpose and omits the embedded QMS AI that quality teams actually use, such as Veeva Vault QMS's Deviation Agent [1]; MasterControl was not verified. Gamma is a weak fit for controlled quality records. Validation and audit-trail expectations for AI in GxP systems [2] make general chat tools hard to justify for regulated records; confirm the current status and scope of Annex 22 with a primary source before teaching it.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Using the Deviation Agent (QMS) - Veeva Vault Help",
+                "url": "https://quality.veevavault.help/en/lr/1006459"
+              },
+              {
+                "title": "AI in CAPA & Deviation Management: Balancing Compliance (Rephine)",
+                "url": "https://www.rephine.com/resources/blog/ai-in-capa-deviation-management-balancing-compliance/"
+              },
+              {
+                "title": "How AI-enhanced CAPA systems actually work (Ideagen)",
+                "url": "https://www.ideagen.com/noram/thought-leadership/blog/how-ai-enhanced-capa-systems-actually-work-guide-biopharma"
+              }
+            ]
+          },
+          {
+            "num": "59",
+            "name": "Business Continuity & Disaster Recovery",
+            "tier": "Specialist",
+            "ai_use_cases": [
+              "Generative AI suggests content when drafting or updating business continuity plans, business impact analyses and incident templates (Riskonnect, 2024) [1].",
+              "AI helps identify critical risks, assess impact, propose mitigation and simulate scenarios (Riskonnect, stated as ongoing integration) [1].",
+              "Natural-language prompts to create, refine and maintain incident response plans (AlertMedia AI Plan Builder) [3].",
+              "AI support for creating and sending critical messages during events, with human judgment kept central (Everbridge) [4].",
+              "Use AI to keep plans current: Forrester/DRJ 2026 data show about 59% update DR plans annually and only 32% have a recovery-readiness dashboard, which indicates room for assisted maintenance (my inference) [2]."
+            ],
+            "capstone_deliverable": "A recovery playbook and tabletop-exercise pack for one scenario (for example a ransomware outage of one critical service): AI-drafted playbook, injects, and holding statements, checked against the real BIA and RTO/RPO. Includes documented prompts, review sign-off, and time saved (Specialist tier hours).",
+            "data_risks": "BCM files hold critical-system architecture, RTO/RPO, supplier dependencies, crisis contact lists (personal data, GDPR) and emergency notification content. Rules: treat plans as confidential security material, no real credentials or network diagrams in public models, validate all AI-generated recovery steps by exercise, and have Legal and Communications approve external or regulator-facing messages.",
+            "adoption_kpis": "Time to draft or refresh a plan; percentage of plans reviewed within cycle; exercise completion rate and issues found; time to issue first incident communication; share of critical services with a readiness dashboard.",
+            "curriculum_emphasis": "Focus on scenario and exercise design with Claude or ChatGPT Enterprise, plan drafting inside Microsoft 365 Copilot, and ServiceNow Now Assist only where BCM runs on that platform. Emphasise validation by testing, since fewer than 40% of respondents felt very or extremely prepared for a site failure or disaster [2].",
+            "tool_fit_commentary": "The handbook list is generic. It omits purpose-built BCM and crisis tools with AI: Riskonnect [1], AlertMedia [3] and Everbridge [4]; Fusion Risk Management was only seen in search results (not verified). ServiceNow Now Assist is a reasonable fit for IT-led DR but no opened source demonstrates it for this function.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Riskonnect Announces Generative AI for Business Continuity Planning",
+                "url": "https://riskonnect.com/press/riskonnect-announces-generative-ai-for-business-continuity-planning/"
+              },
+              {
+                "title": "The State of Disaster Recovery Preparedness 2026 (DRJ/Forrester)",
+                "url": "https://drj.com/journal_main/disaster-recovery-preparedness-2026/"
+              },
+              {
+                "title": "AlertMedia Introduces AI Plan Builder (DRJ)",
+                "url": "https://drj.com/industry_news/alertmedia-introduces-ai-plan-builder-helping-organizations-build-deployment-ready-response-plans-in-minutes/"
+              },
+              {
+                "title": "AI-powered resilience (Everbridge)",
+                "url": "https://www.everbridge.com/use-cases/ai-powered-resilience/"
+              }
+            ]
+          },
+          {
+            "num": "60",
+            "name": "Supply Chain, Logistics & Inventory",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "After a planning run, Joule in SAP IBP analyses results, highlights unfulfilled demand, KPIs and constraints, and lists customer-product demand gaps [1].",
+              "Joule suggests prioritised mitigation steps such as scenario comparison and alternate-supplier assessment [1].",
+              "Exception management: diagnosing whether unfulfilled demand stems from resource capacity or planning horizon constraints (the page also poses material shortage as a diagnostic question) [1].",
+              "Agentic AI adoption is higher in high-performing supply chain organizations across procurement, production, logistics, warehouse management and planning (Gartner survey, 509 leaders, July-October 2025) [2].",
+              "Not verified: Kinaxis Maestro Agents and o9 customer outcomes (pages did not open)."
+            ],
+            "capstone_deliverable": "An inventory exception review and supplier report for an anonymised dataset: AI-assisted triage of the top 20 exceptions, root-cause hypotheses, recommended actions, and a supplier performance summary. Includes verification of numbers against source extracts, documented prompts, and time saved.",
+            "data_risks": "Supply chain data covers supplier pricing and contract terms (commercial confidentiality, antitrust sensitivity), customer demand forecasts, and, for public companies, forward-looking volume data that can be material non-public information. Rules: keep ERP extracts within approved tools, anonymise suppliers when using general chat tools, verify AI-calculated quantities before ordering, and keep a human decision-maker for commitments.",
+            "adoption_kpis": "Planner time per exception; forecast accuracy and bias; stock-out and excess-inventory rates; share of exceptions resolved within target time; supplier on-time-in-full reporting cycle time.",
+            "curriculum_emphasis": "Prioritise SAP Joule (if SAP is the planning system) for exception analysis, Power BI Copilot for inventory and supplier dashboards, and Claude or Gemini for analysing exported data and drafting supplier communications. Stress checking calculations and assumptions.",
+            "tool_fit_commentary": "SAP Joule fits SAP IBP users, but it is irrelevant to firms on other planning platforms [1]. The handbook omits dedicated planning platforms such as Kinaxis, o9 and Blue Yonder, which appeared in searches but were not opened (not verified). Gartner's survey shows agentic AI adoption across the supply chain, which the list does not address [2].",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Enhancing Supply Planning and Exception Management with AI (SAP Learning)",
+                "url": "https://learning.sap.com/courses/discovering-ai-in-sap-integrated-business-planning/analyzing-time-series-optimization-results-with-joule-1"
+              },
+              {
+                "title": "Gartner Survey Shows 55% of Supply Chain Leaders Expect Agentic AI to Reduce Entry-Level Hiring Needs",
+                "url": "https://itsupplychain.com/gartner-survey-shows-55-of-supply-chain-leaders-expect-agentic-ai-to-reduce-entry-level-hiring-needs/"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "I opened all cited sources for all five departments and most claims were supported, including the Veeva Deviation Agent, Prosci Kaiya, the Gartner 32% figure, the DRJ/Forrester figures, Riskonnect, AlertMedia, Everbridge and SAP Joule. One factual error was corrected (Thumbtack SLA). Sources are still mostly vendor or trade-press material, so outcome figures are claims, and the Annex 22 scope for generative AI remains unverified. Confidence stays medium throughout.",
+        "removed_or_corrected": [
+          "55: Thumbtack SLA statement corrected from 'SLA compliance of 90%' and '15% of tickets resolved automatically' to '15% of requests handled without human involvement and SLA compliance raised from 90% to 95%'; the page's summary box says 'boosted to 90%' but the body says 90% to 95%.",
+          "55: Curriculum wording on ServiceNow Now Assist qualified as 'where ServiceNow is the platform' because no opened source covers Now Assist.",
+          "58: Claim that regulators expect transparency, validation and monitoring for 'drafting CAPA content under draft EU Annex 22' rewritten; the Rephine blog states these expectations for AI tools in CAPA generally and does not mention generative drafting, so that scope is marked not verified.",
+          "58: Ideagen URL updated to the opened noram path; tool_fit sentence that Annex 22 makes chat tools harder to justify softened because it was inference.",
+          "59: 'Riskonnect identify risks/simulate scenarios' marked as stated ongoing integration; plan-currency use case marked as inference; '59% update annually' marked approximate.",
+          "60: 'Material shortage' cause softened; the SAP page lists resource capacity and planning horizon as causes and only poses material shortage as a question.",
+          "57: Tool-fit note adjusted: Gartner seen only via press summary and Prosci via its own press release; removed claim that Kaiya is 'trained on' Prosci research (page says it draws on Prosci IP and research)."
+        ]
+      },
+      {
+        "cluster": "HR, people and workplace",
+        "cluster_overview": "Both workplace functions use AI mainly to turn unstructured requests and reports (tickets, incident narratives, safety documents) into structured, routed or summarised outputs, with the biggest gains where the data is already digitised. The shared risks are personal data (employee, occupant and health information under GDPR and similar law), over-trust in AI summaries or predictions in safety-relevant decisions, and weak data foundations. Both need a named human owner who validates output before action.",
+        "departments": [
+          {
+            "num": "18",
+            "name": "Workplace Administration & Facilities",
+            "tier": "Core",
+            "ai_use_cases": [
+              "Conversational work-order intake: the user describes a problem in chat, the assistant diagnoses it, recommends services and generates the work order; Lessen reports a 20% cut in time to produce a work order and human handling in only 1% of conversations (vendor-reported, 2024). [1]",
+              "Portfolio-wide FM platforms that aggregate HVAC, lighting, security and occupancy sensor data into one app so technicians and facility managers see actionable insights (JLL Serve, built on Sclera AI). [2]",
+              "Natural-language queries over real estate documents and occupancy, rent and energy metrics, e.g. CBRE's self-service AI playground and its AWS Bedrock prototype. [2]",
+              "Enterprise assistants (Azure OpenAI and Copilot for Microsoft 365 at Cushman & Wakefield; JLL GPT) for staff drafting and research. [2]",
+              "Backlog clearing: IFMA/JLL webinar frames AI against late work orders, inconsistent vendor performance, re-keyed asset data and spend reporting; it says some use cases pay back faster than others, but no figures were seen. [3]"
+            ],
+            "capstone_deliverable": "Core-tier capstone (about 4-6 hours): a routing and response pack for one facility. Deliver a categorised set of 20 anonymised sample requests with an AI-drafted triage and routing rule table, 3 vendor communication templates, and a Power Automate or ServiceNow flow outline. Include the prompt log, a human check of every routing decision against a manual baseline, and measured minutes saved per request.",
+            "data_risks": "Handles employee and visitor personal data (access logs, badge and occupancy sensor data, CCTV, accessibility and medical-related requests), vendor contracts and pricing, and building security details. Rules: no personal data or security layouts in non-enterprise tools; anonymise tickets before prompting; treat occupancy and sensor analytics as employee monitoring subject to GDPR and local employment law; human approval before spend commitments or vendor instructions. The sources do not detail these rules, so they are standard practice, not claims from the pages.",
+            "adoption_kpis": "Time from request to work order created; share of requests auto-routed correctly without rework (target set against a baseline); work-order backlog and overdue count; vendor first-time-fix or SLA compliance; weekly active users of the approved AI tool among facilities staff.",
+            "curriculum_emphasis": "Core tier: spend hours on prompt basics for ticket triage and vendor emails, plus workflow automation. Prioritise Microsoft 365 Copilot (drafting, summarising), Power Automate (routing flows) and ServiceNow Now Assist (ticket classification and summaries, if the firm runs it). Gemini is a general fallback. Teach redaction and verification.",
+            "tool_fit_commentary": "The list fits well for ticket and routing work. Canva Magic Studio is a weak fit: none of the opened sources describe design tools in facilities work, so it suits only signage and event materials. The list omits CAFM/CMMS-embedded assistants that sources show are the main FM tools, such as JLL Serve and Lessen Copilot, and building-intelligence tools such as VergeSense (Workplace Assistant) and BrainBox AI named in [1]. These are vendor or trade-press sources.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Lessen's AI assistant aims to optimize work order management (Facilities Dive, July 2024)",
+                "url": "https://www.facilitiesdive.com/news/lessen-ai-assistant-work-order-management-commercial-real-estate/721450/"
+              },
+              {
+                "title": "JLL Serve launch highlights ongoing AI initiatives in the commercial real estate sector (Facilities Dive, June 2024)",
+                "url": "https://www.facilitiesdive.com/news/jll-serve-cbre-cushman-wakefield-artificial-intelligence-ai-initiatives-integrated-FM/719271/"
+              },
+              {
+                "title": "Top AI use cases transforming facilities management today (JLL on-demand webinar hosted by IFMA)",
+                "url": "https://www.jll.com/en-ae/webinars/top-ai-use-cases-transforming-facilities-management-today"
+              }
+            ]
+          },
+          {
+            "num": "19",
+            "name": "Health, Safety & Wellbeing",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "Drafting and reviewing safety statements, risk assessments and procedures with generative AI, with review by a competent person. [1]",
+              "Generating scenario-based safety training modules and quizzes tailored to a workforce. [1][2]",
+              "Summarising incident reports and spotting patterns; advisory only, not a replacement for formal risk analysis. [1]",
+              "Enhanced incident reporting with real-time risk detection, e.g. a virtual risk assistant tested in workplaces in Estonia, and predictive risk modelling in heavy manufacturing and insurance. [2]",
+              "Generating machine and equipment safety instructions from risk assessment and job hazard data, and recording incidents, near misses and observations on mobile (SAP EHS, vendor documentation). [3]",
+              "Computer vision on existing CCTV for site safety (behavioural safety, PPE detection) with agentic reporting for EHS teams (Protex, vendor material, not independently verified). [4]"
+            ],
+            "capstone_deliverable": "Advanced-tier capstone (about 8-12 hours): an AI-assisted safety pack for one task or site. Deliver a job hazard checklist and a toolbox-talk or training module with quiz, plus a summary of 10 anonymised incident narratives with themes. Include the prompt log, a competent-person sign-off sheet recording every correction to AI output, source checks against the applicable regulation, and time saved versus manual drafting.",
+            "data_risks": "Handles health and injury data, incident narratives naming workers, wellbeing and occupational health records, and CCTV footage. Regulatory hooks: GDPR (Ibec says no confidential or health-related data should go into AI tools unless anonymised and secured), the EU AI Act (transparency and mandatory human oversight) and, in Ireland, the Safety, Health and Welfare at Work Act 2005, under which legal responsibility stays with the human competent person. [1] Outside the EU, equivalents such as HIPAA and OSHA recordkeeping would apply (not covered by the sources). AI predictions are advisory only.",
+            "adoption_kpis": "Hours to produce a risk assessment or training module versus baseline; share of AI-drafted documents passing competent-person review without major correction; incident report completion time and near-miss reporting volume; number of trained EHS staff using approved tools; count of data-handling breaches or redaction failures (target zero).",
+            "curriculum_emphasis": "Advanced tier: emphasise verification and governance over generation. Prioritise Claude or Gemini for drafting and incident summarisation (long-document handling), Microsoft 365 Copilot for documents inside the tenant, and Power BI Copilot for incident trend dashboards. Gamma only for training decks. Teach anonymisation, citing the regulation, and challenging AI summaries; the NSC review notes limited AI literacy and scepticism among EHS professionals and a need for clean, structured data. [2]",
+            "tool_fit_commentary": "The list suits drafting, training material and trend analysis. Gamma is a weak fit for safety-critical work, as the sources show no use beyond presentation of content. The handbook omits EHS-platform assistants that the sources show are an embedded route: SAP EHS with Joule [3], and computer-vision platforms such as Protex [4]. These are vendor materials, so claims are unverified.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Responsible Adoption of Generative AI in Occupational Safety & Health (Ibec, December 2025)",
+                "url": "https://www.ibec.ie/connect-and-learn/insights/insights/2025/12/02/ibec-networks-ai-in-ehs"
+              },
+              {
+                "title": "NSC report shows how GenAI is starting to impact EHS functions (Safety+Health magazine, August 2025)",
+                "url": "https://www.safetyandhealthmagazine.com/27143-nsc-report-shows-how-genai-is-starting-to-impact-ehs-functions/"
+              },
+              {
+                "title": "SAP S/4HANA for EHS workplace safety features (SAP, vendor)",
+                "url": "https://www.sap.com/products/scm/safety-management-software/features.html"
+              },
+              {
+                "title": "Protex AI Reporting & Integrations (vendor; the originally cited /reporting/copilot URL redirected here)",
+                "url": "https://www.protex.ai/reporting-integrations"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "All three Facilities Dive/JLL sources (dept 18) and all four dept 19 sources opened and supported the central claims, including the Lessen 20% and 1% figures, JLL Serve/Sclera, CBRE and Cushman and Wakefield items, the Ibec legal list (SHWW Act 2005, GDPR, EU AI Act 2024/1689) and NSC findings (Estonia, adoption barriers). Two unsupported product names (Corrigo, EHS Insight Copilot) were removed, and the Protex claim was narrowed to what the opened page shows. Vendor and trade-press material remains unverified for capability and performance claims, so confidence stays medium.",
+        "removed_or_corrected": [
+          "18: removed 'Corrigo' from tool_fit_commentary; not mentioned in any opened source.",
+          "19: removed 'EHS Insight Copilot' from tool_fit_commentary and 'main' qualifier on embedded route; not in any opened source.",
+          "19: Protex use case rewritten from 'flag unsafe behaviour with AI-generated reports' to CCTV-based behavioural safety/PPE detection with agentic reporting, matching the opened page; original /reporting/copilot URL redirected to /reporting-integrations, so the opened URL is cited.",
+          "19: SAP 'Joule-type AI' changed to 'Joule' as the SAP page names Joule explicitly.",
+          "18: added VergeSense product name (Workplace Assistant) as stated in source [1]; no other change."
+        ]
+      },
+      {
+        "cluster": "Sales, marketing and business development",
+        "cluster_overview": "Both functions sit between the company and external parties (partners, prospects), so AI output is often sent outside the firm and must be checked for accuracy and confidentiality. The best-evidenced gains come from drafting from approved content and from matching or prioritising on CRM and partner data. Most quantified results come from vendor-published stories and need local baselining. Typical risks are leaking counterparty-confidential data (partner terms, customer security answers), unverified claims in contractual documents, and personal data in outreach (GDPR).",
+        "departments": [
+          {
+            "num": "34",
+            "name": "Business Development & Partnerships",
+            "tier": "Core",
+            "ai_use_cases": [
+              "Partner discovery and matching: AI analyses firmographic, technographic, performance and regional data to recommend which partners to recruit or co-market with. Described by an agency as an expected capability, not a measured result [1].",
+              "Co-sell routing: AI predicts which partners can influence a deal and suggests introductions, replacing manual deal registration [1]. Futurum also reports AWS and Dell using algorithms to select co-sell partners [2].",
+              "Partner operations agents for onboarding, partner portals, demo environments and deal registration, reported by Futurum from vendor briefings at AWS, Dell, Google Cloud, IBM, Lenovo, Salesforce and ServiceNow [2].",
+              "Generative AI drafts partner-specific one-pagers and outreach; an unnamed software company in a consultancy snapshot saw more opportunities with an engaged partner and better co-sell win rates (anecdotal, unquantified) [1].",
+              "Systematic partner prospecting and outreach, with a data-enrichment tool (Clay) feeding an AI qualification and messaging tool (Octave) (vendor how-to, unverified results) [4].",
+              "Partner targeting is shifting: IDC reports partner value moving toward AI solution design, governance and compliance services and industry advisory [3]. That this should change which partners BD targets is an inference, not stated by IDC."
+            ],
+            "capstone_deliverable": "A partner shortlist and proposal pack for one real or simulated target segment. It contains 5 ranked candidate partners with cited fit rationale, a relationship map, a one-page joint proposal, and a prompt log with time saved against a manual baseline. A reviewer checks that every firmographic or market claim traces to a validated source. About 4 hours at Core tier.",
+            "data_risks": "Partner and prospect commercial terms, pricing, pipeline and NDA-covered material, plus contact personal data (GDPR/CCPA for outreach and relationship mapping). Do not paste NDA or deal-registration data into unapproved tools. Check lawful basis before profiling individuals. Verify AI-sourced partner facts before they appear in proposals. Any shared multi-party data needs agreed data-sharing policies [1].",
+            "adoption_kpis": "Time to identify and shortlist partners vs baseline; partner activation rate; share of opportunities with an engaged partner; co-sell win rate and deal velocity; proposal turnaround time [1].",
+            "curriculum_emphasis": "Core tier: spend most hours on prompt-driven research and proposal drafting with verification, and on data-handling rules. Prioritise Claude (long-document proposals and synthesis), Microsoft 365 Copilot (internal files and meetings), LinkedIn Sales Navigator AI (relationship mapping) and ChatGPT Enterprise only if it is the approved tool. Cover source checking, since the evidence stresses human judgement remains essential [1].",
+            "tool_fit_commentary": "Sales Navigator AI fits relationship mapping (not evidenced in the cited sources). Gamma is a weak fit (presentation polish rather than partner analysis) and is mostly a convenience. The list omits partner-relationship tooling (CRM/PRM and partner-data platforms, named in [1]) and a data-enrichment tool (Clay is cited in [4]); Crossbeam and PartnerStack were not opened, so their fit is not verified.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "What Role Will AI Play in Partner Ecosystems? (Pedowitz Group)",
+                "url": "https://www.pedowitzgroup.com/what-role-will-ai-play-in-partner-ecosystems"
+              },
+              {
+                "title": "AI Has Arrived in Partner Organizations (Futurum Group, May 2025)",
+                "url": "https://futurumgroup.com/press-release/ai-has-arrived-in-partner-operations-those-without-will-be-left-behind/"
+              },
+              {
+                "title": "Ecosystem strategy in 2026 (IDC, May 2026)",
+                "url": "https://www.idc.com/resource-center/blog/ecosystem-strategy-in-2026-turning-ai-disruption-into-partner-led-growth/"
+              },
+              {
+                "title": "Partnership Development with AI (Octave)",
+                "url": "https://www.octavehq.com/post/partnership-development-with-ai-scaling-your-ecosystem-with-octave-and-clay"
+              }
+            ]
+          },
+          {
+            "num": "35",
+            "name": "Pre-Sales & Solution Consulting",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "Security questionnaire automation: reviewers edit AI drafts from an approved content library; Fiddler AI cut a 30-hour questionnaire to 3-4 hours (87%), vendor-reported [1].",
+              "RFP first drafts at scale: SugarAI reports 90% of initial response work automated and roughly 12-18 questions per RFP still routed to SMEs, vendor-reported [2].",
+              "Freeing solution consultants from searching and drafting so they focus on solution strategy and customer engagement (SugarAI's Director, Solution Consulting) [2].",
+              "Personalised demos: AI tailors demo messaging by persona and topic and cuts demo creation from days to minutes (vendor claim) [3].",
+              "Prospect-specific demo data: a tool generates demo records from a discovery call and injects them into the live app (vendor page) [4].",
+              "Conversation intelligence on discovery and demo calls to surface objections and improve demo prep [3]."
+            ],
+            "capstone_deliverable": "A response-and-demo kit for one realistic RFP excerpt (at least 25 questions): AI-drafted answers each tagged with an approved source or flagged for SME review, a tailored solution proposal outline, and a demo script with persona-specific talking points. Include a prompt log and measured time saved against a manual baseline. About 8 hours at Advanced tier; assessed on factual accuracy and correct flagging of unsupported claims.",
+            "data_risks": "Customer confidential data, pricing, unreleased roadmap, security architecture details and NDA material. RFP answers can become contractual commitments, so unverified AI claims about security, compliance (SOC 2, ISO 27001, GDPR) or features create legal exposure. Rules: draft only from approved content, route technical and legal claims to SMEs, never paste customer data into unapproved tools, and keep a human sign-off. Frequent hallucinations (plus missing workflow features) led Fiddler to replace its homegrown chatbot [1].",
+            "adoption_kpis": "Hours per RFP or questionnaire vs baseline; share of answers needing minimal edits; RFPs answered per headcount; SME minutes per response; demo prep time [1][2].",
+            "curriculum_emphasis": "Advanced tier: put most hours on grounded drafting with citations, review workflows and demo preparation. Prioritise Claude (long RFP documents and structured drafts), Microsoft 365 Copilot (internal content and meeting notes), Salesforce Einstein (opportunity context) and Gamma (proposal and demo decks). Teach SME routing and claim verification.",
+            "tool_fit_commentary": "The list is general-purpose and omits dedicated RFP and questionnaire platforms (AutoRFP.ai is evidenced in [1][2]; Loopio and Responsive were not opened, so not verified) and demo platforms (Demoboost [3], Reprise [4]). Gong is listed by a vendor article as a presales tool [3] but is not on this department's list. Salesforce Einstein fits opportunity context but no presales-specific evidence was found for it. Gamma is a weak fit for technical answer accuracy.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "How Fiddler AI achieved 87% time savings on security questionnaires (AutoRFP.ai)",
+                "url": "https://autorfp.ai/customer-stories/how-fiddler-ai-achieved-87-time-savings-on-security-questionnaires"
+              },
+              {
+                "title": "SugarAI answers 2,000 security questions, one FTE (AutoRFP.ai)",
+                "url": "https://autorfp.ai/customer-stories/sugarai-answers-2000-question-security-questionnaires-with-one-fte"
+              },
+              {
+                "title": "Best AI Tools for Presales (Demoboost)",
+                "url": "https://demoboost.com/blog/best-ai-tools-for-presales"
+              },
+              {
+                "title": "Reprise demo platform",
+                "url": "https://www.reprise.com/?p=6880"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "All eight cited URLs opened and broadly support the claims attributed to them; the quantified presales figures (87%, 30 to 3-4 hours, 90%, 12-18 SME questions) match the AutoRFP.ai pages but are vendor-published. Department 34 evidence is mostly agency, vendor and analyst commentary describing expected capabilities, not measured results. One IDC-based claim was overreaching and was reworded; the Fiddler hallucination claim was softened. Tool-fit statements about Sales Navigator, Salesforce Einstein, Gamma, Crossbeam, PartnerStack, Loopio and Responsive remain unverified by the cited sources.",
+        "removed_or_corrected": [
+          "34: use case 6 attributed 'account-level partner matching' to IDC; IDC says only that partner value shifts to AI solution design, governance and advisory. Rewritten, and the BD-retargeting implication marked as inference.",
+          "34: added Futurum's AWS/Dell co-sell partner-selection statement to use case 2, supported by the opened Futurum page.",
+          "34: use case 5 now names Clay and Octave, matching the Octave page; Sales Navigator fit marked as not evidenced in cited sources.",
+          "35: Fiddler hallucination claim softened from 'the reason' to frequent hallucinations plus missing workflow features, per the AutoRFP.ai page.",
+          "35: SugarAI '12-18 SME questions' qualified as 'roughly'; Reprise demo-data claim labelled as a vendor page."
+        ]
+      },
+      {
+        "cluster": "Engineering, cloud and IT",
+        "cluster_overview": "Departments 42, 45 and 46 share a pattern: AI is most useful for first-draft work (test cases, knowledge articles, ERP and CRM assistance), while reviewing and validating the output stays with people. Vendor-reported metrics such as deflection, productivity and time-to-resolve are inconsistently defined and mostly unaudited, so training should teach staff to measure outcomes themselves. Shared risks are data leakage into unsanctioned tools (shadow AI), hallucinated or irreversible actions, and weak underlying data (test suites, knowledge bases, master data). Evidence here is thinner than for other clusters: no named, independently audited customer results were found for any of the three.",
+        "departments": [
+          {
+            "num": "42",
+            "name": "Quality Engineering & Testing",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "Test case design and requirements refinement with an LLM assistant; the World Quality Report 2025 says these now lead GenAI adoption in quality engineering [1].",
+              "Generating first-draft Playwright or Selenium specs from a prompt, user story or recording; reviewers must make each test fail before trusting it [2].",
+              "Self-healing locators that repair selectors when markup changes; each heal should be reviewed, as it can hide a regression [2].",
+              "Failure triage that turns a wall of failed tests into a probable cause [2].",
+              "Test selection and flake detection to decide what to run and what to trust; keep a scheduled full run as a backstop [2].",
+              "Defect analysis and reporting, the earlier GenAI use now being overtaken by input-side work such as test design [1]."
+            ],
+            "capstone_deliverable": "Within about 12 hours: take one real user story, produce an AI-drafted Playwright suite of at least 10 tests, and show that each test fails against a deliberately broken build before it passes. Submit the prompt log, a review checklist covering hallucinated selectors and assertions, a heal-review record, and measured time versus manual authoring.",
+            "data_risks": "Test environments often hold copies of production data, including personal data (GDPR), payment card data (PCI DSS) and health data (HIPAA). Rules: use synthetic or masked data in prompts, never paste credentials or proprietary source into unsanctioned tools, and keep a human reviewer for all generated tests. The WQR 2025 ranks data privacy (67%) and hallucination or reliability (60%) among the top barriers [1].",
+            "adoption_kpis": "1) Share of new tests drafted with AI and merged after review. 2) Test authoring time versus baseline (WQR reports an average 19% productivity gain, with one third seeing minimal gains [1]). 3) Flaky-test rate and failures triaged per engineer. 4) Escaped-defect rate for AI-assisted versus manual suites. 5) Healed locators reviewed within one sprint (%).",
+            "curriculum_emphasis": "Most hours on prompting for test design and on validating AI output (mutation and fail-first checks), because generated tests can be confidently wrong [2]. Prioritise Playwright (the execution target), GitHub Copilot or Claude Code (drafting and refactoring specs) and ChatGPT Enterprise (requirements refinement). Spend little time on self-healing until locator hygiene is covered; the source notes stable test ids fix the same brittleness permanently [2].",
+            "tool_fit_commentary": "The list fits well: Playwright is a framework rather than an AI tool, but it is the natural target for generated tests. Gemini Code Assist is a generic coding assistant with no testing-specific evidence found. Omitted: AI-native testing platforms such as OpenText, Tricentis and mabl. The WQR press release notes OpenText was recognised as a Leader in the 2025 Gartner Magic Quadrant for AI-Augmented Software Testing Tools [1]; Tricentis and mabl were not verified from an opened page. Note the WQR is co-published by OpenText, a vendor in this space.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "World Quality Report 2025: AI adoption surges in Quality Engineering, but enterprise-level scaling remains elusive (Capgemini/OpenText press release)",
+                "url": "https://www.capgemini.com/news/press-releases/world-quality-report-2025-ai-adoption-surges-in-quality-engineering-but-enterprise-level-scaling-remains-elusive/"
+              },
+              {
+                "title": "AI in software testing: what actually works (TestingBot, 2026-08-31)",
+                "url": "https://testingbot.com/resources/articles/ai-in-software-testing"
+              }
+            ]
+          },
+          {
+            "num": "45",
+            "name": "IT Infrastructure & End-User Computing",
+            "tier": "Advanced",
+            "ai_use_cases": [
+              "Ticket deflection through AI self-service; ServiceNow's internal deployments reportedly reached deflection of up to about 54% on common issue-reporting forms, vendor-reported and cited second-hand [1].",
+              "Resolved tickets turned into draft knowledge articles, with the AI identifying which existing article to update and a human reviewing before publication [1].",
+              "Semantic search or RAG over the knowledge base so users can describe a problem in plain language [1].",
+              "Agentic resolution of requests across several tools; the article warns that much vendor 'agentic AI' is still advisory GenAI [1].",
+              "Estimating the blast radius of a planned change from a clean CMDB and composite AI before release [1].",
+              "Drafting change communications and impact summaries for stakeholders using GenAI, grounded by causal AI against CMDB topology [1]."
+            ],
+            "capstone_deliverable": "Within about 8 hours: audit the 20 most-requested end-user issues, then deliver five AI-drafted knowledge articles reviewed by a senior technician. Include the prompt log, a staleness check on existing articles, and a deflection report using the 'full AI resolution, no recontact within 72 hours' definition, plus estimated time saved per ticket.",
+            "data_risks": "Tickets and endpoint logs contain employee personal data (GDPR, employment law), credentials, device and network details, and sometimes regulated data. Rules: redact identifiers before prompting, use only enterprise-approved tools, and require human approval for irreversible autonomous actions. The source names data leakage, prompt injection and irreversible autonomous actions as the consistent production risks [1], and warns that a knowledge-base-grounded agent can expose documents users should not see [1]. Gartner found 69% of organizations suspect or confirm prohibited public GenAI use (survey of 302 cybersecurity leaders) [2].",
+            "adoption_kpis": "1) True AI resolution rate (no recontact in 72 hours), not dashboard deflection; the source says true rates often run 15-25% below vendor dashboards [1]. 2) Mean time to resolve for AI-assisted tickets. 3) Knowledge articles created from tickets and share reviewed within SLA. 4) Stale article share in the knowledge base. 5) Employee CSAT after AI-handled contacts.",
+            "curriculum_emphasis": "Spend most hours on knowledge-base hygiene and grounding, since the source calls it the largest predictor of AI ITSM ROI [1], then on safe use of agents with approval gates. Prioritise ServiceNow Now Assist (ticket workflow), Microsoft 365 Copilot (documentation and communications), and Claude or Gemini (article drafting and troubleshooting analysis); these tool names are not covered by the cited sources. Add a short module on shadow AI policy [2].",
+            "tool_fit_commentary": "ServiceNow Now Assist fits the service-desk workflow (the source mentions ServiceNow only for the deflection figure, not Now Assist features). Microsoft Security Copilot is a weaker fit for routine end-user support, because it targets security operations (this is my judgement, not stated in an opened source). The list names no end-user device-management or non-ServiceNow ITSM AI tooling; I did not verify specific omitted products. Caveat: the main source is written by the CEO of a competing AI-native ITSM vendor (Ravenna), so its framing of vendors is not neutral.",
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Agentic AI in ITSM: 5 Ways Agentic AI Is Transforming the IT Service Desk (ITSM.tools, 2026-08-05)",
+                "url": "https://itsm.tools/agentic-ai-in-itsm-it-service-desk/"
+              },
+              {
+                "title": "Gartner identifies 5 critical generative AI blind spots (PEX Network, 2025-11-20)",
+                "url": "https://www.processexcellencenetwork.com/ai/news/gartner-identifies-5-critical-generative-ai-blind-spots/amp"
+              }
+            ]
+          },
+          {
+            "num": "46",
+            "name": "Enterprise Applications & ERP",
+            "tier": "Specialist",
+            "ai_use_cases": [
+              "Conversational assistance inside SAP S/4HANA, SuccessFactors, Ariba and Customer Experience; the article says finance users can request margin forecasts and supply chain managers can simulate disruptions [1].",
+              "Procurement: summarising supplier risk, generating RFQs and initiating approvals in Ariba through Joule [1].",
+              "Customer-dispute handling; a European auto parts supplier reportedly cut time-to-resolve in S/4HANA by 40% (vendor-sourced, unaudited, unnamed customer) [1].",
+              "HR service automation; a global consumer goods company reportedly automates 60% of HR service requests with Joule (vendor-sourced, unnamed customer) [1].",
+              "ERP migration and implementation support; Joule was trained on SAP consulting assets to assist ERP implementations (2024 announcement) [2].",
+              "Cross-assistant integration, with Joule to be integrated with Microsoft Copilot for 365 and Google Cloud's Gemini (2024 announcement) [2]."
+            ],
+            "capstone_deliverable": "Within about 16 hours: for one ERP or CRM process (for example supplier dispute handling), deliver a documented AI-assisted workflow with a role-and-permission map, ten validated test prompts checked against system-of-record data, an exception log of wrong or unauthorised answers, and a before-and-after time measurement.",
+            "data_risks": "ERP and CRM systems hold financial records (SOX), personal data of customers and employees (GDPR, employment law), supplier pricing and possibly material non-public information. Rules: AI must respect existing role-based permissions, outputs must be checked against the system of record before posting, and no records go into unsanctioned tools. ERP Today states Joule agent activity is governed and auditable via SAP LeanIX (a vendor-friendly claim) [1]. Gartner flags shadow AI, vendor lock-in and data sovereignty as blind spots [3].",
+            "adoption_kpis": "1) Share of target tasks completed through the embedded assistant. 2) Time-to-resolve for disputes or support requests versus baseline. 3) Error rate: AI answers corrected on validation. 4) Access or permission violations detected in AI interactions. 5) Active users per licence (%).",
+            "curriculum_emphasis": "Focus on embedded, permission-aware assistants and on validating outputs against the system of record, because a wrong ERP action has financial consequences. Prioritise SAP Joule (embedded in S/4HANA, Ariba) and Microsoft 365 Copilot (documentation, with Joule integration noted [2]); Salesforce Einstein (CRM) is not verified from an opened source. Use Claude or Gemini mainly for functional specs and test scripts.",
+            "tool_fit_commentary": "SAP Joule fits, but only helps teams running SAP, so training should be tailored to the company's actual stack. Salesforce Einstein's fit is not verified from an opened source. The list omits Oracle, Workday AI (listed for HR departments but not here), and Dynamics-type suites; I did not verify any omitted tool for this function. Customer outcomes found are vendor-sourced, so confidence is limited.",
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "From SAP Sapphire 2025: Joule Everywhere (ERP Today, 2025-05-20)",
+                "url": "https://erp.today/from-sap-sapphire-2025-joule-everywhere-how-sap-is-making-business-ai-omnipresent-and-proactive/"
+              },
+              {
+                "title": "SAP beefs up copilot, trains Joule to assist with ERP migrations (CIO Dive, 2024-06-04)",
+                "url": "https://www.ciodive.com/news/sap-joule-generative-ai-erp-tools-microsoft-aws-google-nvidia/717997/"
+              },
+              {
+                "title": "Gartner identifies 5 critical generative AI blind spots (PEX Network, 2025-11-20)",
+                "url": "https://www.processexcellencenetwork.com/ai/news/gartner-identifies-5-critical-generative-ai-blind-spots/amp"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "All seven cited pages opened and supported the main statistics (WQR 19%, 67%, 60%, test-design lead; Gartner 69%; Joule 60% and 40% figures; the ITSM 72-hour definition and the 54% ServiceNow figure). The corrections were the removal of one unsupported claim, a few tightened wordings, and not-verified labels on tool names the sources do not cover. Evidence is mostly vendor-adjacent or opinion pieces (OpenText co-publishes the WQR, the ITSM author runs a competitor, ERP Today is promotional), so confidence stays medium, medium and low.",
+        "removed_or_corrected": [
+          "42: removed claim that Playwright's built-in auto-waiting fixes timing flakiness better than AI; the TestingBot page does not say this (it says stable test ids fix brittle locators). Replaced with the supported test-id point.",
+          "42: test selection use case now notes the scheduled full-run backstop, which the source states; added the note that OpenText co-publishes the WQR. 'Named a Leader' reworded to 'recognised as a Leader' to match the page.",
+          "45: ServiceNow 54% reworded to 'up to about 54%' and flagged as second-hand vendor-reported, per the article's wording ('as high as').",
+          "45: change-communications use case corrected: the article attributes this to GenAI grounded by causal AI against CMDB topology, not 'validated incident data'; blast-radius source corrected to a clean CMDB plus composite AI.",
+          "45: added the source's own figure that true deflection runs 15-25% below vendor dashboards, the knowledge-base data exposure risk, the Gartner survey size (302), and the caveat that the article's author is CEO of a competing ITSM vendor.",
+          "45: ServiceNow Now Assist, Microsoft 365 Copilot, Claude and Gemini named as tools but not covered by the cited sources; labelled as such.",
+          "46: Salesforce Einstein is not mentioned in any opened source; relabelled 'not verified' and removed from the recommendation as a fit claim.",
+          "46: Joule integration with Microsoft Copilot and Gemini reworded as a 2024 announcement of planned integration (CIO Dive says 'will integrate'); customers in the 40% and 60% claims marked as unnamed.",
+          "46: LeanIX governance claim attributed to ERP Today and marked as a vendor-friendly claim."
+        ]
+      }
+    ],
+    "missing": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research depts: 52,53",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a12765a64c7eed97a",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922388433,
+      "queuedAt": 1792922388390,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Security, data and AI",
+      "promptPreview": "You are researching how specific corporate departments use AI tools in practice, for an enterprise training reference document. Today is 2026-10-25.\n\nYour cluster: \"Security, data and AI\". Read the JSON brief at /home/user/ai-handbook-research/research/wf_args.json with the Read tool, find the entry in deptClusters whose cluster equals \"Security, data and AI\", and research ONLY these departments f…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922439658,
+      "tokens": 96816,
+      "toolCalls": 9,
+      "durationMs": 51224,
+      "resultPreview": "{\"cluster\":\"Security, data and AI\",\"cluster_overview\":\"Both departments use AI mainly for first drafts and synthesis (technology scans, patent-trend reading, ADRs), with humans owning the judgement and the final decision. Shared risks are unverified or hallucinated output, which the Equal Experts ADR experience documents, and leakage of confidential roadmaps, designs or invention details into gene…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research depts: 55,57,58,59,60",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a0a1f400ce95b8305",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922388433,
+      "queuedAt": 1792922388390,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Operations, PMO and transformation",
+      "promptPreview": "You are researching how specific corporate departments use AI tools in practice, for an enterprise training reference document. Today is 2026-10-25.\n\nYour cluster: \"Operations, PMO and transformation\". Read the JSON brief at /home/user/ai-handbook-research/research/wf_args.json with the Read tool, find the entry in deptClusters whose cluster equals \"Operations, PMO and transformation\", and researc…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922533236,
+      "tokens": 135913,
+      "toolCalls": 26,
+      "durationMs": 143303,
+      "resultPreview": "{\"cluster\":\"Operations, PMO and transformation\",\"cluster_overview\":\"Across these departments AI is used mainly for summarising, drafting and pattern-spotting inside the system of record (service desk, QMS, BCM or planning platform), with a human approving the output. The shared risks are inaccurate or incomplete underlying data, regulated records (GxP, SLA and contract data, personal data in chang…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research depts: 18,19",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ac92bef334a0dd0dc",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922439709,
+      "queuedAt": 1792922388391,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "HR, people and workplace",
+      "promptPreview": "You are researching how specific corporate departments use AI tools in practice, for an enterprise training reference document. Today is 2026-10-25.\n\nYour cluster: \"HR, people and workplace\". Read the JSON brief at /home/user/ai-handbook-research/research/wf_args.json with the Read tool, find the entry in deptClusters whose cluster equals \"HR, people and workplace\", and research ONLY these departm…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922502857,
+      "tokens": 98241,
+      "toolCalls": 9,
+      "durationMs": 63147,
+      "resultPreview": "{\"cluster\":\"HR, people and workplace\",\"cluster_overview\":\"Both workplace functions use AI mainly to turn unstructured requests and reports (tickets, incident narratives, safety documents) into structured, routed or summarised outputs, with the biggest gains where the data is already digitised. The shared risks are personal data (employee, occupant and health information under GDPR and similar law)…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "research depts: 34,35",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a5318ad4a73b1ea7d",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922502861,
+      "queuedAt": 1792922388391,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Sales, marketing and business development",
+      "promptPreview": "You are researching how specific corporate departments use AI tools in practice, for an enterprise training reference document. Today is 2026-10-25.\n\nYour cluster: \"Sales, marketing and business development\". Read the JSON brief at /home/user/ai-handbook-research/research/wf_args.json with the Read tool, find the entry in deptClusters whose cluster equals \"Sales, marketing and business development…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922574431,
+      "tokens": 101895,
+      "toolCalls": 11,
+      "durationMs": 71570,
+      "resultPreview": "{\"cluster\":\"Sales, marketing and business development\",\"cluster_overview\":\"Both functions sit between the company and external parties (partners, prospects), so AI output is often sent outside the firm and must be checked for accuracy and confidentiality. The best-evidenced gains come from drafting from approved content and from matching or prioritising on CRM and partner data. Most quantified res…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "research depts: 42,45,46",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ad0fc179629674717",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922533241,
+      "queuedAt": 1792922388391,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Engineering, cloud and IT",
+      "promptPreview": "You are researching how specific corporate departments use AI tools in practice, for an enterprise training reference document. Today is 2026-10-25.\n\nYour cluster: \"Engineering, cloud and IT\". Read the JSON brief at /home/user/ai-handbook-research/research/wf_args.json with the Read tool, find the entry in deptClusters whose cluster equals \"Engineering, cloud and IT\", and research ONLY these depar…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922635314,
+      "tokens": 117997,
+      "toolCalls": 16,
+      "durationMs": 102072,
+      "resultPreview": "{\"cluster\":\"Engineering, cloud and IT\",\"cluster_overview\":\"Departments 42, 45 and 46 share a pattern: AI is most useful for first-draft work (test cases, knowledge articles, ERP and CRM assistance), while reviewing and validating the output stays with people. Vendor-reported metrics such as deflection, productivity and time-to-resolve are inconsistently defined and mostly unaudited, so training sh…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify depts: 52,53",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a59dddcc3ad372f48",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922574470,
+      "queuedAt": 1792922439739,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Security, data and AI",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a research result on departments 52, 53 of the cluster \"Security, data and AI\" produced by another agent. Try to REFUTE it, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment (DNS is unavailable). To OPEN…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922606834,
+      "tokens": 71398,
+      "toolCalls": 4,
+      "durationMs": 32363,
+      "resultPreview": "{\"cluster\":\"Security, data and AI\",\"cluster_overview\":\"Both departments use AI mainly for first drafts and synthesis (technology scans, patent-trend reading, ADRs), with humans owning the judgement and the final decision. Shared risks are unverified or hallucinated output, which the Equal Experts ADR experience documents, and leakage of confidential roadmaps, designs or invention details into gene…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify depts: 18,19",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ae17cded254ba6554",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922606841,
+      "queuedAt": 1792922502895,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "HR, people and workplace",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a research result on departments 18, 19 of the cluster \"HR, people and workplace\" produced by another agent. Try to REFUTE it, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment (DNS is unavailable). To O…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922639399,
+      "tokens": 70957,
+      "toolCalls": 4,
+      "durationMs": 32558,
+      "resultPreview": "{\"cluster\":\"HR, people and workplace\",\"cluster_overview\":\"Both workplace functions use AI mainly to turn unstructured requests and reports (tickets, incident narratives, safety documents) into structured, routed or summarised outputs, with the biggest gains where the data is already digitised. The shared risks are personal data (employee, occupant and health information under GDPR and similar law)…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify depts: 55,57,58,59,60",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ae19044e449a5c4b2",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922635320,
+      "queuedAt": 1792922533271,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Operations, PMO and transformation",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a research result on departments 55, 57, 58, 59, 60 of the cluster \"Operations, PMO and transformation\" produced by another agent. Try to REFUTE it, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment (DNS…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922710988,
+      "tokens": 86838,
+      "toolCalls": 7,
+      "durationMs": 75667,
+      "resultPreview": "{\"cluster\":\"Operations, PMO and transformation\",\"cluster_overview\":\"Across these departments AI is used mainly for summarising, drafting and pattern-spotting inside the system of record (service desk, QMS, BCM or planning platform), with a human approving the output. The shared risks are inaccurate or incomplete underlying data, regulated records (GxP, SLA and contract data, personal data in chang…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "verify depts: 34,35",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a15be6c5eecc54271",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922639403,
+      "queuedAt": 1792922574514,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Sales, marketing and business development",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a research result on departments 34, 35 of the cluster \"Sales, marketing and business development\" produced by another agent. Try to REFUTE it, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment (DNS is u…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922672168,
+      "tokens": 75609,
+      "toolCalls": 4,
+      "durationMs": 32765,
+      "resultPreview": "{\"cluster\":\"Sales, marketing and business development\",\"cluster_overview\":\"Both functions sit between the company and external parties (partners, prospects), so AI output is often sent outside the firm and must be checked for accuracy and confidentiality. The best-evidenced gains come from drafting from approved content and from matching or prioritising on CRM and partner data. Most quantified res…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "verify depts: 42,45,46",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "adc0cbc737da9d995",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792922672175,
+      "queuedAt": 1792922635371,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Engineering, cloud and IT",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a research result on departments 42, 45, 46 of the cluster \"Engineering, cloud and IT\" produced by another agent. Try to REFUTE it, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment (DNS is unavailable).…",
+      "promptFramed": true,
+      "lastProgressAt": 1792922721631,
+      "tokens": 84282,
+      "toolCalls": 7,
+      "durationMs": 49456,
+      "resultPreview": "{\"cluster\":\"Engineering, cloud and IT\",\"cluster_overview\":\"Departments 42, 45 and 46 share a pattern: AI is most useful for first-draft work (test cases, knowledge articles, ERP and CRM assistance), while reviewing and validating the output stays with people. Vendor-reported metrics such as deflection, productivity and time-to-resolve are inconsistently defined and mostly unaudited, so training sh…"
+    }
+  ],
+  "totalTokens": 939946,
+  "totalToolCalls": 97
+}
