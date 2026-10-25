@@ -412,7 +412,7 @@ HTTP 403 or empty renders from openai.com, help.openai.com, canva.com, adobe.com
 ABOUT_MD = r"""
 ## About this site
 
-This site is the web edition of the deep-research companion to the *Corporate AI Tools & Training Handbook* (60 departments, 57 tools, October 2026 revised edition), prepared for iMinds Academy curriculum planning. The long-form document with every section in one place is available as a Claude Doc; this site reorganises the same verified material into a learning path, a tool catalogue, a department directory, an interactive matrix and a comparison tool.
+This site is the web edition of the deep-research companion to the *Corporate AI Tools & Training Handbook* (60 departments, 57 tools, October 2026 revised edition), prepared for iMinds Academy curriculum planning. The long-form research document with every section in one place is linked in the footer; this site reorganises the same verified material into a learning path, a tool catalogue, a department directory, an interactive matrix and a comparison tool.
 
 Every profile page links the pages a researcher opened. Where a claim could not be verified, it says so. Nothing on this site is a purchase recommendation, legal advice, or a substitute for reading the vendor's current contract terms.
 
