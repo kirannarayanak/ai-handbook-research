@@ -1,0 +1,2034 @@
+{
+  "summary": "Find official learning paths, courses and certifications for each handbook tool, with adversarial fact-checking",
+  "agentCount": 10,
+  "logs": [
+    "groups done: 5/5; tools: 30"
+  ],
+  "result": {
+    "groups": [
+      {
+        "group": "General AI assistants and research tools",
+        "overview": "Anthropic has the most complete free academy (Claude 101, AI Fluency, Cowork and Claude Code courses) plus a partner-only architect exam. Google offers Skills paths for Gemini Enterprise and Gemini Notebook plus a help center for NotebookLM. OpenAI Academy is open to all, but its certification and Enterprise help pages could not be opened. Perplexity has docs, a help center and a resource hub with short Academy lessons, but no credential.",
+        "tools": [
+          {
+            "tool": "Gemini",
+            "summary": "Learn Gemini through Google Workspace with Gemini training (described in a Google blog) and the Gemini Enterprise path on Google Skills. No Gemini-specific user certification was found; Google Cloud certifications cover the cloud platform, not the assistant.",
+            "recommended_order": [
+              "Workspace with Gemini learning pathway (Google Skills)",
+              "Gemini Enterprise and Gemini Notebook path",
+              "Google Skills paths catalog"
+            ],
+            "paths": [
+              {
+                "title": "Workspace with Gemini learning pathway (Google Skills / Cloud Skills Boost)",
+                "provider": "Google Cloud Skills",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "Eight activities of 30-45 minutes each",
+                "cost": "No-cost (per Google Workspace blog)",
+                "audience": "All employees using Gemini in Gmail, Docs, Slides, Sheets, Meet, Drive, Vids",
+                "url": "https://workspace.google.com/blog/ai-and-machine-learning/beyond-the-prompt-resources-gemini",
+                "verified": false,
+                "note": "Only the Google Workspace blog (dated July 9, 2025) was opened; it describes the path. The Skills catalog page does not list it today and no direct path URL was found, so its current existence and name are unconfirmed."
+              },
+              {
+                "title": "Gemini Enterprise and Gemini Notebook (Google Skills path)",
+                "provider": "Google Cloud Skills",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "6 activities; hours not stated",
+                "cost": "not stated",
+                "audience": "Enterprise users, admins and builders of Gemini Enterprise search and agents",
+                "url": "https://www.skills.google/paths/3666",
+                "verified": true,
+                "note": "Opened; page shows 6 activities, managed by Google Cloud, last updated 3 months ago. Cost not shown and sign-in is required to start."
+              },
+              {
+                "title": "Google Skills paths catalog (AI/ML, Agents, Productivity)",
+                "provider": "Google Cloud Skills",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Learners and builders choosing paths, badges and certificates",
+                "url": "https://www.skills.google/paths",
+                "verified": true,
+                "note": "Opened; lists paths such as Gemini for Government, certificates, skill badges and proctored Google Cloud certifications, none specific to the Gemini assistant. A no-cost GEAR subscription is mentioned."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Beyond the prompt: Workspace with Gemini resources",
+                "url": "https://workspace.google.com/blog/ai-and-machine-learning/beyond-the-prompt-resources-gemini"
+              },
+              {
+                "title": "Google Skills paths",
+                "url": "https://www.skills.google/paths"
+              }
+            ]
+          },
+          {
+            "tool": "Claude",
+            "summary": "Start with the free Claude 101 course on Anthropic Academy (Skilljar), which ends with a certificate of completion, then take role and product courses. A formal exam, Claude Certified Architect, Foundations, launched in March 2026 for Claude Partner Network partners and targets solution architects, not general staff.",
+            "recommended_order": [
+              "Claude 101",
+              "AI Fluency: Framework and Foundations",
+              "Introduction to Claude Cowork",
+              "Claude Code 101",
+              "Claude Certified Architect, Foundations"
+            ],
+            "paths": [
+              {
+                "title": "Claude 101",
+                "provider": "Anthropic Academy (Skilljar)",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Everyday knowledge workers",
+                "url": "https://anthropic.skilljar.com/claude-101",
+                "verified": true,
+                "note": "Opened; registration shows FREE. Covers projects, artifacts, skills, connectors, enterprise search, research and use cases by role, ending with a certificate of completion."
+              },
+              {
+                "title": "AI Fluency: Framework and Foundations",
+                "provider": "Anthropic Academy",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "4 hr, 14 lessons, 1 quiz",
+                "cost": "Free (no price shown)",
+                "audience": "All staff learning to work with AI (4D framework)",
+                "url": "https://academy.claude.com/",
+                "verified": true,
+                "note": "Opened; Claude Academy home lists it as a course of 14 lessons, 1 quiz, 4 hr, and describes Academy courses as free. Also in the Skilljar catalog."
+              },
+              {
+                "title": "Introduction to Claude Cowork and Claude Code 101",
+                "provider": "Anthropic Academy (Skilljar)",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Staff delegating multi-step work; developers",
+                "url": "https://anthropic.skilljar.com/",
+                "verified": true,
+                "note": "Opened the Skilljar catalog; both Introduction to Claude Cowork and Claude Code 101 are listed as separate courses, so this entry covers two courses. Catalog shows no duration or price."
+              },
+              {
+                "title": "Claude Certified Architect, Foundations (CCA-F)",
+                "provider": "Anthropic",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Solution architects at Claude Partner Network partners",
+                "url": "https://www.anthropic.com/news/claude-partner-network",
+                "verified": true,
+                "note": "Opened Anthropic's Mar 12, 2026 announcement: a technical exam for solution architects, available to partners; network membership is free. Anthropic says further seller, architect and developer certifications are planned. Format and price not on the page."
+              },
+              {
+                "title": "Claude Help Center and Claude Platform docs",
+                "provider": "Anthropic",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Users, admins and developers",
+                "url": "https://support.claude.com/en/",
+                "verified": true,
+                "note": "Opened; collections include Team and Enterprise plans, Cowork, Claude Code and API/Console. API docs link is in the header."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Anthropic Academy",
+                "url": "https://anthropic.skilljar.com/"
+              },
+              {
+                "title": "Claude Partner Network",
+                "url": "https://www.anthropic.com/news/claude-partner-network"
+              },
+              {
+                "title": "Claude Academy",
+                "url": "https://academy.claude.com/"
+              }
+            ]
+          },
+          {
+            "tool": "ChatGPT Enterprise",
+            "summary": "OpenAI Academy is the official learning hub, with Apply AI at Work for knowledge workers and live events. OpenAI certification and Enterprise help pages could not be opened, so treat any credential as unconfirmed.",
+            "recommended_order": [
+              "OpenAI Academy: Apply AI at Work",
+              "OpenAI Academy events and livestreams",
+              "OpenAI certifications (AI Foundations)"
+            ],
+            "paths": [
+              {
+                "title": "OpenAI Academy: Apply AI at Work",
+                "provider": "OpenAI Academy",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Knowledge workers",
+                "url": "https://academy.openai.com/",
+                "verified": true,
+                "note": "Opened; the home page lists Apply AI at Work (prompting and review habits, repeatable workflows, directing agents), plus Build with AI and Lead AI Adoption tracks. Sign-in/Join required; price not shown."
+              },
+              {
+                "title": "OpenAI Academy events and livestreams (for example ChatGPT 101)",
+                "provider": "OpenAI Academy",
+                "kind": "community",
+                "level": "Foundation",
+                "duration": "Roughly 1 hour per session",
+                "cost": "not stated",
+                "audience": "Professionals by sector (government, nonprofits, education)",
+                "url": "https://academy.openai.com/",
+                "verified": true,
+                "note": "Opened; shows upcoming livestreams (e.g. Oct 27, 2026) and replays, mostly 45-60 minutes."
+              },
+              {
+                "title": "OpenAI Certifications: AI Foundations",
+                "provider": "OpenAI",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "General workers (pilot partners)",
+                "url": "https://openai.com/certifications",
+                "verified": false,
+                "note": "Page returned 403 again, as did openai.com/academy/certifications; existence and current status are unconfirmed."
+              },
+              {
+                "title": "ChatGPT Enterprise Help Center",
+                "provider": "OpenAI",
+                "kind": "documentation",
+                "level": "Admin",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Workspace admins and users",
+                "url": "https://help.openai.com/en/collections/6825274-chatgpt-enterprise",
+                "verified": false,
+                "note": "Page returned 403 and could not be opened."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "OpenAI Academy",
+                "url": "https://academy.openai.com/"
+              }
+            ]
+          },
+          {
+            "tool": "NotebookLM",
+            "summary": "Learn NotebookLM from the official help center and the Gemini Enterprise and Gemini Notebook path on Google Skills. No standalone NotebookLM certification was found.",
+            "recommended_order": [
+              "Gemini Notebook Help Center",
+              "Gemini Enterprise and Gemini Notebook path"
+            ],
+            "paths": [
+              {
+                "title": "Gemini Notebook (NotebookLM) Help Center",
+                "provider": "Google",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All users",
+                "url": "https://support.google.com/gemininotebook/",
+                "verified": true,
+                "note": "Opened; the page is titled Gemini Notebook Help (Google's current name for this product, which the older NotebookLM name refers to). Topics: getting started, sources, chat, Audio Overview, usage limits, work or school accounts."
+              },
+              {
+                "title": "Gemini Enterprise and Gemini Notebook (Google Skills path)",
+                "provider": "Google Cloud Skills",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "6 activities",
+                "cost": "not stated",
+                "audience": "Enterprise users deriving insights from complex documents",
+                "url": "https://www.skills.google/paths/3666",
+                "verified": true,
+                "note": "Opened; description includes using Gemini Notebook to derive insights from complex documents."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Gemini Notebook Help",
+                "url": "https://support.google.com/gemininotebook/"
+              },
+              {
+                "title": "Gemini Enterprise and Gemini Notebook path",
+                "url": "https://www.skills.google/paths/3666"
+              }
+            ]
+          },
+          {
+            "tool": "Perplexity",
+            "summary": "Learn Perplexity from the Help Center, the Resource Hub (guides, workshops, short Academy lessons) and the API docs. No certification was found.",
+            "recommended_order": [
+              "Perplexity Resource Hub",
+              "Perplexity Help Center",
+              "Perplexity API docs"
+            ],
+            "paths": [
+              {
+                "title": "Perplexity Resource Hub (guides, workshops, Academy lessons)",
+                "provider": "Perplexity",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All users",
+                "url": "https://www.perplexity.ai/hub/resources",
+                "verified": true,
+                "note": "Opened; includes Academy video lessons such as What is Perplexity Computer?, guides, and workshop replays of 40-57 minutes. It is a resource hub, not a structured course; cost is not stated on the page."
+              },
+              {
+                "title": "Perplexity Help Center",
+                "provider": "Perplexity",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Users and admins",
+                "url": "https://www.perplexity.ai/help-center/en",
+                "verified": true,
+                "note": "Opened; sections for Getting Started, Perplexity Enterprise, Computer, API and more. Last modified Oct 23, 2026."
+              },
+              {
+                "title": "Perplexity API documentation",
+                "provider": "Perplexity",
+                "kind": "documentation",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers",
+                "url": "https://docs.perplexity.ai/docs/getting-started/overview",
+                "verified": true,
+                "note": "Opened; overview and quickstart for the Agent, Search and Embeddings APIs. API usage itself is priced separately."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Perplexity Resource Hub",
+                "url": "https://www.perplexity.ai/hub/resources"
+              },
+              {
+                "title": "Perplexity Help Center",
+                "url": "https://www.perplexity.ai/help-center/en"
+              }
+            ]
+          },
+          {
+            "tool": "Perplexity Enterprise",
+            "summary": "Use the Enterprise section of the Help Center and the Enterprise resource hub for admin setup and rollout, then the shared Perplexity lessons. No certification was found.",
+            "recommended_order": [
+              "Perplexity Enterprise Resource Hub",
+              "Perplexity Help Center (Enterprise)",
+              "Perplexity Resource Hub"
+            ],
+            "paths": [
+              {
+                "title": "Perplexity Enterprise Resource Hub",
+                "provider": "Perplexity",
+                "kind": "documentation",
+                "level": "Admin",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Enterprise admins and teams",
+                "url": "https://enterprise-prod.perplexity.ai/enterprise/resources",
+                "verified": true,
+                "note": "Opened; lists research guides, trainings and webinar replays, and curated Enterprise queries. The host is a non-canonical prod subdomain, so it may change."
+              },
+              {
+                "title": "Perplexity Help Center: Enterprise",
+                "provider": "Perplexity",
+                "kind": "documentation",
+                "level": "Admin",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Enterprise admins and users",
+                "url": "https://www.perplexity.ai/help-center/en",
+                "verified": true,
+                "note": "Opened; Perplexity Enterprise is a top-level section with 43 articles."
+              },
+              {
+                "title": "Perplexity Resource Hub: AI adoption guide and workshops",
+                "provider": "Perplexity",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Technical leaders and rollout owners",
+                "url": "https://www.perplexity.ai/hub/resources",
+                "verified": true,
+                "note": "Opened; includes the AI adoption guide for technical leaders and workshop replays. Cost is not stated on the page."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Perplexity Enterprise Resource Hub",
+                "url": "https://enterprise-prod.perplexity.ai/enterprise/resources"
+              },
+              {
+                "title": "Perplexity Help Center",
+                "url": "https://www.perplexity.ai/help-center/en"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "I opened every vendor URL except the two OpenAI pages, which returned 403 (also for a second certifications URL). Claude, Google Skills path 3666, NotebookLM/Gemini Notebook help, Perplexity and OpenAI Academy entries match the pages. Most durations and costs are genuinely not shown on vendor pages, so they remain \"not stated\". Confidence for ChatGPT Enterprise is low because no certification or Enterprise help page could be confirmed.",
+        "removed_or_corrected": [
+          "Gemini / Workspace with Gemini pathway: set verified=false; only a July 2025 blog describes it and the current Skills catalog does not list it.",
+          "Claude / AI Fluency: duration corrected to 4 hr, 14 lessons, 1 quiz from the Academy home page.",
+          "Claude / Cowork and Claude Code 101: note clarified that these are two separate courses in the Skilljar catalog; no duration or price shown.",
+          "Claude / CCA-F: added that Anthropic plans more certifications later in 2026; membership in the partner network is free.",
+          "NotebookLM: note clarified that the help center is titled Gemini Notebook Help.",
+          "Perplexity Resource Hub entries: noted it is a hub not a structured course and cost is not stated on the page.",
+          "ChatGPT Enterprise / Certifications and Help Center: retained as verified=false after a second attempt also returned 403.",
+          "Perplexity Enterprise hub: added note that the URL is on a non-canonical enterprise-prod subdomain."
+        ]
+      },
+      {
+        "group": "Microsoft Copilots and Power Platform",
+        "overview": "Microsoft Learn is the official hub for all six tools. Excel, Word, Teams and M365 Copilot share the same free Learn modules and paths, and AB-731 is the only Copilot-related exam. Power BI has an intermediate Copilot module and a Fabric Copilot path. Power Automate has free beginner paths and the PL-900 fundamentals exam. The PL-500 RPA exam retired on 2026-06-30.",
+        "tools": [
+          {
+            "tool": "Microsoft 365 Copilot",
+            "summary": "Learn it free on Microsoft Learn, starting with the beginner productivity module and then the intermediate Draft, analyze, and present path. The one credential on this topic is Microsoft Certified: AI Transformation Leader (AB-731), a beginner exam for business leaders.",
+            "recommended_order": [
+              "Copilot for all the ways you work",
+              "Draft, analyze, and present with Microsoft Copilot",
+              "Microsoft Certified: AI Transformation Leader (AB-731)",
+              "Microsoft Copilot documentation for IT Pros"
+            ],
+            "paths": [
+              {
+                "title": "Copilot for all the ways you work",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "8 units (minutes not stated)",
+                "cost": "Free",
+                "audience": "Business users, leaders, administrators",
+                "url": "https://learn.microsoft.com/en-us/training/modules/copilot-productivity-workflows/",
+                "verified": true,
+                "note": "Page shows Beginner, 8 units, no prerequisites; covers Word, Excel, Outlook and Teams. Cost is not printed on the page; Learn modules are free."
+              },
+              {
+                "title": "Draft, analyze, and present with Microsoft Copilot",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "7 modules",
+                "cost": "Free",
+                "audience": "Business users, administrators, functional consultants",
+                "url": "https://learn.microsoft.com/en-us/training/paths/draft-analyze-present-microsoft-365-copilot/",
+                "verified": true,
+                "note": "Page shows Intermediate, 7 modules. Covers PowerPoint, Word, Excel, Teams, Outlook and Copilot Chat; needs basic Microsoft 365 experience. The 'MS-4018' code does not appear on the page, so it was dropped from the title."
+              },
+              {
+                "title": "Microsoft Certified: AI Transformation Leader (AB-731)",
+                "provider": "Microsoft",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "45-minute proctored exam",
+                "cost": "Price varies by country (not stated on page)",
+                "audience": "Business decision-makers leading AI adoption, no coding",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/",
+                "verified": true,
+                "note": "Page shows Beginner, 45 minutes, proctored, price by country. Covers Microsoft 365 Copilot, Azure AI and Foundry; practice assessment and sandbox offered. Last updated 07/22/2026."
+              },
+              {
+                "title": "Microsoft Copilot documentation for IT Pros",
+                "provider": "Microsoft Learn",
+                "kind": "documentation",
+                "level": "Admin",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "IT admins and developers",
+                "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/",
+                "verified": true,
+                "note": "Docs hub for planning, securing and managing Copilot; page title is 'Microsoft Copilot documentation for IT Pros'."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "AB-731 certification page",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/"
+              },
+              {
+                "title": "Copilot docs hub",
+                "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/"
+              }
+            ]
+          },
+          {
+            "tool": "Power BI Copilot",
+            "summary": "Take the intermediate Microsoft Learn module on Copilot in Power BI, then the Fabric Copilot path if you work in Fabric. No Copilot-specific exam exists.",
+            "recommended_order": [
+              "Get started with Copilot in Power BI",
+              "Copilot for Power BI overview",
+              "Work smarter with Copilot in Microsoft Fabric"
+            ],
+            "paths": [
+              {
+                "title": "Get started with Copilot in Power BI",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "6 units (minutes not stated)",
+                "cost": "Free",
+                "audience": "Data analysts",
+                "url": "https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/",
+                "verified": true,
+                "note": "Page shows Intermediate, 6 units; needs conceptual knowledge of data preparation, modeling and analytics. Cost is not printed on the page."
+              },
+              {
+                "title": "Copilot for Power BI overview",
+                "provider": "Microsoft Learn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Report authors and admins",
+                "url": "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction",
+                "verified": true,
+                "note": "Page opened with title 'Copilot for Power BI overview' but showed an authorization notice; level and audience are not confirmed by the page."
+              },
+              {
+                "title": "Work smarter with Copilot in Microsoft Fabric",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "6 modules",
+                "cost": "Free",
+                "audience": "Data analysts, data engineers, data scientists",
+                "url": "https://learn.microsoft.com/en-us/training/paths/work-smarter-with-copilot-in-microsoft-fabric/",
+                "verified": true,
+                "note": "Now opened: Intermediate, 6 modules, and it includes 'Get started with Copilot in Power BI'. Duration corrected from 'not stated'."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Get started with Copilot in Power BI",
+                "url": "https://learn.microsoft.com/en-us/training/modules/power-bi-copilot/"
+              },
+              {
+                "title": "Work smarter with Copilot in Microsoft Fabric",
+                "url": "https://learn.microsoft.com/en-us/training/paths/work-smarter-with-copilot-in-microsoft-fabric/"
+              }
+            ]
+          },
+          {
+            "tool": "Excel Copilot",
+            "summary": "Excel Copilot has no dedicated course or exam. Learn it through the free Microsoft Learn M365 Copilot modules, which include analyzing data in Excel.",
+            "recommended_order": [
+              "Copilot for all the ways you work",
+              "Microsoft Productivity Accreditation 2026",
+              "Draft, analyze, and present with Microsoft Copilot"
+            ],
+            "paths": [
+              {
+                "title": "Copilot for all the ways you work",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "8 units (minutes not stated)",
+                "cost": "Free",
+                "audience": "Business users",
+                "url": "https://learn.microsoft.com/en-us/training/modules/copilot-productivity-workflows/",
+                "verified": true,
+                "note": "Includes an 'Analyze data with Excel' unit."
+              },
+              {
+                "title": "Microsoft Productivity Accreditation 2026",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "4 modules",
+                "cost": "Free",
+                "audience": "Business users, owners, educators, students",
+                "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-productivity-accreditation-2026/",
+                "verified": true,
+                "note": "Beginner, no prerequisites, achievement code offered. Includes 'Work smarter with Copilot across your Microsoft 365 apps' (Word, PowerPoint, Excel, Outlook, OneNote)."
+              },
+              {
+                "title": "Draft, analyze, and present with Microsoft Copilot",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "7 modules",
+                "cost": "Free",
+                "audience": "Business users",
+                "url": "https://learn.microsoft.com/en-us/training/paths/draft-analyze-present-microsoft-365-copilot/",
+                "verified": true,
+                "note": "Includes the module 'Uncover new data insights with AI' on Copilot in Excel, with the Analyst agent."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Productivity Accreditation 2026",
+                "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-productivity-accreditation-2026/"
+              }
+            ]
+          },
+          {
+            "tool": "Microsoft Word Copilot",
+            "summary": "Word Copilot has no dedicated course or exam. It is taught inside the free Microsoft 365 Copilot modules on Microsoft Learn.",
+            "recommended_order": [
+              "Copilot for all the ways you work",
+              "Microsoft Productivity Accreditation 2026",
+              "Draft, analyze, and present with Microsoft Copilot"
+            ],
+            "paths": [
+              {
+                "title": "Copilot for all the ways you work",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "8 units (minutes not stated)",
+                "cost": "Free",
+                "audience": "Business users",
+                "url": "https://learn.microsoft.com/en-us/training/modules/copilot-productivity-workflows/",
+                "verified": true,
+                "note": "Includes a 'Find action items with Word' unit."
+              },
+              {
+                "title": "Microsoft Productivity Accreditation 2026",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "4 modules",
+                "cost": "Free",
+                "audience": "Business users",
+                "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-productivity-accreditation-2026/",
+                "verified": true,
+                "note": "Beginner, no prerequisites; covers Copilot in Word among other apps."
+              },
+              {
+                "title": "Draft, analyze, and present with Microsoft Copilot",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "7 modules",
+                "cost": "Free",
+                "audience": "Business users",
+                "url": "https://learn.microsoft.com/en-us/training/paths/draft-analyze-present-microsoft-365-copilot/",
+                "verified": true,
+                "note": "Includes the module 'Draft impactful documents using AI' with Writing Coach agent."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Copilot for all the ways you work",
+                "url": "https://learn.microsoft.com/en-us/training/modules/copilot-productivity-workflows/"
+              }
+            ]
+          },
+          {
+            "tool": "Microsoft Teams Copilot",
+            "summary": "Teams Copilot has no dedicated course or exam. Learn it through the free M365 Copilot Learn modules, which cover Teams communication and meetings.",
+            "recommended_order": [
+              "Copilot for all the ways you work",
+              "Draft, analyze, and present with Microsoft Copilot",
+              "Microsoft Certified: AI Transformation Leader (AB-731)"
+            ],
+            "paths": [
+              {
+                "title": "Copilot for all the ways you work",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "8 units (minutes not stated)",
+                "cost": "Free",
+                "audience": "Business users",
+                "url": "https://learn.microsoft.com/en-us/training/modules/copilot-productivity-workflows/",
+                "verified": true,
+                "note": "Includes 'Communicate effectively with Outlook and Teams'."
+              },
+              {
+                "title": "Draft, analyze, and present with Microsoft Copilot",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "7 modules",
+                "cost": "Free",
+                "audience": "Business users, administrators",
+                "url": "https://learn.microsoft.com/en-us/training/paths/draft-analyze-present-microsoft-365-copilot/",
+                "verified": true,
+                "note": "Includes the module 'Make your meetings more productive with AI' on Copilot and the Facilitator agent in Teams."
+              },
+              {
+                "title": "Microsoft Certified: AI Transformation Leader (AB-731)",
+                "provider": "Microsoft",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "45-minute proctored exam",
+                "cost": "Price varies by country (not stated on page)",
+                "audience": "Business leaders",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/",
+                "verified": true,
+                "note": "Optional credential on M365 Copilot adoption broadly, not Teams specifically."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Draft, analyze, and present path",
+                "url": "https://learn.microsoft.com/en-us/training/paths/draft-analyze-present-microsoft-365-copilot/"
+              }
+            ]
+          },
+          {
+            "tool": "Power Automate",
+            "summary": "Start with the free beginner Power Automate path, then the Copilot in Power Automate module. PL-900 Power Platform Fundamentals is the current entry certification. The PL-500 RPA Developer exam retired on 2026-06-30.",
+            "recommended_order": [
+              "Demonstrate the capabilities of Microsoft Power Automate",
+              "Use Copilot in Power Automate",
+              "Microsoft Certified: Power Platform Fundamentals (PL-900)",
+              "Power Automate documentation"
+            ],
+            "paths": [
+              {
+                "title": "Demonstrate the capabilities of Microsoft Power Automate",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "2 modules",
+                "cost": "Free",
+                "audience": "Business users, app makers, students",
+                "url": "https://learn.microsoft.com/en-us/training/paths/demonstrate-capabilities-microsoft-power-automate/",
+                "verified": true,
+                "note": "Beginner, no prerequisites; build, test and monitor a cloud flow."
+              },
+              {
+                "title": "Use Copilot in Power Automate",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "6 units (minutes not stated)",
+                "cost": "Free",
+                "audience": "App makers, functional consultants",
+                "url": "https://learn.microsoft.com/en-us/training/modules/use-copilot-power-automate/",
+                "verified": true,
+                "note": "Page shows Beginner, 6 units; prerequisite is basic knowledge of creating flows plus a Dataverse environment with sample apps."
+              },
+              {
+                "title": "Microsoft Certified: Power Platform Fundamentals (PL-900)",
+                "provider": "Microsoft",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "45-minute proctored exam",
+                "cost": "Price varies by country (not stated on page)",
+                "audience": "People starting out on Power Platform, app makers",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/",
+                "verified": true,
+                "note": "Beginner, no prerequisites for role-based certifications. Duration corrected from 'not stated' to 45 minutes; price depends on country. Last updated 07/24/2026."
+              },
+              {
+                "title": "Power Automate documentation",
+                "provider": "Microsoft Learn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Makers and admins",
+                "url": "https://learn.microsoft.com/en-us/power-automate/",
+                "verified": true,
+                "note": "Docs hub with a Training section."
+              },
+              {
+                "title": "Exam PL-500: Power Automate RPA Developer study guide (retired)",
+                "provider": "Microsoft Learn",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "RPA developers",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-500",
+                "verified": true,
+                "note": "Page states the exam retired June 30, 2026 (11:59 PM CST). Listed only as a retired credential; not a current path."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Power Automate docs",
+                "url": "https://learn.microsoft.com/en-us/power-automate/"
+              },
+              {
+                "title": "PL-900 certification page",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/"
+              },
+              {
+                "title": "PL-500 study guide",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/pl-500"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "All 12 distinct URLs opened successfully. Titles, levels, module or unit counts and exam lengths were checked against the page text. Learn pages do not print a cost, so 'Free' for modules and paths is inferred from Learn's usual model, and exam prices vary by country. The Power BI overview doc opened but showed an authorization notice, so only its title is confirmed.",
+        "removed_or_corrected": [
+          "Draft, analyze, and present path: removed the 'MS-4018' code from the title because the page does not show it.",
+          "Work smarter with Copilot in Microsoft Fabric: opened, set verified=true, duration corrected to 6 modules, audience expanded to data scientists.",
+          "PL-900: duration corrected from 'not stated' to a 45-minute proctored exam; cost stated as price by country.",
+          "PL-500: kept but labelled as retired in the title, per the page's June 30, 2026 retirement notice.",
+          "Power BI Copilot: added the Fabric path to recommended_order since it is now verified, and raised confidence to high.",
+          "Excel and Word Copilot: notes enriched with the specific module names from the opened path pages.",
+          "Copilot for all the ways you work and Use Copilot in Power Automate notes: stated that cost is not printed on the page."
+        ]
+      },
+      {
+        "group": "Presentation, design and document tools",
+        "overview": "Gamma and Adobe have official learning paths; Adobe is the only vendor here with formal exam credentials (Adobe Certified Professional). Canva's official pages return HTTP 403, so a third-party Coursera course is the only verified Canva option. FigJam AI has no dedicated course and is learned through Figma Learn.",
+        "tools": [
+          {
+            "tool": "Gamma",
+            "summary": "Learn Gamma through Gamma Academy at lab.gamma.app (free, 60-minute courses) and the Help Center. No formal exam exists; achievements can be added to LinkedIn as verified skills.",
+            "recommended_order": [
+              "Gamma 101 (Gamma Academy)",
+              "Selling with Gamma (Gamma Academy)",
+              "Gamma Help Center"
+            ],
+            "paths": [
+              {
+                "title": "Gamma 101",
+                "provider": "Gamma Academy (Gamma Lab)",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "60 minutes of course content, in short lessons",
+                "cost": "Free (all courses can be completed on a free plan; some feature limits may apply)",
+                "audience": "Anyone creating presentations, documents and websites with AI",
+                "url": "https://lab.gamma.app/",
+                "verified": true,
+                "note": "Opened; page lists the course. Achievements can be added to LinkedIn as verified skills."
+              },
+              {
+                "title": "Selling with Gamma",
+                "provider": "Gamma Academy (Gamma Lab)",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "60 minutes of course content",
+                "cost": "Free (works on a free plan)",
+                "audience": "Consultants, founders, account executives, customer success, BD, partnerships",
+                "url": "https://lab.gamma.app/",
+                "verified": true,
+                "note": "Opened; sales-deck focused. Teaching with Gamma and Visual Storytelling are listed as Coming soon. The page does not state a level; Intermediate is our classification."
+              },
+              {
+                "title": "Gamma Help Center",
+                "provider": "Gamma",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All users",
+                "url": "https://help.gamma.app/en/",
+                "verified": true,
+                "note": "Opened; categories include Gamma Basics, Editing and Formatting, AI Content and Image Generation, Sharing and Analytics."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Gamma Academy",
+                "url": "https://lab.gamma.app/"
+              },
+              {
+                "title": "Gamma Help Center",
+                "url": "https://help.gamma.app/en/"
+              }
+            ]
+          },
+          {
+            "tool": "Canva Magic Studio",
+            "summary": "Canva's own Design School page blocked access (HTTP 403), so the official catalog is unverified. A beginner Coursera course on Magic Studio is the verified option; no formal Canva certification was confirmed.",
+            "recommended_order": [
+              "AI-Powered Design with Canva Magic Studio (Coursera)",
+              "Canva Design School (check manually)"
+            ],
+            "paths": [
+              {
+                "title": "AI-Powered Design with Canva Magic Studio",
+                "provider": "Coursera (third-party, instructor listed as Professionals from the Industry)",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "3 hours, 3 modules, self-paced",
+                "cost": "Enroll for free; shareable certificate offered (terms not stated)",
+                "audience": "Beginners using Magic Write, Magic Media, Magic Design, Magic Resize and related tools",
+                "url": "https://www.coursera.org/learn/ai-powered-design-with-canva-magic-studio",
+                "verified": true,
+                "note": "Opened; Beginner level, 3 hours, 3 assignments. Not made by Canva."
+              },
+              {
+                "title": "Canva Design School",
+                "provider": "Canva",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "All Canva users",
+                "url": "https://www.canva.com/designschool/",
+                "verified": false,
+                "note": "Returned HTTP 403 on retry, as did canva.com/learn and designschool.canva.com; not verified. Check manually for current courses and any certification."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "AI-Powered Design with Canva Magic Studio",
+                "url": "https://www.coursera.org/learn/ai-powered-design-with-canva-magic-studio"
+              }
+            ]
+          },
+          {
+            "tool": "Adobe Firefly",
+            "summary": "Adobe lists free Firefly-related courses in Adobe Digital Academy and a formal Adobe Certified Professional exam, Product and Experience Design with AI Using Adobe Firefly. Adobe says certification typically requires 150 hours of hands-on experience and instruction.",
+            "recommended_order": [
+              "AI Foundations for Creativity (Adobe Digital Academy)",
+              "AI Tools for Creatives powered by Adobe Firefly (Adobe Digital Academy)",
+              "Firefly exam guide and CertPREP practice tests",
+              "Adobe Certified Professional: Product and Experience Design with AI Using Adobe Firefly"
+            ],
+            "paths": [
+              {
+                "title": "AI Foundations for Creativity and AI Tools for Creatives powered by Adobe Firefly",
+                "provider": "Adobe Digital Academy",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Creatives and designers new to generative AI",
+                "url": "https://certifiedprofessional.adobe.com/firefly",
+                "verified": true,
+                "note": "Both courses are listed as Free on the opened Adobe certification page; the course pages themselves were not opened. Also listed free: Prompting for Generative AI, Navigating Generative AI Ethics, AI-Powered Exploration With Adobe Firefly Boards."
+              },
+              {
+                "title": "Adobe Certified Professional: Product and Experience Design with AI Using Adobe Firefly",
+                "provider": "Adobe (Certiport)",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "Typically 150 hours of hands-on experience and instruction; exam length not stated",
+                "cost": "not stated",
+                "audience": "Designers validating AI-assisted ideation and design skills",
+                "url": "https://certifiedprofessional.adobe.com/firefly",
+                "verified": true,
+                "note": "Opened; exam guide covers AI concepts and principles, concepts of design, ideation. CertPREP practice tests (GMetrix) listed. Page also announces a new AI Creative Workflows Specialty Credential (not verified in detail). Level is our classification, not stated by Adobe."
+              },
+              {
+                "title": "Leading Creative Projects with AI",
+                "provider": "Coursera (Adobe + Coursera career certificate resources)",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "Subscription required",
+                "audience": "Creative project leads",
+                "url": "https://certifiedprofessional.adobe.com/firefly",
+                "verified": true,
+                "note": "Listed on the opened Adobe page as Subscription required; the Coursera page itself was not opened. Level is our classification."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Adobe Certified Professional - Firefly",
+                "url": "https://certifiedprofessional.adobe.com/firefly"
+              },
+              {
+                "title": "Adobe Certified Professional home",
+                "url": "https://certifiedprofessional.adobe.com/"
+              }
+            ]
+          },
+          {
+            "tool": "Adobe Acrobat AI Assistant",
+            "summary": "The Adobe-taught Coursera specialization covers the Acrobat AI Assistant directly. Adobe's Acrobat Pro certification tests document skills, not the AI Assistant specifically.",
+            "recommended_order": [
+              "Adobe Acrobat for Business Professionals Specialization (Coursera)",
+              "Acrobat Pro exam guide and practice tests",
+              "Adobe Certified Professional: Document Creation & Management Using Adobe Acrobat Pro"
+            ],
+            "paths": [
+              {
+                "title": "Adobe Acrobat for Business Professionals Specialization",
+                "provider": "Coursera (instructor: Adobe)",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "3-course series, 4 weeks at 5 hours a week",
+                "cost": "Enroll for free shown; shareable certificate (terms not stated)",
+                "audience": "Business professionals creating and managing PDFs",
+                "url": "https://www.coursera.org/specializations/adobe-acrobat-for-business-professionals",
+                "verified": true,
+                "note": "Opened; Beginner level; learning outcomes include using Acrobat AI Assistant to extract insights; updated June 2026."
+              },
+              {
+                "title": "Adobe Certified Professional: Document Creation & Management Using Adobe Acrobat Pro",
+                "provider": "Adobe (Certiport)",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "Typically 150 hours of hands-on experience and instruction; exam length not stated",
+                "cost": "not stated",
+                "audience": "Users validating Acrobat Pro skills",
+                "url": "https://certifiedprofessional.adobe.com/acrobat-pro",
+                "verified": true,
+                "note": "Opened; exam guide and CertPREP practice tests listed. No AI Assistant-specific exam seen. Level is our classification."
+              },
+              {
+                "title": "Get smart assistance for PDF tools (Acrobat AI Assistant help)",
+                "provider": "Adobe Help Center",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All Acrobat users",
+                "url": "https://helpx.adobe.com/acrobat/using/get-smart-assistance-pdf-tools.html",
+                "verified": false,
+                "note": "Returned HTTP 403 on retry and could not be opened; found via search only, not verified."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Adobe Acrobat for Business Professionals Specialization",
+                "url": "https://www.coursera.org/specializations/adobe-acrobat-for-business-professionals"
+              },
+              {
+                "title": "Acrobat Pro certification",
+                "url": "https://certifiedprofessional.adobe.com/acrobat-pro"
+              }
+            ]
+          },
+          {
+            "tool": "Figma AI",
+            "summary": "Learn Figma AI through Figma Learn (courses, projects, tutorials) and its About Figma AI section. No Figma AI certification was found; a third-party Coursera course covers AI features.",
+            "recommended_order": [
+              "Figma Learn: Courses, projects, tutorials",
+              "About Figma AI (Figma Learn)",
+              "Figma AI: Productivity Tools for Designers (Coursera)"
+            ],
+            "paths": [
+              {
+                "title": "Figma Learn: Courses and collections, Projects, Tutorials",
+                "provider": "Figma",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free (no cost stated on page; presented as free help content)",
+                "audience": "Designers and teams new to Figma",
+                "url": "https://help.figma.com/hc/en-us/categories/23556790977431",
+                "verified": true,
+                "note": "Opened; lists skill-based courses and collections, practical bite-sized projects and expert-led video tutorials."
+              },
+              {
+                "title": "About Figma AI",
+                "provider": "Figma Learn",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All users and admins",
+                "url": "https://help.figma.com/hc/en-us/sections/31803050978967-About-Figma-AI",
+                "verified": true,
+                "note": "Opened; page opens under Figma Learn. Only the navigation and a short body (about 3.6k characters) were seen, so the exact article list (AI credits, settings) was not confirmed here."
+              },
+              {
+                "title": "Figma AI: Productivity Tools for Designers",
+                "provider": "Coursera (third-party; instructor Anton Voroniuk)",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "3 hours, 7 modules",
+                "cost": "Enroll for free; shareable certificate (terms not stated)",
+                "audience": "Designers using AI in real workflows",
+                "url": "https://www.coursera.org/learn/figma-ai-productivity-tools-for-designers",
+                "verified": true,
+                "note": "Opened; Intermediate level, part of the AI-Powered Design and Creative Tools Specialization. Not made by Figma."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Figma Learn",
+                "url": "https://help.figma.com/hc/en-us/categories/23556790977431"
+              },
+              {
+                "title": "About Figma AI",
+                "url": "https://help.figma.com/hc/en-us/sections/31803050978967-About-Figma-AI"
+              },
+              {
+                "title": "Figma AI: Productivity Tools for Designers",
+                "url": "https://www.coursera.org/learn/figma-ai-productivity-tools-for-designers"
+              }
+            ]
+          },
+          {
+            "tool": "FigJam AI",
+            "summary": "No FigJam-specific course or certification was found; learn it from Figma Learn's FigJam documentation and the shared Figma courses.",
+            "recommended_order": [
+              "Figma Learn: Courses, projects, tutorials",
+              "FigJam documentation (Figma Learn)"
+            ],
+            "paths": [
+              {
+                "title": "Figma Learn: Courses and collections, Projects, Tutorials",
+                "provider": "Figma",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free (no cost stated on page; presented as free help content)",
+                "audience": "Teams using FigJam for workshops and planning",
+                "url": "https://help.figma.com/hc/en-us/categories/23556790977431",
+                "verified": true,
+                "note": "Opened; general Figma courses, not FigJam AI specific."
+              },
+              {
+                "title": "FigJam documentation (Figma Learn)",
+                "provider": "Figma",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "FigJam users",
+                "url": "https://help.figma.com/hc/en-us/categories/360002051613-FigJam",
+                "verified": true,
+                "note": "URL corrected to the FigJam category page, which opened. Only the Figma Learn navigation was seen, so individual FigJam AI articles were not confirmed."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Figma Learn",
+                "url": "https://help.figma.com/hc/en-us/categories/23556790977431"
+              },
+              {
+                "title": "FigJam category (Figma Learn)",
+                "url": "https://help.figma.com/hc/en-us/categories/360002051613-FigJam"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "Gamma, the two Adobe certification pages, and the three Coursera pages opened and matched on name, duration and level. Canva Design School and the Acrobat AI Assistant help page returned HTTP 403 on retry and stay unverified. Figma Learn pages opened but only navigation text was clearly seen, so the contents of individual articles are not confirmed. Levels for Adobe certifications and some Gamma courses are our classification, since the pages do not state them. Exam cost and length are not on the pages.",
+        "removed_or_corrected": [
+          "FigJam documentation: URL changed from the About Figma AI section to the FigJam category page, which opened.",
+          "Gamma Selling with Gamma: note clarifies that the page does not state a level.",
+          "Figma AI and FigJam entries: cost reworded to say Free is not stated on the page; About Figma AI note softened because the article list was not confirmed.",
+          "Canva Coursera course: provider note clarified as third-party; instructor shown as Professionals from the Industry.",
+          "Adobe Firefly: certification duration reworded to the page's 'typically 150 hours'; added that the page announces a new AI Creative Workflows Specialty Credential, and that Boards course is named AI-Powered Exploration With Adobe Firefly Boards.",
+          "Canva Design School and Acrobat AI Assistant help: retried, still HTTP 403, kept as verified=false.",
+          "Leading Creative Projects with AI: kept as verified=true only for its listing on the Adobe page (Subscription required); Coursera page not opened."
+        ]
+      },
+      {
+        "group": "Coding and engineering assistants",
+        "overview": "Claude Code, GitHub Copilot and Cursor have first-party learning content that was opened and confirmed. Only GitHub Copilot has a formal proctored certification (GH-300). Gemini Code Assist, Playwright and Amazon Q Developer are learned mainly from docs and vendor tutorials, and Playwright has no official credential. Amazon Q Developer IDE plugins reach end of support on 2027-04-30, so new learners should look at Kiro.",
+        "tools": [
+          {
+            "tool": "Claude Code",
+            "summary": "Start with the free Claude Code 101 course in Anthropic Academy, then Claude Code in Action for long autonomous sessions, with the official docs as the reference. No formal Claude Code certification was seen.",
+            "recommended_order": [
+              "Claude Code 101",
+              "Claude Code in Action",
+              "Claude Code documentation"
+            ],
+            "paths": [
+              {
+                "title": "Claude Code 101",
+                "provider": "Anthropic Academy",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers new to AI coding agents, and experienced engineers who have not yet used them",
+                "url": "https://anthropic.skilljar.com/claude-code-101",
+                "verified": true,
+                "note": "Page shows 'Register | FREE'; covers install, Plan Mode, CLAUDE.md, subagents, skills, MCP, hooks, and ends with a course quiz."
+              },
+              {
+                "title": "Claude Code in Action",
+                "provider": "Anthropic Academy",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers who already use Claude Code and want longer, less supervised, team-wide workflows",
+                "url": "https://anthropic.skilljar.com/claude-code-in-action",
+                "verified": true,
+                "note": "Page shows 'Register | FREE'; covers steering long sessions, CLAUDE.md, permission modes, hooks, routines, headless mode, GitHub Actions and plugins."
+              },
+              {
+                "title": "Claude Code documentation",
+                "provider": "Anthropic",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All Claude Code users and admins",
+                "url": "https://code.claude.com/docs/en/overview",
+                "verified": true,
+                "note": "Page opened; official overview and reference."
+              },
+              {
+                "title": "Anthropic Academy course catalog",
+                "provider": "Anthropic Academy",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Anyone starting with Claude",
+                "url": "https://anthropic.skilljar.com",
+                "verified": true,
+                "note": "Catalog home opened (shows Plans and Paths navigation); no certification seen."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Anthropic Academy",
+                "url": "https://anthropic.skilljar.com"
+              },
+              {
+                "title": "Claude Code docs",
+                "url": "https://code.claude.com/docs/en/overview"
+              }
+            ]
+          },
+          {
+            "tool": "GitHub Copilot",
+            "summary": "Learn through Microsoft Learn's Copilot paths and GitHub Docs, then take the GitHub Copilot certification exam (GH-300), listed on Microsoft Learn. It is the only formal credential in this group.",
+            "recommended_order": [
+              "Introduction to GitHub Copilot",
+              "GitHub Copilot Fundamentals Part 1 of 2",
+              "GitHub Copilot certification (exam GH-300)",
+              "GitHub Copilot documentation"
+            ],
+            "paths": [
+              {
+                "title": "Introduction to GitHub Copilot",
+                "provider": "Microsoft Learn",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "7 units",
+                "cost": "Free",
+                "audience": "Developers, DevOps engineers, administrators, solution architects and students",
+                "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/",
+                "verified": true,
+                "note": "Page shows Beginner, 7 units; cost not stated on the page, free assumed as for Microsoft Learn modules."
+              },
+              {
+                "title": "GitHub Copilot Fundamentals Part 1 of 2",
+                "provider": "Microsoft Learn",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "9 modules",
+                "cost": "Free",
+                "audience": "Developers, DevOps engineers, administrators, solution architects and students",
+                "url": "https://learn.microsoft.com/en-us/training/paths/copilot/",
+                "verified": true,
+                "note": "Page shows Beginner and Intermediate, 9 modules; cost not stated on the page, free assumed."
+              },
+              {
+                "title": "GitHub Copilot certification (exam GH-300)",
+                "provider": "GitHub / Microsoft",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "100-minute proctored exam; certification valid 2 years",
+                "cost": "not stated (price depends on country or region)",
+                "audience": "App makers, developers, DevOps engineers and technology managers",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/",
+                "verified": true,
+                "note": "Page shows Intermediate, 100 minutes, proctored via Pearson VUE, valid 2 years, practice assessment and exam sandbox; requires GitHub fundamentals and some programming experience."
+              },
+              {
+                "title": "GitHub Copilot documentation",
+                "provider": "GitHub Docs",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "All Copilot users and admins",
+                "url": "https://docs.github.com/en/copilot",
+                "verified": true,
+                "note": "Page opened; official docs hub."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Microsoft Learn GitHub Copilot certification",
+                "url": "https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/"
+              },
+              {
+                "title": "GitHub Copilot docs",
+                "url": "https://docs.github.com/en/copilot"
+              }
+            ]
+          },
+          {
+            "tool": "Gemini Code Assist",
+            "summary": "Learn from the official Google Cloud Gemini Code Assist documentation. No Gemini Code Assist specific course or certification could be confirmed.",
+            "recommended_order": [
+              "Gemini Code Assist overview and documentation"
+            ],
+            "paths": [
+              {
+                "title": "Gemini Code Assist overview and documentation",
+                "provider": "Google Cloud",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers and admins adopting Gemini Code Assist",
+                "url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview",
+                "verified": true,
+                "note": "Page opened; official documentation hub."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "Gemini Code Assist docs",
+                "url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview"
+              }
+            ]
+          },
+          {
+            "tool": "Cursor",
+            "summary": "Cursor publishes a free Learn hub (AI Foundations, then Coding Agents) plus product docs. No Cursor certification was found.",
+            "recommended_order": [
+              "Cursor Learn",
+              "Cursor documentation"
+            ],
+            "paths": [
+              {
+                "title": "Cursor Learn",
+                "provider": "Cursor",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Developers and newcomers to AI coding agents",
+                "url": "https://cursor.com/learn",
+                "verified": true,
+                "note": "Page shows AI Foundations (6 lessons) and Coding Agents (7 lessons) tracks; no price shown, though it appears openly accessible."
+              },
+              {
+                "title": "Cursor documentation",
+                "provider": "Cursor",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "All Cursor users and team admins",
+                "url": "https://cursor.com/docs",
+                "verified": true,
+                "note": "Page opened; quickstart, models and pricing, and agent docs. Docs are publicly readable; Cursor itself has paid plans."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Cursor Learn",
+                "url": "https://cursor.com/learn"
+              },
+              {
+                "title": "Cursor docs",
+                "url": "https://cursor.com/docs"
+              }
+            ]
+          },
+          {
+            "tool": "Playwright",
+            "summary": "Learn from the official Playwright docs and Learn Videos, maintained by Microsoft's Playwright team. No official Playwright certification was found.",
+            "recommended_order": [
+              "Playwright documentation: Getting started",
+              "Playwright Learn Videos"
+            ],
+            "paths": [
+              {
+                "title": "Playwright documentation: Getting started",
+                "provider": "Playwright (Microsoft)",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "QA engineers and developers writing end-to-end tests",
+                "url": "https://playwright.dev/docs/intro",
+                "verified": true,
+                "note": "Page opened; installation, writing tests, debugging, trace viewer, CI and Agents."
+              },
+              {
+                "title": "Playwright Learn Videos",
+                "provider": "Playwright (Microsoft)",
+                "kind": "course",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Beginners to intermediate testers",
+                "url": "https://playwright.dev/community/learn-videos",
+                "verified": true,
+                "note": "Page lists videos including a 'Get Started with end-to-end testing: Playwright' series of six; cost not stated, publicly viewable."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Playwright docs",
+                "url": "https://playwright.dev/docs/intro"
+              },
+              {
+                "title": "Playwright Learn Videos",
+                "url": "https://playwright.dev/community/learn-videos"
+              }
+            ]
+          },
+          {
+            "tool": "Amazon Q Developer",
+            "summary": "Use the AWS user guide. No Amazon Q Developer certification or confirmed Skill Builder course was found, and IDE plugin support ends 2027-04-30 with AWS pointing to Kiro.",
+            "recommended_order": [
+              "Amazon Q Developer user guide"
+            ],
+            "paths": [
+              {
+                "title": "What is Amazon Q Developer? (User Guide)",
+                "provider": "AWS Documentation",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free",
+                "audience": "Developers and AWS builders",
+                "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html",
+                "verified": true,
+                "note": "Page carries an end-of-support notice: AWS discontinues Amazon Q Developer IDE plugins on April 30, 2027 and recommends Kiro."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "Amazon Q Developer User Guide",
+                "url": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "Opened and checked the Claude Code courses, GH-300 certification page, both Microsoft Learn Copilot pages, Cursor Learn, Playwright Learn Videos, the Amazon Q user guide and the main docs hubs. Course and exam facts match the pages, but most courses state no duration, and Microsoft Learn and Cursor pages show no price. Gemini Code Assist and Amazon Q Developer remain low confidence because only documentation could be confirmed.",
+        "removed_or_corrected": [
+          "Removed Gemini Code Assist codelabs: the opened page rendered no Gemini Code Assist codelab titles.",
+          "Removed Google Skills catalog: no Gemini Code Assist course was shown on the page.",
+          "Removed Amazon Q Developer product page: extracted text had no Q-specific content.",
+          "Removed Amazon Q Developer Getting Started (Skill Builder): page unreadable and course not confirmed; the search-snippet duration and cost could not be verified.",
+          "Corrected GitHub Copilot Fundamentals path: level is Beginner and Intermediate, audience includes solution architects, and the page does not state a cost.",
+          "Corrected GH-300 duration wording: 100-minute proctored exam, certification valid 2 years, price varies by region.",
+          "Corrected Introduction to GitHub Copilot: page shows Beginner and 7 units but no cost.",
+          "Corrected Cursor Learn and Cursor documentation cost from Free to not stated: the opened pages show no price.",
+          "Corrected Claude Code in Action audience to match the page: developers already using Claude Code who want longer, less supervised, team-wide workflows.",
+          "Corrected Anthropic Academy catalog note: the homepage opened but its course list was not shown in the extracted text, so the specific course names previously listed were not confirmed there.",
+          "Updated Gemini Code Assist, Amazon Q Developer and Playwright summaries and recommended order to match the remaining entries."
+        ]
+      },
+      {
+        "group": "Enterprise business platforms",
+        "overview": "Most enterprise platforms train through their own academy (Trailhead, SAP Learning, Atlassian, UiPath Academy, Now Learning). Salesforce, Atlassian and UiPath have formal AI-related credentials. SAP has Joule learning journeys but no Joule exam. ServiceNow and Workday have no AI-specific credential I could confirm. Prices and durations are mostly not shown on the vendor pages.",
+        "tools": [
+          {
+            "tool": "ServiceNow Now Assist",
+            "summary": "Learn Now Assist through ServiceNow's Now Learning portal and product documentation. No Now Assist-specific certification was confirmed; ServiceNow's official pages could not be opened, so every path here is unverified.",
+            "recommended_order": [
+              "ServiceNow Now Learning (Now Assist content)",
+              "ServiceNow product documentation",
+              "Certified Implementation Specialist (product area, e.g. ITSM)"
+            ],
+            "paths": [
+              {
+                "title": "ServiceNow Now Learning (Now Assist content)",
+                "provider": "ServiceNow",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Admins, developers and consultants using Now Assist",
+                "url": "https://nowlearning.servicenow.com",
+                "verified": false,
+                "note": "Re-checked: the page opens only a sign-in redirect with no visible catalog, so no Now Assist course could be confirmed."
+              },
+              {
+                "title": "ServiceNow product documentation",
+                "provider": "ServiceNow",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Admins and implementers",
+                "url": "https://www.servicenow.com/docs/",
+                "verified": false,
+                "note": "Earlier check showed only 'Loading application...'; content not confirmed."
+              },
+              {
+                "title": "Certified Implementation Specialist (product area, e.g. ITSM)",
+                "provider": "ServiceNow",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Implementers with platform and implementation experience",
+                "url": "https://www.servicenow.com/services/training-and-certification.html",
+                "verified": false,
+                "note": "Re-checked: the official page failed to open (HTTP/2 error). Seen only in third-party results; not a Now Assist-specific exam."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "ServiceNow Now Learning",
+                "url": "https://nowlearning.servicenow.com"
+              },
+              {
+                "title": "Global Knowledge: CIS ITSM",
+                "url": "https://www.globalknowledge.com/en-ca/certifications/certification-training/servicenow/certified-implementation-specialist-it-service-management"
+              }
+            ]
+          },
+          {
+            "tool": "Salesforce Einstein",
+            "summary": "Learn through Trailhead (Agentblazer status), then take the Salesforce Certified Agentforce Specialist exam, the main AI credential. The page shows no price or duration; confirm with Salesforce.",
+            "recommended_order": [
+              "Trailhead Agentblazer trail",
+              "Salesforce Certified Agentforce Specialist",
+              "Salesforce Certified Platform Administrator"
+            ],
+            "paths": [
+              {
+                "title": "Trailhead Agentblazer trail",
+                "provider": "Salesforce Trailhead",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Anyone learning Agentforce and Einstein AI",
+                "url": "https://trailhead.salesforce.com/credentials/agentforcespecialist",
+                "verified": true,
+                "note": "Page opened; its Study & Prepare section lists the Trail 'Earn Agentblazer Status'."
+              },
+              {
+                "title": "Salesforce Certified Agentforce Specialist",
+                "provider": "Salesforce",
+                "kind": "certification",
+                "level": "Intermediate",
+                "duration": "not stated on page",
+                "cost": "not stated on page",
+                "audience": "People who manage and optimize Agentforce, with Salesforce platform configuration knowledge",
+                "url": "https://trailhead.salesforce.com/credentials/agentforcespecialist",
+                "verified": true,
+                "note": "Page opened and confirms the exam name and audience. Third-party figures (105 min, 60 questions, about $200) are not on the page."
+              },
+              {
+                "title": "Salesforce Certified Platform Administrator",
+                "provider": "Salesforce",
+                "kind": "certification",
+                "level": "Admin",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Salesforce admins",
+                "url": "https://trailhead.salesforce.com/credentials/agentforcespecialist",
+                "verified": true,
+                "note": "Shown as a Related Certification on the Agentforce Specialist page."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "Trailhead: Agentforce Specialist certification",
+                "url": "https://trailhead.salesforce.com/credentials/agentforcespecialist"
+              }
+            ]
+          },
+          {
+            "tool": "SAP Joule",
+            "summary": "SAP Learning offers Joule learning journeys for consultants and for adoption leads. No dedicated Joule certification exam was found.",
+            "recommended_order": [
+              "SAP Learning home",
+              "Implementing Joule Across your Organizational System Landscape",
+              "Driving SAP Joule for Consultants Adoption"
+            ],
+            "paths": [
+              {
+                "title": "SAP Learning home",
+                "provider": "SAP",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "All SAP learners",
+                "url": "https://learning.sap.com/",
+                "verified": true,
+                "note": "Page opened; features SAP AI Adoption Learning Week recordings and partner, student and learning-manager content."
+              },
+              {
+                "title": "Implementing Joule Across your Organizational System Landscape",
+                "provider": "SAP Learning",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated on page",
+                "audience": "Consultants",
+                "url": "https://learning.sap.com/learning-journeys/implementing-joule-across-your-organizational-system-landscape",
+                "verified": true,
+                "note": "Page opened: covers Joule architecture, identity readiness, unified Joule on SAP BTP, activation across SAP solutions."
+              },
+              {
+                "title": "Driving SAP Joule for Consultants Adoption",
+                "provider": "SAP Learning",
+                "kind": "learning path",
+                "level": "Intermediate",
+                "duration": "not stated",
+                "cost": "not stated on page",
+                "audience": "Adoption leads",
+                "url": "https://learning.sap.com/learning-journeys/driving-sap-joule-for-consultants-adoption",
+                "verified": true,
+                "note": "Page opened and confirms the journey for Adoption Leads. URL corrected to the English version."
+              },
+              {
+                "title": "SAP Joule documentation",
+                "provider": "SAP",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Admins and developers",
+                "url": "https://help.sap.com/docs/joule",
+                "verified": false,
+                "note": "Re-checked: the page opens but returns no text, so content is unconfirmed."
+              }
+            ],
+            "confidence": "medium",
+            "sources": [
+              {
+                "title": "SAP Learning: Implementing Joule",
+                "url": "https://learning.sap.com/learning-journeys/implementing-joule-across-your-organizational-system-landscape"
+              },
+              {
+                "title": "SAP Learning: Driving SAP Joule for Consultants Adoption",
+                "url": "https://learning.sap.com/learning-journeys/driving-sap-joule-for-consultants-adoption"
+              }
+            ]
+          },
+          {
+            "tool": "Workday AI",
+            "summary": "No official Workday AI certification was found. Workday Learning, powered by Sana, became generally available on 22 July 2026 as a learning product for Workday HCM customers. The only AI-specific course found is a third-party one.",
+            "recommended_order": [
+              "Workday Learning powered by Sana announcement",
+              "Workday AI Training (igmGuru, third-party)"
+            ],
+            "paths": [
+              {
+                "title": "Workday Learning powered by Sana announcement",
+                "provider": "Workday",
+                "kind": "documentation",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Learning admins and HCM customers",
+                "url": "https://newsroom.workday.com/2026-07-22-Workday-Learning,-Powered-by-Sana,-Now-Generally-Available-as-an-AI-Native-Learning-Experience-Built-on-Workdays-Trusted-Data",
+                "verified": true,
+                "note": "Press release on a learning product, not a course or credential."
+              },
+              {
+                "title": "Workday AI Training (igmGuru, third-party)",
+                "provider": "igmGuru",
+                "kind": "course",
+                "level": "Intermediate",
+                "duration": "not stated on page",
+                "cost": "not stated on page",
+                "audience": "Workday consultants, HR professionals, admins and business analysts",
+                "url": "https://www.igmguru.com/erp-training/workday-ai-training",
+                "verified": true,
+                "note": "Page opened and describes a paid third-party course on Workday Illuminate and AI agents. It is not an official Workday credential; the earlier 24-hour figure is not on the page."
+              }
+            ],
+            "confidence": "low",
+            "sources": [
+              {
+                "title": "Workday newsroom: Workday Learning powered by Sana",
+                "url": "https://newsroom.workday.com/2026-07-22-Workday-Learning,-Powered-by-Sana,-Now-Generally-Available-as-an-AI-Native-Learning-Experience-Built-on-Workdays-Trusted-Data"
+              },
+              {
+                "title": "igmGuru Workday AI Training",
+                "url": "https://www.igmguru.com/erp-training/workday-ai-training"
+              }
+            ]
+          },
+          {
+            "tool": "Jira Atlassian Intelligence",
+            "summary": "Atlassian's AI features are now Rovo. Learn through Atlassian's learning hub and take the free Rovo Fundamentals certificate. Jira Essentials is a related certification.",
+            "recommended_order": [
+              "Atlassian Community Learning hub (Rovo and Jira courses)",
+              "Rovo Fundamentals certificate",
+              "Jira Essentials certification"
+            ],
+            "paths": [
+              {
+                "title": "Atlassian Community Learning hub (Rovo and Jira courses)",
+                "provider": "Atlassian",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Jira and Rovo users",
+                "url": "https://community.atlassian.com/learning",
+                "verified": true,
+                "note": "Page opened; lists on-demand learning by app (Jira, Rovo) and a certification-ready section."
+              },
+              {
+                "title": "Rovo Fundamentals certificate",
+                "provider": "Atlassian",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "Free (page says 'Quick and free')",
+                "audience": "Current and future Rovo users",
+                "url": "https://community.atlassian.com/learning/certifications/rovo-fundamentals",
+                "verified": true,
+                "note": "Page opened: proves ability to use Rovo Search, Chat and Agents. Exam length and validity are not on the page."
+              },
+              {
+                "title": "Jira Essentials certification",
+                "provider": "Atlassian",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Jira users",
+                "url": "https://community.atlassian.com/learning/certifications/rovo-fundamentals",
+                "verified": true,
+                "note": "Listed as 'Earn the Jira Essentials certification' under Related credentials on the Rovo page. Its own page (guessed URL) returned 404, so only the listing is confirmed."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "Rovo Fundamentals certificate",
+                "url": "https://community.atlassian.com/learning/certifications/rovo-fundamentals"
+              },
+              {
+                "title": "Atlassian Learning hub",
+                "url": "https://community.atlassian.com/learning"
+              }
+            ]
+          },
+          {
+            "tool": "UiPath Autopilot",
+            "summary": "UiPath Academy has free courses and learning plans plus agentic certifications. Agentic Automation Associate is the foundation level, and Agentic Automation Builder Professional validates building end-to-end agentic solutions. Pricing is not on the pages.",
+            "recommended_order": [
+              "UiPath Academy courses and learning plans",
+              "Agentic Automation Associate",
+              "Agentic Automation Builder Professional"
+            ],
+            "paths": [
+              {
+                "title": "UiPath Academy courses and learning plans",
+                "provider": "UiPath Academy",
+                "kind": "learning path",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Automation and AI-agent builders",
+                "url": "https://academy.uipath.com/",
+                "verified": true,
+                "note": "Page opened: advertises 500+ courses and an Agentic Automation Associate learning plan; the Community edition is free in Automation Cloud."
+              },
+              {
+                "title": "Agentic Automation Associate",
+                "provider": "UiPath",
+                "kind": "certification",
+                "level": "Foundation",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Citizen developers, business analysts, automation developers, solution architects",
+                "url": "https://academy.uipath.com/certifications",
+                "verified": true,
+                "note": "Page opened: validates foundational skills for collaborating with AI agents; free online practice test offered."
+              },
+              {
+                "title": "Agentic Automation Builder Professional",
+                "provider": "UiPath",
+                "kind": "certification",
+                "level": "Advanced",
+                "duration": "not stated",
+                "cost": "not stated",
+                "audience": "Builders of end-to-end agentic automation",
+                "url": "https://academy.uipath.com/certifications",
+                "verified": true,
+                "note": "Page opened: covers design, build, orchestration and operation of agentic solutions with Maestro and AI agents. The page also lists an intermediate Agentic Automation Professional certification."
+              }
+            ],
+            "confidence": "high",
+            "sources": [
+              {
+                "title": "UiPath Academy",
+                "url": "https://academy.uipath.com/"
+              },
+              {
+                "title": "UiPath certifications",
+                "url": "https://academy.uipath.com/certifications"
+              }
+            ]
+          }
+        ],
+        "verification_notes": "I opened the Salesforce, SAP (home and both Joule journeys), Atlassian, UiPath, Workday newsroom and igmGuru pages, and each confirmed its entry. The ServiceNow pages and the SAP Joule help page gave no usable content, so those entries stay unverified and ServiceNow confidence is low. No page showed exam price or duration, so all costs and durations are 'not stated' except Rovo Fundamentals, which the page calls free. Third-party figures were removed unless the vendor page shows them.",
+        "removed_or_corrected": [
+          "Removed Workday customer learning (workday.com/en-us/learning-training.html): page returned HTTP 404 and a second guessed URL also 404'd.",
+          "Salesforce Agentforce Specialist: dropped the unconfirmed third-party duration and cost from the fields, because the vendor page shows neither.",
+          "SAP Driving SAP Joule for Consultants Adoption: opened the English URL and set verified=true (the earlier URL was the German version).",
+          "SAP Implementing Joule: removed the 'free' claim, since the page does not show cost.",
+          "Workday igmGuru course: opened and set verified=true for existence; removed the 24-hour figure and corrected the audience, as the page does not show the duration.",
+          "Jira Essentials: renamed to 'certification' to match the Atlassian listing; its own page returned 404, so only the Rovo page listing is confirmed.",
+          "UiPath: removed the unsupported claim that Autopilot and Studio Web are covered; added a note that Agentic Automation Professional also exists."
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "certs: General AI assistants and research tools",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a8624160c29ad9432",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931634968,
+      "queuedAt": 1792931634927,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "General AI assistants and research tools",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: General AI assistants and research tools. Tools: Gemini; Claude; ChatGPT Enterprise; NotebookLM; Perplexity; Perplexity Enterprise.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2026-10-25:\n- vendor academies and l…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931709442,
+      "tokens": 73917,
+      "toolCalls": 11,
+      "durationMs": 74473,
+      "resultPreview": "{\"group\":\"General AI assistants and research tools\",\"overview\":\"Anthropic has the most complete free academy (Claude 101 plus a partner-only architect exam). Google offers free Skills paths for Gemini, Gemini Enterprise and NotebookLM. OpenAI Academy is open to all, but I could not open its certification pages. Perplexity has docs, help center and a resource hub with short Academy lessons but no c…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "certs: Microsoft Copilots and Power Platform",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a02e776a67a6eeb51",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931634968,
+      "queuedAt": 1792931634928,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Microsoft Copilots and Power Platform",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Microsoft Copilots and Power Platform. Tools: Microsoft 365 Copilot; Power BI Copilot; Excel Copilot; Microsoft Word Copilot; Microsoft Teams Copilot; Power Automate.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931699314,
+      "tokens": 70188,
+      "toolCalls": 10,
+      "durationMs": 59345,
+      "resultPreview": "{\"group\":\"Microsoft Copilots and Power Platform\",\"overview\":\"Microsoft Learn is the single official hub for all six tools. The Copilot features in Word, Excel, Teams and M365 Copilot share the same free Learn paths, and the only Copilot-related exam is AB-731. Power BI has an intermediate Copilot module. Power Automate has free learning paths and the PL-900 fundamentals exam, but its PL-500 RPA ex…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "certs: Presentation, design and document tools",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ae34b6bb516230f05",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931699321,
+      "queuedAt": 1792931634928,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Presentation, design and document tools",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Presentation, design and document tools. Tools: Gamma; Canva Magic Studio; Adobe Firefly; Adobe Acrobat AI Assistant; Figma AI; FigJam AI.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2026-10-25:\n- vendor academie…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931757079,
+      "tokens": 73713,
+      "toolCalls": 12,
+      "durationMs": 57758,
+      "resultPreview": "{\"group\":\"Presentation, design and document tools\",\"overview\":\"Gamma and Adobe have official academies; Adobe is the only vendor in this group with formal exam credentials (Adobe Certified Professional via Certiport). Canva and Figma official learning pages could not be fully opened or verified, so third-party Coursera courses fill the gaps. FigJam AI has no dedicated course and is learned through…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "certs: Coding and engineering assistants",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a57cb6eb47effc41a",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931709449,
+      "queuedAt": 1792931634928,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Coding and engineering assistants",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Coding and engineering assistants. Tools: Claude Code; GitHub Copilot; Gemini Code Assist; Cursor; Playwright; Amazon Q Developer.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2026-10-25:\n- vendor academies and le…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931765614,
+      "tokens": 70600,
+      "toolCalls": 8,
+      "durationMs": 56165,
+      "resultPreview": "{\"group\":\"Coding and engineering assistants\",\"overview\":\"Claude Code, GitHub Copilot and Cursor have first-party learning content that I opened and confirmed. Only GitHub Copilot has a formal proctored certification (GH-300). Gemini Code Assist, Playwright and Amazon Q Developer are learned mainly from docs and vendor tutorials. Playwright has no official credential. Amazon Q Developer IDE plugins…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "certs: Enterprise business platforms",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a560d6dd413624228",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931757085,
+      "queuedAt": 1792931634928,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Enterprise business platforms",
+      "promptPreview": "You are building the \"learning path and certifications\" section of an enterprise AI training handbook. Today is 2026-10-25.\n\nTool group: Enterprise business platforms. Tools: ServiceNow Now Assist; Salesforce Einstein; SAP Joule; Workday AI; Jira Atlassian Intelligence; UiPath Autopilot.\n\nFor EACH tool, find the official and widely used ways to learn it and get credentialed, as of 2026-10-25:\n- ve…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931810534,
+      "tokens": 71090,
+      "toolCalls": 11,
+      "durationMs": 53448,
+      "resultPreview": "{\"group\":\"Enterprise business platforms\",\"overview\":\"Most enterprise platforms train through their own academy (Trailhead, SAP Learning, Atlassian University, UiPath Academy, Now Learning), and only Salesforce, Atlassian and UiPath offer a formal AI-specific credential. ServiceNow and Workday AI features are learned inside broader product training, and neither has an AI-specific credential I could…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify certs: Microsoft Copilots and Power Platform",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a3455c4a43da84938",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931765669,
+      "queuedAt": 1792931699360,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Microsoft Copilots and Power Platform",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Microsoft Copilots and Power Platform\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a page,…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931814902,
+      "tokens": 71990,
+      "toolCalls": 5,
+      "durationMs": 49232,
+      "resultPreview": "{\"group\":\"Microsoft Copilots and Power Platform\",\"overview\":\"Microsoft Learn is the official hub for all six tools. Excel, Word, Teams and M365 Copilot share the same free Learn modules and paths, and AB-731 is the only Copilot-related exam. Power BI has an intermediate Copilot module and a Fabric Copilot path. Power Automate has free beginner paths and the PL-900 fundamentals exam. The PL-500 RPA…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify certs: General AI assistants and research tools",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a48e3c10487ba49b7",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931810544,
+      "queuedAt": 1792931709480,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "General AI assistants and research tools",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"General AI assistants and research tools\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a pa…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931865332,
+      "tokens": 74032,
+      "toolCalls": 4,
+      "durationMs": 54788,
+      "resultPreview": "{\"group\":\"General AI assistants and research tools\",\"overview\":\"Anthropic has the most complete free academy (Claude 101, AI Fluency, Cowork and Claude Code courses) plus a partner-only architect exam. Google offers Skills paths for Gemini Enterprise and Gemini Notebook plus a help center for NotebookLM. OpenAI Academy is open to all, but its certification and Enterprise help pages could not be op…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify certs: Presentation, design and document tools",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a83c98598fc8f9f8a",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931814909,
+      "queuedAt": 1792931757114,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Presentation, design and document tools",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Presentation, design and document tools\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a pag…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931854476,
+      "tokens": 71977,
+      "toolCalls": 5,
+      "durationMs": 39567,
+      "resultPreview": "{\"group\":\"Presentation, design and document tools\",\"overview\":\"Gamma and Adobe have official learning paths; Adobe is the only vendor here with formal exam credentials (Adobe Certified Professional). Canva's official pages return HTTP 403, so a third-party Coursera course is the only verified Canva option. FigJam AI has no dedicated course and is learned through Figma Learn.\",\"tools\":[{\"tool\":\"Gam…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "verify certs: Coding and engineering assistants",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a5bf9fee82110a4b9",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931854485,
+      "queuedAt": 1792931765711,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Coding and engineering assistants",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Coding and engineering assistants\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a page, run…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931892150,
+      "tokens": 67914,
+      "toolCalls": 4,
+      "durationMs": 37665,
+      "resultPreview": "{\"group\":\"Coding and engineering assistants\",\"overview\":\"Claude Code, GitHub Copilot and Cursor have first-party learning content that was opened and confirmed. Only GitHub Copilot has a formal proctored certification (GH-300). Gemini Code Assist, Playwright and Amazon Q Developer are learned mainly from docs and vendor tutorials, and Playwright has no official credential. Amazon Q Developer IDE p…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "verify certs: Enterprise business platforms",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a4d17604a1d61447d",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792931865339,
+      "queuedAt": 1792931810587,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Enterprise business platforms",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below are proposed learning paths and certifications for the tools in the group \"Enterprise business platforms\". Try to REFUTE each path, efficiently.\n\nWeb access: load WebSearch with ToolSearch using the query \"select:WebSearch\" and use it to find candidate pages. The WebFetch tool does NOT work in this environment. To OPEN a page, run wit…",
+      "promptFramed": true,
+      "lastProgressAt": 1792931918820,
+      "tokens": 69817,
+      "toolCalls": 6,
+      "durationMs": 53480,
+      "resultPreview": "{\"group\":\"Enterprise business platforms\",\"overview\":\"Most enterprise platforms train through their own academy (Trailhead, SAP Learning, Atlassian, UiPath Academy, Now Learning). Salesforce, Atlassian and UiPath have formal AI-related credentials. SAP has Joule learning journeys but no Joule exam. ServiceNow and Workday have no AI-specific credential I could confirm. Prices and durations are mostl…"
+    }
+  ],
+  "totalTokens": 715238,
+  "totalToolCalls": 76
+}
