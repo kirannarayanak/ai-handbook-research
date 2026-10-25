@@ -1,0 +1,1736 @@
+{
+ "depts": [
+  {
+   "num": 1,
+   "name": "Office of the CEO",
+   "tier": "Core",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise",
+    "Power BI Copilot"
+   ],
+   "app": "Executive briefs, meeting decisions, KPI narratives"
+  },
+  {
+   "num": 2,
+   "name": "Corporate Strategy",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Perplexity",
+    "Gamma",
+    "ChatGPT Enterprise",
+    "Perplexity Enterprise",
+    "Power BI Copilot"
+   ],
+   "app": "Scenario analysis, competitive synthesis, strategy memos"
+  },
+  {
+   "num": 3,
+   "name": "Corporate Development & M&A",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "NotebookLM",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise",
+    "Datasite AI"
+   ],
+   "app": "Due diligence summaries, valuation assumptions, integration trackers"
+  },
+  {
+   "num": 4,
+   "name": "Board Secretariat & Corporate Governance",
+   "tier": "Core",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "NotebookLM",
+    "Microsoft 365 Copilot",
+    "Microsoft Teams Copilot",
+    "Adobe Acrobat AI Assistant"
+   ],
+   "app": "Board packs, minutes, action registers and document search"
+  },
+  {
+   "num": 5,
+   "name": "Enterprise Risk Management",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot",
+    "ServiceNow Now Assist"
+   ],
+   "app": "Risk registers, control mapping, trend summaries"
+  },
+  {
+   "num": 6,
+   "name": "Legal Affairs",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "NotebookLM",
+    "Microsoft 365 Copilot",
+    "Microsoft Word Copilot",
+    "Thomson Reuters CoCounsel"
+   ],
+   "app": "Contract review, legal research and clause comparison"
+  },
+  {
+   "num": 7,
+   "name": "Regulatory Compliance",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "NotebookLM",
+    "Microsoft 365 Copilot",
+    "ServiceNow Now Assist",
+    "Thomson Reuters CoCounsel"
+   ],
+   "app": "Regulatory change summaries, control evidence, compliance checklists"
+  },
+  {
+   "num": 8,
+   "name": "Internal Audit",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot",
+    "AuditBoard AI"
+   ],
+   "app": "Audit planning, control testing support, exception triage"
+  },
+  {
+   "num": 9,
+   "name": "Ethics & Investigations",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "ServiceNow Now Assist",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Case summaries, policy comparisons, investigation timelines"
+  },
+  {
+   "num": 10,
+   "name": "ESG & Sustainability",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "Gamma",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "ESG reporting drafts, emissions data narratives, disclosure checks"
+  },
+  {
+   "num": 11,
+   "name": "Human Resources Business Partnering",
+   "tier": "Core",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "Workday AI",
+    "ChatGPT Enterprise"
+   ],
+   "app": "HR advisory drafts, policy search, manager guidance"
+  },
+  {
+   "num": 12,
+   "name": "Talent Acquisition",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "LinkedIn Recruiter AI",
+    "Workday AI",
+    "Microsoft 365 Copilot"
+   ],
+   "app": "Job descriptions, sourcing, interview question design"
+  },
+  {
+   "num": 13,
+   "name": "Learning & Development",
+   "tier": "Core",
+   "tools": [
+    "Gamma",
+    "Canva Magic Studio",
+    "Claude",
+    "Gemini",
+    "NotebookLM",
+    "ChatGPT Enterprise",
+    "Microsoft 365 Copilot"
+   ],
+   "app": "Learning objectives, lesson plans, quizzes and training videos"
+  },
+  {
+   "num": 14,
+   "name": "Compensation, Benefits & Payroll",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Workday AI",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot"
+   ],
+   "app": "Compensation analytics, payroll exception review, employee FAQs"
+  },
+  {
+   "num": 15,
+   "name": "Talent Management & Succession",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Workday AI",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot"
+   ],
+   "app": "Skill matrices, succession planning, development pathways"
+  },
+  {
+   "num": 16,
+   "name": "People Analytics & HR Operations",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "Workday AI",
+    "Power BI Copilot",
+    "Microsoft 365 Copilot"
+   ],
+   "app": "Workforce dashboards, HR queries, attrition pattern analysis"
+  },
+  {
+   "num": 17,
+   "name": "Diversity, Equity & Inclusion",
+   "tier": "Core",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise",
+    "Power BI Copilot"
+   ],
+   "app": "Inclusive-language review, anonymized feedback synthesis"
+  },
+  {
+   "num": 18,
+   "name": "Workplace Administration & Facilities",
+   "tier": "Core",
+   "tools": [
+    "Gemini",
+    "Canva Magic Studio",
+    "Microsoft 365 Copilot",
+    "ServiceNow Now Assist",
+    "Power Automate"
+   ],
+   "app": "Facility tickets, vendor communications, request routing"
+  },
+  {
+   "num": 19,
+   "name": "Health, Safety & Wellbeing",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Gamma",
+    "Claude",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Safety checklists, incident summaries, training materials"
+  },
+  {
+   "num": 20,
+   "name": "Financial Planning & Analysis",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Excel Copilot",
+    "Power BI Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Budget variance narratives, scenario modeling, forecast commentary"
+  },
+  {
+   "num": 21,
+   "name": "Accounting & Financial Reporting",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Excel Copilot",
+    "Microsoft 365 Copilot",
+    "SAP Joule"
+   ],
+   "app": "Reconciliation assistance, journal explanations, reporting drafts"
+  },
+  {
+   "num": 22,
+   "name": "Treasury & Cash Management",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Excel Copilot",
+    "Power BI Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Cash flow scenarios, liquidity reporting, treasury analysis"
+  },
+  {
+   "num": 23,
+   "name": "Taxation",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Thomson Reuters CoCounsel",
+    "Microsoft 365 Copilot",
+    "Excel Copilot"
+   ],
+   "app": "Tax research support, document extraction, review checklists"
+  },
+  {
+   "num": 24,
+   "name": "Accounts Payable & Receivable",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "SAP Joule",
+    "Microsoft 365 Copilot",
+    "Power Automate"
+   ],
+   "app": "Invoice extraction, payment exceptions, collection follow-ups"
+  },
+  {
+   "num": 25,
+   "name": "Procurement & Strategic Sourcing",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Perplexity",
+    "SAP Joule",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "RFP drafting, spend analysis, supplier comparison"
+  },
+  {
+   "num": 26,
+   "name": "Vendor & Third-Party Management",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "ServiceNow Now Assist",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot"
+   ],
+   "app": "Vendor risk summaries, SLA monitoring, supplier scorecards"
+  },
+  {
+   "num": 27,
+   "name": "Investor Relations",
+   "tier": "Advanced",
+   "tools": [
+    "Gamma",
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Investor Q&A preparation, earnings summaries, performance narratives"
+  },
+  {
+   "num": 28,
+   "name": "Sales - Enterprise & Key Accounts",
+   "tier": "Core",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "Salesforce Einstein",
+    "Microsoft 365 Copilot",
+    "Gong AI"
+   ],
+   "app": "Account research, call summaries, opportunity planning"
+  },
+  {
+   "num": 29,
+   "name": "Sales - SMB & Inside Sales",
+   "tier": "Core",
+   "tools": [
+    "Gemini",
+    "Gamma",
+    "Canva Magic Studio",
+    "HubSpot AI",
+    "Salesforce Einstein",
+    "Microsoft 365 Copilot"
+   ],
+   "app": "Lead qualification, personalized outreach, pipeline follow-ups"
+  },
+  {
+   "num": 30,
+   "name": "Sales Operations & Revenue Operations",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "Salesforce Einstein",
+    "Power BI Copilot",
+    "Gong AI"
+   ],
+   "app": "Forecast insights, pipeline hygiene, revenue performance analysis"
+  },
+  {
+   "num": 31,
+   "name": "Marketing & Brand",
+   "tier": "Core",
+   "tools": [
+    "Canva Magic Studio",
+    "Gamma",
+    "Gemini",
+    "Claude",
+    "Adobe Firefly",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Brand-safe copy, campaign concepts, creative production"
+  },
+  {
+   "num": 32,
+   "name": "Digital & Performance Marketing",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Canva Magic Studio",
+    "Gamma",
+    "Google Ads AI",
+    "Meta Advantage+",
+    "HubSpot AI"
+   ],
+   "app": "Campaign optimization, audience testing, performance reporting"
+  },
+  {
+   "num": 33,
+   "name": "Market Research & Competitive Intelligence",
+   "tier": "Core",
+   "tools": [
+    "Perplexity",
+    "Gemini",
+    "Claude",
+    "NotebookLM",
+    "Perplexity Enterprise",
+    "ChatGPT Enterprise",
+    "Power BI Copilot"
+   ],
+   "app": "Research synthesis, competitor tracking, survey analysis"
+  },
+  {
+   "num": 34,
+   "name": "Business Development & Partnerships",
+   "tier": "Core",
+   "tools": [
+    "Gamma",
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "LinkedIn Sales Navigator AI",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Partner discovery, proposals, relationship mapping"
+  },
+  {
+   "num": 35,
+   "name": "Pre-Sales & Solution Consulting",
+   "tier": "Advanced",
+   "tools": [
+    "Gamma",
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise",
+    "Salesforce Einstein"
+   ],
+   "app": "RFP responses, solution proposals, demo preparation"
+  },
+  {
+   "num": 36,
+   "name": "Customer Success",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "Salesforce Einstein",
+    "Gainsight AI",
+    "Microsoft 365 Copilot"
+   ],
+   "app": "Customer health, renewal risks, success plans"
+  },
+  {
+   "num": 37,
+   "name": "Customer Support & Contact Center",
+   "tier": "Core",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "Zendesk AI",
+    "Intercom Fin",
+    "ServiceNow Now Assist"
+   ],
+   "app": "Ticket classification, knowledge search, agent-assist responses"
+  },
+  {
+   "num": 38,
+   "name": "Customer Experience & Service Design",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Canva Magic Studio",
+    "Qualtrics AI",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Voice-of-customer synthesis, journey mapping, service insights"
+  },
+  {
+   "num": 39,
+   "name": "Product Management",
+   "tier": "Core",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "NotebookLM",
+    "Jira Atlassian Intelligence",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "PRDs, backlog refinement, release communication"
+  },
+  {
+   "num": 40,
+   "name": "Product Design & UX Research",
+   "tier": "Advanced",
+   "tools": [
+    "Figma AI",
+    "Canva Magic Studio",
+    "Gemini",
+    "Claude",
+    "FigJam AI",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Wireframe ideation, usability themes, UX content"
+  },
+  {
+   "num": 41,
+   "name": "Software Engineering - Applications",
+   "tier": "Core",
+   "tools": [
+    "Claude Code",
+    "Gemini Code Assist",
+    "GitHub Copilot",
+    "Cursor",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Code generation, refactoring, documentation, code review support"
+  },
+  {
+   "num": 42,
+   "name": "Quality Engineering & Testing",
+   "tier": "Advanced",
+   "tools": [
+    "Claude Code",
+    "Gemini Code Assist",
+    "GitHub Copilot",
+    "Playwright",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Test case generation, automation scripts, defect triage"
+  },
+  {
+   "num": 43,
+   "name": "Cloud Infrastructure & Platform Engineering",
+   "tier": "Specialist",
+   "tools": [
+    "Gemini Code Assist",
+    "Claude Code",
+    "Amazon Q Developer",
+    "Azure Copilot",
+    "GitHub Copilot"
+   ],
+   "app": "Infrastructure templates, cloud troubleshooting, cost analysis"
+  },
+  {
+   "num": 44,
+   "name": "DevOps & Site Reliability Engineering",
+   "tier": "Specialist",
+   "tools": [
+    "Claude Code",
+    "Gemini Code Assist",
+    "GitHub Copilot",
+    "Datadog Bits AI",
+    "Dynatrace Davis AI"
+   ],
+   "app": "Runbook generation, incident investigation, observability queries"
+  },
+  {
+   "num": 45,
+   "name": "IT Infrastructure & End-User Computing",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "Microsoft Security Copilot",
+    "ServiceNow Now Assist",
+    "Microsoft 365 Copilot"
+   ],
+   "app": "IT ticket resolution, endpoint support, knowledge articles"
+  },
+  {
+   "num": 46,
+   "name": "Enterprise Applications & ERP",
+   "tier": "Specialist",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "SAP Joule",
+    "Salesforce Einstein",
+    "Microsoft 365 Copilot"
+   ],
+   "app": "ERP workflows, CRM insights, enterprise app support"
+  },
+  {
+   "num": 47,
+   "name": "Cybersecurity Operations",
+   "tier": "Specialist",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "Microsoft Security Copilot",
+    "CrowdStrike Charlotte AI",
+    "Google Gemini in Security"
+   ],
+   "app": "Alert triage, threat hunting, incident summaries"
+  },
+  {
+   "num": 48,
+   "name": "Security Governance, Risk & Privacy",
+   "tier": "Specialist",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "Microsoft Security Copilot",
+    "Microsoft Purview",
+    "ServiceNow Now Assist"
+   ],
+   "app": "Security policy mapping, privacy workflows, risk assessments"
+  },
+  {
+   "num": 49,
+   "name": "Data Engineering & Data Platforms",
+   "tier": "Specialist",
+   "tools": [
+    "Gemini",
+    "Claude Code",
+    "Databricks Assistant",
+    "Snowflake Cortex AI",
+    "GitHub Copilot"
+   ],
+   "app": "SQL generation, data pipelines, quality troubleshooting"
+  },
+  {
+   "num": 50,
+   "name": "Business Intelligence & Analytics",
+   "tier": "Core",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "Gamma",
+    "Power BI Copilot",
+    "Tableau Pulse",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Dashboard narratives, natural-language data exploration"
+  },
+  {
+   "num": 51,
+   "name": "AI, Machine Learning & Automation",
+   "tier": "Specialist",
+   "tools": [
+    "Claude Code",
+    "Gemini",
+    "Google AI Studio",
+    "Azure AI Foundry",
+    "Amazon Bedrock",
+    "MLflow"
+   ],
+   "app": "Model evaluation, RAG pipelines, agent governance and MLOps"
+  },
+  {
+   "num": 52,
+   "name": "Research, Innovation & Emerging Technology",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Perplexity",
+    "Gamma",
+    "ChatGPT Enterprise",
+    "Perplexity Enterprise",
+    "GitHub Copilot"
+   ],
+   "app": "Technology scanning, prototype planning, experiment documentation"
+  },
+  {
+   "num": 53,
+   "name": "Enterprise Architecture & Integration",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise",
+    "GitHub Copilot"
+   ],
+   "app": "Architecture decision records, integration patterns, design reviews"
+  },
+  {
+   "num": 54,
+   "name": "Project & Program Management Office",
+   "tier": "Core",
+   "tools": [
+    "Gamma",
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "Jira Atlassian Intelligence",
+    "Power BI Copilot"
+   ],
+   "app": "Status reports, dependency analysis, project risk summaries"
+  },
+  {
+   "num": 55,
+   "name": "Service Delivery & Managed Services",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "ServiceNow Now Assist",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot"
+   ],
+   "app": "SLA reporting, service desk optimization, incident patterns"
+  },
+  {
+   "num": 56,
+   "name": "Business Operations & Process Excellence",
+   "tier": "Advanced",
+   "tools": [
+    "Gamma",
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "Power Automate",
+    "UiPath Autopilot"
+   ],
+   "app": "Process mapping, workflow automation, SOP creation"
+  },
+  {
+   "num": 57,
+   "name": "Business Transformation & Change Management",
+   "tier": "Advanced",
+   "tools": [
+    "Gamma",
+    "Claude",
+    "Gemini",
+    "Canva Magic Studio",
+    "Microsoft 365 Copilot",
+    "ChatGPT Enterprise",
+    "Power BI Copilot"
+   ],
+   "app": "Change impact assessments, communications, adoption analysis"
+  },
+  {
+   "num": 58,
+   "name": "Quality Management & Process Compliance",
+   "tier": "Advanced",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Gamma",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Quality audit summaries, root-cause analysis, SOP improvement"
+  },
+  {
+   "num": 59,
+   "name": "Business Continuity & Disaster Recovery",
+   "tier": "Specialist",
+   "tools": [
+    "Claude",
+    "Gemini",
+    "Microsoft 365 Copilot",
+    "ServiceNow Now Assist",
+    "ChatGPT Enterprise"
+   ],
+   "app": "Recovery playbooks, scenario exercises, incident communications"
+  },
+  {
+   "num": 60,
+   "name": "Supply Chain, Logistics & Inventory",
+   "tier": "Advanced",
+   "tools": [
+    "Gemini",
+    "Claude",
+    "SAP Joule",
+    "Microsoft 365 Copilot",
+    "Power BI Copilot"
+   ],
+   "app": "Demand insights, inventory exception review, supplier reporting"
+  }
+ ],
+ "vendor": {
+  "Gemini": [
+   "Google",
+   "General AI assistant"
+  ],
+  "Claude": [
+   "Anthropic",
+   "General AI assistant"
+  ],
+  "Microsoft 365 Copilot": [
+   "Microsoft",
+   "Microsoft productivity & platform"
+  ],
+  "ChatGPT Enterprise": [
+   "OpenAI",
+   "General AI assistant"
+  ],
+  "Gamma": [
+   "Gamma Tech",
+   "Presentation, design & documents"
+  ],
+  "Power BI Copilot": [
+   "Microsoft",
+   "Microsoft productivity & platform"
+  ],
+  "ServiceNow Now Assist": [
+   "ServiceNow",
+   "Enterprise business platforms"
+  ],
+  "Canva Magic Studio": [
+   "Canva",
+   "Presentation, design & documents"
+  ],
+  "NotebookLM": [
+   "Google",
+   "Google ecosystem"
+  ],
+  "GitHub Copilot": [
+   "GitHub (Microsoft)",
+   "Coding & engineering"
+  ],
+  "Salesforce Einstein": [
+   "Salesforce",
+   "Enterprise business platforms"
+  ],
+  "Claude Code": [
+   "Anthropic",
+   "Coding & engineering"
+  ],
+  "Workday AI": [
+   "Workday",
+   "Enterprise business platforms"
+  ],
+  "SAP Joule": [
+   "SAP",
+   "Enterprise business platforms"
+  ],
+  "Perplexity": [
+   "Perplexity AI",
+   "General AI assistant"
+  ],
+  "Excel Copilot": [
+   "Microsoft",
+   "Microsoft productivity & platform"
+  ],
+  "Gemini Code Assist": [
+   "Google",
+   "Coding & engineering"
+  ],
+  "Perplexity Enterprise": [
+   "Perplexity AI",
+   "General AI assistant"
+  ],
+  "Thomson Reuters CoCounsel": [
+   "Thomson Reuters",
+   "Legal, audit & GRC"
+  ],
+  "Power Automate": [
+   "Microsoft",
+   "Microsoft productivity & platform"
+  ],
+  "Microsoft Security Copilot": [
+   "Microsoft",
+   "Security & observability"
+  ],
+  "Gong AI": [
+   "Gong",
+   "Sales, marketing & customer"
+  ],
+  "HubSpot AI": [
+   "HubSpot",
+   "Sales, marketing & customer"
+  ],
+  "Jira Atlassian Intelligence": [
+   "Atlassian",
+   "Enterprise business platforms"
+  ],
+  "Datasite AI": [
+   "Datasite",
+   "Legal, audit & GRC"
+  ],
+  "Microsoft Teams Copilot": [
+   "Microsoft",
+   "Microsoft productivity & platform"
+  ],
+  "Adobe Acrobat AI Assistant": [
+   "Adobe",
+   "Presentation, design & documents"
+  ],
+  "Microsoft Word Copilot": [
+   "Microsoft",
+   "Microsoft productivity & platform"
+  ],
+  "AuditBoard AI": [
+   "AuditBoard",
+   "Legal, audit & GRC"
+  ],
+  "LinkedIn Recruiter AI": [
+   "LinkedIn (Microsoft)",
+   "Sales, marketing & customer"
+  ],
+  "Adobe Firefly": [
+   "Adobe",
+   "Presentation, design & documents"
+  ],
+  "Google Ads AI": [
+   "Google",
+   "Sales, marketing & customer"
+  ],
+  "Meta Advantage+": [
+   "Meta",
+   "Sales, marketing & customer"
+  ],
+  "LinkedIn Sales Navigator AI": [
+   "LinkedIn (Microsoft)",
+   "Sales, marketing & customer"
+  ],
+  "Gainsight AI": [
+   "Gainsight",
+   "Sales, marketing & customer"
+  ],
+  "Zendesk AI": [
+   "Zendesk",
+   "Sales, marketing & customer"
+  ],
+  "Intercom Fin": [
+   "Intercom",
+   "Sales, marketing & customer"
+  ],
+  "Qualtrics AI": [
+   "Qualtrics",
+   "Sales, marketing & customer"
+  ],
+  "Figma AI": [
+   "Figma",
+   "Presentation, design & documents"
+  ],
+  "FigJam AI": [
+   "Figma",
+   "Presentation, design & documents"
+  ],
+  "Cursor": [
+   "Anysphere",
+   "Coding & engineering"
+  ],
+  "Playwright": [
+   "Microsoft (open source)",
+   "Coding & engineering"
+  ],
+  "Amazon Q Developer": [
+   "Amazon Web Services",
+   "Coding & engineering"
+  ],
+  "Azure Copilot": [
+   "Microsoft",
+   "Security & observability"
+  ],
+  "Datadog Bits AI": [
+   "Datadog",
+   "Security & observability"
+  ],
+  "Dynatrace Davis AI": [
+   "Dynatrace",
+   "Security & observability"
+  ],
+  "CrowdStrike Charlotte AI": [
+   "CrowdStrike",
+   "Security & observability"
+  ],
+  "Google Gemini in Security": [
+   "Google Cloud",
+   "Security & observability"
+  ],
+  "Microsoft Purview": [
+   "Microsoft",
+   "Security & observability"
+  ],
+  "Databricks Assistant": [
+   "Databricks",
+   "Data, analytics & AI platforms"
+  ],
+  "Snowflake Cortex AI": [
+   "Snowflake",
+   "Data, analytics & AI platforms"
+  ],
+  "Tableau Pulse": [
+   "Salesforce (Tableau)",
+   "Data, analytics & AI platforms"
+  ],
+  "Google AI Studio": [
+   "Google",
+   "Data, analytics & AI platforms"
+  ],
+  "Azure AI Foundry": [
+   "Microsoft",
+   "Data, analytics & AI platforms"
+  ],
+  "Amazon Bedrock": [
+   "Amazon Web Services",
+   "Data, analytics & AI platforms"
+  ],
+  "MLflow": [
+   "Databricks / Linux Foundation (open source)",
+   "Data, analytics & AI platforms"
+  ],
+  "UiPath Autopilot": [
+   "UiPath",
+   "Enterprise business platforms"
+  ]
+ },
+ "tool_depts": {
+  "Claude": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   30,
+   31,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   45,
+   46,
+   47,
+   48,
+   50,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60
+  ],
+  "Gemini": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60
+  ],
+  "Gamma": [
+   1,
+   2,
+   10,
+   13,
+   17,
+   19,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   34,
+   35,
+   36,
+   39,
+   50,
+   52,
+   53,
+   54,
+   56,
+   57,
+   58
+  ],
+  "Microsoft 365 Copilot": [
+   1,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   21,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   34,
+   35,
+   36,
+   38,
+   39,
+   45,
+   46,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60
+  ],
+  "ChatGPT Enterprise": [
+   1,
+   2,
+   3,
+   9,
+   10,
+   11,
+   13,
+   17,
+   19,
+   20,
+   22,
+   25,
+   27,
+   31,
+   33,
+   34,
+   35,
+   38,
+   39,
+   40,
+   41,
+   42,
+   50,
+   52,
+   53,
+   57,
+   58,
+   59
+  ],
+  "Power BI Copilot": [
+   1,
+   2,
+   5,
+   8,
+   10,
+   14,
+   15,
+   16,
+   17,
+   19,
+   20,
+   22,
+   26,
+   27,
+   30,
+   33,
+   50,
+   54,
+   55,
+   57,
+   58,
+   60
+  ],
+  "Perplexity": [
+   2,
+   25,
+   33,
+   52
+  ],
+  "Perplexity Enterprise": [
+   2,
+   33,
+   52
+  ],
+  "NotebookLM": [
+   3,
+   4,
+   6,
+   7,
+   13,
+   33,
+   39
+  ],
+  "Datasite AI": [
+   3
+  ],
+  "Microsoft Teams Copilot": [
+   4
+  ],
+  "Adobe Acrobat AI Assistant": [
+   4
+  ],
+  "ServiceNow Now Assist": [
+   5,
+   7,
+   9,
+   18,
+   26,
+   37,
+   45,
+   48,
+   55,
+   59
+  ],
+  "Microsoft Word Copilot": [
+   6
+  ],
+  "Thomson Reuters CoCounsel": [
+   6,
+   7,
+   23
+  ],
+  "AuditBoard AI": [
+   8
+  ],
+  "Workday AI": [
+   11,
+   12,
+   14,
+   15,
+   16
+  ],
+  "LinkedIn Recruiter AI": [
+   12
+  ],
+  "Canva Magic Studio": [
+   13,
+   18,
+   29,
+   31,
+   32,
+   38,
+   40,
+   57
+  ],
+  "Power Automate": [
+   18,
+   24,
+   56
+  ],
+  "Excel Copilot": [
+   20,
+   21,
+   22,
+   23
+  ],
+  "SAP Joule": [
+   21,
+   24,
+   25,
+   46,
+   60
+  ],
+  "Salesforce Einstein": [
+   28,
+   29,
+   30,
+   35,
+   36,
+   46
+  ],
+  "Gong AI": [
+   28,
+   30
+  ],
+  "HubSpot AI": [
+   29,
+   32
+  ],
+  "Adobe Firefly": [
+   31
+  ],
+  "Google Ads AI": [
+   32
+  ],
+  "Meta Advantage+": [
+   32
+  ],
+  "LinkedIn Sales Navigator AI": [
+   34
+  ],
+  "Gainsight AI": [
+   36
+  ],
+  "Zendesk AI": [
+   37
+  ],
+  "Intercom Fin": [
+   37
+  ],
+  "Qualtrics AI": [
+   38
+  ],
+  "Jira Atlassian Intelligence": [
+   39,
+   54
+  ],
+  "Figma AI": [
+   40
+  ],
+  "FigJam AI": [
+   40
+  ],
+  "Claude Code": [
+   41,
+   42,
+   43,
+   44,
+   49,
+   51
+  ],
+  "Gemini Code Assist": [
+   41,
+   42,
+   43,
+   44
+  ],
+  "GitHub Copilot": [
+   41,
+   42,
+   43,
+   44,
+   49,
+   52,
+   53
+  ],
+  "Cursor": [
+   41
+  ],
+  "Playwright": [
+   42
+  ],
+  "Amazon Q Developer": [
+   43
+  ],
+  "Azure Copilot": [
+   43
+  ],
+  "Datadog Bits AI": [
+   44
+  ],
+  "Dynatrace Davis AI": [
+   44
+  ],
+  "Microsoft Security Copilot": [
+   45,
+   47,
+   48
+  ],
+  "CrowdStrike Charlotte AI": [
+   47
+  ],
+  "Google Gemini in Security": [
+   47
+  ],
+  "Microsoft Purview": [
+   48
+  ],
+  "Databricks Assistant": [
+   49
+  ],
+  "Snowflake Cortex AI": [
+   49
+  ],
+  "Tableau Pulse": [
+   50
+  ],
+  "Google AI Studio": [
+   51
+  ],
+  "Azure AI Foundry": [
+   51
+  ],
+  "Amazon Bedrock": [
+   51
+  ],
+  "MLflow": [
+   51
+  ],
+  "UiPath Autopilot": [
+   56
+  ]
+ },
+ "freq": [
+  [
+   56,
+   "Gemini"
+  ],
+  [
+   51,
+   "Claude"
+  ],
+  [
+   41,
+   "Microsoft 365 Copilot"
+  ],
+  [
+   28,
+   "ChatGPT Enterprise"
+  ],
+  [
+   23,
+   "Gamma"
+  ],
+  [
+   22,
+   "Power BI Copilot"
+  ],
+  [
+   10,
+   "ServiceNow Now Assist"
+  ],
+  [
+   8,
+   "Canva Magic Studio"
+  ],
+  [
+   7,
+   "NotebookLM"
+  ],
+  [
+   7,
+   "GitHub Copilot"
+  ],
+  [
+   6,
+   "Salesforce Einstein"
+  ],
+  [
+   6,
+   "Claude Code"
+  ],
+  [
+   5,
+   "Workday AI"
+  ],
+  [
+   5,
+   "SAP Joule"
+  ],
+  [
+   4,
+   "Perplexity"
+  ],
+  [
+   4,
+   "Gemini Code Assist"
+  ],
+  [
+   4,
+   "Excel Copilot"
+  ],
+  [
+   3,
+   "Thomson Reuters CoCounsel"
+  ],
+  [
+   3,
+   "Power Automate"
+  ],
+  [
+   3,
+   "Perplexity Enterprise"
+  ],
+  [
+   3,
+   "Microsoft Security Copilot"
+  ],
+  [
+   2,
+   "Jira Atlassian Intelligence"
+  ],
+  [
+   2,
+   "HubSpot AI"
+  ],
+  [
+   2,
+   "Gong AI"
+  ],
+  [
+   1,
+   "Zendesk AI"
+  ],
+  [
+   1,
+   "UiPath Autopilot"
+  ],
+  [
+   1,
+   "Tableau Pulse"
+  ],
+  [
+   1,
+   "Snowflake Cortex AI"
+  ],
+  [
+   1,
+   "Qualtrics AI"
+  ],
+  [
+   1,
+   "Playwright"
+  ],
+  [
+   1,
+   "Microsoft Word Copilot"
+  ],
+  [
+   1,
+   "Microsoft Teams Copilot"
+  ],
+  [
+   1,
+   "Microsoft Purview"
+  ],
+  [
+   1,
+   "Meta Advantage+"
+  ],
+  [
+   1,
+   "MLflow"
+  ],
+  [
+   1,
+   "LinkedIn Sales Navigator AI"
+  ],
+  [
+   1,
+   "LinkedIn Recruiter AI"
+  ],
+  [
+   1,
+   "Intercom Fin"
+  ],
+  [
+   1,
+   "Google Gemini in Security"
+  ],
+  [
+   1,
+   "Google Ads AI"
+  ],
+  [
+   1,
+   "Google AI Studio"
+  ],
+  [
+   1,
+   "Gainsight AI"
+  ],
+  [
+   1,
+   "Figma AI"
+  ],
+  [
+   1,
+   "FigJam AI"
+  ],
+  [
+   1,
+   "Dynatrace Davis AI"
+  ],
+  [
+   1,
+   "Datasite AI"
+  ],
+  [
+   1,
+   "Datadog Bits AI"
+  ],
+  [
+   1,
+   "Databricks Assistant"
+  ],
+  [
+   1,
+   "Cursor"
+  ],
+  [
+   1,
+   "CrowdStrike Charlotte AI"
+  ],
+  [
+   1,
+   "Azure Copilot"
+  ],
+  [
+   1,
+   "Azure AI Foundry"
+  ],
+  [
+   1,
+   "AuditBoard AI"
+  ],
+  [
+   1,
+   "Amazon Q Developer"
+  ],
+  [
+   1,
+   "Amazon Bedrock"
+  ],
+  [
+   1,
+   "Adobe Firefly"
+  ],
+  [
+   1,
+   "Adobe Acrobat AI Assistant"
+  ]
+ ]
+}

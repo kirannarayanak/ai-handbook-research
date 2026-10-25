@@ -1,0 +1,434 @@
+                CORPORATE AI TOOLS & TRAINING
+                        HANDBOOK
+ 60 Departments | Claude, Gemini, Gamma & Specialist AI Tools
+ A department-by-department training reference for enterprise workforce upskilling, including iMinds Academy curriculum planning.
+
+
+ October 2026 | Revised edition
+
+
+
+
+ TRAINING PRINCIPLES
+ Foundation (all employees): Learn one employer-approved general AI assistant (ChatGPT, Claude or Gemini), prompting,
+ verification, privacy, data handling, source checking, and human review. Tools listed below are recommended options, not universal
+ mandatory purchases.
+ Role-based: Select 2–4 tools for practical exercises, including a general assistant and the specialist platform most relevant to the role.
+ Gamma is useful primarily for presentations; Canva for design; NotebookLM for source-grounded study and synthesis.
+ Proficiency: Core = 6–10 hours; Advanced = 12–20 hours; Specialist = 20–40+ hours. Assess real deliverables, safe data use, output
+ accuracy and repeatable workflow.
+ Important: Enterprise licensing, data residency, integrations and product features vary. Validate before adoption. Never upload
+ confidential company, customer, employee, financial or legal information into unapproved tools.
+
+
+ AI TOOL SELECTION QUICK GUIDE
+ ChatGPT: writing, analysis, structured problem-solving, coding and workflow support.
+ Claude: long-document synthesis, careful drafting, code assistance and reasoning.
+ Gemini: research, multimodal work and Google Workspace workflows (where licensed).
+ Gamma: rapid presentation, proposal and training-deck creation; human design review needed.
+ NotebookLM: working with uploaded source materials, study guides and grounded Q&A.
+ Canva Magic Studio: marketing graphics, posters, social creatives and course materials.
+ Perplexity: web-supported discovery and competitive scanning with source validation.
+ GitHub Copilot / Claude Code / Gemini Code Assist: coding support with secure repository controls.
+
+
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                      Page 1
+ DEPARTMENT-WISE TOOL & SKILL DIRECTORY
+ 01. Office of the CEO | Core
+ Recommended tools: Claude, Gemini, Gamma, Microsoft 365 Copilot, ChatGPT Enterprise, Power BI Copilot.
+ Workplace application: Executive briefs, meeting decisions, KPI narratives.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 02. Corporate Strategy | Advanced
+ Recommended tools: Claude, Gemini, Perplexity, Gamma, ChatGPT Enterprise, Perplexity Enterprise, Power BI Copilot.
+ Workplace application: Scenario analysis, competitive synthesis, strategy memos.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 03. Corporate Development & M&A | Specialist
+ Recommended tools: Claude, Gemini, NotebookLM, Microsoft 365 Copilot, ChatGPT Enterprise, Datasite AI.
+ Workplace application: Due diligence summaries, valuation assumptions, integration trackers.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 04. Board Secretariat & Corporate Governance | Core
+ Recommended tools: Claude, Gemini, NotebookLM, Microsoft 365 Copilot, Microsoft Teams Copilot, Adobe Acrobat AI Assistant.
+ Workplace application: Board packs, minutes, action registers and document search.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 05. Enterprise Risk Management | Advanced
+ Recommended tools: Claude, Gemini, Microsoft 365 Copilot, Power BI Copilot, ServiceNow Now Assist.
+ Workplace application: Risk registers, control mapping, trend summaries.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 06. Legal Affairs | Specialist
+ Recommended tools: Claude, Gemini, NotebookLM, Microsoft 365 Copilot, Microsoft Word Copilot, Thomson Reuters CoCounsel.
+ Workplace application: Contract review, legal research and clause comparison.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 07. Regulatory Compliance | Specialist
+ Recommended tools: Claude, Gemini, NotebookLM, Microsoft 365 Copilot, ServiceNow Now Assist, Thomson Reuters CoCounsel.
+ Workplace application: Regulatory change summaries, control evidence, compliance checklists.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 08. Internal Audit | Specialist
+ Recommended tools: Claude, Gemini, Microsoft 365 Copilot, Power BI Copilot, AuditBoard AI.
+ Workplace application: Audit planning, control testing support, exception triage.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                Page 2
+ 09. Ethics & Investigations | Advanced
+ Recommended tools: Claude, Gemini, Microsoft 365 Copilot, ServiceNow Now Assist, ChatGPT Enterprise.
+ Workplace application: Case summaries, policy comparisons, investigation timelines.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 10. ESG & Sustainability | Advanced
+ Recommended tools: Gemini, Claude, Gamma, Microsoft 365 Copilot, Power BI Copilot, ChatGPT Enterprise.
+ Workplace application: ESG reporting drafts, emissions data narratives, disclosure checks.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 11. Human Resources Business Partnering | Core
+ Recommended tools: Claude, Gemini, Microsoft 365 Copilot, Workday AI, ChatGPT Enterprise.
+ Workplace application: HR advisory drafts, policy search, manager guidance.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 12. Talent Acquisition | Advanced
+ Recommended tools: Gemini, Claude, LinkedIn Recruiter AI, Workday AI, Microsoft 365 Copilot.
+ Workplace application: Job descriptions, sourcing, interview question design.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 13. Learning & Development | Core
+ Recommended tools: Gamma, Canva Magic Studio, Claude, Gemini, NotebookLM, ChatGPT Enterprise, Microsoft 365 Copilot.
+ Workplace application: Learning objectives, lesson plans, quizzes and training videos.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 14. Compensation, Benefits & Payroll | Specialist
+ Recommended tools: Claude, Gemini, Workday AI, Microsoft 365 Copilot, Power BI Copilot.
+ Workplace application: Compensation analytics, payroll exception review, employee FAQs.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 15. Talent Management & Succession | Advanced
+ Recommended tools: Claude, Gemini, Workday AI, Microsoft 365 Copilot, Power BI Copilot.
+ Workplace application: Skill matrices, succession planning, development pathways.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 16. People Analytics & HR Operations | Advanced
+ Recommended tools: Gemini, Claude, Workday AI, Power BI Copilot, Microsoft 365 Copilot.
+ Workplace application: Workforce dashboards, HR queries, attrition pattern analysis.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 17. Diversity, Equity & Inclusion | Core
+ Recommended tools: Claude, Gemini, Gamma, Microsoft 365 Copilot, ChatGPT Enterprise, Power BI Copilot.
+ Workplace application: Inclusive-language review, anonymized feedback synthesis.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                Page 3
+ 18. Workplace Administration & Facilities | Core
+ Recommended tools: Gemini, Canva Magic Studio, Microsoft 365 Copilot, ServiceNow Now Assist, Power Automate.
+ Workplace application: Facility tickets, vendor communications, request routing.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 19. Health, Safety & Wellbeing | Advanced
+ Recommended tools: Gemini, Gamma, Claude, Microsoft 365 Copilot, Power BI Copilot, ChatGPT Enterprise.
+ Workplace application: Safety checklists, incident summaries, training materials.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 20. Financial Planning & Analysis | Advanced
+ Recommended tools: Claude, Gemini, Excel Copilot, Power BI Copilot, ChatGPT Enterprise.
+ Workplace application: Budget variance narratives, scenario modeling, forecast commentary.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 21. Accounting & Financial Reporting | Advanced
+ Recommended tools: Claude, Gemini, Excel Copilot, Microsoft 365 Copilot, SAP Joule.
+ Workplace application: Reconciliation assistance, journal explanations, reporting drafts.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 22. Treasury & Cash Management | Specialist
+ Recommended tools: Claude, Gemini, Excel Copilot, Power BI Copilot, ChatGPT Enterprise.
+ Workplace application: Cash flow scenarios, liquidity reporting, treasury analysis.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 23. Taxation | Specialist
+ Recommended tools: Claude, Gemini, Thomson Reuters CoCounsel, Microsoft 365 Copilot, Excel Copilot.
+ Workplace application: Tax research support, document extraction, review checklists.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 24. Accounts Payable & Receivable | Advanced
+ Recommended tools: Gemini, Claude, SAP Joule, Microsoft 365 Copilot, Power Automate.
+ Workplace application: Invoice extraction, payment exceptions, collection follow-ups.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 25. Procurement & Strategic Sourcing | Advanced
+ Recommended tools: Claude, Gemini, Perplexity, SAP Joule, Microsoft 365 Copilot, ChatGPT Enterprise.
+ Workplace application: RFP drafting, spend analysis, supplier comparison.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 26. Vendor & Third-Party Management | Advanced
+ Recommended tools: Claude, Gemini, ServiceNow Now Assist, Microsoft 365 Copilot, Power BI Copilot.
+ Workplace application: Vendor risk summaries, SLA monitoring, supplier scorecards.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                Page 4
+ 27. Investor Relations | Advanced
+ Recommended tools: Gamma, Claude, Gemini, Microsoft 365 Copilot, Power BI Copilot, ChatGPT Enterprise.
+ Workplace application: Investor Q&A preparation, earnings summaries, performance narratives.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 28. Sales - Enterprise & Key Accounts | Core
+ Recommended tools: Claude, Gemini, Gamma, Salesforce Einstein, Microsoft 365 Copilot, Gong AI.
+ Workplace application: Account research, call summaries, opportunity planning.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 29. Sales - SMB & Inside Sales | Core
+ Recommended tools: Gemini, Gamma, Canva Magic Studio, HubSpot AI, Salesforce Einstein, Microsoft 365 Copilot.
+ Workplace application: Lead qualification, personalized outreach, pipeline follow-ups.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 30. Sales Operations & Revenue Operations | Advanced
+ Recommended tools: Claude, Gemini, Gamma, Salesforce Einstein, Power BI Copilot, Gong AI.
+ Workplace application: Forecast insights, pipeline hygiene, revenue performance analysis.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 31. Marketing & Brand | Core
+ Recommended tools: Canva Magic Studio, Gamma, Gemini, Claude, Adobe Firefly, ChatGPT Enterprise.
+ Workplace application: Brand-safe copy, campaign concepts, creative production.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 32. Digital & Performance Marketing | Advanced
+ Recommended tools: Gemini, Canva Magic Studio, Gamma, Google Ads AI, Meta Advantage+, HubSpot AI.
+ Workplace application: Campaign optimization, audience testing, performance reporting.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 33. Market Research & Competitive Intelligence | Core
+ Recommended tools: Perplexity, Gemini, Claude, NotebookLM, Perplexity Enterprise, ChatGPT Enterprise, Power BI Copilot.
+ Workplace application: Research synthesis, competitor tracking, survey analysis.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 34. Business Development & Partnerships | Core
+ Recommended tools: Gamma, Claude, Gemini, Microsoft 365 Copilot, LinkedIn Sales Navigator AI, ChatGPT Enterprise.
+ Workplace application: Partner discovery, proposals, relationship mapping.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 35. Pre-Sales & Solution Consulting | Advanced
+ Recommended tools: Gamma, Claude, Gemini, Microsoft 365 Copilot, ChatGPT Enterprise, Salesforce Einstein.
+ Workplace application: RFP responses, solution proposals, demo preparation.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                Page 5
+ 36. Customer Success | Advanced
+ Recommended tools: Claude, Gemini, Gamma, Salesforce Einstein, Gainsight AI, Microsoft 365 Copilot.
+ Workplace application: Customer health, renewal risks, success plans.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 37. Customer Support & Contact Center | Core
+ Recommended tools: Gemini, Claude, Zendesk AI, Intercom Fin, ServiceNow Now Assist.
+ Workplace application: Ticket classification, knowledge search, agent-assist responses.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 38. Customer Experience & Service Design | Advanced
+ Recommended tools: Claude, Gemini, Canva Magic Studio, Qualtrics AI, Microsoft 365 Copilot, ChatGPT Enterprise.
+ Workplace application: Voice-of-customer synthesis, journey mapping, service insights.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 39. Product Management | Core
+ Recommended tools: Claude, Gemini, Gamma, NotebookLM, Jira Atlassian Intelligence, Microsoft 365 Copilot, ChatGPT Enterprise.
+ Workplace application: PRDs, backlog refinement, release communication.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 40. Product Design & UX Research | Advanced
+ Recommended tools: Figma AI, Canva Magic Studio, Gemini, Claude, FigJam AI, ChatGPT Enterprise.
+ Workplace application: Wireframe ideation, usability themes, UX content.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 41. Software Engineering - Applications | Core
+ Recommended tools: Claude Code, Gemini Code Assist, GitHub Copilot, Cursor, ChatGPT Enterprise.
+ Workplace application: Code generation, refactoring, documentation, code review support.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 42. Quality Engineering & Testing | Advanced
+ Recommended tools: Claude Code, Gemini Code Assist, GitHub Copilot, Playwright, ChatGPT Enterprise.
+ Workplace application: Test case generation, automation scripts, defect triage.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 43. Cloud Infrastructure & Platform Engineering | Specialist
+ Recommended tools: Gemini Code Assist, Claude Code, Amazon Q Developer, Azure Copilot, GitHub Copilot.
+ Workplace application: Infrastructure templates, cloud troubleshooting, cost analysis.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 44. DevOps & Site Reliability Engineering | Specialist
+ Recommended tools: Claude Code, Gemini Code Assist, GitHub Copilot, Datadog Bits AI, Dynatrace Davis AI.
+ Workplace application: Runbook generation, incident investigation, observability queries.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                Page 6
+ 45. IT Infrastructure & End-User Computing | Advanced
+ Recommended tools: Gemini, Claude, Microsoft Security Copilot, ServiceNow Now Assist, Microsoft 365 Copilot.
+ Workplace application: IT ticket resolution, endpoint support, knowledge articles.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 46. Enterprise Applications & ERP | Specialist
+ Recommended tools: Gemini, Claude, SAP Joule, Salesforce Einstein, Microsoft 365 Copilot.
+ Workplace application: ERP workflows, CRM insights, enterprise app support.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 47. Cybersecurity Operations | Specialist
+ Recommended tools: Gemini, Claude, Microsoft Security Copilot, CrowdStrike Charlotte AI, Google Gemini in Security.
+ Workplace application: Alert triage, threat hunting, incident summaries.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 48. Security Governance, Risk & Privacy | Specialist
+ Recommended tools: Gemini, Claude, Microsoft Security Copilot, Microsoft Purview, ServiceNow Now Assist.
+ Workplace application: Security policy mapping, privacy workflows, risk assessments.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 49. Data Engineering & Data Platforms | Specialist
+ Recommended tools: Gemini, Claude Code, Databricks Assistant, Snowflake Cortex AI, GitHub Copilot.
+ Workplace application: SQL generation, data pipelines, quality troubleshooting.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 50. Business Intelligence & Analytics | Core
+ Recommended tools: Gemini, Claude, Gamma, Power BI Copilot, Tableau Pulse, ChatGPT Enterprise.
+ Workplace application: Dashboard narratives, natural-language data exploration.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 51. AI, Machine Learning & Automation | Specialist
+ Recommended tools: Claude Code, Gemini, Google AI Studio, Azure AI Foundry, Amazon Bedrock, MLflow.
+ Workplace application: Model evaluation, RAG pipelines, agent governance and MLOps.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 52. Research, Innovation & Emerging Technology | Advanced
+ Recommended tools: Claude, Gemini, Perplexity, Gamma, ChatGPT Enterprise, Perplexity Enterprise, GitHub Copilot.
+ Workplace application: Technology scanning, prototype planning, experiment documentation.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 53. Enterprise Architecture & Integration | Specialist
+ Recommended tools: Claude, Gemini, Gamma, Microsoft 365 Copilot, ChatGPT Enterprise, GitHub Copilot.
+ Workplace application: Architecture decision records, integration patterns, design reviews.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                Page 7
+ 54. Project & Program Management Office | Core
+ Recommended tools: Gamma, Claude, Gemini, Microsoft 365 Copilot, Jira Atlassian Intelligence, Power BI Copilot.
+ Workplace application: Status reports, dependency analysis, project risk summaries.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 55. Service Delivery & Managed Services | Advanced
+ Recommended tools: Gemini, Claude, ServiceNow Now Assist, Microsoft 365 Copilot, Power BI Copilot.
+ Workplace application: SLA reporting, service desk optimization, incident patterns.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 56. Business Operations & Process Excellence | Advanced
+ Recommended tools: Gamma, Claude, Gemini, Microsoft 365 Copilot, Power Automate, UiPath Autopilot.
+ Workplace application: Process mapping, workflow automation, SOP creation.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 57. Business Transformation & Change Management | Advanced
+ Recommended tools: Gamma, Claude, Gemini, Canva Magic Studio, Microsoft 365 Copilot, ChatGPT Enterprise, Power BI Copilot.
+ Workplace application: Change impact assessments, communications, adoption analysis.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 58. Quality Management & Process Compliance | Advanced
+ Recommended tools: Claude, Gemini, Gamma, Microsoft 365 Copilot, Power BI Copilot, ChatGPT Enterprise.
+ Workplace application: Quality audit summaries, root-cause analysis, SOP improvement.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 59. Business Continuity & Disaster Recovery | Specialist
+ Recommended tools: Claude, Gemini, Microsoft 365 Copilot, ServiceNow Now Assist, ChatGPT Enterprise.
+ Workplace application: Recovery playbooks, scenario exercises, incident communications.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+ 60. Supply Chain, Logistics & Inventory | Advanced
+ Recommended tools: Gemini, Claude, SAP Joule, Microsoft 365 Copilot, Power BI Copilot.
+ Workplace application: Demand insights, inventory exception review, supplier reporting.
+ Training assignment: Create one role-specific deliverable using an approved AI assistant; validate sources and figures; document
+ prompts, edits, quality checks and time saved.
+
+
+
+
+ IMPLEMENTATION ROADMAP
+ Weeks 1–2: Baseline AI literacy, privacy, prompt skills and a common approved assistant.
+ Weeks 3–4: Department-specific use cases and Claude/Gemini comparative exercises.
+ Weeks 5–6: Gamma presentation workshops; NotebookLM document workflows; Canva for creative teams.
+ Weeks 7–9: Domain tools (CRM, finance, coding, analytics, security) and integration labs.
+ Weeks 10–12: Capstone, manager review, adoption metrics and certification.
+
+
+ ASSESSMENT RUBRIC
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                                Page 8
+ Accuracy & fact checking 40%; safe and compliant handling 25%; business usefulness 20%; process documentation and explainability
+ 15%. Suggested pass mark 80%, with no critical privacy violation.
+
+
+
+
+CORPORATE AI SKILLS | 60 DEPARTMENTS | iMinds training planning                                                             Page 9
+
