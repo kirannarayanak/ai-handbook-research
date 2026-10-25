@@ -1,6 +1,6 @@
 # Handover: AI handbook deep-research doc
 
-STATUS: COMPLETE (25 October 2026). The Claude Doc "Enterprise AI Tools & Departments Deep Research" at
+STATUS: COMPLETE (25 October 2026), plus a second expansion pass the same day. The Claude Doc "Enterprise AI Tools & Departments Deep Research" at
 https://claude.ai/artifact/PzB4eRd3Trt1TU4GsT6hrH
 (doc id ba24a598-aca5-433a-a827-900bf3026cb2, prose body node id abac2331-6fa6,
 block-id prefix m431jm6wj84) has no pending blocks left. Doc rev 38.
@@ -16,11 +16,11 @@ Headings are unnumbered, in this order:
 5. Department-by-tool coverage matrix (frequency chart)
 6. Tool deep dives: 10 groups, 57 tools, each with a fact-check paragraph and per-tool sources
 7. Department deep dives: 8 clusters, 60 departments, each with a fact-check paragraph and per-department sources
-8. Additional tools the handbook omits (41, two tables)
-9. Additional departments the handbook omits (18)
+8. Additional tools the handbook omits (41 in two tables, then a second pass of 49 in two more tables: 90 in all)
+9. Additional departments the handbook omits (18 in one table, then a second pass of 23 in two more: 41 in all)
 10. Cross-cutting themes (regulation table, data residency, cost model, rationalisation, hallucination/prompt injection/shadow AI, adoption and ROI, accessibility, tiering and hours, naming drift)
 11. Gaps, caveats and recommendations (confidence table, renames table, caveats, 8 curriculum and 8 matrix recommendations)
-12. Sources and verification notes (method, counts, labels, failures, and all 516 pages opened, grouped by section)
+12. Sources and verification notes (method, counts, labels, failures, and all 626 pages opened, grouped by section)
 
 Confidence: tools 10 high / 39 medium / 8 low; departments 15 high / 44 medium / 1 low (46).
 
@@ -42,7 +42,8 @@ after the last block id the ack returns (or insert in reverse order after a fixe
 - `research/run2.json` – merged, fact-checked result used to generate the doc sections.
 - `research/gen.py` – converts a result JSON into `out/s6_*.md`, `out/s7_*.md`, `out/s7b.md`, `out/s7c.md`, `out/gaps.md`.
 - `out/` – generated section markdown as written to the doc; `out/sources_list.md` is the deduplicated source list (516 URLs), split into `sources_0..2.md` for the three doc writes.
-- `workflows/*.js` – Workflow scripts (tools, departments, expansion, critic, redo-depts). Agents ran on Sonnet at medium effort, the critic on Opus at high.
+- `research/run_more_tools.json`, `research/run_more_depts.json` – second expansion pass (6 tool lenses, 4 department lenses), rendered by `research/gen2.py` into `out/more_tools_*.md` and `out/more_depts_*.md`; `out/sources_more.md` lists the 110 new pages.
+- `workflows/*.js` – Workflow scripts (tools, departments, expansion, critic, redo-depts, more-expansion). Agents ran on Sonnet at medium effort, the critic on Opus at high.
 
 ## Known limits to carry forward
 

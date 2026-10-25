@@ -17,8 +17,9 @@ how to edit it, and the known limits.
 - `research/run2.json` – merged and fact-checked result (57 tools, 60 departments, 41 additional tools, 18 additional departments).
 - `research/gen.py` – turns a result JSON into markdown for the doc sections: `python3 gen.py <result.json>` writes `out/s6_*.md` (tool deep dives), `out/s7_*.md` (department clusters), `out/s7b.md` (additional tools), `out/s7c.md` (additional departments), `out/gaps.md`.
 - `out/` – the generated section markdown as placed in the doc, plus `sources_list.md` (516 deduplicated source URLs).
-- `workflows/*.js` – the Workflow scripts: tools, departments, expansion, critic and gap fill, and the second-pass department redo.
+- `research/run_more_tools.json`, `research/run_more_depts.json`, `research/gen2.py` – second expansion pass and its table generator.
+- `workflows/*.js` – the Workflow scripts: tools, departments, expansion, critic and gap fill, the second-pass department redo, and the second expansion pass.
 
 ## Doc state
 
-All sections filled: scope and method; handbook at a glance; department directory (60); tool catalog (57); coverage matrix; tool deep dives (10 groups); department deep dives (8 clusters); additional tools (41); additional departments (18); cross-cutting themes; gaps, caveats and recommendations; sources and verification notes (516 pages).
+All sections filled: scope and method; handbook at a glance; department directory (60); tool catalog (57); coverage matrix; tool deep dives (10 groups); department deep dives (8 clusters); additional tools (41 + 49 second pass = 90); additional departments (18 + 23 second pass = 41); cross-cutting themes; gaps, caveats and recommendations; sources and verification notes (626 pages).

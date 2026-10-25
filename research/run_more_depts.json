@@ -1,0 +1,1543 @@
+{
+ "summary": "Second pass: find more enterprise AI tools or departments the handbook and the first expansion missed, with adversarial fact-checking",
+ "agentCount": 8,
+ "logs": [
+  "Starting 4 additional-departments researchers",
+  "Additional departments after dedup: 24"
+ ],
+ "result": {
+  "additionalDepartments": {
+   "runs": [
+    {
+     "lens": "Commercial, brand and customer-adjacent functions (second pass)",
+     "overview": "Four of the six proposed second-pass departments survive checking: Localisation & Translation, Customer Education & Training Services, Events & Field Marketing and Product Marketing. Deal Desk, Content Marketing & Search Visibility, and Loyalty & CRM Marketing were removed as overlaps with covered departments or for evidence that does not show AI use in the function. Evidence is mostly vendor- or practitioner-published, so confidence is medium or lower.",
+     "candidates": [
+      {
+       "name": "Localisation & Translation",
+       "why_missing": "No covered department owns multilingual product, content and support localisation; it is spread across Marketing, Engineering and Support.",
+       "typical_org_types": "Multinationals, software, consumer goods, gaming, medical devices and any company selling in several languages",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Gemini",
+        "Claude",
+        "ChatGPT Enterprise",
+        "Microsoft Word Copilot",
+        "Power Automate",
+        "Intento (translation management specialist)"
+       ],
+       "workplace_application": "Terminology-aware draft translation, automated linguistic quality review, translation memory clean-up",
+       "ai_use_evidence": "Salesforce's Vice President of Localization describes rebuilding its pipeline as an LLM workflow with multi-stage AI validation, shipping releases in up to 34 languages and cutting localisation cost 50-90% (self-reported). Intento's April 2025 digest covers a Subway/XTM/Intento webinar on AI in enterprise localisation workflows (ROI beyond cost, content selection, security hurdles).",
+       "data_risks": "Unreleased product strings, confidential marketing and legal text, and customer data inside support content sent to external models.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "How AI Rebuilt Salesforce's Decades-Old Localization Pipeline",
+         "url": "https://engineering.salesforce.com/how-ai-rebuilt-salesforces-decades-old-localization-pipeline/"
+        },
+        {
+         "title": "Intento April 2025 digest: Subway's translation ROI",
+         "url": "https://inten.to/blog/april-2025-subways-translation-roi-requirements-driven-approach-and-genai-for-translation-in-2025/"
+        }
+       ]
+      },
+      {
+       "name": "Customer Education & Training Services",
+       "why_missing": "Customer Success and L&D (internal staff) do not cover external customer academies, certification and product training as a function.",
+       "typical_org_types": "Software, SaaS, industrial equipment and healthcare technology vendors",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Claude",
+        "ChatGPT Enterprise",
+        "NotebookLM",
+        "Gamma",
+        "Canva Magic Studio",
+        "Gainsight AI"
+       ],
+       "workplace_application": "Course drafting from product documentation, assessment creation, translation of training content",
+       "ai_use_evidence": "Intellum (May 2024) reports a Forrester survey of 300 US customer education decision-makers: 51% already use AI, with accelerating content creation (73%), personalised paths (61%) and assessment creation (58%) the top intended uses. Skilljar's 2025 survey of 100+ customer education teams found AI shows most promise in course creation and updates (60%). Both are vendor-published.",
+       "data_risks": "Customer learner records and certification data, plus unreleased product documentation.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Skilljar Customer Education Trends 2025",
+         "url": "https://www.skilljar.com/reports/ce-2025-trends"
+        },
+        {
+         "title": "Intellum: Research on AI in Customer Education",
+         "url": "https://www.intellum.com/resources/blog/research-ai-in-customer-education"
+        }
+       ]
+      },
+      {
+       "name": "Events & Field Marketing",
+       "why_missing": "Marketing & Brand and Digital Marketing do not own conferences, roadshows and regional field events as a distinct function; partial overlap with Marketing & Brand remains.",
+       "typical_org_types": "B2B technology, financial services, pharma and industrial companies",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "ChatGPT Enterprise",
+        "Canva Magic Studio",
+        "Gamma",
+        "HubSpot AI",
+        "Microsoft Teams Copilot",
+        "Cvent (event platform specialist)"
+       ],
+       "workplace_application": "Event content and session descriptions, attendee personalisation, post-event follow-up and repurposing",
+       "ai_use_evidence": "PCMA's Convene article has eight event-marketing specialists describing generative AI use in design, brainstorming and research. A CO/AI report on Cvent Connect 2025 describes the CventIQ AI suite and cites Forrester data that 79% of event leaders prioritise personalisation and 59% plan more small field events. Practitioner and vendor-linked sources.",
+       "data_risks": "Attendee personal data, registration lists and unannounced launch information.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "PCMA: How 8 Event Marketers Are Using AI Now",
+         "url": "https://www.pcma.org/how-8-event-marketers-are-using-ai-now/"
+        },
+        {
+         "title": "CO/AI: Cvent unveils AI-powered CventIQ",
+         "url": "https://getcoai.com/news/cvent-unveils-ai-powered-cventiq-to-automate-event-planning-and-personalization/"
+        }
+       ]
+      },
+      {
+       "name": "Product Marketing",
+       "why_missing": "Marketing & Brand and Product Management leave positioning, launch messaging and battlecards without an owner; Revenue Enablement covers sales training only. Partial overlap with Marketing & Brand remains.",
+       "typical_org_types": "Software, medical devices, consumer goods and industrial technology",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Claude",
+        "ChatGPT Enterprise",
+        "Perplexity Enterprise",
+        "Gamma",
+        "NotebookLM",
+        "Canva Magic Studio"
+       ],
+       "workplace_application": "Positioning and messaging drafts, competitive battlecards, launch asset production",
+       "ai_use_evidence": "The Product Marketing Alliance's 2026 State of Product Marketing report page states AI adoption has moved from experiment to everyday use. Runway's August 2026 guide cites that report for 80% of PMMs using AI regularly (copy, research summaries, first-draft assets); the 80% figure is not shown on the report landing page and is unverified. Runway is a vendor.",
+       "data_risks": "Unreleased roadmaps, pricing plans and win-loss interview content.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Runway: AI for product marketing",
+         "url": "https://runway.com/resources/ai-product-marketing"
+        },
+        {
+         "title": "Product Marketing Alliance: State of Product Marketing Report 2026",
+         "url": "https://www.productmarketingalliance.com/state-of-product-marketing-report-2026/"
+        }
+       ]
+      }
+     ],
+     "verification_notes": "All cited pages for the four retained candidates were opened and support AI use in the function, though almost all are vendor-published or self-reported and no outcome figures were independently verified. The Product Marketing Alliance 80% figure rests on a secondary vendor citation. Tools named are real products, but several are loose fits (for example Gainsight AI, Microsoft Word Copilot) and should be treated as examples. Three candidates were removed on overlap or evidence grounds.",
+     "removed_or_corrected": [
+      "Removed Deal Desk & Quote Operations: duplicate of Sales Operations & Revenue Operations and Pricing & Revenue Management (deal desk is a standard RevOps/pricing sub-function); the opened Subskribe and Rework pages are vendor product material only.",
+      "Removed Content Marketing & Search Visibility: SEO and AI-search visibility fall under Digital & Performance Marketing and editorial under Marketing & Brand; the Contently page's 200-article result is a vendor case claim, and the BrightEdge release is a vendor survey of SEO teams.",
+      "Removed Loyalty & CRM Marketing: overlaps Digital & Performance Marketing and Customer Experience & Service Design; opened sources only forecast AI's role (Brand Keys) or report a personalisation maturity chart (Clootrack citing EY), not AI use in a loyalty function.",
+      "Corrected tier Core to Advanced for Customer Education & Training Services, Events & Field Marketing and Product Marketing (narrow specialist functions, vendor-only evidence).",
+      "Corrected Customer Education evidence: Forrester survey is dated May 2024 and reported by Intellum; the Skilljar 60% figure is share expecting most impact from course creation and updates; Intellum URL corrected to the opened www.intellum.com form.",
+      "Corrected Events evidence: removed the unsupported 'personas, reporting' detail and added Forrester's 59% field-events figure from the CO/AI page.",
+      "Corrected Product Marketing evidence: PMA landing page does not itself display the 80% figure; flagged as unverified."
+     ]
+    },
+    {
+     "lens": "Technology, data and engineering-adjacent functions (second pass)",
+     "overview": "Most technology functions are already covered, so what remains is specialist and cross-cutting work around engineering: documentation, cloud cost, identity, records, geospatial and physical-product or firmware engineering. Several near-misses fold into existing departments and are not proposed: release and configuration management (44), developer experience (43, 44), privacy engineering (48), telecom network engineering (Grid & Network Operations), UX writing (40) and scientific computing (52, 49). Evidence for several candidates is vendor-authored, sponsored or preprint material, so confidence is capped at medium or low.",
+     "candidates": [
+      {
+       "name": "Technical Writing & Documentation",
+       "why_missing": "No covered department owns product, API and process documentation; Product Design & UX and Learning & Development cover adjacent but different content.",
+       "typical_org_types": "Software, hardware, telecom, medtech and industrial companies",
+       "suggested_tier": "Core",
+       "recommended_tools": [
+        "Claude",
+        "Microsoft Word Copilot",
+        "GitHub Copilot",
+        "Adobe Acrobat AI Assistant",
+        "NotebookLM"
+       ],
+       "workplace_application": "Drafting release notes and Markdown tables, summarising SME interview notes, checking style and consistency across doc sets",
+       "ai_use_evidence": "A Cisco ThousandEyes technical writer reports using Cisco's internal AI assistant for context switching, preparing for SME interviews, and generating Markdown tables in a docs-as-code workflow (opened and confirmed). Fluid Topics page on generative versus agentic AI for technical writers opened but detail not checked.",
+       "data_risks": "Unreleased product specifications, security-sensitive configuration details and customer-confidential examples.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Using Generative AI for Technical Writing at Cisco ThousandEyes",
+         "url": "https://blogs.cisco.com/innovation/generative-ai-for-cisco-thousandeyes"
+        },
+        {
+         "title": "Agentic AI vs Generative AI for Technical Writers (Fluid Topics)",
+         "url": "https://www.fluidtopics.com/blog/ai/agentic-ai-vs-generative-ai-for-technical-writers/"
+        }
+       ]
+      },
+      {
+       "name": "FinOps & Cloud Financial Management",
+       "why_missing": "FP&A, Treasury and Cloud Infrastructure cover budgets and platforms, but not the cross-functional practice of cloud unit economics, showback and commitment management.",
+       "typical_org_types": "All large companies with significant cloud or AI spend",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Azure Copilot",
+        "Amazon Q Developer",
+        "Power BI Copilot",
+        "Excel Copilot",
+        "Gemini",
+        "Snowflake Cortex AI"
+       ],
+       "workplace_application": "Natural-language cloud cost queries, anomaly explanation and forecasting, chargeback and showback reporting",
+       "ai_use_evidence": "Capgemini page (opened) describes six generative AI use cases in cloud FinOps, including intelligent forecasting, proactive anomaly detection and automated cost savings. The FinOps Foundation AI Value topic page opened; it shows the community organising around AI but is not adoption data.",
+       "data_risks": "Cloud billing and usage data that reveals architecture, vendor contract rates and commercial commitments.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Now's the time to elevate your cloud financial operations with generative AI (Capgemini)",
+         "url": "https://www.capgemini.com/insights/research-library/want-maximum-value-from-finops-in-the-cloud/"
+        },
+        {
+         "title": "AI Value (FinOps Foundation)",
+         "url": "https://www.finops.org/topic/ai-value/"
+        }
+       ]
+      },
+      {
+       "name": "Identity & Access Management",
+       "why_missing": "Cybersecurity Operations and IT Infrastructure touch identity, but identity governance, access review and AI-agent identity is not named. Borderline overlap with 47, since IAM often sits inside security.",
+       "typical_org_types": "All large companies, especially regulated industries",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Microsoft Security Copilot",
+        "ServiceNow Now Assist",
+        "Microsoft Purview",
+        "Google Gemini in Security",
+        "Power Automate",
+        "Okta Identity Governance"
+       ],
+       "workplace_application": "Access review summarisation, joiner-mover-leaver exception triage, governance of AI-agent identities",
+       "ai_use_evidence": "Okta's guide on securing generative AI with identity opened and its site positions identity teams as owners of AI-agent access; it is vendor marketing, so it shows vendor direction, not independent adoption data. No independent evidence of AI use by IAM teams was found.",
+       "data_risks": "Entitlement data, privileged credentials and directory records on every employee and system.",
+       "confidence": "low",
+       "sources": [
+        {
+         "title": "Securing generative AI with identity (Okta)",
+         "url": "https://www.okta.com/resources/guides/securing-generative-ai-with-identity/"
+        }
+       ]
+      },
+      {
+       "name": "Records & Information Management",
+       "why_missing": "Legal, Compliance and Data Governance touch retention, but the records function that runs schedules, classification and disposition is not covered.",
+       "typical_org_types": "All large companies; heavily regulated sectors and public bodies",
+       "suggested_tier": "Core",
+       "recommended_tools": [
+        "Microsoft Purview",
+        "Microsoft 365 Copilot",
+        "Adobe Acrobat AI Assistant",
+        "Claude",
+        "Power Automate"
+       ],
+       "workplace_application": "Auto-classifying records against retention schedules, treating AI prompts and outputs as records, drafting disposition reviews",
+       "ai_use_evidence": "SJSU records-programme blog (opened) summarises NAGARA 2025 insights: AI is moving from optional to essential for classification and retention. King County generative AI records guidance opened (PDF) and addresses AI prompts and outputs as records.",
+       "data_risks": "Unstructured records containing personal, legal-hold and confidential business information.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "AI, Archives, and the Future of Information Governance (SJSU iSchool)",
+         "url": "https://ischool.sjsu.edu/mara-blog/ai-archives-and-future-information-governance"
+        },
+        {
+         "title": "Records management guidance on generative AI (King County)",
+         "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/executive-services/records-management/rm/rm-guidance-generative-ai.pdf"
+        }
+       ]
+      },
+      {
+       "name": "Embedded Systems & Firmware Engineering",
+       "why_missing": "Software Engineering - Applications is application-focused; device firmware has real-time, safety and certification constraints not covered.",
+       "typical_org_types": "Automotive, industrial, medical device, consumer electronics, aerospace",
+       "suggested_tier": "Specialist",
+       "recommended_tools": [
+        "GitHub Copilot",
+        "Claude Code",
+        "Cursor",
+        "Gemini Code Assist",
+        "Claude"
+       ],
+       "workplace_application": "Generating code from requirements, reviewing for memory and safety defects, drafting unit tests for hardware-in-the-loop runs",
+       "ai_use_evidence": "A 2026 arXiv study on agentic pipelines in embedded software engineering opened and examines emerging practices and challenges; it is a preprint. The TUM-led automotive paper was not opened and is dropped.",
+       "data_risks": "Proprietary firmware source, hardware designs and safety-critical test data.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Agentic Pipelines in Embedded Software Engineering: Emerging Practices and Challenges",
+         "url": "https://arxiv.org/pdf/2601.10220"
+        }
+       ]
+      },
+      {
+       "name": "Hardware & Product Engineering R&D",
+       "why_missing": "Manufacturing Operations covers plants, and Product Design & UX covers software experience; mechanical, electrical and systems engineering of physical products is not covered.",
+       "typical_org_types": "Manufacturing, automotive, aerospace, electronics, industrial equipment",
+       "suggested_tier": "Specialist",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Claude",
+        "Perplexity Enterprise",
+        "Azure AI Foundry",
+        "Siemens Industrial Copilot and NX (Siemens)",
+        "Power BI Copilot"
+       ],
+       "workplace_application": "Natural-language access to simulation and CAD data, generating automation code, summarising engineering change documentation",
+       "ai_use_evidence": "NVIDIA case study (opened) describes Siemens integrating AI across Teamcenter, Simcenter STAR-CCM+ and the Siemens Industrial Copilot for product development. 3D Printing Industry article on the Industrial Copilot launch opened. Both are vendor or trade-press accounts.",
+       "data_risks": "Design IP, CAD models, simulation results and supplier specifications.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Siemens accelerates product development with industrial AI (NVIDIA)",
+         "url": "https://www.nvidia.com/en-in/case-studies/siemens-accelerates-product-development-and-innovation-with-industrial-ai/"
+        },
+        {
+         "title": "Siemens launches its new AI-powered assistant for industrial engineering (3D Printing Industry)",
+         "url": "https://3dprintingindustry.com/news/siemens-launches-its-new-ai-powered-assistant-for-industrial-engineering-230116/"
+        }
+       ]
+      },
+      {
+       "name": "GIS & Geospatial Analytics",
+       "why_missing": "Business Intelligence and Grid & Network Operations use maps incidentally; a dedicated geospatial data and analysis function is not covered.",
+       "typical_org_types": "Utilities, telecom, energy, insurance, logistics, retail, government contractors",
+       "suggested_tier": "Specialist",
+       "recommended_tools": [
+        "Azure AI Foundry",
+        "Databricks Assistant",
+        "Gemini",
+        "Claude",
+        "Power BI Copilot",
+        "Esri ArcGIS GeoAI (Esri)"
+       ],
+       "workplace_application": "Feature extraction from imagery, natural-language spatial queries, site and risk mapping",
+       "ai_use_evidence": "A CIO.com sponsored case study (opened) says Esri used Azure generative AI and NVIDIA GPUs to enhance GeoAI-driven solutions. It shows the vendor's product, not a customer GIS team's use, and is a short teaser; evidence is thin.",
+       "data_risks": "Location data on assets, customers and critical infrastructure.",
+       "confidence": "low",
+       "sources": [
+        {
+         "title": "Esri drives innovation in geospatial intelligence solutions with AI (CIO.com)",
+         "url": "https://blueprintforai.cio.com/winning-strategies-for-ai-ready-enterprises/esri-drives-innovation-in-geospatial-intelligence-solutions-with-ai/"
+        }
+       ]
+      }
+     ],
+     "verification_notes": "All cited sources retained were opened, and key claims were confirmed in the page text (Cisco, Capgemini, SJSU, NVIDIA, CIO.com, arXiv). Evidence is mostly vendor, sponsored or preprint material, so no candidate is high confidence; IAM and GIS are low because the evidence shows vendor products rather than function-level adoption. No candidate duplicates a covered department outright; IAM overlaps partly with Cybersecurity Operations. Tool names were not individually verified beyond being established products.",
+     "removed_or_corrected": [
+      "Corrected IAM: removed Okta AI-agents datasheet source (page not opened); kept the Okta guide only; noted borderline overlap with Cybersecurity Operations.",
+      "Corrected Embedded Systems: removed TUM/arXiv 2505.02500 source (not opened); retained 2601.10220 only.",
+      "Corrected GIS: removed Microsoft 2019 Esri interview source (not opened, dated); noted CIO.com evidence is a sponsored teaser about the vendor.",
+      "Corrected Technical Writing and FinOps: narrowed evidence wording to what the opened pages show."
+     ]
+    },
+    {
+     "lens": "Industry line-of-business functions (second pass)",
+     "overview": "Seven regulated, document-heavy industry functions survive checking: provider revenue cycle, financial-crime operations, actuarial, wealth advisory, lending operations, construction project controls and public benefits casework. Pharmacovigilance was removed because the only opened source is a closed FDA research fellowship posting. Financial Crime Operations adjoins covered Regulatory Compliance and Payments Fraud & Credit Risk Operations but is retained as a distinct KYC/AML operations team.",
+     "candidates": [
+      {
+       "name": "Revenue Cycle Management & Clinical Coding",
+       "why_missing": "No covered department handles hospital billing, medical coding, clinical documentation improvement or claim denials; Accounts Payable & Receivable is commercial, not payer-based.",
+       "typical_org_types": "Hospitals, health systems, physician groups, payers",
+       "suggested_tier": "Specialist",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Claude",
+        "Power Automate",
+        "UiPath Autopilot",
+        "Power BI Copilot",
+        "AKASA (specialist, vendor: AKASA)"
+       ],
+       "workplace_application": "Drafting code suggestions from clinical notes, triaging claim denials and appeals, tracking coding automation rates and backlogs",
+       "ai_use_evidence": "UMass Memorial's AI-coded share of radiology rose from about 70% to 86%, eliminating overtime and the post-weekend backlog (HFMA, opened). Cleveland Clinic partnered with AKASA on generative AI for medical coding, because coders review multiple clinical documents per case before choosing from 140,000+ codes, up to an hour per encounter (opened).",
+       "data_risks": "Protected health information, diagnosis and procedure codes, and payer claim data.",
+       "confidence": "high",
+       "sources": [
+        {
+         "title": "AI coding at UMass Memorial tempers staffing shortage (HFMA)",
+         "url": "https://www.hfma.org/revenue-cycle/ai-coding-at-umass-memorial-tempers-staffing-shortage/"
+        },
+        {
+         "title": "AI tools boost efficiency, patient experience (Cleveland Clinic Consult QD)",
+         "url": "https://consultqd.clevelandclinic.org/ai-tools-boost-efficiency-patient-experience"
+        }
+       ]
+      },
+      {
+       "name": "Financial Crime Operations (AML & KYC)",
+       "why_missing": "Payments Fraud & Credit Risk Operations targets fraud and credit; customer due diligence, sanctions and adverse media alert review, and SAR filing are not covered (some overlap with Regulatory Compliance).",
+       "typical_org_types": "Banks, broker-dealers, payment firms, insurers, crypto",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Claude",
+        "Microsoft Purview",
+        "Power Automate",
+        "ServiceNow Now Assist",
+        "WorkFusion (specialist, vendor: WorkFusion)"
+       ],
+       "workplace_application": "Triaging AML alerts, summarising adverse media for KYC reviews, drafting suspicious activity narratives",
+       "ai_use_evidence": "FinTech Global reports banks and other FIs using WorkFusion AI agents for alert review and decisioning in transaction monitoring, sanctions screening and adverse media reviews, where false-positive rates are around 95%. A Teneo guide (vendor material) describes agents running KYC/AML onboarding checks and routing only high-risk exceptions to compliance officers.",
+       "data_risks": "Customer identity documents, beneficial ownership, transaction histories and confidential SAR filings.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "AI agents cut false positives in AML monitoring (FinTech Global)",
+         "url": "https://fintech.global/2026/03/24/ai-agents-cut-false-positives-in-aml-monitoring/"
+        },
+        {
+         "title": "AI Agent for Banking guide (Teneo)",
+         "url": "https://www.teneo.ai/blog/ai-agent-for-banking"
+        }
+       ]
+      },
+      {
+       "name": "Actuarial & Insurance Analytics",
+       "why_missing": "Insurance Underwriting & Claims does not cover reserving, pricing models, valuation and experience studies, which are a distinct professional function.",
+       "typical_org_types": "Insurers, reinsurers, pension funds, health plans, consultancies",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Claude",
+        "ChatGPT Enterprise",
+        "Excel Copilot",
+        "GitHub Copilot",
+        "Databricks Assistant",
+        "Microsoft 365 Copilot"
+       ],
+       "workplace_application": "Drafting and reviewing model code, summarising assumptions and experience studies, documenting valuation methodology",
+       "ai_use_evidence": "The Society of Actuaries' magazine (July 2025) gives guidance on generative AI in actuarial work, citing a decision-maker checklist and confidentiality and auditability concerns. The SOA Member AI Survey (November 2025) assessed generative AI adoption among its members. This is professional-body guidance and survey evidence, not a named employer case study.",
+       "data_risks": "Policyholder and claims data, proprietary pricing assumptions and reserve figures.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Generative AI and Actuarial Work (The Actuary)",
+         "url": "https://www.theactuarymagazine.org/generative-ai-and-actuarial-work/"
+        },
+        {
+         "title": "SOA Member AI Survey - Summer 2025",
+         "url": "https://www.soa.org/resources/research-reports/2025/ai-member-survey-summer-2025/"
+        }
+       ]
+      },
+      {
+       "name": "Wealth Management & Financial Advisory",
+       "why_missing": "Sales and Investor Relations do not cover advisor workflows such as client meeting prep, portfolio reviews and suitability documentation.",
+       "typical_org_types": "Wealth managers, private banks, broker-dealers, asset managers",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "ChatGPT Enterprise",
+        "Microsoft 365 Copilot",
+        "Microsoft Teams Copilot",
+        "Salesforce Einstein",
+        "Perplexity Enterprise",
+        "Claude"
+       ],
+       "workplace_application": "Searching the research library, summarising client meetings into notes and follow-ups, drafting compliant client communications",
+       "ai_use_evidence": "Banking Dive (Sept 2023): Morgan Stanley rolled out an OpenAI-powered assistant to advisers after months of testing, to search its research and data; Reuters-reported meeting summaries and follow-up emails were a possible later capability, not launch features. FinTech Global (July 2024) describes generative AI assistants spreading in wealth firms and stresses human oversight and guardrails against hallucination.",
+       "data_risks": "Client financial positions, personal identity data and suitability records subject to supervision rules.",
+       "confidence": "high",
+       "sources": [
+        {
+         "title": "Morgan Stanley to roll out AI bot (Banking Dive)",
+         "url": "https://www.bankingdive.com/news/morgan-stanley-ai-bot-openai-chatgpt-generative/693002/"
+        },
+        {
+         "title": "The rise of generative AI assistants in WealthTech (FinTech Global)",
+         "url": "https://fintech.global/2024/07/19/the-rise-of-generative-ai-assistants-in-wealthtech/"
+        }
+       ]
+      },
+      {
+       "name": "Lending & Mortgage Operations",
+       "why_missing": "Credit Risk Operations covers payments risk; loan origination, processing and underwriting document validation are not covered.",
+       "typical_org_types": "Banks, mortgage lenders, credit unions, consumer finance",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Claude",
+        "Adobe Acrobat AI Assistant",
+        "Power Automate",
+        "UiPath Autopilot",
+        "ICE Mortgage Analyzers (specialist, vendor: ICE Mortgage Technology)"
+       ],
+       "workplace_application": "Validating borrower income and asset documents, pre-screening applications for underwriters, flagging document discrepancies",
+       "ai_use_evidence": "Equity Prime Mortgage used ICE Mortgage Analyzers to auto-validate borrower income, credit and asset data before underwriters open files, doubling underwriting output without added headcount (vendor-authored, May 2026). PYMNTS reports TD Bank cut mortgage pre-adjudication from about 15 hours to under three minutes, with discrepancy detection and a human underwriter retained for the decision.",
+       "data_risks": "Borrower income, credit, tax and identity records governed by fair-lending rules.",
+       "confidence": "high",
+       "sources": [
+        {
+         "title": "Scaling lending operations with AI-assisted data validation (ICE Mortgage Technology)",
+         "url": "https://mortgagetech.ice.com/blog/scaling-lending-operations-with-ai-assisted-data-validation"
+        },
+        {
+         "title": "Mortgage Underwriters Get an AI Agent Assist (PYMNTS)",
+         "url": "https://www.pymnts.com/news/artificial-intelligence/2026/tds-ai-just-made-mortgage-waiting-obsolete/"
+        }
+       ]
+      },
+      {
+       "name": "Construction Estimating & Project Controls",
+       "why_missing": "The PMO and Corporate Real Estate cover generic programmes and property; quantity takeoff, cost control, change orders and capital project reporting are not covered.",
+       "typical_org_types": "Contractors, engineering firms, developers, owners with capital programmes, utilities",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Claude",
+        "Excel Copilot",
+        "Power BI Copilot",
+        "Adobe Acrobat AI Assistant"
+       ],
+       "workplace_application": "Extracting data from contracts and invoices, drafting cost and schedule reports, automating quantity takeoffs",
+       "ai_use_evidence": "Contruent's recap of a conference session says predictive AI forecasts cost overruns and risks while generative AI supplies narrative and recommended actions. Mastt's review says AI construction tools automate quantity takeoffs, contract review and project planning. Both are vendor-authored and show capability rather than a named customer outcome.",
+       "data_risks": "Bid prices, contract terms, cost forecasts and drawings that may include critical infrastructure details.",
+       "confidence": "low",
+       "sources": [
+        {
+         "title": "The Future of Project Controls (Contruent)",
+         "url": "https://www.contruent.com/resources/blog/the-future-of-project-controls-how-ai-is-transforming-cost-and-schedule-management/"
+        },
+        {
+         "title": "Top AI Construction Tools (Mastt)",
+         "url": "https://www.mastt.com/software/ai-construction-tools"
+        }
+       ]
+      },
+      {
+       "name": "Public Benefits Administration & Casework",
+       "why_missing": "Government Affairs covers policy engagement, not eligibility determination, application processing and caseworker support inside agencies.",
+       "typical_org_types": "Government agencies, social services, NGOs, outsourcers serving the public sector",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Claude",
+        "Microsoft 365 Copilot",
+        "Gemini",
+        "Power Automate",
+        "ServiceNow Now Assist",
+        "Zendesk AI"
+       ],
+       "workplace_application": "Pre-filling benefit applications, flagging missing information, preparing applications for caseworker approval",
+       "ai_use_evidence": "Nava Labs received a $1.5M Google.org grant (June 2025) to develop and test generative AI agents that complete benefit applications with caseworker oversight, with California partners. A Digital Government Hub recap of a Riverside County session describes an assistant that pre-fills applications, flags missing information and prepares them for approval, with human oversight. This is pilot-stage work.",
+       "data_risks": "Applicant identity, income, household, immigration and health information.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Nava Labs Google.org grant for AI agents",
+         "url": "https://www.navapbc.com/news/nava-labs-google-grant-ai"
+        },
+        {
+         "title": "FormFest 2025 Recap: AI Agents for Streamlining Safety Net Applications (Digital Government Hub)",
+         "url": "https://digitalgovernmenthub.org/publications/formfest-2025-recap-ai-agents-for-streamlining-safety-net-applications/"
+        }
+       ]
+      }
+     ],
+     "verification_notes": "All cited pages were opened and the key claims were checked against page text. Evidence is strong for revenue cycle, wealth and lending, and thinner for actuarial (guidance and survey), construction (vendor-only) and public benefits (pilot stage). Tool existence was checked only where a cited page names the vendor (AKASA, WorkFusion, ICE Mortgage Analyzers); generic tools such as Copilot and Claude were not individually verified. Candidate sets were not re-checked beyond the covered list.",
+     "removed_or_corrected": [
+      "REMOVED Pharmacovigilance & Drug Safety: only source is a closed FDA research fellowship posting about exploring LLMs, which is not documented operational AI use; the 'versus rule-based NLP' claim did not appear on the page; no second source.",
+      "CORRECTED Construction Estimating & Project Controls: removed Togal.AI from tools (not mentioned on the cited Mastt page, unverified); confidence lowered from medium to low because both sources are vendor-authored capability descriptions.",
+      "CORRECTED Public Benefits: Riverside County claim reworded from 'answering caseworker policy questions with cited sources' to pre-filling, flagging missing information and preparing applications, as the opened page states; confidence lowered from high to medium because the work is pilot-stage.",
+      "CORRECTED Wealth Management: Morgan Stanley meeting summaries and follow-up drafts were Reuters-reported possible later features, not launch capabilities; fixed the Banking Dive URL to the opened form with trailing slash.",
+      "CORRECTED Revenue Cycle: removed the unverified '100+ documents per case' figure; the Cleveland Clinic page says multiple clinical documents per case and 140,000+ codes.",
+      "CORRECTED Actuarial: the SOA survey page is dated November 2025 and is not shown to be recurring; the 'recurring' claim was removed. Evidence is guidance and survey rather than an employer case.",
+      "CORRECTED Lending: workplace application changed 'flagging document fraud' to 'flagging document discrepancies', as TD's source describes discrepancy detection.",
+      "NOTE Financial Crime Operations overlaps partly with covered Regulatory Compliance and Payments Fraud & Credit Risk Operations; kept as a distinct operational function at medium confidence."
+     ]
+    },
+    {
+     "lens": "People, governance and enterprise-support functions (second pass)",
+     "overview": "Most of this lens is already absorbed by the covered list. Near-misses are folded into existing departments: internal communications and employer brand (Corporate Communications, Talent Acquisition, DEI), HR shared services (HR Business Partnering, People Analytics & HR Operations), payroll (Compensation, Benefits & Payroll), workforce planning (People Analytics), employee relations (Ethics & Investigations), legal operations (Legal Affairs), crisis management (Business Continuity) and facilities helpdesk (Workplace Administration & Facilities). Six discrete support functions remain after checking: global mobility, travel and expense, corporate insurance and risk financing, corporate philanthropy, physical security, and language services. Every cited page opened and supports AI use in its function, but most evidence is vendor-sourced.",
+     "candidates": [
+      {
+       "name": "Global Mobility & Immigration",
+       "why_missing": "No covered department owns cross-border assignments, relocation, visas and expatriate tax coordination; HR Business Partnering and Payroll touch it only at the edges.",
+       "typical_org_types": "Multinationals across all industries, especially consulting, technology, energy and manufacturing.",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Claude",
+        "Microsoft 365 Copilot",
+        "Workday AI",
+        "ServiceNow Now Assist",
+        "Thomson Reuters CoCounsel",
+        "Power Automate"
+       ],
+       "workplace_application": "Visa pathway and policy Q&A for assignees, assignment cost estimates and case summaries, compliance tracking across host countries.",
+       "ai_use_evidence": "EY's Mobility Reimagined Survey (1,038 respondents: 528 HR and mobility professionals, 510 employees) reports 72% of mobility teams are scaling GenAI and agentic AI, while only 51% say their data is accurate [1]. Benivo's blog says Capgemini's mobility head described an AI immigration chatbot that handled over 1,200 employee queries without human intervention, and separately describes a Benivo platform assistant that guides managers through cost estimates and immigration rules and summarizes case details [2]. Consultancy and vendor sources.",
+       "data_risks": "Passport, visa, tax residency, family and salary data of employees moving across jurisdictions.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "GenAI is raising the stakes in managing a global workforce (EY, April 2026)",
+         "url": "https://www.ey.com/en_gl/newsroom/2026/04/genai-is-raising-the-stakes-in-managing-a-global-workforce-trust-and-speed-are-emerging-as-decisive-ey-research-finds"
+        },
+        {
+         "title": "Unleashing the Power of Generative AI for Global Mobility (Benivo)",
+         "url": "https://www.benivo.com/blog/unleashing-the-power-of-generative-ai-for-global-mobility"
+        }
+       ]
+      },
+      {
+       "name": "Travel & Expense Management",
+       "why_missing": "Accounts Payable & Receivable covers invoices and collections, not employee travel programmes, corporate cards and expense policy audit, which sit in a shared-services T&E team.",
+       "typical_org_types": "All large companies with travelling workforces; heaviest in consulting, manufacturing, pharma and financial services.",
+       "suggested_tier": "Core",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Excel Copilot",
+        "SAP Joule",
+        "Power Automate",
+        "UiPath Autopilot",
+        "AppZen (expense audit)"
+       ],
+       "workplace_application": "Receipt and policy checks on every claim, duplicate and altered-receipt flagging, repeat-offender and travel spend analytics.",
+       "ai_use_evidence": "AppZen's Electrolux case study reports 60% faster approvals and 3.2K auditor hours saved in two years after replacing manual shared-services audit with AI expense audit [1]. Emburse launched Emburse Assurance in February 2026 to check receipts before submission and detect duplicates and fraud, waste and abuse after submission, with a risk score [2]. Both are vendor-reported figures.",
+       "data_risks": "Employee card and bank details, travel itineraries, receipts and potentially fraud findings about named individuals.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "Electrolux sees improved accuracy with AI-powered expense audit (AppZen)",
+         "url": "https://www.appzen.com/electrolux-sees-improved-accuracy-with-ai-powered-expense-audit"
+        },
+        {
+         "title": "Emburse Releases AI-Powered Expense Compliance Solution (CPA Practice Advisor)",
+         "url": "https://www.cpapracticeadvisor.com/2026/02/17/emburse-releases-ai-powered-expense-compliance-solution/178189/"
+        }
+       ]
+      },
+      {
+       "name": "Corporate Insurance & Risk Financing",
+       "why_missing": "Enterprise Risk Management identifies and governs risk, but buying company insurance, running captives and managing the company's own claims is a separate treasury-adjacent risk-finance role.",
+       "typical_org_types": "Large asset-heavy and global companies: energy, manufacturing, logistics, real estate, healthcare.",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Claude",
+        "Excel Copilot",
+        "Adobe Acrobat AI Assistant",
+        "Power BI Copilot",
+        "Microsoft 365 Copilot (Word)",
+        "Perplexity Enterprise"
+       ],
+       "workplace_application": "Renewal submission drafting, captive versus commercial cover trade-off modelling, claims document review and status tracking.",
+       "ai_use_evidence": "Captive.com says AI supports comparing commercial coverage with placing risk in a captive, and automates claims processing and fraud detection [1]. Marsh launched its AI-enabled Risk Companion analytics platform at RISKWORLD 2026, including Renewal Companion (casualty and property) and Captive Companion [2]. Trade press and vendor sources; no buyer-side outcome data.",
+       "data_risks": "Loss histories, claimant details, asset valuations and confidential underwriting submissions.",
+       "confidence": "medium",
+       "sources": [
+        {
+         "title": "AI in Captive Insurance: Risks, Benefits, and Emerging Coverage Opportunities (Captive.com)",
+         "url": "https://www.captive.com/news/ai-in-captive-insurance-risks-benefits-and-emerging-coverage-opportunities"
+        },
+        {
+         "title": "Marsh looks to launch new AI risk strategy tool (Insurance Business)",
+         "url": "https://www.insurancebusinessmag.com/us/news/technology/marsh-looks-to-launch-new-ai-risk-strategy-tool-574586.aspx"
+        }
+       ]
+      },
+      {
+       "name": "Corporate Philanthropy & Community Investment",
+       "why_missing": "ESG & Sustainability reports on impact, but running the corporate foundation, grantmaking, employee giving and volunteering programmes is not covered.",
+       "typical_org_types": "Large consumer, financial services, technology and pharma companies with foundations or giving programmes.",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Claude",
+        "Gemini",
+        "NotebookLM",
+        "Power BI Copilot",
+        "Canva Magic Studio"
+       ],
+       "workplace_application": "Grant application summarisation, impact report drafting, employee volunteering and matching-gift administration.",
+       "ai_use_evidence": "Candid's survey of foundations (Nov 2025) found 97% do not use generative AI to screen applicants or decide whom to fund and only 1% do, so use centres on operations and reporting [1]. A 2026 commentary says AI is used to match employees to volunteering, automate gift-matching verification and produce impact reports in corporate giving programmes [2]. Evidence is thin and partly opinion.",
+       "data_risks": "Applicant organisation financials, beneficiary information and employee donation records.",
+       "confidence": "low",
+       "sources": [
+        {
+         "title": "Will foundations soon use AI to screen grant applications? (Candid)",
+         "url": "https://candid.org/blogs/will-foundations-soon-use-ai-to-screen-grant-applications/"
+        },
+        {
+         "title": "How AI and Automation Are Reshaping Corporate Giving in 2026 (The Future of Things)",
+         "url": "https://thefutureofthings.com/28116-jp-conte-how-ai-and-automation-are-reshaping-corporate-giving-in-2026/"
+        }
+       ]
+      },
+      {
+       "name": "Corporate Security & Physical Protection",
+       "why_missing": "Cybersecurity Operations and Security Governance cover information security; guarding, access control, video surveillance and executive protection are not covered.",
+       "typical_org_types": "Large multi-site companies: retail, energy, data centres, manufacturing, financial services.",
+       "suggested_tier": "Advanced",
+       "recommended_tools": [
+        "Microsoft 365 Copilot",
+        "Claude",
+        "Microsoft Teams Copilot",
+        "Power BI Copilot",
+        "Genetec (video investigation)",
+        "ServiceNow Now Assist"
+       ],
+       "workplace_application": "Natural-language video search for investigations, incident report drafting, site risk and threat briefings.",
+       "ai_use_evidence": "Genetec's February 2026 announcement says Security Center SaaS uses AI natural language search to turn descriptions into searches across video from multiple sites and camera brands, with connected case and evidence management [1]. Single vendor announcement reprint; no independent outcome data.",
+       "data_risks": "Video of employees and visitors, biometric or licence-plate data, and incident and investigation records.",
+       "confidence": "low",
+       "sources": [
+        {
+         "title": "Genetec announces new investigation capabilities in Security Center SaaS (Security Systems News)",
+         "url": "https://www.securitysystemsnews.com/article/genetec-announces-new-investigation-capabilities-in-security-center-saas"
+        }
+       ]
+      },
+      {
+       "name": "Translation, Localization & Language Services",
+       "why_missing": "Marketing and Corporate Communications create content, but no covered department runs enterprise translation, interpreting and multilingual content governance.",
+       "typical_org_types": "Multinationals in life sciences, manufacturing, software, legal-heavy and public-facing industries.",
+       "suggested_tier": "Core",
+       "recommended_tools": [
+        "Gemini",
+        "Claude",
+        "ChatGPT Enterprise",
+        "Microsoft 365 Copilot",
+        "Adobe Acrobat AI Assistant",
+        "Crowdin (localization platform)"
+       ],
+       "workplace_application": "Draft machine translation with human review, terminology and style governance, multilingual document and support content.",
+       "ai_use_evidence": "Crowdin's March 2026 survey of 152 US and Canadian B2B professionals found roughly 95% use AI or machine translation in some capacity and frames the main constraint as data governance rather than quality [1]. Vendor survey, one source, no independent confirmation.",
+       "data_risks": "Confidential contracts, regulatory filings and product content sent to external translation models.",
+       "confidence": "low",
+       "sources": [
+        {
+         "title": "152 Enterprise Teams, 95% Use AI Translation (Crowdin)",
+         "url": "https://crowdin.com/blog/ai-translation-enterprise-survey-2026"
+        }
+       ]
+      }
+     ],
+     "verification_notes": "All ten cited pages opened and each supports AI use in the stated function; key figures (72%/51%/1,038 EY; 60% and 3.2K Electrolux; 1% Candid; 95% Crowdin) were matched in page text. None of the six candidates duplicates a covered department, though Travel & Expense sits close to Accounts Payable & Receivable and Security close to Cybersecurity. Evidence is mostly vendor or trade press, so confidence was lowered for T&E to medium and kept low for philanthropy, physical security and language services. Tool names were not individually web-verified beyond those in sources.",
+     "removed_or_corrected": [
+      "Global Mobility: corrected evidence attribution; the Capgemini item is a 1,200-query immigration chatbot, while the cost-estimate and case-summary assistant is Benivo's own platform feature (Benivo source).",
+      "Travel & Expense: confidence lowered from high to medium because both sources are vendor-reported.",
+      "Corporate Insurance: replaced 'Microsoft Word Copilot' with 'Microsoft 365 Copilot (Word)'; clarified Marsh Risk Companion and Captive Companion wording (Insurance Business source).",
+      "Corporate Philanthropy: tier changed Core to Advanced given thin evidence; Candid figure sharpened to 97% no / 1% yes.",
+      "Corporate Security: evidence wording corrected to AI natural language search plus case management (Security Systems News source).",
+      "Translation: survey date (March 2026) added; no other change."
+     ]
+    }
+   ],
+   "merged": [
+    {
+     "name": "Localisation & Translation",
+     "why_missing": "No covered department owns multilingual product, content and support localisation; it is spread across Marketing, Engineering and Support.",
+     "typical_org_types": "Multinationals, software, consumer goods, gaming, medical devices and any company selling in several languages",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Gemini",
+      "Claude",
+      "ChatGPT Enterprise",
+      "Microsoft Word Copilot",
+      "Power Automate",
+      "Intento (translation management specialist)"
+     ],
+     "workplace_application": "Terminology-aware draft translation, automated linguistic quality review, translation memory clean-up",
+     "ai_use_evidence": "Salesforce's Vice President of Localization describes rebuilding its pipeline as an LLM workflow with multi-stage AI validation, shipping releases in up to 34 languages and cutting localisation cost 50-90% (self-reported). Intento's April 2025 digest covers a Subway/XTM/Intento webinar on AI in enterprise localisation workflows (ROI beyond cost, content selection, security hurdles).",
+     "data_risks": "Unreleased product strings, confidential marketing and legal text, and customer data inside support content sent to external models.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "How AI Rebuilt Salesforce's Decades-Old Localization Pipeline",
+       "url": "https://engineering.salesforce.com/how-ai-rebuilt-salesforces-decades-old-localization-pipeline/"
+      },
+      {
+       "title": "Intento April 2025 digest: Subway's translation ROI",
+       "url": "https://inten.to/blog/april-2025-subways-translation-roi-requirements-driven-approach-and-genai-for-translation-in-2025/"
+      }
+     ]
+    },
+    {
+     "name": "Customer Education & Training Services",
+     "why_missing": "Customer Success and L&D (internal staff) do not cover external customer academies, certification and product training as a function.",
+     "typical_org_types": "Software, SaaS, industrial equipment and healthcare technology vendors",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Claude",
+      "ChatGPT Enterprise",
+      "NotebookLM",
+      "Gamma",
+      "Canva Magic Studio",
+      "Gainsight AI"
+     ],
+     "workplace_application": "Course drafting from product documentation, assessment creation, translation of training content",
+     "ai_use_evidence": "Intellum (May 2024) reports a Forrester survey of 300 US customer education decision-makers: 51% already use AI, with accelerating content creation (73%), personalised paths (61%) and assessment creation (58%) the top intended uses. Skilljar's 2025 survey of 100+ customer education teams found AI shows most promise in course creation and updates (60%). Both are vendor-published.",
+     "data_risks": "Customer learner records and certification data, plus unreleased product documentation.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Skilljar Customer Education Trends 2025",
+       "url": "https://www.skilljar.com/reports/ce-2025-trends"
+      },
+      {
+       "title": "Intellum: Research on AI in Customer Education",
+       "url": "https://www.intellum.com/resources/blog/research-ai-in-customer-education"
+      }
+     ]
+    },
+    {
+     "name": "Events & Field Marketing",
+     "why_missing": "Marketing & Brand and Digital Marketing do not own conferences, roadshows and regional field events as a distinct function; partial overlap with Marketing & Brand remains.",
+     "typical_org_types": "B2B technology, financial services, pharma and industrial companies",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "ChatGPT Enterprise",
+      "Canva Magic Studio",
+      "Gamma",
+      "HubSpot AI",
+      "Microsoft Teams Copilot",
+      "Cvent (event platform specialist)"
+     ],
+     "workplace_application": "Event content and session descriptions, attendee personalisation, post-event follow-up and repurposing",
+     "ai_use_evidence": "PCMA's Convene article has eight event-marketing specialists describing generative AI use in design, brainstorming and research. A CO/AI report on Cvent Connect 2025 describes the CventIQ AI suite and cites Forrester data that 79% of event leaders prioritise personalisation and 59% plan more small field events. Practitioner and vendor-linked sources.",
+     "data_risks": "Attendee personal data, registration lists and unannounced launch information.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "PCMA: How 8 Event Marketers Are Using AI Now",
+       "url": "https://www.pcma.org/how-8-event-marketers-are-using-ai-now/"
+      },
+      {
+       "title": "CO/AI: Cvent unveils AI-powered CventIQ",
+       "url": "https://getcoai.com/news/cvent-unveils-ai-powered-cventiq-to-automate-event-planning-and-personalization/"
+      }
+     ]
+    },
+    {
+     "name": "Product Marketing",
+     "why_missing": "Marketing & Brand and Product Management leave positioning, launch messaging and battlecards without an owner; Revenue Enablement covers sales training only. Partial overlap with Marketing & Brand remains.",
+     "typical_org_types": "Software, medical devices, consumer goods and industrial technology",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Claude",
+      "ChatGPT Enterprise",
+      "Perplexity Enterprise",
+      "Gamma",
+      "NotebookLM",
+      "Canva Magic Studio"
+     ],
+     "workplace_application": "Positioning and messaging drafts, competitive battlecards, launch asset production",
+     "ai_use_evidence": "The Product Marketing Alliance's 2026 State of Product Marketing report page states AI adoption has moved from experiment to everyday use. Runway's August 2026 guide cites that report for 80% of PMMs using AI regularly (copy, research summaries, first-draft assets); the 80% figure is not shown on the report landing page and is unverified. Runway is a vendor.",
+     "data_risks": "Unreleased roadmaps, pricing plans and win-loss interview content.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Runway: AI for product marketing",
+       "url": "https://runway.com/resources/ai-product-marketing"
+      },
+      {
+       "title": "Product Marketing Alliance: State of Product Marketing Report 2026",
+       "url": "https://www.productmarketingalliance.com/state-of-product-marketing-report-2026/"
+      }
+     ]
+    },
+    {
+     "name": "Technical Writing & Documentation",
+     "why_missing": "No covered department owns product, API and process documentation; Product Design & UX and Learning & Development cover adjacent but different content.",
+     "typical_org_types": "Software, hardware, telecom, medtech and industrial companies",
+     "suggested_tier": "Core",
+     "recommended_tools": [
+      "Claude",
+      "Microsoft Word Copilot",
+      "GitHub Copilot",
+      "Adobe Acrobat AI Assistant",
+      "NotebookLM"
+     ],
+     "workplace_application": "Drafting release notes and Markdown tables, summarising SME interview notes, checking style and consistency across doc sets",
+     "ai_use_evidence": "A Cisco ThousandEyes technical writer reports using Cisco's internal AI assistant for context switching, preparing for SME interviews, and generating Markdown tables in a docs-as-code workflow (opened and confirmed). Fluid Topics page on generative versus agentic AI for technical writers opened but detail not checked.",
+     "data_risks": "Unreleased product specifications, security-sensitive configuration details and customer-confidential examples.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Using Generative AI for Technical Writing at Cisco ThousandEyes",
+       "url": "https://blogs.cisco.com/innovation/generative-ai-for-cisco-thousandeyes"
+      },
+      {
+       "title": "Agentic AI vs Generative AI for Technical Writers (Fluid Topics)",
+       "url": "https://www.fluidtopics.com/blog/ai/agentic-ai-vs-generative-ai-for-technical-writers/"
+      }
+     ]
+    },
+    {
+     "name": "FinOps & Cloud Financial Management",
+     "why_missing": "FP&A, Treasury and Cloud Infrastructure cover budgets and platforms, but not the cross-functional practice of cloud unit economics, showback and commitment management.",
+     "typical_org_types": "All large companies with significant cloud or AI spend",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Azure Copilot",
+      "Amazon Q Developer",
+      "Power BI Copilot",
+      "Excel Copilot",
+      "Gemini",
+      "Snowflake Cortex AI"
+     ],
+     "workplace_application": "Natural-language cloud cost queries, anomaly explanation and forecasting, chargeback and showback reporting",
+     "ai_use_evidence": "Capgemini page (opened) describes six generative AI use cases in cloud FinOps, including intelligent forecasting, proactive anomaly detection and automated cost savings. The FinOps Foundation AI Value topic page opened; it shows the community organising around AI but is not adoption data.",
+     "data_risks": "Cloud billing and usage data that reveals architecture, vendor contract rates and commercial commitments.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Now's the time to elevate your cloud financial operations with generative AI (Capgemini)",
+       "url": "https://www.capgemini.com/insights/research-library/want-maximum-value-from-finops-in-the-cloud/"
+      },
+      {
+       "title": "AI Value (FinOps Foundation)",
+       "url": "https://www.finops.org/topic/ai-value/"
+      }
+     ]
+    },
+    {
+     "name": "Identity & Access Management",
+     "why_missing": "Cybersecurity Operations and IT Infrastructure touch identity, but identity governance, access review and AI-agent identity is not named. Borderline overlap with 47, since IAM often sits inside security.",
+     "typical_org_types": "All large companies, especially regulated industries",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Microsoft Security Copilot",
+      "ServiceNow Now Assist",
+      "Microsoft Purview",
+      "Google Gemini in Security",
+      "Power Automate",
+      "Okta Identity Governance"
+     ],
+     "workplace_application": "Access review summarisation, joiner-mover-leaver exception triage, governance of AI-agent identities",
+     "ai_use_evidence": "Okta's guide on securing generative AI with identity opened and its site positions identity teams as owners of AI-agent access; it is vendor marketing, so it shows vendor direction, not independent adoption data. No independent evidence of AI use by IAM teams was found.",
+     "data_risks": "Entitlement data, privileged credentials and directory records on every employee and system.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Securing generative AI with identity (Okta)",
+       "url": "https://www.okta.com/resources/guides/securing-generative-ai-with-identity/"
+      }
+     ]
+    },
+    {
+     "name": "Records & Information Management",
+     "why_missing": "Legal, Compliance and Data Governance touch retention, but the records function that runs schedules, classification and disposition is not covered.",
+     "typical_org_types": "All large companies; heavily regulated sectors and public bodies",
+     "suggested_tier": "Core",
+     "recommended_tools": [
+      "Microsoft Purview",
+      "Microsoft 365 Copilot",
+      "Adobe Acrobat AI Assistant",
+      "Claude",
+      "Power Automate"
+     ],
+     "workplace_application": "Auto-classifying records against retention schedules, treating AI prompts and outputs as records, drafting disposition reviews",
+     "ai_use_evidence": "SJSU records-programme blog (opened) summarises NAGARA 2025 insights: AI is moving from optional to essential for classification and retention. King County generative AI records guidance opened (PDF) and addresses AI prompts and outputs as records.",
+     "data_risks": "Unstructured records containing personal, legal-hold and confidential business information.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "AI, Archives, and the Future of Information Governance (SJSU iSchool)",
+       "url": "https://ischool.sjsu.edu/mara-blog/ai-archives-and-future-information-governance"
+      },
+      {
+       "title": "Records management guidance on generative AI (King County)",
+       "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/executive-services/records-management/rm/rm-guidance-generative-ai.pdf"
+      }
+     ]
+    },
+    {
+     "name": "Embedded Systems & Firmware Engineering",
+     "why_missing": "Software Engineering - Applications is application-focused; device firmware has real-time, safety and certification constraints not covered.",
+     "typical_org_types": "Automotive, industrial, medical device, consumer electronics, aerospace",
+     "suggested_tier": "Specialist",
+     "recommended_tools": [
+      "GitHub Copilot",
+      "Claude Code",
+      "Cursor",
+      "Gemini Code Assist",
+      "Claude"
+     ],
+     "workplace_application": "Generating code from requirements, reviewing for memory and safety defects, drafting unit tests for hardware-in-the-loop runs",
+     "ai_use_evidence": "A 2026 arXiv study on agentic pipelines in embedded software engineering opened and examines emerging practices and challenges; it is a preprint. The TUM-led automotive paper was not opened and is dropped.",
+     "data_risks": "Proprietary firmware source, hardware designs and safety-critical test data.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Agentic Pipelines in Embedded Software Engineering: Emerging Practices and Challenges",
+       "url": "https://arxiv.org/pdf/2601.10220"
+      }
+     ]
+    },
+    {
+     "name": "Hardware & Product Engineering R&D",
+     "why_missing": "Manufacturing Operations covers plants, and Product Design & UX covers software experience; mechanical, electrical and systems engineering of physical products is not covered.",
+     "typical_org_types": "Manufacturing, automotive, aerospace, electronics, industrial equipment",
+     "suggested_tier": "Specialist",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Claude",
+      "Perplexity Enterprise",
+      "Azure AI Foundry",
+      "Siemens Industrial Copilot and NX (Siemens)",
+      "Power BI Copilot"
+     ],
+     "workplace_application": "Natural-language access to simulation and CAD data, generating automation code, summarising engineering change documentation",
+     "ai_use_evidence": "NVIDIA case study (opened) describes Siemens integrating AI across Teamcenter, Simcenter STAR-CCM+ and the Siemens Industrial Copilot for product development. 3D Printing Industry article on the Industrial Copilot launch opened. Both are vendor or trade-press accounts.",
+     "data_risks": "Design IP, CAD models, simulation results and supplier specifications.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Siemens accelerates product development with industrial AI (NVIDIA)",
+       "url": "https://www.nvidia.com/en-in/case-studies/siemens-accelerates-product-development-and-innovation-with-industrial-ai/"
+      },
+      {
+       "title": "Siemens launches its new AI-powered assistant for industrial engineering (3D Printing Industry)",
+       "url": "https://3dprintingindustry.com/news/siemens-launches-its-new-ai-powered-assistant-for-industrial-engineering-230116/"
+      }
+     ]
+    },
+    {
+     "name": "GIS & Geospatial Analytics",
+     "why_missing": "Business Intelligence and Grid & Network Operations use maps incidentally; a dedicated geospatial data and analysis function is not covered.",
+     "typical_org_types": "Utilities, telecom, energy, insurance, logistics, retail, government contractors",
+     "suggested_tier": "Specialist",
+     "recommended_tools": [
+      "Azure AI Foundry",
+      "Databricks Assistant",
+      "Gemini",
+      "Claude",
+      "Power BI Copilot",
+      "Esri ArcGIS GeoAI (Esri)"
+     ],
+     "workplace_application": "Feature extraction from imagery, natural-language spatial queries, site and risk mapping",
+     "ai_use_evidence": "A CIO.com sponsored case study (opened) says Esri used Azure generative AI and NVIDIA GPUs to enhance GeoAI-driven solutions. It shows the vendor's product, not a customer GIS team's use, and is a short teaser; evidence is thin.",
+     "data_risks": "Location data on assets, customers and critical infrastructure.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Esri drives innovation in geospatial intelligence solutions with AI (CIO.com)",
+       "url": "https://blueprintforai.cio.com/winning-strategies-for-ai-ready-enterprises/esri-drives-innovation-in-geospatial-intelligence-solutions-with-ai/"
+      }
+     ]
+    },
+    {
+     "name": "Revenue Cycle Management & Clinical Coding",
+     "why_missing": "No covered department handles hospital billing, medical coding, clinical documentation improvement or claim denials; Accounts Payable & Receivable is commercial, not payer-based.",
+     "typical_org_types": "Hospitals, health systems, physician groups, payers",
+     "suggested_tier": "Specialist",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Claude",
+      "Power Automate",
+      "UiPath Autopilot",
+      "Power BI Copilot",
+      "AKASA (specialist, vendor: AKASA)"
+     ],
+     "workplace_application": "Drafting code suggestions from clinical notes, triaging claim denials and appeals, tracking coding automation rates and backlogs",
+     "ai_use_evidence": "UMass Memorial's AI-coded share of radiology rose from about 70% to 86%, eliminating overtime and the post-weekend backlog (HFMA, opened). Cleveland Clinic partnered with AKASA on generative AI for medical coding, because coders review multiple clinical documents per case before choosing from 140,000+ codes, up to an hour per encounter (opened).",
+     "data_risks": "Protected health information, diagnosis and procedure codes, and payer claim data.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "AI coding at UMass Memorial tempers staffing shortage (HFMA)",
+       "url": "https://www.hfma.org/revenue-cycle/ai-coding-at-umass-memorial-tempers-staffing-shortage/"
+      },
+      {
+       "title": "AI tools boost efficiency, patient experience (Cleveland Clinic Consult QD)",
+       "url": "https://consultqd.clevelandclinic.org/ai-tools-boost-efficiency-patient-experience"
+      }
+     ]
+    },
+    {
+     "name": "Financial Crime Operations (AML & KYC)",
+     "why_missing": "Payments Fraud & Credit Risk Operations targets fraud and credit; customer due diligence, sanctions and adverse media alert review, and SAR filing are not covered (some overlap with Regulatory Compliance).",
+     "typical_org_types": "Banks, broker-dealers, payment firms, insurers, crypto",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Claude",
+      "Microsoft Purview",
+      "Power Automate",
+      "ServiceNow Now Assist",
+      "WorkFusion (specialist, vendor: WorkFusion)"
+     ],
+     "workplace_application": "Triaging AML alerts, summarising adverse media for KYC reviews, drafting suspicious activity narratives",
+     "ai_use_evidence": "FinTech Global reports banks and other FIs using WorkFusion AI agents for alert review and decisioning in transaction monitoring, sanctions screening and adverse media reviews, where false-positive rates are around 95%. A Teneo guide (vendor material) describes agents running KYC/AML onboarding checks and routing only high-risk exceptions to compliance officers.",
+     "data_risks": "Customer identity documents, beneficial ownership, transaction histories and confidential SAR filings.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "AI agents cut false positives in AML monitoring (FinTech Global)",
+       "url": "https://fintech.global/2026/03/24/ai-agents-cut-false-positives-in-aml-monitoring/"
+      },
+      {
+       "title": "AI Agent for Banking guide (Teneo)",
+       "url": "https://www.teneo.ai/blog/ai-agent-for-banking"
+      }
+     ]
+    },
+    {
+     "name": "Actuarial & Insurance Analytics",
+     "why_missing": "Insurance Underwriting & Claims does not cover reserving, pricing models, valuation and experience studies, which are a distinct professional function.",
+     "typical_org_types": "Insurers, reinsurers, pension funds, health plans, consultancies",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Claude",
+      "ChatGPT Enterprise",
+      "Excel Copilot",
+      "GitHub Copilot",
+      "Databricks Assistant",
+      "Microsoft 365 Copilot"
+     ],
+     "workplace_application": "Drafting and reviewing model code, summarising assumptions and experience studies, documenting valuation methodology",
+     "ai_use_evidence": "The Society of Actuaries' magazine (July 2025) gives guidance on generative AI in actuarial work, citing a decision-maker checklist and confidentiality and auditability concerns. The SOA Member AI Survey (November 2025) assessed generative AI adoption among its members. This is professional-body guidance and survey evidence, not a named employer case study.",
+     "data_risks": "Policyholder and claims data, proprietary pricing assumptions and reserve figures.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Generative AI and Actuarial Work (The Actuary)",
+       "url": "https://www.theactuarymagazine.org/generative-ai-and-actuarial-work/"
+      },
+      {
+       "title": "SOA Member AI Survey - Summer 2025",
+       "url": "https://www.soa.org/resources/research-reports/2025/ai-member-survey-summer-2025/"
+      }
+     ]
+    },
+    {
+     "name": "Wealth Management & Financial Advisory",
+     "why_missing": "Sales and Investor Relations do not cover advisor workflows such as client meeting prep, portfolio reviews and suitability documentation.",
+     "typical_org_types": "Wealth managers, private banks, broker-dealers, asset managers",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "ChatGPT Enterprise",
+      "Microsoft 365 Copilot",
+      "Microsoft Teams Copilot",
+      "Salesforce Einstein",
+      "Perplexity Enterprise",
+      "Claude"
+     ],
+     "workplace_application": "Searching the research library, summarising client meetings into notes and follow-ups, drafting compliant client communications",
+     "ai_use_evidence": "Banking Dive (Sept 2023): Morgan Stanley rolled out an OpenAI-powered assistant to advisers after months of testing, to search its research and data; Reuters-reported meeting summaries and follow-up emails were a possible later capability, not launch features. FinTech Global (July 2024) describes generative AI assistants spreading in wealth firms and stresses human oversight and guardrails against hallucination.",
+     "data_risks": "Client financial positions, personal identity data and suitability records subject to supervision rules.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Morgan Stanley to roll out AI bot (Banking Dive)",
+       "url": "https://www.bankingdive.com/news/morgan-stanley-ai-bot-openai-chatgpt-generative/693002/"
+      },
+      {
+       "title": "The rise of generative AI assistants in WealthTech (FinTech Global)",
+       "url": "https://fintech.global/2024/07/19/the-rise-of-generative-ai-assistants-in-wealthtech/"
+      }
+     ]
+    },
+    {
+     "name": "Lending & Mortgage Operations",
+     "why_missing": "Credit Risk Operations covers payments risk; loan origination, processing and underwriting document validation are not covered.",
+     "typical_org_types": "Banks, mortgage lenders, credit unions, consumer finance",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Claude",
+      "Adobe Acrobat AI Assistant",
+      "Power Automate",
+      "UiPath Autopilot",
+      "ICE Mortgage Analyzers (specialist, vendor: ICE Mortgage Technology)"
+     ],
+     "workplace_application": "Validating borrower income and asset documents, pre-screening applications for underwriters, flagging document discrepancies",
+     "ai_use_evidence": "Equity Prime Mortgage used ICE Mortgage Analyzers to auto-validate borrower income, credit and asset data before underwriters open files, doubling underwriting output without added headcount (vendor-authored, May 2026). PYMNTS reports TD Bank cut mortgage pre-adjudication from about 15 hours to under three minutes, with discrepancy detection and a human underwriter retained for the decision.",
+     "data_risks": "Borrower income, credit, tax and identity records governed by fair-lending rules.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Scaling lending operations with AI-assisted data validation (ICE Mortgage Technology)",
+       "url": "https://mortgagetech.ice.com/blog/scaling-lending-operations-with-ai-assisted-data-validation"
+      },
+      {
+       "title": "Mortgage Underwriters Get an AI Agent Assist (PYMNTS)",
+       "url": "https://www.pymnts.com/news/artificial-intelligence/2026/tds-ai-just-made-mortgage-waiting-obsolete/"
+      }
+     ]
+    },
+    {
+     "name": "Construction Estimating & Project Controls",
+     "why_missing": "The PMO and Corporate Real Estate cover generic programmes and property; quantity takeoff, cost control, change orders and capital project reporting are not covered.",
+     "typical_org_types": "Contractors, engineering firms, developers, owners with capital programmes, utilities",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Claude",
+      "Excel Copilot",
+      "Power BI Copilot",
+      "Adobe Acrobat AI Assistant"
+     ],
+     "workplace_application": "Extracting data from contracts and invoices, drafting cost and schedule reports, automating quantity takeoffs",
+     "ai_use_evidence": "Contruent's recap of a conference session says predictive AI forecasts cost overruns and risks while generative AI supplies narrative and recommended actions. Mastt's review says AI construction tools automate quantity takeoffs, contract review and project planning. Both are vendor-authored and show capability rather than a named customer outcome.",
+     "data_risks": "Bid prices, contract terms, cost forecasts and drawings that may include critical infrastructure details.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "The Future of Project Controls (Contruent)",
+       "url": "https://www.contruent.com/resources/blog/the-future-of-project-controls-how-ai-is-transforming-cost-and-schedule-management/"
+      },
+      {
+       "title": "Top AI Construction Tools (Mastt)",
+       "url": "https://www.mastt.com/software/ai-construction-tools"
+      }
+     ]
+    },
+    {
+     "name": "Public Benefits Administration & Casework",
+     "why_missing": "Government Affairs covers policy engagement, not eligibility determination, application processing and caseworker support inside agencies.",
+     "typical_org_types": "Government agencies, social services, NGOs, outsourcers serving the public sector",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Claude",
+      "Microsoft 365 Copilot",
+      "Gemini",
+      "Power Automate",
+      "ServiceNow Now Assist",
+      "Zendesk AI"
+     ],
+     "workplace_application": "Pre-filling benefit applications, flagging missing information, preparing applications for caseworker approval",
+     "ai_use_evidence": "Nava Labs received a $1.5M Google.org grant (June 2025) to develop and test generative AI agents that complete benefit applications with caseworker oversight, with California partners. A Digital Government Hub recap of a Riverside County session describes an assistant that pre-fills applications, flags missing information and prepares them for approval, with human oversight. This is pilot-stage work.",
+     "data_risks": "Applicant identity, income, household, immigration and health information.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Nava Labs Google.org grant for AI agents",
+       "url": "https://www.navapbc.com/news/nava-labs-google-grant-ai"
+      },
+      {
+       "title": "FormFest 2025 Recap: AI Agents for Streamlining Safety Net Applications (Digital Government Hub)",
+       "url": "https://digitalgovernmenthub.org/publications/formfest-2025-recap-ai-agents-for-streamlining-safety-net-applications/"
+      }
+     ]
+    },
+    {
+     "name": "Global Mobility & Immigration",
+     "why_missing": "No covered department owns cross-border assignments, relocation, visas and expatriate tax coordination; HR Business Partnering and Payroll touch it only at the edges.",
+     "typical_org_types": "Multinationals across all industries, especially consulting, technology, energy and manufacturing.",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Claude",
+      "Microsoft 365 Copilot",
+      "Workday AI",
+      "ServiceNow Now Assist",
+      "Thomson Reuters CoCounsel",
+      "Power Automate"
+     ],
+     "workplace_application": "Visa pathway and policy Q&A for assignees, assignment cost estimates and case summaries, compliance tracking across host countries.",
+     "ai_use_evidence": "EY's Mobility Reimagined Survey (1,038 respondents: 528 HR and mobility professionals, 510 employees) reports 72% of mobility teams are scaling GenAI and agentic AI, while only 51% say their data is accurate [1]. Benivo's blog says Capgemini's mobility head described an AI immigration chatbot that handled over 1,200 employee queries without human intervention, and separately describes a Benivo platform assistant that guides managers through cost estimates and immigration rules and summarizes case details [2]. Consultancy and vendor sources.",
+     "data_risks": "Passport, visa, tax residency, family and salary data of employees moving across jurisdictions.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "GenAI is raising the stakes in managing a global workforce (EY, April 2026)",
+       "url": "https://www.ey.com/en_gl/newsroom/2026/04/genai-is-raising-the-stakes-in-managing-a-global-workforce-trust-and-speed-are-emerging-as-decisive-ey-research-finds"
+      },
+      {
+       "title": "Unleashing the Power of Generative AI for Global Mobility (Benivo)",
+       "url": "https://www.benivo.com/blog/unleashing-the-power-of-generative-ai-for-global-mobility"
+      }
+     ]
+    },
+    {
+     "name": "Travel & Expense Management",
+     "why_missing": "Accounts Payable & Receivable covers invoices and collections, not employee travel programmes, corporate cards and expense policy audit, which sit in a shared-services T&E team.",
+     "typical_org_types": "All large companies with travelling workforces; heaviest in consulting, manufacturing, pharma and financial services.",
+     "suggested_tier": "Core",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Excel Copilot",
+      "SAP Joule",
+      "Power Automate",
+      "UiPath Autopilot",
+      "AppZen (expense audit)"
+     ],
+     "workplace_application": "Receipt and policy checks on every claim, duplicate and altered-receipt flagging, repeat-offender and travel spend analytics.",
+     "ai_use_evidence": "AppZen's Electrolux case study reports 60% faster approvals and 3.2K auditor hours saved in two years after replacing manual shared-services audit with AI expense audit [1]. Emburse launched Emburse Assurance in February 2026 to check receipts before submission and detect duplicates and fraud, waste and abuse after submission, with a risk score [2]. Both are vendor-reported figures.",
+     "data_risks": "Employee card and bank details, travel itineraries, receipts and potentially fraud findings about named individuals.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Electrolux sees improved accuracy with AI-powered expense audit (AppZen)",
+       "url": "https://www.appzen.com/electrolux-sees-improved-accuracy-with-ai-powered-expense-audit"
+      },
+      {
+       "title": "Emburse Releases AI-Powered Expense Compliance Solution (CPA Practice Advisor)",
+       "url": "https://www.cpapracticeadvisor.com/2026/02/17/emburse-releases-ai-powered-expense-compliance-solution/178189/"
+      }
+     ]
+    },
+    {
+     "name": "Corporate Insurance & Risk Financing",
+     "why_missing": "Enterprise Risk Management identifies and governs risk, but buying company insurance, running captives and managing the company's own claims is a separate treasury-adjacent risk-finance role.",
+     "typical_org_types": "Large asset-heavy and global companies: energy, manufacturing, logistics, real estate, healthcare.",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Claude",
+      "Excel Copilot",
+      "Adobe Acrobat AI Assistant",
+      "Power BI Copilot",
+      "Microsoft 365 Copilot (Word)",
+      "Perplexity Enterprise"
+     ],
+     "workplace_application": "Renewal submission drafting, captive versus commercial cover trade-off modelling, claims document review and status tracking.",
+     "ai_use_evidence": "Captive.com says AI supports comparing commercial coverage with placing risk in a captive, and automates claims processing and fraud detection [1]. Marsh launched its AI-enabled Risk Companion analytics platform at RISKWORLD 2026, including Renewal Companion (casualty and property) and Captive Companion [2]. Trade press and vendor sources; no buyer-side outcome data.",
+     "data_risks": "Loss histories, claimant details, asset valuations and confidential underwriting submissions.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "AI in Captive Insurance: Risks, Benefits, and Emerging Coverage Opportunities (Captive.com)",
+       "url": "https://www.captive.com/news/ai-in-captive-insurance-risks-benefits-and-emerging-coverage-opportunities"
+      },
+      {
+       "title": "Marsh looks to launch new AI risk strategy tool (Insurance Business)",
+       "url": "https://www.insurancebusinessmag.com/us/news/technology/marsh-looks-to-launch-new-ai-risk-strategy-tool-574586.aspx"
+      }
+     ]
+    },
+    {
+     "name": "Corporate Philanthropy & Community Investment",
+     "why_missing": "ESG & Sustainability reports on impact, but running the corporate foundation, grantmaking, employee giving and volunteering programmes is not covered.",
+     "typical_org_types": "Large consumer, financial services, technology and pharma companies with foundations or giving programmes.",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Claude",
+      "Gemini",
+      "NotebookLM",
+      "Power BI Copilot",
+      "Canva Magic Studio"
+     ],
+     "workplace_application": "Grant application summarisation, impact report drafting, employee volunteering and matching-gift administration.",
+     "ai_use_evidence": "Candid's survey of foundations (Nov 2025) found 97% do not use generative AI to screen applicants or decide whom to fund and only 1% do, so use centres on operations and reporting [1]. A 2026 commentary says AI is used to match employees to volunteering, automate gift-matching verification and produce impact reports in corporate giving programmes [2]. Evidence is thin and partly opinion.",
+     "data_risks": "Applicant organisation financials, beneficiary information and employee donation records.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Will foundations soon use AI to screen grant applications? (Candid)",
+       "url": "https://candid.org/blogs/will-foundations-soon-use-ai-to-screen-grant-applications/"
+      },
+      {
+       "title": "How AI and Automation Are Reshaping Corporate Giving in 2026 (The Future of Things)",
+       "url": "https://thefutureofthings.com/28116-jp-conte-how-ai-and-automation-are-reshaping-corporate-giving-in-2026/"
+      }
+     ]
+    },
+    {
+     "name": "Corporate Security & Physical Protection",
+     "why_missing": "Cybersecurity Operations and Security Governance cover information security; guarding, access control, video surveillance and executive protection are not covered.",
+     "typical_org_types": "Large multi-site companies: retail, energy, data centres, manufacturing, financial services.",
+     "suggested_tier": "Advanced",
+     "recommended_tools": [
+      "Microsoft 365 Copilot",
+      "Claude",
+      "Microsoft Teams Copilot",
+      "Power BI Copilot",
+      "Genetec (video investigation)",
+      "ServiceNow Now Assist"
+     ],
+     "workplace_application": "Natural-language video search for investigations, incident report drafting, site risk and threat briefings.",
+     "ai_use_evidence": "Genetec's February 2026 announcement says Security Center SaaS uses AI natural language search to turn descriptions into searches across video from multiple sites and camera brands, with connected case and evidence management [1]. Single vendor announcement reprint; no independent outcome data.",
+     "data_risks": "Video of employees and visitors, biometric or licence-plate data, and incident and investigation records.",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Genetec announces new investigation capabilities in Security Center SaaS (Security Systems News)",
+       "url": "https://www.securitysystemsnews.com/article/genetec-announces-new-investigation-capabilities-in-security-center-saas"
+      }
+     ]
+    }
+   ],
+   "editorial_dedup": [
+    "Dropped 'Translation, Localization & Language Services' (low confidence, 1 source) as a duplicate of 'Localisation & Translation'."
+   ]
+  },
+  "dropped": []
+ },
+ "workflowProgress": [
+  {
+   "type": "workflow_phase",
+   "index": 1,
+   "title": "Expand"
+  },
+  {
+   "type": "workflow_phase",
+   "index": 2,
+   "title": "Verify"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 1,
+   "label": "more depts: Commercial, brand and customer-adjacent functions (second pass)",
+   "phaseIndex": 1,
+   "phaseTitle": "Expand",
+   "agentId": "a198ae07fca631079",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928407575,
+   "queuedAt": 1792928407542,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "Commercial, brand and customer-adjacent functions (second p\u2026",
+   "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nALREADY COVERED departments (do not propose any of these, under any name): 1 Office of the CEO; 2 Corporate Strategy; 3 Corporate Development & M&A; 4 Board Secretariat & Corporate Governance; 5 Enterprise Risk Management; 6 Legal Affairs; 7 Regulatory Compliance; 8 Internal Audit; 9 Ethics & Investigations; 10 ESG & Susta\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928499986,
+   "tokens": 97922,
+   "toolCalls": 18,
+   "durationMs": 92411,
+   "resultPreview": "{\"lens\":\"Commercial, brand and customer-adjacent functions (second pass)\",\"overview\":\"After the 60 core departments and the first-pass additions, what is still missing are the specialist production and execution teams that sit beneath Marketing & Brand, Customer Success and Sales Operations: localisation, product marketing, content and search visibility, events, loyalty/CRM, customer education and\u2026"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 2,
+   "label": "more depts: Technology, data and engineering-adjacent functions (second pass)",
+   "phaseIndex": 1,
+   "phaseTitle": "Expand",
+   "agentId": "af4af5b7868aff8c2",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928407575,
+   "queuedAt": 1792928407543,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "Technology, data and engineering-adjacent functions (second\u2026",
+   "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nALREADY COVERED departments (do not propose any of these, under any name): 1 Office of the CEO; 2 Corporate Strategy; 3 Corporate Development & M&A; 4 Board Secretariat & Corporate Governance; 5 Enterprise Risk Management; 6 Legal Affairs; 7 Regulatory Compliance; 8 Internal Audit; 9 Ethics & Investigations; 10 ESG & Susta\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928497772,
+   "tokens": 88223,
+   "toolCalls": 15,
+   "durationMs": 88594,
+   "resultPreview": "{\"lens\":\"Technology, data and engineering-adjacent functions (second pass)\",\"overview\":\"Most technology functions are already covered, so what remains is the specialist and cross-cutting work around engineering: documentation, cloud cost, identity, records, geospatial and physical-product or firmware engineering. Several lens ideas are near-misses that fold into existing departments and are not pr\u2026"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 3,
+   "label": "more depts: Industry line-of-business functions (second pass)",
+   "phaseIndex": 1,
+   "phaseTitle": "Expand",
+   "agentId": "a8391b599903dfc58",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928497779,
+   "queuedAt": 1792928407543,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "Industry line-of-business functions (second pass)",
+   "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nALREADY COVERED departments (do not propose any of these, under any name): 1 Office of the CEO; 2 Corporate Strategy; 3 Corporate Development & M&A; 4 Board Secretariat & Corporate Governance; 5 Enterprise Risk Management; 6 Legal Affairs; 7 Regulatory Compliance; 8 Internal Audit; 9 Ethics & Investigations; 10 ESG & Susta\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928591282,
+   "tokens": 103790,
+   "toolCalls": 18,
+   "durationMs": 93503,
+   "resultPreview": "{\"lens\":\"Industry line-of-business functions (second pass)\",\"overview\":\"What remains under this lens are regulated, document-heavy back-office operations that sit inside industry verticals the covered list only touches at the edges: provider revenue cycle, drug safety, financial-crime operations, actuarial, wealth advisory, lending operations, construction project controls and public benefits case\u2026"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 4,
+   "label": "more depts: People, governance and enterprise-support functions (second pass)",
+   "phaseIndex": 1,
+   "phaseTitle": "Expand",
+   "agentId": "af7df0273726a3a8e",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928499994,
+   "queuedAt": 1792928407543,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "People, governance and enterprise-support functions (second\u2026",
+   "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nALREADY COVERED departments (do not propose any of these, under any name): 1 Office of the CEO; 2 Corporate Strategy; 3 Corporate Development & M&A; 4 Board Secretariat & Corporate Governance; 5 Enterprise Risk Management; 6 Legal Affairs; 7 Regulatory Compliance; 8 Internal Audit; 9 Ethics & Investigations; 10 ESG & Susta\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928587190,
+   "tokens": 91676,
+   "toolCalls": 17,
+   "durationMs": 87196,
+   "resultPreview": "{\"lens\":\"People, governance and enterprise-support functions (second pass)\",\"overview\":\"Most of this lens is already absorbed by the covered list. Near-misses folded into existing departments: internal communications and employer brand (Corporate Communications, Talent Acquisition, DEI), HR shared services and people helpdesk (HR Business Partnering, People Analytics & HR Operations, Service Deliv\u2026"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 5,
+   "label": "verify: Technology, data and engineering-adjacent functions (second pass)",
+   "phaseIndex": 2,
+   "phaseTitle": "Verify",
+   "agentId": "a10f54e2694b35cd3",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928587224,
+   "queuedAt": 1792928497817,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "Technology, data and engineering-adjacent functions (second\u2026",
+   "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of departments another agent proposes adding to an enterprise AI training handbook (lens: Technology, data and engineering-adjacent functions (second pass)). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED departments (a candidate that duplicates one of these must be removed): 1 Office of the CEO; 2 Corporate Str\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928627817,
+   "tokens": 67870,
+   "toolCalls": 3,
+   "durationMs": 40593,
+   "resultPreview": "{\"lens\":\"Technology, data and engineering-adjacent functions (second pass)\",\"overview\":\"Most technology functions are already covered, so what remains is specialist and cross-cutting work around engineering: documentation, cloud cost, identity, records, geospatial and physical-product or firmware engineering. Several near-misses fold into existing departments and are not proposed: release and conf\u2026"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 6,
+   "label": "verify: Commercial, brand and customer-adjacent functions (second pass)",
+   "phaseIndex": 2,
+   "phaseTitle": "Verify",
+   "agentId": "abc138b5ce53c0e27",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928591291,
+   "queuedAt": 1792928500029,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "Commercial, brand and customer-adjacent functions (second p\u2026",
+   "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of departments another agent proposes adding to an enterprise AI training handbook (lens: Commercial, brand and customer-adjacent functions (second pass)). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED departments (a candidate that duplicates one of these must be removed): 1 Office of the CEO; 2 Corporate Strat\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928630429,
+   "tokens": 77341,
+   "toolCalls": 4,
+   "durationMs": 39138,
+   "resultPreview": "{\"lens\":\"Commercial, brand and customer-adjacent functions (second pass)\",\"overview\":\"Four of the six proposed second-pass departments survive checking: Localisation & Translation, Customer Education & Training Services, Events & Field Marketing and Product Marketing. Deal Desk, Content Marketing & Search Visibility, and Loyalty & CRM Marketing were removed as overlaps with covered departments or \u2026"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 7,
+   "label": "verify: People, governance and enterprise-support functions (second pass)",
+   "phaseIndex": 2,
+   "phaseTitle": "Verify",
+   "agentId": "a600330620dbaba62",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928627826,
+   "queuedAt": 1792928587253,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "People, governance and enterprise-support functions (second\u2026",
+   "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of departments another agent proposes adding to an enterprise AI training handbook (lens: People, governance and enterprise-support functions (second pass)). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED departments (a candidate that duplicates one of these must be removed): 1 Office of the CEO; 2 Corporate Str\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928671522,
+   "tokens": 73510,
+   "toolCalls": 3,
+   "durationMs": 43695,
+   "resultPreview": "{\"lens\":\"People, governance and enterprise-support functions (second pass)\",\"overview\":\"Most of this lens is already absorbed by the covered list. Near-misses are folded into existing departments: internal communications and employer brand (Corporate Communications, Talent Acquisition, DEI), HR shared services (HR Business Partnering, People Analytics & HR Operations), payroll (Compensation, Benef\u2026"
+  },
+  {
+   "type": "workflow_agent",
+   "index": 8,
+   "label": "verify: Industry line-of-business functions (second pass)",
+   "phaseIndex": 2,
+   "phaseTitle": "Verify",
+   "agentId": "ac9922825599da81f",
+   "model": "claude-sonnet-5-5",
+   "state": "done",
+   "startedAt": 1792928630434,
+   "queuedAt": 1792928591327,
+   "attempt": 1,
+   "lastToolName": "StructuredOutput",
+   "lastToolSummary": "Industry line-of-business functions (second pass)",
+   "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of departments another agent proposes adding to an enterprise AI training handbook (lens: Industry line-of-business functions (second pass)). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED departments (a candidate that duplicates one of these must be removed): 1 Office of the CEO; 2 Corporate Strategy; 3 Corpora\u2026",
+   "promptFramed": true,
+   "lastProgressAt": 1792928685519,
+   "tokens": 78130,
+   "toolCalls": 5,
+   "durationMs": 55084,
+   "resultPreview": "{\"lens\":\"Industry line-of-business functions (second pass)\",\"overview\":\"Seven regulated, document-heavy industry functions survive checking: provider revenue cycle, financial-crime operations, actuarial, wealth advisory, lending operations, construction project controls and public benefits casework. Pharmacovigilance was removed because the only opened source is a closed FDA research fellowship po\u2026"
+  }
+ ],
+ "totalTokens": 678462,
+ "totalToolCalls": 83
+}

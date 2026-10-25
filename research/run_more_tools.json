@@ -1,0 +1,2835 @@
+{
+  "summary": "Second pass: find more enterprise AI tools or departments the handbook and the first expansion missed, with adversarial fact-checking",
+  "agentCount": 12,
+  "logs": [
+    "Starting 6 additional-tools researchers",
+    "Additional tools after dedup: 49"
+  ],
+  "result": {
+    "additionalTools": {
+      "runs": [
+        {
+          "candidates": [
+            {
+              "name": "Synthesia",
+              "vendor": "Synthesia",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "Enterprise AI video platform that turns scripts and documents into avatar-led training, onboarding and compliance videos in 140+ languages, with roleplay and survey avatar sessions and an API.",
+              "why_include": "Vendor states it is used by over 90% of the Fortune 100 (self-reported, Apr 2026) and 95% of the DAX 40 (incl. SAP, Merck KGaA). Raised $200M Series E at a $4B valuation in Jan 2026; contracts over $100K grew sharply in 12 months. Named customers: Merck, Mondelez International, Nexity; Heineken case study linked on the page.",
+              "suggested_departments": [
+                "13 Learning & Development",
+                "11 Human Resources Business Partnering",
+                "Corporate Communications & Public Relations",
+                "Revenue Enablement"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "Canva Magic Studio",
+              "enterprise_data_note": "Vendor cites ISO 42001, ISO 27001 and ISO 27701 and customer governance controls; no training-on-customer-data statement was verified.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Synthesia accelerates global expansion as enterprise contracts triple (Apr 21, 2026)",
+                  "url": "https://www.synthesia.io/post/synthesia-global-expansion-austin-berlin-paris-zurich-2026"
+                }
+              ]
+            },
+            {
+              "name": "Simpplr",
+              "vendor": "Simpplr",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "AI-powered intranet and employee-experience platform with enterprise search, AI agents, communications AI, surveys and HR service delivery, integrated with other enterprise systems.",
+              "why_include": "Vendor site states Leader in the 2026 Gartner Magic Quadrant for Intranet Packaged Solutions (four years running) and Leader in The Forrester Wave: Intranet Platforms, Q2 2026 (vendor-reported); also listed for IDC MarketScape for Integrated Employee Workspaces 2025. Claims 1,000+ organizations including AAA, the NHS, Penske and Moderna.",
+              "suggested_departments": [
+                "Corporate Communications & Public Relations",
+                "11 Human Resources Business Partnering",
+                "16 People Analytics & HR Operations",
+                "45 IT Infrastructure & End-User Computing"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Glean",
+              "enterprise_data_note": "Vendor markets an AI Control Center for IT governance of intranet AI; training-data policy was not verified.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Simpplr Named a Leader in the Gartner Magic Quadrant for Intranet Packaged Solutions (press release page, shows 2026 Gartner and Forrester Q2 2026 Leader banners)",
+                  "url": "https://www.simpplr.com/newsroom/press-releases/2025-gartner-mq-intranet-leader/"
+                },
+                {
+                  "title": "Simpplr home page",
+                  "url": "https://www.simpplr.com/"
+                }
+              ]
+            },
+            {
+              "name": "ADP Assist",
+              "vendor": "ADP",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "Agentic AI embedded across ADP's HCM, payroll, talent, compliance and workforce management products; audits payroll variances, initiates HR workflows and generates analytics through conversational questions, alongside ADP DataCloud.",
+              "why_include": "ADP's Aug 12, 2026 release states ADP Assist won the HCM Innovation Award and was named AI HR Platform of the Year in the inaugural 2026 HR Tech Breakthrough Awards (vendor-reported; a paid-entry award program, so weak evidence). Client-count and user-count claims removed because the source was never opened.",
+              "suggested_departments": [
+                "14 Compensation, Benefits & Payroll",
+                "16 People Analytics & HR Operations",
+                "11 Human Resources Business Partnering",
+                "7 Regulatory Compliance"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Workday AI",
+              "enterprise_data_note": "Not verified; ADP describes human oversight of agents but no training-data statement was opened.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "ADP Wins Three Inaugural HR Tech Breakthrough Awards (Aug 12, 2026)",
+                  "url": "https://mediacenter.adp.com/adp-wins-three-inaugural-hr-tech-breakthrough-awards"
+                }
+              ]
+            },
+            {
+              "name": "iCIMS Talent Cloud AI",
+              "vendor": "iCIMS",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "Enterprise applicant tracking and recruiting suite with embedded AI (matching, ranking, explainability) for corporate and high-volume frontline hiring, covering ATS, CRM, text recruiting and onboarding.",
+              "why_include": "Named a Leader in the May 2026 Gartner Magic Quadrant for Talent Acquisition (Recruiting) Suites and recognized in all four Critical Capabilities use cases (iCIMS release, June 30, 2026; Gartner report date corroborated by Oracle's page). Says it serves many Fortune 500 firms, including General Dynamics, General Mills and BrightSpring Health Services.",
+              "suggested_departments": [
+                "12 Talent Acquisition",
+                "11 Human Resources Business Partnering",
+                "17 Diversity, Equity & Inclusion"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "LinkedIn Recruiter AI",
+              "enterprise_data_note": "Vendor cites enterprise-grade responsible AI with transparency and compliance controls; no training-data statement was verified.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "iCIMS Named a Leader in the Gartner Magic Quadrant for Talent Acquisition (Recruiting) Suites",
+                  "url": "https://www.icims.com/company/newsroom/gartnerannouncement2026/"
+                },
+                {
+                  "title": "Oracle: Gartner MQ Talent Acquisition 2026 (confirms report title and 8 May 2026 date)",
+                  "url": "https://www.oracle.com/human-capital-management/gartner-magic-quadrant-talent-acquisition/"
+                }
+              ]
+            },
+            {
+              "name": "Darwinbox Super Agent",
+              "vendor": "Darwinbox",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "AI-native HCM suite with a Super Agent that orchestrates 30+ agents across recruiting, onboarding and HR operations, aimed at 1,000+ employee enterprises.",
+              "why_include": "Debuted as a Leader in the 2026 Gartner Magic Quadrant for Talent Acquisition Suites for 1,000+ Employee Enterprises (moved from Visionary in a year); claims #1 in AI innovation and top-two in all four use cases (vendor branded-content release, May 14, 2026). Reported one Southeast Asian financial-services customer cut time-to-hire 48%. The Gartner report title is also corroborated by Oracle's page.",
+              "suggested_departments": [
+                "12 Talent Acquisition",
+                "16 People Analytics & HR Operations",
+                "14 Compensation, Benefits & Payroll"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Workday AI",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Darwinbox Named a Leader in Gartner Magic Quadrant for Talent Acquisition Suites (May 14, 2026; branded content)",
+                  "url": "https://www.peoplematters.in/amp/news/hr-technology/darwinbox-named-leader-in-gartner-magic-quadrant-for-talent-acquisition-suites-49744"
+                }
+              ]
+            },
+            {
+              "name": "Docebo AI Learning Platform",
+              "vendor": "Docebo",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "AI-first enterprise LMS with AI course creation, AI roleplay simulations, AI assistants and agents, and skills analytics, supporting employee, customer and partner training.",
+              "why_include": "Listed company (NASDAQ/TSX: DCBO). Q3 2025 results cite wins at an industrial and environmental services firm with 200,000+ employees, a beverage company with 25,000+ employees and Amazon Health. Vendor lists Zoom (2M+ customers trained on Zoom Academy), Booking.com, AWS, SONOS and Kiehl's. Analyst-leader claims (Fosway, Gartner, IDC) were not found on opened pages and are dropped.",
+              "suggested_departments": [
+                "13 Learning & Development",
+                "36 Customer Success",
+                "Revenue Enablement",
+                "58 Quality Management & Process Compliance"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Workday AI",
+              "enterprise_data_note": "Vendor lists SOC 2 Type 2, ISO 27001, ISO 9001 and FedRAMP Moderate (US Gov); no AI training-data statement was verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Docebo AI Info",
+                  "url": "https://www.docebo.com/ai-info/"
+                },
+                {
+                  "title": "Docebo Reports Third Quarter 2025 Results",
+                  "url": "https://www.nasdaq.com/press-release/docebo-reports-third-quarter-2025-results-2025-11-07"
+                }
+              ]
+            },
+            {
+              "name": "HeyGen",
+              "vendor": "HeyGen",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "AI avatar video platform for training, internal communications and sales, with digital-twin avatars, Video Agent, SCORM/xAPI export and voice-cloned video translation in 175+ languages.",
+              "why_include": "AWS Marketplace listing claims 80% of the Fortune 100 (the HeyGen blog says 85%; both self-reported, no named customers). HeyGen blog reports 281 G2 badges and 23 #1 rankings in G2 Summer 2026 reports, including Enterprise Grid for Presentation (vendor-reported, user-review based).",
+              "suggested_departments": [
+                "13 Learning & Development",
+                "Corporate Communications & Public Relations",
+                "31 Marketing & Brand",
+                "Revenue Enablement"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "Canva Magic Studio",
+              "enterprise_data_note": "AWS Marketplace listing states SOC 2 Type II, GDPR/CCPA support, SSO/SCIM/RBAC/audit logs, and that enterprise customer data is never used for model training (vendor statement).",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "HeyGen tops G2 Summer 2026 Reports",
+                  "url": "https://www.heygen.com/blog/heygen-2026-g2-summer-reports"
+                },
+                {
+                  "title": "HeyGen on AWS Marketplace",
+                  "url": "https://aws.amazon.com/marketplace/pp/prodview-zqgky3tz3dibe"
+                }
+              ]
+            },
+            {
+              "name": "Eightfold Talent Intelligence Platform",
+              "vendor": "Eightfold AI",
+              "category": "HR, talent, learning and workplace AI",
+              "what_it_is": "Skills-based talent intelligence platform covering recruiting, internal mobility and workforce planning, with an agentic AI interviewer.",
+              "why_include": "Eightfold's own blog (May 13, 2026) says it is a Visionary in the 2026 Gartner MQ for Talent Acquisition (Recruiting) Suites, and a Strategic Leader in the 2026 Fosway 9-Grid for Talent Acquisition for the fourth consecutive year (Jul 3, 2026). Both are vendor-reported; no customer names were verified, so earlier customer list is dropped.",
+              "suggested_departments": [
+                "12 Talent Acquisition",
+                "15 Talent Management & Succession",
+                "16 People Analytics & HR Operations"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "LinkedIn Recruiter AI",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Eightfold named a Visionary in the 2026 Gartner MQ for Talent Acquisition Suites",
+                  "url": "https://eightfold.ai/blog/eightfold-named-visionary-garter-magic-quadrant/"
+                },
+                {
+                  "title": "Eightfold named a Strategic Leader in the 2026 Fosway 9-Grid for Talent Acquisition",
+                  "url": "https://eightfold.ai/blog/eightfold-named-strategic-leader-2026-fosway-9-grid/"
+                }
+              ]
+            }
+          ],
+          "categories": [
+            "HR, talent, learning and workplace AI"
+          ],
+          "overview": "The handbook covers HR only through Workday AI, SAP Joule, Oracle Fusion agents and LinkedIn Recruiter, so it misses specialist recruiting suites, payroll and HCM agents, learning platforms, AI video for training and the intranet and employee-experience layer. Seven candidates survive verification. Near-misses skipped: Paradox (falls under Workday AI), Moveworks (overlaps ServiceNow Now Assist) and Oracle Recruiting (covered under Oracle Fusion AI Agents). Cornerstone Galaxy AI was removed because no adoption evidence could be opened. Most analyst placements are vendor-reported.",
+          "removed_or_corrected": [
+            "Removed Cornerstone Galaxy AI (Workforce AI): the cited page has no Gartner placement or customer evidence, and the Gartner inclusion was seen only in search results.",
+            "ADP Assist: dropped the unopened FY2026 call-transcript claim (1.1M clients, 3.1M users); kept only the opened award evidence, which is weak (vendor-reported, inaugural award program).",
+            "Docebo: dropped the Fosway/Gartner/IDC leader claim, as no opened page supports it; the Q3 2025 customer wins and the Zoom, Booking.com and AWS customer names are verified.",
+            "Docebo: corrected the security list to include ISO 9001 and note FedRAMP Moderate applies to US Gov.",
+            "Eightfold: the pages opened once decoded; the Gartner Visionary and Fosway Strategic Leader claims are now verified as vendor-reported. Dropped the customer list (Vodafone, Chevron, etc.) as unverified. Confidence raised from low to medium.",
+            "HeyGen: Fortune 100 share differs between sources (AWS Marketplace 80%, vendor blog 85%); both are noted as self-reported. The enterprise_data_note is replaced with the AWS Marketplace statement that customer data is never used for model training and that it is SOC 2 Type II.",
+            "Synthesia: corrected customers to Merck, Mondelez International, Nexity, with SAP and Merck KGaA as DAX 40 examples. Heineken appears only as a linked case study. The enterprise_data_note still reflects the ISO certifications only.",
+            "Simpplr: updated to the 2026 Gartner MQ (four years running) and the Forrester Wave Q2 2026 per the opened vendor page; the sources entry now notes that the press-release page shows the 2026 banners.",
+            "Darwinbox: noted the source is branded content and the MQ title includes 1,000+ Employee Enterprises. Overall verdict stands at medium confidence.",
+            "iCIMS: corrected 'serves many Fortune 500 firms' to the vendor wording and added the BrightSpring Health Services name. No other change; the Leader placement was verified on the vendor page and the report date on Oracle's page."
+          ],
+          "verification_notes": "I opened every cited vendor page and independent sources where available (the Oracle page for the Gartner report title and date, the Nasdaq release for Docebo wins, the AWS Marketplace page for HeyGen). Most adoption and analyst-placement claims are vendor self-reported; the only independent corroboration is Oracle's page confirming the Gartner TA report and its date. No candidate duplicates a covered tool under another name; the stated overlaps are partial (Workday AI, LinkedIn Recruiter AI, Glean, Canva Magic Studio) and each candidate has a distinct scope. Confidence is high only where the vendor page states specific figures or customers that I read directly (Synthesia, Simpplr, iCIMS)."
+        },
+        {
+          "categories": [
+            "Finance, accounting, procurement and supply chain AI"
+          ],
+          "overview": "Best-of-breed finance, procurement and supply chain AI platforms that sit beside the ERP-native tools already in the handbook (SAP Joule, Oracle Fusion agents, Workday, Dynamics 365, Power BI). After adversarial checking, eight candidates remain; BlackLine Verity AI and Avalara Agentic Tax were removed for lack of verifiable adoption evidence. Most adoption figures are company-reported.",
+          "candidates": [
+            {
+              "name": "Coupa Navi (AI agents and Agent Studio)",
+              "vendor": "Coupa Software",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "Agentic AI layer inside the Coupa spend-management suite (sourcing, procure-to-pay, invoicing, expenses, payments), with prebuilt Navi agents, a no-code Agent Studio, and MCP access (Navi Connect) for external agents such as Microsoft Copilot.",
+              "why_include": "IT Brief (24 Aug 2026) reports 450+ customers using Coupa AI agents in production, 50+ Navi agents released, 400+ custom agents built in Agent Studio, and one customer's payment agent running 14 batches (2,395 payments, USD 20.1M). Figures are company-reported. The Gartner S2P Leader claim could not be confirmed on an opened page and is dropped.",
+              "suggested_departments": [
+                "24 Accounts Payable & Receivable",
+                "25 Procurement & Strategic Sourcing",
+                "26 Vendor & Third-Party Management",
+                "22 Treasury & Cash Management"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Oracle Fusion Applications AI Agents (partial, procurement)",
+              "enterprise_data_note": "The report says agent access via MCP is governed by existing user permissions and security controls; no further data-handling terms verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Coupa launches largest AI release for procurement teams (IT Brief, Aug 2026)",
+                  "url": "https://itbrief.com.au/story/coupa-launches-largest-ai-release-for-procurement-teams"
+                }
+              ]
+            },
+            {
+              "name": "Blue Yonder Cognitive Solutions and AI agents",
+              "vendor": "Blue Yonder",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "Supply chain planning, warehouse and logistics platform running on Snowflake, with a Cognitive Solutions suite and five AI agents for supply chain decisions.",
+              "why_include": "Business Wire release (May 2025) reports 30 new customer logos in Q1 2025 (incl. GXO Logistics, Sainsbury's), 3,000+ customers, and launch of five AI agents. Trade press reports vendor claim that 20 of Gartner's 2025 Supply Chain Top 25 use its solutions. The Gartner SCP Leader claim was not found on any opened page and is dropped.",
+              "suggested_departments": [
+                "60 Supply Chain, Logistics & Inventory",
+                "56 Business Operations & Process Excellence"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "SAP Joule (partial, SAP IBP excluded)",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Blue Yonder Q1 2025 highlights and Cognitive Solutions launch",
+                  "url": "https://www.silicon.co.uk/press-release/blue-yonder-releases-q1-2025-company-highlights-and-launches-cognitive-solutions-with-ai-agents-heading-into-q2"
+                },
+                {
+                  "title": "Blue Yonder powers supply chains for 20 Gartner top 25 firms",
+                  "url": "https://ecommercenews.com.au/story/blue-yonder-powers-supply-chains-for-20-gartner-top-25-firms"
+                }
+              ]
+            },
+            {
+              "name": "Kinaxis Maestro (AI agents)",
+              "vendor": "Kinaxis",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "AI-infused end-to-end supply chain planning and orchestration platform covering demand, supply, inventory, S&OP and scheduling, with AI agents and a control tower.",
+              "why_include": "Kinaxis states it is a Leader in the 2025 Gartner Magic Quadrant for Supply Chain Planning Solutions, for the 11th consecutive time (vendor-reported). Its pages name Schneider Electric, Lenovo, ExxonMobil and Volvo Cars as customers; AI Agents is a listed solution.",
+              "suggested_departments": [
+                "60 Supply Chain, Logistics & Inventory",
+                "20 Financial Planning & Analysis",
+                "56 Business Operations & Process Excellence"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "SAP Joule (partial, SAP IBP excluded)",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Kinaxis named Leader in 2025 Gartner MQ for Supply Chain Planning Solutions",
+                  "url": "https://www.kinaxis.com/en/blog/kinaxis-named-leader-2025-gartner-magic-quadrant-supply-chain-planning-solutions"
+                }
+              ]
+            },
+            {
+              "name": "OneStream (AI for finance)",
+              "vendor": "OneStream",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "Corporate performance management platform unifying close, consolidation, reporting, planning and forecasting, with embedded AI for decisions and productivity.",
+              "why_include": "Company release (1 Apr 2025) says OneStream was a Leader for the third year in the 2025 Gartner Magic Quadrant for Financial Close and Consolidation Solutions (15 providers evaluated) and a Leader in the 2024 Financial Planning Software MQ; Gartner Peer Insights Customers' Choice in May 2024. Vendor-reported.",
+              "suggested_departments": [
+                "21 Accounting & Financial Reporting",
+                "20 Financial Planning & Analysis",
+                "5 Enterprise Risk Management"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "SAP Joule (partial)",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "OneStream recognized as Leader in 2025 Gartner MQ for Financial Close and Consolidation",
+                  "url": "https://www.onestream.com/news/onestream-again-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-financial-close-and-consolidation-solutions/"
+                }
+              ]
+            },
+            {
+              "name": "Workiva (AI platform for reporting, GRC, sustainability)",
+              "vendor": "Workiva",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "Cloud platform for SEC and financial reporting, GRC and sustainability reporting with built-in generative AI, used by the office of the CFO.",
+              "why_include": "Q4 2025 results release (19 Feb 2026): 6,624 customers at 31 Dec 2025 (+319 year on year), 97% gross and 113% net retention. The release frames the platform as serving the office of the CFO 'in the AI era'. No Gartner placement verified.",
+              "suggested_departments": [
+                "21 Accounting & Financial Reporting",
+                "27 Investor Relations",
+                "10 ESG & Sustainability",
+                "4 Board Secretariat & Corporate Governance"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "Diligent One (partial)",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Workiva Q4 and full-year 2025 results",
+                  "url": "https://seekingalpha.com/pr/20406724-workiva-announces-fourth-quarter-and-full-year-2025-financial-results"
+                }
+              ]
+            },
+            {
+              "name": "Zip (agentic procurement orchestration)",
+              "vendor": "Zip",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "Intake-to-procure orchestration layer above ERPs, with 50 specialised AI agents for contract review, tariff assessment and compliance checks across procurement and related functions.",
+              "why_include": "VentureBeat (10 Jun 2025): 50 agents launched; early adopters OpenAI, Canva and Webflow; company claims USD 4.4B trackable procurement savings and 14M reviews in 2024. Company-reported. The 2026 Gartner Visionary claim was not verified and is dropped.",
+              "suggested_departments": [
+                "25 Procurement & Strategic Sourcing",
+                "26 Vendor & Third-Party Management",
+                "6 Legal Affairs"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "low",
+              "sources": [
+                {
+                  "title": "Zip debuts 50 AI agents (VentureBeat)",
+                  "url": "https://venturebeat.com/ai/zip-debuts-50-ai-agents-to-kill-procurement-inefficiencies-openai-is-already-on-board"
+                }
+              ]
+            },
+            {
+              "name": "Kyriba Trusted AI (TAI)",
+              "vendor": "Kyriba",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "Agentic AI in the Kyriba treasury, risk, payments and working-capital platform, built on an embedded LLM for cash and liquidity work.",
+              "why_include": "NeuGroup (10 Dec 2025, sponsored content) says Kyriba is used by thousands of customers; TAI had a Co-Innovation Lab that grew to 11 corporates (including Koch) and launched commercially in October 2025. The SPARK Matrix claim was not verified and is dropped.",
+              "suggested_departments": [
+                "22 Treasury & Cash Management",
+                "5 Enterprise Risk Management"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Kyriba's fact sheet states no training on customer data for its embedded LLM.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Kyriba Trusted AI fact sheet",
+                  "url": "https://www.kyriba.com/resources/fact-sheets/kyriba-trusted-ai"
+                },
+                {
+                  "title": "NeuGroup: Listening to Treasury Teams Hones Kyriba's Vision for Agentic AI",
+                  "url": "https://connect.neugroup.com/public/blogs/listening-to-treasury-teams-hones-kyribas-vision-for-agentic-ai"
+                }
+              ]
+            },
+            {
+              "name": "DataSnipper (AI agents for audit and finance)",
+              "vendor": "DataSnipper",
+              "category": "Finance, accounting, procurement and supply chain AI",
+              "what_it_is": "Excel-based intelligent automation platform for audit and finance, with Excel and Disclosure AI Agents (developed with Microsoft) for testing, evidence matching and IFRS/GAAP disclosure review.",
+              "why_include": "Company release (14 Jan 2026): AI Agents launched in 2025; more than USD 1.4B productivity gains claimed; described as trusted by Fortune 500 companies and all Big Four firms, used in 175 countries. Company-reported; the 600,000-professionals figure was not found and is dropped.",
+              "suggested_departments": [
+                "8 Internal Audit",
+                "21 Accounting & Financial Reporting",
+                "23 Taxation"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "Excel Copilot (partial)",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "low",
+              "sources": [
+                {
+                  "title": "DataSnipper delivers $1.4B in productivity savings in 2025",
+                  "url": "https://www.datasnipper.com/resources/datasnipper-delivers-1-4b-in-productivity-savings-in-2025-as-audit-and-finance-enter-the-ai-era"
+                }
+              ]
+            }
+          ],
+          "verification_notes": "All cited pages opened except none failed; every retained claim was checked against the opened text. Nearly all adoption and analyst-placement evidence is vendor-reported (press releases, sponsored content), with independent confirmation only for Coupa (trade press), Zip (VentureBeat) and Blue Yonder's customer additions (via a syndicated release). Several unverified claims (Gartner placements for Coupa, Blue Yonder and Zip; SPARK Matrix; 600,000 DataSnipper users) were stripped. No candidate duplicates a covered tool; overlaps are only partial.",
+          "removed_or_corrected": [
+            "Removed BlackLine Verity AI: the opened BlackLine blog confirms Verity Prepare, Match, Summarize and Narrate exist but contains none of the cited adoption figures (20%, two-thirds, 4,300 customers), and no opened page supports them.",
+            "Removed Avalara Agentic Tax and Compliance (Avi): the Avalara review confirms Avi exists, but the 200,000+ customers, 54B transactions and IDC MarketScape claims appear on no opened page, so no adoption evidence is verified.",
+            "Coupa: dropped the 2025 Gartner S2P Leader claim (not on the opened IT Brief page); kept the 450+ customer and agent figures that the page does support.",
+            "Blue Yonder: dropped the 'Leader in 2025 Gartner SCP MQ for the 12th time' claim (the opened release lists only TMS and other Gartner mentions); replaced it with the verified 3,000+ customers and 30 new logos; removed the non-numbered 'Merchandising & Store Operations' department.",
+            "Kinaxis: corrected 'Leader in 2021-2025 editions, 20 vendors evaluated' to 'Leader for the 11th consecutive time' (the page does not state the vendor count); added named customers Lenovo, ExxonMobil, Volvo Cars.",
+            "OneStream: corrected the Financial Planning MQ claim from 2025 to 2024 (the release says 2024).",
+            "Zip: dropped the 2026 Gartner Visionary claim (unopened); confidence kept low.",
+            "Kyriba: dropped the 2025 SPARK Matrix claim (not verified).",
+            "DataSnipper: replaced the 600,000+ professionals claim with the verified 'all Big Four, Fortune 500, 175 countries' wording.",
+            "Workiva: removed the unsupported statement that AI is 'core to the platform'; the release only frames Workiva as serving the CFO office in the AI era.",
+            "Tier and department corrections: removed the non-numbered 'Trade Compliance & Customs' department along with Avalara."
+          ]
+        },
+        {
+          "categories": [
+            "Knowledge, documents, meetings, translation and content operations AI"
+          ],
+          "overview": "The handbook covers general assistants and suite copilots but misses the specialist layer under this lens: intelligent document processing (ABBYY, Hyperscience, Tungsten, hyperscaler document APIs), enterprise AI search, translation and localisation, meeting-note tools and AI-native content operations. Gartner issued its first Magic Quadrant for Intelligent Document Processing Solutions on 3 Sep 2025, and Forrester issued its first Wave for Translation Management Systems in Q3 2025, which makes both categories easy to justify. Skipped or not verified: Guru, Sinequa, Rossum, Instabase, Smartling, RWS Language Weaver, Lokalise, Jasper, Acrolinx, Contentful and Read AI (no opened page with adoption evidence). UiPath Document Understanding is covered under UiPath Autopilot, and Microsoft/Google Gemini connectors are covered, so neither was proposed.",
+          "candidates": [
+            {
+              "name": "ABBYY Vantage (Document AI)",
+              "vendor": "ABBYY",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "Intelligent document processing platform that classifies, splits and extracts data from documents (OCR, pre-trained skills, generative AI and retrieval-augmented generation), with an ABBYY Marketplace of pre-trained models.",
+              "why_include": "ABBYY's own page says it was named a Leader in Gartner's first-ever Magic Quadrant for Intelligent Document Processing Solutions; the 3 Sep 2025 date and 18-vendor count are confirmed on the Hyperscience page for the same report. No customer count verified.",
+              "suggested_departments": [
+                "24 Accounts Payable & Receivable",
+                "21 Accounting & Financial Reporting",
+                "7 Regulatory Compliance",
+                "56 Business Operations & Process Excellence",
+                "Insurance Underwriting & Claims"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "UiPath Autopilot",
+              "enterprise_data_note": "Not verified; vendor data-use terms were not found on the opened pages.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "ABBYY: Gartner Magic Quadrant for Intelligent Document Processing",
+                  "url": "https://www.abbyy.com/resources/report/gartner-magic-quadrant-intelligent-document-processing"
+                },
+                {
+                  "title": "Hyperscience: 2025 Gartner MQ for IDP (18 vendors, 3 Sep 2025)",
+                  "url": "https://www.hyperscience.ai/resource/2025-gartner-magic-quadrant-for-intelligent-document-processing-solutions/"
+                }
+              ]
+            },
+            {
+              "name": "Hyperscience Hypercell",
+              "vendor": "Hyperscience",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "ML-native intelligent document processing platform (Hypercell) with products for GenAI, Freight Pay and SNAP, sold into energy, financial services, healthcare, insurance, legal, manufacturing, public sector, retail and logistics.",
+              "why_include": "Its page states it is a Leader in the first Gartner Magic Quadrant for Intelligent Document Processing Solutions (3 Sep 2025) and was positioned furthest for completeness of vision among 18 vendors evaluated (vendor-reported). No customer count verified.",
+              "suggested_departments": [
+                "24 Accounts Payable & Receivable",
+                "60 Supply Chain, Logistics & Inventory",
+                "Insurance Underwriting & Claims",
+                "56 Business Operations & Process Excellence",
+                "7 Regulatory Compliance"
+              ],
+              "suggested_tier": "Specialist",
+              "overlaps_with": "UiPath Autopilot",
+              "enterprise_data_note": "Not verified on the opened page.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Hyperscience: 2025 Gartner MQ for IDP",
+                  "url": "https://www.hyperscience.ai/resource/2025-gartner-magic-quadrant-for-intelligent-document-processing-solutions/"
+                }
+              ]
+            },
+            {
+              "name": "Tungsten TotalAgility (formerly Kofax)",
+              "vendor": "Tungsten Automation",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "AI-powered document intelligence and workflow orchestration platform that automates data extraction, orchestrates workflows and surfaces insights from document-heavy processes.",
+              "why_include": "Tungsten's press release (8 Sep 2025) says it was recognised as a Leader in the 2025 Gartner Magic Quadrant for IDP, and describes the company as serving 25,000+ global customers (vendor-stated). The 'second-edition Leader' claim was not found and is dropped.",
+              "suggested_departments": [
+                "24 Accounts Payable & Receivable",
+                "56 Business Operations & Process Excellence",
+                "Insurance Underwriting & Claims",
+                "46 Enterprise Applications & ERP"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "UiPath Autopilot",
+              "enterprise_data_note": "Not verified; no data-training policy found.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Tungsten Automation press release, 8 Sep 2025",
+                  "url": "https://www.tungstenautomation.com/press-releases/2025/tungsten-recognized-as-a-leader-in-2025-gartner-mq-for-intelligent-document-processing-solutions"
+                }
+              ]
+            },
+            {
+              "name": "Azure Document Intelligence and Google Cloud Document AI",
+              "vendor": "Microsoft / Google",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "Cloud document-extraction services. Azure Document Intelligence (in Foundry Tools) builds intelligent document processing solutions from forms and documents; Document AI offers generative-AI custom extractors, splitters and classifiers.",
+              "why_include": "Both are first-party hyperscaler services that teams on Azure or Google Cloud can use under existing contracts (product pages opened). The earlier Gartner Peer Insights claim was not verified and is removed; no analyst placement or customer count is verified.",
+              "suggested_departments": [
+                "49 Data Engineering & Data Platforms",
+                "51 AI, Machine Learning & Automation",
+                "24 Accounts Payable & Receivable",
+                "53 Enterprise Architecture & Integration"
+              ],
+              "suggested_tier": "Specialist",
+              "overlaps_with": "Azure AI Foundry; Gemini Enterprise Agent Platform",
+              "enterprise_data_note": "Not verified on the opened pages.",
+              "confidence": "low",
+              "sources": [
+                {
+                  "title": "Microsoft Learn: Azure Document Intelligence overview",
+                  "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview"
+                },
+                {
+                  "title": "Google Cloud Document AI",
+                  "url": "https://cloud.google.com/document-ai"
+                }
+              ]
+            },
+            {
+              "name": "Coveo AI-Relevance Platform",
+              "vendor": "Coveo",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "Enterprise AI search, generative answering and passage-retrieval platform for service, workplace, website and commerce, with integrations for Salesforce, ServiceNow, Zendesk, SAP, Sitecore, Optimizely and others.",
+              "why_include": "Coveo's page says it is a Leader in the 2026 Gartner Magic Quadrant for Search and Product Discovery for the third consecutive year. Its Q1 FY2026 results (31 Jul 2025) name SAP, UKG and AMD as adopters, say SAP expanded its use, and say generative AI solutions drove about 50% of new business that quarter.",
+              "suggested_departments": [
+                "37 Customer Support & Contact Center",
+                "36 Customer Success",
+                "32 Digital & Performance Marketing",
+                "45 IT Infrastructure & End-User Computing"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Glean",
+              "enterprise_data_note": "Not verified on the opened pages.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Coveo Q1 fiscal 2026 results",
+                  "url": "https://ir.coveo.com/en/news-events/press-releases/detail/450/coveo-reports-first-quarter-fiscal-2026-financial-results"
+                },
+                {
+                  "title": "Coveo: 2026 Gartner MQ Search and Product Discovery",
+                  "url": "https://coveo.com/en/resources/reports/gartner-magic-quadrant-search-product-discovery"
+                }
+              ]
+            },
+            {
+              "name": "Phrase Localization Platform (Phrase TMS)",
+              "vendor": "Phrase",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "Translation management system and localisation platform with AI translation, quality evaluation and AI agents that automate localisation workflows.",
+              "why_include": "Phrase's page says Forrester named it a Leader in its first Wave: Translation Management Systems, Q3 2025, with the highest possible scores in 21 of 26 criteria among 12 providers, and that reference customers said AI agents automated 99% of workflows (all vendor-reported). No customer count verified.",
+              "suggested_departments": [
+                "31 Marketing & Brand",
+                "39 Product Management",
+                "41 Software Engineering - Applications",
+                "37 Customer Support & Contact Center",
+                "Corporate Communications & Public Relations"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Not verified on the opened page.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Phrase: Forrester Wave TMS Q3 2025",
+                  "url": "https://phrase.com/resources/forrester-wave-translation-management-systems-q3-2025/"
+                }
+              ]
+            },
+            {
+              "name": "DeepL (Translator, Voice, Write, Agent)",
+              "vendor": "DeepL",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "Language AI for text and document translation, writing, live speech translation (DeepL Voice) and an autonomous workplace agent (DeepL Agent, generally available 5 Nov 2025), with a Customization Hub for glossaries and style rules.",
+              "why_include": "DeepL's 23 Jul 2025 press release says over 200,000 business customers use it and names Inetum, Cybozu and Brioche Pasquier as DeepL Voice adopters (vendor-stated). The 5 Nov 2025 release confirms DeepL Agent GA and the Customization Hub. No analyst report was found.",
+              "suggested_departments": [
+                "6 Legal Affairs",
+                "31 Marketing & Brand",
+                "37 Customer Support & Contact Center",
+                "13 Learning & Development",
+                "Corporate Communications & Public Relations"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "Microsoft Teams Copilot",
+              "enterprise_data_note": "Training terms were not verified on the opened pages.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "DeepL press release, 23 Jul 2025",
+                  "url": "https://www.deepl.com/en/press-release/deepl-expands-real-time-voice-translation-capabilities-with-new-features-and-upcoming-zoom-integration"
+                },
+                {
+                  "title": "DeepL Agent and Customization Hub, 5 Nov 2025",
+                  "url": "https://tools.prnewswire.com/en-us/live/20823/release/20251105EN15316"
+                }
+              ]
+            },
+            {
+              "name": "Optimizely Opal",
+              "vendor": "Optimizely",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "Agent orchestration platform inside Optimizely One (content management, content marketing, experimentation, commerce, personalization) that can also orchestrate across other stacks.",
+              "why_include": "Optimizely's 19 Nov 2025 release says it was named a Leader in The Forrester Wave: Digital Experience Platforms, Q4 2025 (evaluating Optimizely One and Opal), and a Leader in the 2025 Gartner MQs for Digital Experience Platforms and Content Marketing Platforms. It says it serves thousands of enterprise customers (vendor-stated). The Gartner placements are vendor-reported only.",
+              "suggested_departments": [
+                "31 Marketing & Brand",
+                "32 Digital & Performance Marketing",
+                "39 Product Management",
+                "Pricing & Revenue Management"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Adobe GenStudio",
+              "enterprise_data_note": "Not verified on the opened page.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Optimizely press release, Forrester DXP Wave Q4 2025",
+                  "url": "https://www.optimizely.com/company/press/forrester-dxp-wave-2025/"
+                }
+              ]
+            },
+            {
+              "name": "Fireflies.ai and Otter.ai (AI meeting assistants)",
+              "vendor": "Fireflies.ai / Otter.ai",
+              "category": "Knowledge, documents, meetings, translation and content operations AI",
+              "what_it_is": "Meeting recording, transcription and summary assistants that work across Zoom, Teams and Meet. Fireflies adds AskFred search; Otter adds SSO/SAML, SCIM, audit trails and meeting agents.",
+              "why_include": "Widely used, so shadow adoption is a governance issue; no analyst report or customer count was verified. Teaching points: DPA-level training opt-outs and BAA availability (HIPAA is an Enterprise add-on on both). Fireflies' comparison page notes an Aug 2025 class action against Otter over recording consent and training use (competitor-reported, unverified).",
+              "suggested_departments": [
+                "28 Sales - Enterprise & Key Accounts",
+                "12 Talent Acquisition",
+                "54 Project & Program Management Office",
+                "48 Security Governance, Risk & Privacy"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "Zoom AI Companion 3.0",
+              "enterprise_data_note": "Otter says it is SOC 2 Type II certified and HIPAA compliant with BAA availability, that its third-party AI providers do not train on customer data, and that it de-identifies data before its own training; Fireflies says it does not use customer data to train AI models (vendor claims).",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Otter.ai: Enterprise AI governance",
+                  "url": "https://otter.ai/blog/enterprise-ai-governance"
+                },
+                {
+                  "title": "Fireflies: Fireflies vs. Otter (Jun 2026)",
+                  "url": "https://fireflies.ai/blog/fireflies-vs-otter"
+                }
+              ]
+            }
+          ],
+          "verification_notes": "All cited pages opened and the products exist under the stated names. The adoption claims are mostly vendor-reported (analyst placements, customer counts), with only Coveo's placement and named customers on an investor-relations filing; I did not open the Gartner or Forrester reports themselves. Azure/Google Document AI lacked verified adoption evidence and was downgraded to low confidence and Specialist tier. No candidate duplicates a covered tool, though several overlap (UiPath Autopilot, Glean, Azure AI Foundry, Zoom AI Companion, Adobe GenStudio).",
+          "removed_or_corrected": [
+            "Tungsten TotalAgility: removed the unsupported 'second-edition Leader' claim; the 25,000+ customers figure and 2025 Gartner Leader recognition are confirmed on the press release.",
+            "Azure Document Intelligence and Google Cloud Document AI: removed the unverified Gartner Peer Insights claim, downgraded confidence to low and tier to Specialist, and added Gemini Enterprise Agent Platform as an overlap.",
+            "ABBYY Vantage: the 18-vendor and 3 Sep 2025 details are not on ABBYY's page, so they are now attributed to the Hyperscience page.",
+            "Coveo: the 2025 Gartner placement is not directly confirmed (the page says 2026, third consecutive year), so the 2025 reference was dropped.",
+            "Fireflies/Otter: added the Aug 2025 Otter class-action note as competitor-reported, and corrected the Fireflies claim to the wording on its page (does not use customer data to train AI models).",
+            "Optimizely Opal: noted that the Gartner MQ placements are vendor-reported only."
+          ]
+        },
+        {
+          "categories": [
+            "Agent builders, automation, low-code and voice AI"
+          ],
+          "overview": "The handbook covers platform-embedded copilots and a few contact-centre suites, but misses the independent orchestration and low-code layers where enterprises build and govern their own agents (iPaaS, low-code, process automation), plus conversational and voice agent specialists. Eight candidates remain after fact-checking against opened pages; one (LangSmith) was removed for unsupported adoption evidence. Several adoption figures are vendor-stated and flagged as such.",
+          "candidates": [
+            {
+              "name": "Workato (Enterprise Orchestration, Agent Studio, AI Control Plane)",
+              "vendor": "Workato",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Enterprise iPaaS and agent orchestration platform: low-code workflows, Agent Studio, enterprise MCP servers and an AI gateway/governance layer, connecting 17,000+ apps. Cloud service alongside Salesforce, Workday, ServiceNow and similar systems.",
+              "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for iPaaS (seventh consecutive time, furthest in vision, per vendor release dated 21 May 2025; 4.9 Gartner Peer Insights rating). Homepage claims Fortune 500 trust, 4.7 G2, 17,000+ connectable apps and agents for 100,000+ employees (all vendor-stated).",
+              "suggested_departments": [
+                "53 Enterprise Architecture & Integration",
+                "51 AI, Machine Learning & Automation",
+                "56 Business Operations & Process Excellence",
+                "45 IT Infrastructure & End-User Computing",
+                "30 Sales Operations & Revenue Operations"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Power Automate (different vendor; iPaaS peer, not a duplicate)",
+              "enterprise_data_note": "Not verified; opened pages describe governance and security controls but give no model-training statement.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Workato Named a Leader in the 2025 Gartner Magic Quadrant for iPaaS (Silicon UK, press release)",
+                  "url": "https://www.silicon.co.uk/press-release/workato-named-a-leader-in-the-2025-gartner-magic-quadrant-for-ipaas"
+                },
+                {
+                  "title": "Workato homepage",
+                  "url": "https://www.workato.com/"
+                }
+              ]
+            },
+            {
+              "name": "OutSystems (Mentor, Agent Workbench)",
+              "vendor": "OutSystems",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Enterprise low-code and agentic application platform: Mentor AI-assisted development, Agent Workbench for coordinating agents and apps, data fabric, with governance built into apps and agents.",
+              "why_include": "OutSystems page states Gartner named it a Leader in the 2026 Magic Quadrant for AI-Augmented Low-Code Application Platforms for the 10th consecutive year, furthest in Completeness of Vision (vendor-stated; exact publication date not confirmed on the opened page).",
+              "suggested_departments": [
+                "41 Software Engineering - Applications",
+                "46 Enterprise Applications & ERP",
+                "51 AI, Machine Learning & Automation",
+                "57 Business Transformation & Change Management",
+                "56 Business Operations & Process Excellence"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Not verified; page cites enterprise policies and governance but no training-data statement.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "OutSystems Gartner Magic Quadrant page",
+                  "url": "https://www.outsystems.com/1/low-code-application-platforms-gartner/"
+                },
+                {
+                  "title": "OutSystems AI page",
+                  "url": "https://www.outsystems.com/ai/"
+                }
+              ]
+            },
+            {
+              "name": "Appian Platform (AI Agents and Agent Studio)",
+              "vendor": "Appian",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Low-code process automation and case management platform with AI agents, generative AI, data fabric, RPA and document processing.",
+              "why_include": "Leader in the 2025 Gartner Magic Quadrant for Enterprise Low-Code Application Platforms for the third consecutive year, and a 2025 Gartner Peer Insights Customers' Choice (99% willingness to recommend, 52 reviews); site also shows Leader in Gartner BOAT. All per Appian's own release.",
+              "suggested_departments": [
+                "56 Business Operations & Process Excellence",
+                "24 Accounts Payable & Receivable",
+                "25 Procurement & Strategic Sourcing",
+                "Insurance Underwriting & Claims",
+                "51 AI, Machine Learning & Automation"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "ServiceNow Now Assist (partial, workflow automation)",
+              "enterprise_data_note": "Not verified from opened pages.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Appian Recognized as a Leader in the 2025 Gartner Magic Quadrant for Enterprise LCAP",
+                  "url": "https://appian.com/about/explore/press-releases/2025/appian-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant"
+                }
+              ]
+            },
+            {
+              "name": "Pega Blueprint and Pega Platform",
+              "vendor": "Pegasystems",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Pega Blueprint is a generative AI design tool that turns goals and documents into agent-driven workflows and apps on the Pega platform.",
+              "why_include": "Pega release dated 12 May 2026: named a Leader in the Gartner Magic Quadrant for Process Intelligence among 13 vendors; Pega site features a Deutsche Telekom Blueprint case study. The Gartner process intelligence MQ is adjacent evidence, not an agent-builder evaluation.",
+              "suggested_departments": [
+                "56 Business Operations & Process Excellence",
+                "38 Customer Experience & Service Design",
+                "37 Customer Support & Contact Center",
+                "57 Business Transformation & Change Management",
+                "Insurance Underwriting & Claims"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "ServiceNow Now Assist (partial)",
+              "enterprise_data_note": "Not verified from opened pages.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Pega Named a Leader in Gartner Magic Quadrant for Process Intelligence",
+                  "url": "https://www.pega.com/node/466461"
+                }
+              ]
+            },
+            {
+              "name": "Kore.ai Agent Platform",
+              "vendor": "Kore.ai",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Multi-agent and conversational AI platform for customer service, employee self-service (HR, IT) and process automation, with no-code and pro-code builders, multi-LLM support and guardrails.",
+              "why_include": "Leader in the 2025 Gartner Magic Quadrant for Conversational AI Platforms, rated highest for Ability to Execute (vendor release, 26 Aug 2025); release header also cites Forrester Wave Conversational AI Platforms for Employee Services Q3 2026 Leader and partnerships with Microsoft and AWS.",
+              "suggested_departments": [
+                "37 Customer Support & Contact Center",
+                "11 Human Resources Business Partnering",
+                "45 IT Infrastructure & End-User Computing",
+                "38 Customer Experience & Service Design"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Genesys Cloud CX (AI Studio, AI Guides) (partial)",
+              "enterprise_data_note": "Not verified; release mentions LLM guardrails only.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Kore.ai named a Leader in Gartner Magic Quadrant for Conversational AI Platforms",
+                  "url": "https://www.kore.ai/news/kore-ai-named-a-leader-in-gartner-magic-quadrant-for-conversational-ai-platforms"
+                }
+              ]
+            },
+            {
+              "name": "Sierra",
+              "vendor": "Sierra",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Conversational AI agent platform for customer experience; Ghostwriter builds agents from SOPs and transcripts, deployed across chat, SMS, email, voice, WhatsApp and ChatGPT with outcome-based pricing.",
+              "why_include": "TechCrunch (21 Nov 2025): reached $100M ARR in 21 months; customers named include Deliveroo, Discord, Ramp, Rivian, SoFi, Tubi, ADT, Bissell, Vans, Cigna and SiriusXM. No analyst evaluation verified.",
+              "suggested_departments": [
+                "37 Customer Support & Contact Center",
+                "38 Customer Experience & Service Design",
+                "36 Customer Success"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Intercom Fin (competitor, not a duplicate)",
+              "enterprise_data_note": "Not verified; homepage mentions built-in guardrails but no training-data posture.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Bret Taylor's Sierra reaches $100M ARR in under two years (TechCrunch)",
+                  "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+                },
+                {
+                  "title": "Sierra homepage",
+                  "url": "https://sierra.ai/"
+                }
+              ]
+            },
+            {
+              "name": "ElevenLabs Agents (ElevenAgents)",
+              "vendor": "ElevenLabs",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Voice and conversational agent platform plus text-to-speech models; configure, deploy and monitor agents in 90+ languages across voice, chat and email via web platform and API.",
+              "why_include": "Company states enterprises are 55% of revenue, used at five of the ten largest tech companies, five of ten largest insurers and four of ten largest telecoms; Stripe, Deutsche Telekom, Admiral and others rolled out ElevenAgents since Feb 2026; 15M+ conversations weekly; $22B valuation tender. All company-stated, relayed by Unite.AI (AI-generated article).",
+              "suggested_departments": [
+                "37 Customer Support & Contact Center",
+                "13 Learning & Development",
+                "31 Marketing & Brand",
+                "38 Customer Experience & Service Design"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Amazon Connect Customer (partial)",
+              "enterprise_data_note": "Not verified from opened pages.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "ElevenLabs Closes $300M Employee Tender Offer at $22B Valuation (Unite.AI)",
+                  "url": "https://www.unite.ai/elevenlabs-closes-300m-employee-tender-offer-at-22b-valuation/"
+                },
+                {
+                  "title": "ElevenAgents product page",
+                  "url": "https://elevenlabs.io/agents"
+                }
+              ]
+            },
+            {
+              "name": "n8n",
+              "vendor": "n8n",
+              "category": "Agent builders, automation, low-code and voice AI",
+              "what_it_is": "Workflow automation and AI agent platform with visual canvas supporting no-code, low-code and pro-code; self-hostable or cloud, with enterprise tier.",
+              "why_include": "Pulse 2.0 (12 May 2026), reporting the company announcement: 1,400+ enterprise customers, 1.7M monthly builders, SAP investment at $5.2B valuation with n8n embedded in SAP Joule Studio. Site claims Fortune 500 use. No analyst evaluation verified.",
+              "suggested_departments": [
+                "51 AI, Machine Learning & Automation",
+                "45 IT Infrastructure & End-User Computing",
+                "47 Cybersecurity Operations",
+                "56 Business Operations & Process Excellence"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Power Automate (peer); SAP Joule (embedded partner, not a duplicate)",
+              "enterprise_data_note": "Pulse 2.0 says the platform lets organisations keep data sovereignty (self-hosting); no model-training statement verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "n8n valuation doubles to $5.2 billion as SAP invests (Pulse 2.0)",
+                  "url": "https://pulse2.com/n8n-valuation-doubles-to-5-2-billion-as-sap-makes-strategic-investment-and-embeds-platform-into-joule-studio/"
+                },
+                {
+                  "title": "n8n homepage",
+                  "url": "https://n8n.io/"
+                }
+              ]
+            }
+          ],
+          "verification_notes": "All eight remaining candidates have vendor pages and a second page opened; Gartner and customer figures are mostly vendor-stated and none was checked against Gartner itself. Core numbers matched the opened pages (Workato 7x Leader, Appian 99%/52 reviews, Pega 13 vendors, Kore.ai Aug 2025, Sierra $100M ARR, ElevenLabs 55%, n8n 1,400+). No candidate is a duplicate of a covered tool. Data-training posture is unverified for nearly all.",
+          "removed_or_corrected": [
+            "Removed LangSmith (LangChain): the Gartner AI Application Development Platforms listing and 300+ enterprise customers were never opened, and the vendor page gives no adoption evidence; only self-host/BYOC was confirmed.",
+            "Workato: corrected 'Gartner peer rating' wording; 4.9 rating and seventh Leader confirmed in the release; 17,000+ apps and 100,000+ employees confirmed on homepage as vendor claims; confidence raised to high.",
+            "OutSystems: removed the unverified '30 Sept 2026' date and the 'earlier 2025 Gartner LCAP Leader' claim, neither confirmed on opened pages; the 10th consecutive year in the 2026 MQ is confirmed.",
+            "Pega: dropped the unopened 'earlier 2025 Gartner Process Mining Leader' claim; added release date 12 May 2026 and a note that the MQ is for Process Intelligence, not agent building.",
+            "ElevenLabs: corrected figures to match the opened article (five of ten largest insurers, 15M+ conversations weekly) and noted the article is AI-generated; tier changed Core to Advanced as it is a specialist build platform.",
+            "Sierra: tier changed Core to Advanced; added Bissell and Vans from TechCrunch.",
+            "Kore.ai: Forrester recognition is Q3 2026 per the page header, not in the 2025 release body; wording adjusted.",
+            "Workato, n8n, Kore.ai, ElevenLabs, Sierra and Appian: overlaps_with entries clarified as peers or competitors rather than duplicates."
+          ]
+        },
+        {
+          "categories": [
+            "Marketing, creative, commerce and customer-data AI"
+          ],
+          "overview": "The handbook covers the suites (Adobe, HubSpot, Salesforce, Canva) but misses the specialist engagement, CDP, commerce-search and generative-video layers that large brands run next to them. The strongest gaps are Braze, Sprinklr and Klaviyo, then the customer-data layer (Twilio Segment, Tealium, Amperity), rated in Gartner's 2026 CDP Magic Quadrant. Commerce (Bloomreach, Algolia, Shopify Sidekick) and enterprise video (Runway) round out the list. None of the nine duplicates a covered tool; Adobe, Salesforce and HubSpot are adjacent suites, not the same products.",
+          "candidates": [
+            {
+              "name": "Braze (BrazeAI, BrazeAI Decisioning Studio and Agents)",
+              "vendor": "Braze",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Cross-channel customer engagement platform (email, push, SMS/RCS, WhatsApp) with BrazeAI for campaign building, content creation, optimisation and 1:1 decisioning (including OfferFit capability, acquired), plus a Braze Data Platform.",
+              "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs (third consecutive year, 11 vendors evaluated, per Braze blog dated 24 Sep 2025). Names HBO Max, Overstock, Dairy Queen and Canva as customers (vendor-stated).",
+              "suggested_departments": [
+                "32 Digital & Performance Marketing",
+                "31 Marketing & Brand",
+                "36 Customer Success",
+                "38 Customer Experience & Service Design"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Salesforce Einstein",
+              "enterprise_data_note": "Not verified; no data-training statement found on opened pages.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Braze named a Leader in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs",
+                  "url": "https://www.braze.com/resources/articles/braze-named-leader-2025-gartner-magic-quadrant"
+                }
+              ]
+            },
+            {
+              "name": "Sprinklr AI (AI Agents, Copilot, AI+ Studio)",
+              "vendor": "Sprinklr",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Unified-CXM platform covering social publishing, listening, marketing and service, with AI agents, a Copilot and an AI+ Studio across social, insights and contact-centre workflows.",
+              "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Content Marketing Platforms (sixth year, per April 2025 press release); Leader in Forrester Wave Social Suites Q4 2024 and Strong Performer in Forrester Wave CCaaS Platforms Q2 2025 (per Sprinklr). Home page names Uber, Deutsche Telekom, Northwestern Mutual, Acer and Aramex as customer stories (vendor-stated).",
+              "suggested_departments": [
+                "31 Marketing & Brand",
+                "33 Market Research & Competitive Intelligence",
+                "37 Customer Support & Contact Center",
+                "Corporate Communications & Public Relations"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Zendesk AI",
+              "enterprise_data_note": "Not verified; Sprinklr lists a Security & Data Privacy page that was not opened.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Sprinklr home page",
+                  "url": "https://www.sprinklr.com/"
+                },
+                {
+                  "title": "Sprinklr Named a Leader in the 2025 Gartner Magic Quadrant for Content Marketing Platforms (press release)",
+                  "url": "https://www.silicon.co.uk/press-release/sprinklr-named-a-leader-in-the-2025-gartner-magic-quadrant-for-content-marketing-platforms-for-the-sixth-consecutive-year"
+                }
+              ]
+            },
+            {
+              "name": "Klaviyo K:AI (Composer and Customer Agent)",
+              "vendor": "Klaviyo",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "B2C CRM and marketing platform whose K:AI layer includes Composer (audits and builds flows and campaigns from a prompt) and Customer Agent (AI support and sales agent), over Klaviyo's data platform.",
+              "why_include": "Klaviyo's page states 'Trusted by 205,000+ brands' (vendor-stated) and lists an Enterprise offering and Professional services. No analyst or named large-enterprise evidence verified.",
+              "suggested_departments": [
+                "32 Digital & Performance Marketing",
+                "31 Marketing & Brand",
+                "37 Customer Support & Contact Center",
+                "Merchandising & Store Operations"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "HubSpot AI",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Klaviyo AI (K:AI) overview",
+                  "url": "https://www.klaviyo.com/solutions/ai"
+                }
+              ]
+            },
+            {
+              "name": "Bloomreach (Loomi AI, Engagement, Discovery)",
+              "vendor": "Bloomreach",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Agentic personalisation platform combining commerce search, marketing automation/ESP and a Shopping Agent, with Loomi AI marketing agent and Loomi Connect for custom agents.",
+              "why_include": "Named a Visionary in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs (press release 2 Oct 2025). Its site also cites the 2026 Gartner Critical Capabilities for Multichannel Marketing Hubs (a Critical Capabilities note, not the 2026 Magic Quadrant). States 1,400+ brands including American Eagle, Sonepar and Pandora (vendor-stated).",
+              "suggested_departments": [
+                "32 Digital & Performance Marketing",
+                "Merchandising & Store Operations",
+                "31 Marketing & Brand",
+                "39 Product Management"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Adobe GenStudio",
+              "enterprise_data_note": "Not verified on opened pages.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Bloomreach Named a Visionary in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs",
+                  "url": "https://www.bloomreach.com/en/news/2025/bloomreach-named-a-visionary-gartner-magic-quadrant/"
+                }
+              ]
+            },
+            {
+              "name": "Twilio Segment (CDP with Connections, Unify, Protocols, Engage)",
+              "vendor": "Twilio",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Customer data platform (Connections, Unify, Protocols, Engage audiences and journeys) that feeds AI models and agents with unified, consented profiles.",
+              "why_include": "Niche Player in the 2026 Gartner Magic Quadrant for CDPs (second consecutive year), with 700+ prebuilt connectors and OneTrust consent integration, per CX Today (9 Feb 2026). Caveats from the same source: Twilio declined to supply supplemental information, and Engage Premier was announced for sunset in June 2025. Treat Engage as at risk. 'CustomerAI' removed from the name since not shown on opened pages.",
+              "suggested_departments": [
+                "49 Data Engineering & Data Platforms",
+                "32 Digital & Performance Marketing",
+                "48 Security Governance, Risk & Privacy",
+                "Data Governance & Stewardship"
+              ],
+              "suggested_tier": "Specialist",
+              "overlaps_with": "Salesforce Einstein",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Twilio Segment page",
+                  "url": "https://www.twilio.com/en-us/segment"
+                },
+                {
+                  "title": "Gartner Magic Quadrant for CDPs 2026: The Rundown (CX Today)",
+                  "url": "https://www.cxtoday.com/customer-analytics-intelligence/gartner-magic-quadrant-cdp-2026/"
+                }
+              ]
+            },
+            {
+              "name": "Tealium (Customer Data Hub, AI and Predictive)",
+              "vendor": "Tealium",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Customer data orchestration platform covering collection, CDP, enrichment and consent, feeding models and agents with real-time governed customer context.",
+              "why_include": "Gartner CDP Magic Quadrant: Leader in 2025, dropped to Challenger in 2026, with Gartner noting slowing customer acquisition and ARR growth (per CX Today). Tealium's own site still says '2x Gartner Magic Quadrant Leader', 850+ enterprise customers and 1,300+ integrations (vendor-stated).",
+              "suggested_departments": [
+                "49 Data Engineering & Data Platforms",
+                "48 Security Governance, Risk & Privacy",
+                "32 Digital & Performance Marketing",
+                "Data Governance & Stewardship"
+              ],
+              "suggested_tier": "Specialist",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Vendor positions consent enforcement as central; training posture for its AI features not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Tealium home page",
+                  "url": "https://tealium.com/"
+                },
+                {
+                  "title": "Gartner Magic Quadrant for CDPs 2026: The Rundown (CX Today)",
+                  "url": "https://www.cxtoday.com/customer-analytics-intelligence/gartner-magic-quadrant-cdp-2026/"
+                }
+              ]
+            },
+            {
+              "name": "Amperity (Stitch identity resolution and GenAI)",
+              "vendor": "Amperity",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Retail- and consumer-focused customer data platform whose Stitch identity resolution uses up to 45 AI models, with GenAI integrated across the platform.",
+              "why_include": "Niche Player in the 2026 Gartner CDP Magic Quadrant for the second year, praised for identity unification and GenAI vision; Gartner flags net revenue retention lagging peers and an uncertain move to consumption pricing (per CX Today). Named-customer evidence not verified and no vendor page opened.",
+              "suggested_departments": [
+                "49 Data Engineering & Data Platforms",
+                "32 Digital & Performance Marketing",
+                "Merchandising & Store Operations",
+                "50 Business Intelligence & Analytics"
+              ],
+              "suggested_tier": "Specialist",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "low",
+              "sources": [
+                {
+                  "title": "Gartner Magic Quadrant for CDPs 2026: The Rundown (CX Today)",
+                  "url": "https://www.cxtoday.com/customer-analytics-intelligence/gartner-magic-quadrant-cdp-2026/"
+                }
+              ]
+            },
+            {
+              "name": "Runway (Gen-4.5, Aleph, enterprise platform)",
+              "vendor": "Runway",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Generative video and image platform with enterprise tooling (API, custom model weights licensing, Runway Ads) used for ads, VFX and brand campaigns.",
+              "why_include": "Enterprise page cites Under Armour (via agency Tool of North America), Salomon, Sonos, Coca-Cola work via Silverside AI, BBC Studios and Amazon Prime's House of David. Runway reports business more than doubled in 2026 and NRR above 300%, one Fortune 20 customer up 17x (company-reported, unaudited, per ContentGrip 25 Aug 2026). No analyst quadrant found.",
+              "suggested_departments": [
+                "31 Marketing & Brand",
+                "32 Digital & Performance Marketing",
+                "Corporate Communications & Public Relations",
+                "13 Learning & Development"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Adobe Firefly",
+              "enterprise_data_note": "Runway's enterprise page states SOC 2 Type 2 and 'We don't train on your data'; ContentGrip reports full ownership of outputs.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Runway Enterprise",
+                  "url": "https://runway.com/enterprise"
+                },
+                {
+                  "title": "Runway's enterprise numbers (ContentGrip, 25 Aug 2026)",
+                  "url": "https://www.contentgrip.com/runway-enterprise-ai-video/"
+                }
+              ]
+            },
+            {
+              "name": "Algolia AI Search (Agent Studio, Ask AI, Generative Experiences)",
+              "vendor": "Algolia",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "Search and product-discovery platform with AI search, recommendations, personalisation, RAG-based Generative Experiences, Agent Studio, Ask AI and an MCP server, embedded in commerce and app front ends.",
+              "why_include": "Algolia states 18,000+ customers in 150+ countries, highlights Walgreens doubling search conversion, and lists the 2026 Gartner Magic Quadrant for Search and Product Discovery among recognitions (vendor page; placement tier not verified).",
+              "suggested_departments": [
+                "32 Digital & Performance Marketing",
+                "39 Product Management",
+                "41 Software Engineering - Applications",
+                "Merchandising & Store Operations"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Not verified; Algolia says assistants are grounded in the customer's own product data.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Algolia home page",
+                  "url": "https://www.algolia.com/"
+                }
+              ]
+            },
+            {
+              "name": "Shopify Sidekick and Agentic Storefronts",
+              "vendor": "Shopify",
+              "category": "Marketing, creative, commerce and customer-data AI",
+              "what_it_is": "AI commerce assistant built into the Shopify admin (design, product copy, photos, discounts, email campaigns, reporting), alongside Agentic Storefronts that surface merchant products in AI assistants.",
+              "why_include": "AI capability inside a commerce platform enterprise brands already run (page says 'Trusted by enterprise brands' and links an Enterprise offering). Sidekick testimonials are small brands (Blurrd, Tuckernuck, Jaded London); large-enterprise adoption and Plus-specific entitlements not verified.",
+              "suggested_departments": [
+                "Merchandising & Store Operations",
+                "32 Digital & Performance Marketing",
+                "31 Marketing & Brand",
+                "Pricing & Revenue Management"
+              ],
+              "suggested_tier": "Core",
+              "overlaps_with": "none",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "low",
+              "sources": [
+                {
+                  "title": "Shopify Sidekick",
+                  "url": "https://www.shopify.com/sidekick"
+                }
+              ]
+            }
+          ],
+          "verification_notes": "Opened all vendor pages and the CX Today CDP piece; Gartner placements for Braze, Bloomreach, Sprinklr, Twilio, Tealium and Amperity are confirmed via opened pages, though Braze, Sprinklr and Bloomreach placements are vendor-reported and none of the Gartner reports themselves were opened. Customer counts are vendor-stated only. Weakest candidates are Amperity and Shopify Sidekick (no named enterprise evidence), so they stay low confidence. No candidate duplicates a covered tool.",
+          "removed_or_corrected": [
+            "Sprinklr: removed '1,900+ enterprises' claim (not found on opened home page); replaced with verified Forrester Social Suites Q4 2024 Leader and named customer stories.",
+            "Klaviyo: removed Q2 2026 earnings figure (4,477 customers above $50k ARR), which was unverified; kept only the verified '205,000+ brands' line.",
+            "Bloomreach: corrected the '2026 edition' claim; the opened page shows a 2026 Gartner Critical Capabilities mention, not a 2026 Magic Quadrant placement. Dropped 'Clarity' assistant naming in favour of the Shopping Agent shown on the page.",
+            "Twilio Segment: tier lowered Advanced to Specialist (Niche Player, declined Gartner information request, Engage Premier sunset); removed 'CustomerAI' from name; removed unverified claim of May 2026 CPaaS Leader placement beyond a page mention of the 2026 CPaaS MQ; added Engage sunset caveat.",
+            "Tealium: tier lowered Advanced to Specialist; noted vendor site still claims '2x Gartner Leader' while 2026 placement is Challenger with slowing growth; corrected integration count (Gartner 1,200+, vendor 1,300+).",
+            "Algolia: Gartner Leader claim not verified; replaced with the 2026 Magic Quadrant for Search and Product Discovery listing on the vendor page, tier unconfirmed.",
+            "Runway: enterprise_data_note now cites the opened enterprise page (SOC 2 Type 2, no training on customer data); added the 17x Fortune 20 detail and the unaudited caveat; removed 'model router' phrasing not seen on the opened page."
+          ]
+        },
+        {
+          "categories": [
+            "Engineering, IT operations, identity and risk AI (second pass)"
+          ],
+          "overview": "The handbook covers coding assistants, SIEM/XDR and observability AI, but misses the identity layer (Okta), cloud and application security (Wiz, Snyk), SASE/SSE (Zscaler), incident response (PagerDuty) and mid-market and enterprise ITSM (Freshservice). Several of these ship agents that act on enterprise data and identities, which is where governance training is most needed. SailPoint and Vanta were dropped after fact-checking because their adoption evidence could not be verified.",
+          "candidates": [
+            {
+              "name": "Okta (Okta for AI Agents / identity security fabric)",
+              "vendor": "Okta",
+              "category": "Engineering, IT operations, identity and risk AI (second pass)",
+              "what_it_is": "Workforce and customer identity platform (SSO, MFA, lifecycle, governance, privileged access) that also manages AI agent and non-human identities via Okta for AI Agents and Cross App Access. Lives in the Okta and Auth0 admin consoles.",
+              "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Access Management for the ninth consecutive year (13 vendors evaluated, announced 18 Nov 2025) and a Gartner Peer Insights Customers' Choice for the sixth consecutive year. Agent identity is the core new risk when departments deploy agents.",
+              "suggested_departments": [
+                "47 Cybersecurity Operations",
+                "48 Security Governance, Risk & Privacy",
+                "45 IT Infrastructure & End-User Computing",
+                "51 AI, Machine Learning & Automation",
+                "AI Governance & Responsible AI Office"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Microsoft Purview (partial, adjacent identity and governance)",
+              "enterprise_data_note": "Not verified; no training-data statement was read.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Okta named a leader in 2025 Gartner Magic Quadrant for Access Management",
+                  "url": "https://www.okta.com/en-sg/newsroom/press-releases/okta-named-a-leader-in-2025-gartner-magic-quadrant/"
+                }
+              ]
+            },
+            {
+              "name": "Wiz (AI-APP, Defend, Red/Blue/Green agents)",
+              "vendor": "Wiz",
+              "category": "Engineering, IT operations, identity and risk AI (second pass)",
+              "what_it_is": "Cloud security platform linking code, cloud and runtime in one security graph, with Red (attack paths), Blue (SecOps investigation) and Green (fix PRs) agents plus AI application security posture. Lives in the Wiz console and developer IDE/CI.",
+              "why_include": "Vendor-stated: trusted by more than 65% of Fortune 100 companies and 845 customer reviews rated #1 in cloud and AI security. These are vendor claims only; no independent analyst placement was opened. Fills a cloud-security gap beyond the listed SIEMs.",
+              "suggested_departments": [
+                "47 Cybersecurity Operations",
+                "43 Cloud Infrastructure & Platform Engineering",
+                "44 DevOps & Site Reliability Engineering",
+                "48 Security Governance, Risk & Privacy"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Microsoft Security Copilot (partial)",
+              "enterprise_data_note": "Not verified; the opened page makes no training-data statement.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "Wiz homepage",
+                  "url": "https://www.wiz.io/"
+                }
+              ]
+            },
+            {
+              "name": "Snyk AI Security Platform (Snyk Code, DeepCode AI, Evo)",
+              "vendor": "Snyk",
+              "category": "Engineering, IT operations, identity and risk AI (second pass)",
+              "what_it_is": "Developer-first application security suite (SAST, SCA, container, IaC, DAST) with DeepCode AI fixes and Evo security for AI agents and AI-generated code. Lives in IDEs, pull requests, CI/CD and the Snyk web UI.",
+              "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Application Security Testing (Snyk blog, 14 Oct 2025). Directly relevant to teams using Copilot, Cursor and Claude Code.",
+              "suggested_departments": [
+                "41 Software Engineering - Applications",
+                "42 Quality Engineering & Testing",
+                "44 DevOps & Site Reliability Engineering",
+                "47 Cybersecurity Operations"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "GitHub Copilot (adjacent only)",
+              "enterprise_data_note": "Not verified; the opened page states only regional data hosting for enterprise plans.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Snyk Named a Leader in the 2025 Gartner Magic Quadrant for AST",
+                  "url": "https://snyk.io/blog/snyk-named-a-leader-in-the-2025-gartner-r-magic-quadrant-tm-for-application/"
+                }
+              ]
+            },
+            {
+              "name": "PagerDuty AI agents (SRE Agent, Advance, AIOps)",
+              "vendor": "PagerDuty",
+              "category": "Engineering, IT operations, identity and risk AI (second pass)",
+              "what_it_is": "Incident management and on-call platform with an SRE Agent that learns from related incidents, recommends and executes diagnostics and remediations, and generates self-updating runbooks, plus Scribe and Shift agents. Lives in the PagerDuty Operations Cloud and Slack/Teams.",
+              "why_include": "Fall '25 release (Oct 2025, 150+ enhancements) launched the end-to-end AI agent suite. Vendor page lists customers including TUI, Zoom, Spotify, DraftKings, Vodafone and Fox Corporation. The earlier 15,351-customer figure and Gartner claim were not verified and are dropped.",
+              "suggested_departments": [
+                "44 DevOps & Site Reliability Engineering",
+                "43 Cloud Infrastructure & Platform Engineering",
+                "45 IT Infrastructure & End-User Computing",
+                "59 Business Continuity & Disaster Recovery"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Datadog Bits AI (partial)",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "medium",
+              "sources": [
+                {
+                  "title": "KMWorld: PagerDuty launches end-to-end AI agent suite",
+                  "url": "https://www.kmworld.com/Articles/News/News/PagerDuty-launches-end-to-end-AI-agent-suite-improving-operational-resilience-and-developer-productivity-171881.aspx"
+                },
+                {
+                  "title": "PagerDuty blog: SRE Agent",
+                  "url": "https://www.pagerduty.com/blog/ai/meet-your-virtual-responder-pagerdutys-sre-agent-for-ai-driven-reliability/"
+                }
+              ]
+            },
+            {
+              "name": "Zscaler Zero Trust Exchange (Security for AI, Agentic SecOps)",
+              "vendor": "Zscaler",
+              "category": "Engineering, IT operations, identity and risk AI (second pass)",
+              "what_it_is": "Cloud-delivered SSE/SASE platform securing user, workload and agent traffic, with AI asset management, AI security and agentic SecOps. Lives as an inline cloud proxy plus admin portal.",
+              "why_include": "Leader in the 2025 Gartner Magic Quadrant for Security Service Edge (Gartner report dated 20 May 2025; Zscaler release 23 May 2025), positioned highest on Ability to Execute and a Leader for the fourth consecutive year. Controls which GenAI tools staff can reach.",
+              "suggested_departments": [
+                "47 Cybersecurity Operations",
+                "45 IT Infrastructure & End-User Computing",
+                "48 Security Governance, Risk & Privacy",
+                "53 Enterprise Architecture & Integration"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "Palo Alto Networks Cortex XSIAM (adjacent vendor, different product)",
+              "enterprise_data_note": "Not verified.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Zscaler Recognized as a Leader in the 2025 Gartner Magic Quadrant for SSE",
+                  "url": "https://www.zscaler.com/press/zscaler-recognized-leader-2025-gartner-r-magic-quadrant-tm-security-service-edge"
+                }
+              ]
+            },
+            {
+              "name": "Freshservice with Freddy AI",
+              "vendor": "Freshworks",
+              "category": "Engineering, IT operations, identity and risk AI (second pass)",
+              "what_it_is": "ITSM, ITOM, asset and enterprise service management platform with Freddy AI agents for IT and HR requests, incident triage and self-service. Lives in the Freshservice web app.",
+              "why_include": "Named a Leader in the 2026 Gartner Magic Quadrant for IT Service Management Platforms (29 Jul 2026); named customers Amerisure, McLaren Mastercard Formula 1 Team and New Balance; vendor-reported 97.8% CSAT. Gartner sizes the ITSM platform market at nearly $9 billion in 2025.",
+              "suggested_departments": [
+                "45 IT Infrastructure & End-User Computing",
+                "55 Service Delivery & Managed Services",
+                "46 Enterprise Applications & ERP",
+                "16 People Analytics & HR Operations"
+              ],
+              "suggested_tier": "Advanced",
+              "overlaps_with": "ServiceNow Now Assist (same category, different product)",
+              "enterprise_data_note": "Not verified; the opened release makes no training-data statement.",
+              "confidence": "high",
+              "sources": [
+                {
+                  "title": "Freshworks named a Leader in the 2026 Gartner MQ for ITSM Platforms",
+                  "url": "https://www.freshworks.com/pressrelease/freshworks-named-a-leader-in-the-2026-gartner-magic-quadrant-for-it-service-management-platforms/"
+                }
+              ]
+            }
+          ],
+          "verification_notes": "I opened every cited page; the Okta, Snyk, Zscaler and Freshworks analyst claims and dates matched, and the Wiz vendor claims and PagerDuty agent suite were confirmed. Claims taken from search snippets (PagerDuty customer count, Wiz Peer Insights, Vanta customers and Forrester) were not verifiable and were removed. No candidate is a covered tool under another name; the overlaps are category-adjacent only. Enterprise data-handling statements remain unverified for all candidates.",
+          "removed_or_corrected": [
+            "Removed SailPoint Harbor Pilot: the only evidence was a vendor-cited survey (82% of respondents use AI agents), which is not SailPoint adoption, and no Gartner placement or customers were verified.",
+            "Removed Vanta: the 16,000-customer, Snowflake/GitHub and Forrester claims were not on any opened page; the only verified fact was a vendor-claimed four-hours-per-week saving, which is not adoption evidence.",
+            "Corrected PagerDuty: dropped the unverified 15,351-customer and Gartner claims and replaced them with the named customers on the vendor SRE Agent page (investor page returned 403).",
+            "Corrected Wiz: dropped the unopened Gartner Peer Insights claim; evidence is vendor-stated only.",
+            "Corrected Zscaler: the vendor release is dated 23 May 2025 and the Gartner report 20 May 2025; the Netskope and Palo Alto Leader claim was not confirmed on the opened page and is removed.",
+            "Corrected Okta: Customers' Choice is for the sixth consecutive year (2025 Voice of the Customer), not just 'six years'; confidence raised to high.",
+            "Tier changed from Core to Advanced for Freshservice because it is a platform choice rather than a baseline skill.",
+            "Confidence raised to high for Snyk, Zscaler and Freshservice, where the analyst placements were verified on opened vendor pages."
+          ]
+        }
+      ],
+      "merged": [
+        {
+          "name": "Synthesia",
+          "vendor": "Synthesia",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "Enterprise AI video platform that turns scripts and documents into avatar-led training, onboarding and compliance videos in 140+ languages, with roleplay and survey avatar sessions and an API.",
+          "why_include": "Vendor states it is used by over 90% of the Fortune 100 (self-reported, Apr 2026) and 95% of the DAX 40 (incl. SAP, Merck KGaA). Raised $200M Series E at a $4B valuation in Jan 2026; contracts over $100K grew sharply in 12 months. Named customers: Merck, Mondelez International, Nexity; Heineken case study linked on the page.",
+          "suggested_departments": [
+            "13 Learning & Development",
+            "11 Human Resources Business Partnering",
+            "Corporate Communications & Public Relations",
+            "Revenue Enablement"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "Canva Magic Studio",
+          "enterprise_data_note": "Vendor cites ISO 42001, ISO 27001 and ISO 27701 and customer governance controls; no training-on-customer-data statement was verified.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Synthesia accelerates global expansion as enterprise contracts triple (Apr 21, 2026)",
+              "url": "https://www.synthesia.io/post/synthesia-global-expansion-austin-berlin-paris-zurich-2026"
+            }
+          ]
+        },
+        {
+          "name": "Simpplr",
+          "vendor": "Simpplr",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "AI-powered intranet and employee-experience platform with enterprise search, AI agents, communications AI, surveys and HR service delivery, integrated with other enterprise systems.",
+          "why_include": "Vendor site states Leader in the 2026 Gartner Magic Quadrant for Intranet Packaged Solutions (four years running) and Leader in The Forrester Wave: Intranet Platforms, Q2 2026 (vendor-reported); also listed for IDC MarketScape for Integrated Employee Workspaces 2025. Claims 1,000+ organizations including AAA, the NHS, Penske and Moderna.",
+          "suggested_departments": [
+            "Corporate Communications & Public Relations",
+            "11 Human Resources Business Partnering",
+            "16 People Analytics & HR Operations",
+            "45 IT Infrastructure & End-User Computing"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Glean",
+          "enterprise_data_note": "Vendor markets an AI Control Center for IT governance of intranet AI; training-data policy was not verified.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Simpplr Named a Leader in the Gartner Magic Quadrant for Intranet Packaged Solutions (press release page, shows 2026 Gartner and Forrester Q2 2026 Leader banners)",
+              "url": "https://www.simpplr.com/newsroom/press-releases/2025-gartner-mq-intranet-leader/"
+            },
+            {
+              "title": "Simpplr home page",
+              "url": "https://www.simpplr.com/"
+            }
+          ]
+        },
+        {
+          "name": "ADP Assist",
+          "vendor": "ADP",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "Agentic AI embedded across ADP's HCM, payroll, talent, compliance and workforce management products; audits payroll variances, initiates HR workflows and generates analytics through conversational questions, alongside ADP DataCloud.",
+          "why_include": "ADP's Aug 12, 2026 release states ADP Assist won the HCM Innovation Award and was named AI HR Platform of the Year in the inaugural 2026 HR Tech Breakthrough Awards (vendor-reported; a paid-entry award program, so weak evidence). Client-count and user-count claims removed because the source was never opened.",
+          "suggested_departments": [
+            "14 Compensation, Benefits & Payroll",
+            "16 People Analytics & HR Operations",
+            "11 Human Resources Business Partnering",
+            "7 Regulatory Compliance"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Workday AI",
+          "enterprise_data_note": "Not verified; ADP describes human oversight of agents but no training-data statement was opened.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "ADP Wins Three Inaugural HR Tech Breakthrough Awards (Aug 12, 2026)",
+              "url": "https://mediacenter.adp.com/adp-wins-three-inaugural-hr-tech-breakthrough-awards"
+            }
+          ]
+        },
+        {
+          "name": "iCIMS Talent Cloud AI",
+          "vendor": "iCIMS",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "Enterprise applicant tracking and recruiting suite with embedded AI (matching, ranking, explainability) for corporate and high-volume frontline hiring, covering ATS, CRM, text recruiting and onboarding.",
+          "why_include": "Named a Leader in the May 2026 Gartner Magic Quadrant for Talent Acquisition (Recruiting) Suites and recognized in all four Critical Capabilities use cases (iCIMS release, June 30, 2026; Gartner report date corroborated by Oracle's page). Says it serves many Fortune 500 firms, including General Dynamics, General Mills and BrightSpring Health Services.",
+          "suggested_departments": [
+            "12 Talent Acquisition",
+            "11 Human Resources Business Partnering",
+            "17 Diversity, Equity & Inclusion"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "LinkedIn Recruiter AI",
+          "enterprise_data_note": "Vendor cites enterprise-grade responsible AI with transparency and compliance controls; no training-data statement was verified.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "iCIMS Named a Leader in the Gartner Magic Quadrant for Talent Acquisition (Recruiting) Suites",
+              "url": "https://www.icims.com/company/newsroom/gartnerannouncement2026/"
+            },
+            {
+              "title": "Oracle: Gartner MQ Talent Acquisition 2026 (confirms report title and 8 May 2026 date)",
+              "url": "https://www.oracle.com/human-capital-management/gartner-magic-quadrant-talent-acquisition/"
+            }
+          ]
+        },
+        {
+          "name": "Darwinbox Super Agent",
+          "vendor": "Darwinbox",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "AI-native HCM suite with a Super Agent that orchestrates 30+ agents across recruiting, onboarding and HR operations, aimed at 1,000+ employee enterprises.",
+          "why_include": "Debuted as a Leader in the 2026 Gartner Magic Quadrant for Talent Acquisition Suites for 1,000+ Employee Enterprises (moved from Visionary in a year); claims #1 in AI innovation and top-two in all four use cases (vendor branded-content release, May 14, 2026). Reported one Southeast Asian financial-services customer cut time-to-hire 48%. The Gartner report title is also corroborated by Oracle's page.",
+          "suggested_departments": [
+            "12 Talent Acquisition",
+            "16 People Analytics & HR Operations",
+            "14 Compensation, Benefits & Payroll"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Workday AI",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Darwinbox Named a Leader in Gartner Magic Quadrant for Talent Acquisition Suites (May 14, 2026; branded content)",
+              "url": "https://www.peoplematters.in/amp/news/hr-technology/darwinbox-named-leader-in-gartner-magic-quadrant-for-talent-acquisition-suites-49744"
+            }
+          ]
+        },
+        {
+          "name": "Docebo AI Learning Platform",
+          "vendor": "Docebo",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "AI-first enterprise LMS with AI course creation, AI roleplay simulations, AI assistants and agents, and skills analytics, supporting employee, customer and partner training.",
+          "why_include": "Listed company (NASDAQ/TSX: DCBO). Q3 2025 results cite wins at an industrial and environmental services firm with 200,000+ employees, a beverage company with 25,000+ employees and Amazon Health. Vendor lists Zoom (2M+ customers trained on Zoom Academy), Booking.com, AWS, SONOS and Kiehl's. Analyst-leader claims (Fosway, Gartner, IDC) were not found on opened pages and are dropped.",
+          "suggested_departments": [
+            "13 Learning & Development",
+            "36 Customer Success",
+            "Revenue Enablement",
+            "58 Quality Management & Process Compliance"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Workday AI",
+          "enterprise_data_note": "Vendor lists SOC 2 Type 2, ISO 27001, ISO 9001 and FedRAMP Moderate (US Gov); no AI training-data statement was verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Docebo AI Info",
+              "url": "https://www.docebo.com/ai-info/"
+            },
+            {
+              "title": "Docebo Reports Third Quarter 2025 Results",
+              "url": "https://www.nasdaq.com/press-release/docebo-reports-third-quarter-2025-results-2025-11-07"
+            }
+          ]
+        },
+        {
+          "name": "HeyGen",
+          "vendor": "HeyGen",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "AI avatar video platform for training, internal communications and sales, with digital-twin avatars, Video Agent, SCORM/xAPI export and voice-cloned video translation in 175+ languages.",
+          "why_include": "AWS Marketplace listing claims 80% of the Fortune 100 (the HeyGen blog says 85%; both self-reported, no named customers). HeyGen blog reports 281 G2 badges and 23 #1 rankings in G2 Summer 2026 reports, including Enterprise Grid for Presentation (vendor-reported, user-review based).",
+          "suggested_departments": [
+            "13 Learning & Development",
+            "Corporate Communications & Public Relations",
+            "31 Marketing & Brand",
+            "Revenue Enablement"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "Canva Magic Studio",
+          "enterprise_data_note": "AWS Marketplace listing states SOC 2 Type II, GDPR/CCPA support, SSO/SCIM/RBAC/audit logs, and that enterprise customer data is never used for model training (vendor statement).",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "HeyGen tops G2 Summer 2026 Reports",
+              "url": "https://www.heygen.com/blog/heygen-2026-g2-summer-reports"
+            },
+            {
+              "title": "HeyGen on AWS Marketplace",
+              "url": "https://aws.amazon.com/marketplace/pp/prodview-zqgky3tz3dibe"
+            }
+          ]
+        },
+        {
+          "name": "Eightfold Talent Intelligence Platform",
+          "vendor": "Eightfold AI",
+          "category": "HR, talent, learning and workplace AI",
+          "what_it_is": "Skills-based talent intelligence platform covering recruiting, internal mobility and workforce planning, with an agentic AI interviewer.",
+          "why_include": "Eightfold's own blog (May 13, 2026) says it is a Visionary in the 2026 Gartner MQ for Talent Acquisition (Recruiting) Suites, and a Strategic Leader in the 2026 Fosway 9-Grid for Talent Acquisition for the fourth consecutive year (Jul 3, 2026). Both are vendor-reported; no customer names were verified, so earlier customer list is dropped.",
+          "suggested_departments": [
+            "12 Talent Acquisition",
+            "15 Talent Management & Succession",
+            "16 People Analytics & HR Operations"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "LinkedIn Recruiter AI",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Eightfold named a Visionary in the 2026 Gartner MQ for Talent Acquisition Suites",
+              "url": "https://eightfold.ai/blog/eightfold-named-visionary-garter-magic-quadrant/"
+            },
+            {
+              "title": "Eightfold named a Strategic Leader in the 2026 Fosway 9-Grid for Talent Acquisition",
+              "url": "https://eightfold.ai/blog/eightfold-named-strategic-leader-2026-fosway-9-grid/"
+            }
+          ]
+        },
+        {
+          "name": "Coupa Navi (AI agents and Agent Studio)",
+          "vendor": "Coupa Software",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "Agentic AI layer inside the Coupa spend-management suite (sourcing, procure-to-pay, invoicing, expenses, payments), with prebuilt Navi agents, a no-code Agent Studio, and MCP access (Navi Connect) for external agents such as Microsoft Copilot.",
+          "why_include": "IT Brief (24 Aug 2026) reports 450+ customers using Coupa AI agents in production, 50+ Navi agents released, 400+ custom agents built in Agent Studio, and one customer's payment agent running 14 batches (2,395 payments, USD 20.1M). Figures are company-reported. The Gartner S2P Leader claim could not be confirmed on an opened page and is dropped.",
+          "suggested_departments": [
+            "24 Accounts Payable & Receivable",
+            "25 Procurement & Strategic Sourcing",
+            "26 Vendor & Third-Party Management",
+            "22 Treasury & Cash Management"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Oracle Fusion Applications AI Agents (partial, procurement)",
+          "enterprise_data_note": "The report says agent access via MCP is governed by existing user permissions and security controls; no further data-handling terms verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Coupa launches largest AI release for procurement teams (IT Brief, Aug 2026)",
+              "url": "https://itbrief.com.au/story/coupa-launches-largest-ai-release-for-procurement-teams"
+            }
+          ]
+        },
+        {
+          "name": "Blue Yonder Cognitive Solutions and AI agents",
+          "vendor": "Blue Yonder",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "Supply chain planning, warehouse and logistics platform running on Snowflake, with a Cognitive Solutions suite and five AI agents for supply chain decisions.",
+          "why_include": "Business Wire release (May 2025) reports 30 new customer logos in Q1 2025 (incl. GXO Logistics, Sainsbury's), 3,000+ customers, and launch of five AI agents. Trade press reports vendor claim that 20 of Gartner's 2025 Supply Chain Top 25 use its solutions. The Gartner SCP Leader claim was not found on any opened page and is dropped.",
+          "suggested_departments": [
+            "60 Supply Chain, Logistics & Inventory",
+            "56 Business Operations & Process Excellence"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "SAP Joule (partial, SAP IBP excluded)",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Blue Yonder Q1 2025 highlights and Cognitive Solutions launch",
+              "url": "https://www.silicon.co.uk/press-release/blue-yonder-releases-q1-2025-company-highlights-and-launches-cognitive-solutions-with-ai-agents-heading-into-q2"
+            },
+            {
+              "title": "Blue Yonder powers supply chains for 20 Gartner top 25 firms",
+              "url": "https://ecommercenews.com.au/story/blue-yonder-powers-supply-chains-for-20-gartner-top-25-firms"
+            }
+          ]
+        },
+        {
+          "name": "Kinaxis Maestro (AI agents)",
+          "vendor": "Kinaxis",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "AI-infused end-to-end supply chain planning and orchestration platform covering demand, supply, inventory, S&OP and scheduling, with AI agents and a control tower.",
+          "why_include": "Kinaxis states it is a Leader in the 2025 Gartner Magic Quadrant for Supply Chain Planning Solutions, for the 11th consecutive time (vendor-reported). Its pages name Schneider Electric, Lenovo, ExxonMobil and Volvo Cars as customers; AI Agents is a listed solution.",
+          "suggested_departments": [
+            "60 Supply Chain, Logistics & Inventory",
+            "20 Financial Planning & Analysis",
+            "56 Business Operations & Process Excellence"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "SAP Joule (partial, SAP IBP excluded)",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Kinaxis named Leader in 2025 Gartner MQ for Supply Chain Planning Solutions",
+              "url": "https://www.kinaxis.com/en/blog/kinaxis-named-leader-2025-gartner-magic-quadrant-supply-chain-planning-solutions"
+            }
+          ]
+        },
+        {
+          "name": "OneStream (AI for finance)",
+          "vendor": "OneStream",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "Corporate performance management platform unifying close, consolidation, reporting, planning and forecasting, with embedded AI for decisions and productivity.",
+          "why_include": "Company release (1 Apr 2025) says OneStream was a Leader for the third year in the 2025 Gartner Magic Quadrant for Financial Close and Consolidation Solutions (15 providers evaluated) and a Leader in the 2024 Financial Planning Software MQ; Gartner Peer Insights Customers' Choice in May 2024. Vendor-reported.",
+          "suggested_departments": [
+            "21 Accounting & Financial Reporting",
+            "20 Financial Planning & Analysis",
+            "5 Enterprise Risk Management"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "SAP Joule (partial)",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "OneStream recognized as Leader in 2025 Gartner MQ for Financial Close and Consolidation",
+              "url": "https://www.onestream.com/news/onestream-again-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-financial-close-and-consolidation-solutions/"
+            }
+          ]
+        },
+        {
+          "name": "Workiva (AI platform for reporting, GRC, sustainability)",
+          "vendor": "Workiva",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "Cloud platform for SEC and financial reporting, GRC and sustainability reporting with built-in generative AI, used by the office of the CFO.",
+          "why_include": "Q4 2025 results release (19 Feb 2026): 6,624 customers at 31 Dec 2025 (+319 year on year), 97% gross and 113% net retention. The release frames the platform as serving the office of the CFO 'in the AI era'. No Gartner placement verified.",
+          "suggested_departments": [
+            "21 Accounting & Financial Reporting",
+            "27 Investor Relations",
+            "10 ESG & Sustainability",
+            "4 Board Secretariat & Corporate Governance"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "Diligent One (partial)",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Workiva Q4 and full-year 2025 results",
+              "url": "https://seekingalpha.com/pr/20406724-workiva-announces-fourth-quarter-and-full-year-2025-financial-results"
+            }
+          ]
+        },
+        {
+          "name": "Zip (agentic procurement orchestration)",
+          "vendor": "Zip",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "Intake-to-procure orchestration layer above ERPs, with 50 specialised AI agents for contract review, tariff assessment and compliance checks across procurement and related functions.",
+          "why_include": "VentureBeat (10 Jun 2025): 50 agents launched; early adopters OpenAI, Canva and Webflow; company claims USD 4.4B trackable procurement savings and 14M reviews in 2024. Company-reported. The 2026 Gartner Visionary claim was not verified and is dropped.",
+          "suggested_departments": [
+            "25 Procurement & Strategic Sourcing",
+            "26 Vendor & Third-Party Management",
+            "6 Legal Affairs"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Zip debuts 50 AI agents (VentureBeat)",
+              "url": "https://venturebeat.com/ai/zip-debuts-50-ai-agents-to-kill-procurement-inefficiencies-openai-is-already-on-board"
+            }
+          ]
+        },
+        {
+          "name": "Kyriba Trusted AI (TAI)",
+          "vendor": "Kyriba",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "Agentic AI in the Kyriba treasury, risk, payments and working-capital platform, built on an embedded LLM for cash and liquidity work.",
+          "why_include": "NeuGroup (10 Dec 2025, sponsored content) says Kyriba is used by thousands of customers; TAI had a Co-Innovation Lab that grew to 11 corporates (including Koch) and launched commercially in October 2025. The SPARK Matrix claim was not verified and is dropped.",
+          "suggested_departments": [
+            "22 Treasury & Cash Management",
+            "5 Enterprise Risk Management"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Kyriba's fact sheet states no training on customer data for its embedded LLM.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Kyriba Trusted AI fact sheet",
+              "url": "https://www.kyriba.com/resources/fact-sheets/kyriba-trusted-ai"
+            },
+            {
+              "title": "NeuGroup: Listening to Treasury Teams Hones Kyriba's Vision for Agentic AI",
+              "url": "https://connect.neugroup.com/public/blogs/listening-to-treasury-teams-hones-kyribas-vision-for-agentic-ai"
+            }
+          ]
+        },
+        {
+          "name": "DataSnipper (AI agents for audit and finance)",
+          "vendor": "DataSnipper",
+          "category": "Finance, accounting, procurement and supply chain AI",
+          "what_it_is": "Excel-based intelligent automation platform for audit and finance, with Excel and Disclosure AI Agents (developed with Microsoft) for testing, evidence matching and IFRS/GAAP disclosure review.",
+          "why_include": "Company release (14 Jan 2026): AI Agents launched in 2025; more than USD 1.4B productivity gains claimed; described as trusted by Fortune 500 companies and all Big Four firms, used in 175 countries. Company-reported; the 600,000-professionals figure was not found and is dropped.",
+          "suggested_departments": [
+            "8 Internal Audit",
+            "21 Accounting & Financial Reporting",
+            "23 Taxation"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "Excel Copilot (partial)",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "DataSnipper delivers $1.4B in productivity savings in 2025",
+              "url": "https://www.datasnipper.com/resources/datasnipper-delivers-1-4b-in-productivity-savings-in-2025-as-audit-and-finance-enter-the-ai-era"
+            }
+          ]
+        },
+        {
+          "name": "ABBYY Vantage (Document AI)",
+          "vendor": "ABBYY",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "Intelligent document processing platform that classifies, splits and extracts data from documents (OCR, pre-trained skills, generative AI and retrieval-augmented generation), with an ABBYY Marketplace of pre-trained models.",
+          "why_include": "ABBYY's own page says it was named a Leader in Gartner's first-ever Magic Quadrant for Intelligent Document Processing Solutions; the 3 Sep 2025 date and 18-vendor count are confirmed on the Hyperscience page for the same report. No customer count verified.",
+          "suggested_departments": [
+            "24 Accounts Payable & Receivable",
+            "21 Accounting & Financial Reporting",
+            "7 Regulatory Compliance",
+            "56 Business Operations & Process Excellence",
+            "Insurance Underwriting & Claims"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "UiPath Autopilot",
+          "enterprise_data_note": "Not verified; vendor data-use terms were not found on the opened pages.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "ABBYY: Gartner Magic Quadrant for Intelligent Document Processing",
+              "url": "https://www.abbyy.com/resources/report/gartner-magic-quadrant-intelligent-document-processing"
+            },
+            {
+              "title": "Hyperscience: 2025 Gartner MQ for IDP (18 vendors, 3 Sep 2025)",
+              "url": "https://www.hyperscience.ai/resource/2025-gartner-magic-quadrant-for-intelligent-document-processing-solutions/"
+            }
+          ]
+        },
+        {
+          "name": "Hyperscience Hypercell",
+          "vendor": "Hyperscience",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "ML-native intelligent document processing platform (Hypercell) with products for GenAI, Freight Pay and SNAP, sold into energy, financial services, healthcare, insurance, legal, manufacturing, public sector, retail and logistics.",
+          "why_include": "Its page states it is a Leader in the first Gartner Magic Quadrant for Intelligent Document Processing Solutions (3 Sep 2025) and was positioned furthest for completeness of vision among 18 vendors evaluated (vendor-reported). No customer count verified.",
+          "suggested_departments": [
+            "24 Accounts Payable & Receivable",
+            "60 Supply Chain, Logistics & Inventory",
+            "Insurance Underwriting & Claims",
+            "56 Business Operations & Process Excellence",
+            "7 Regulatory Compliance"
+          ],
+          "suggested_tier": "Specialist",
+          "overlaps_with": "UiPath Autopilot",
+          "enterprise_data_note": "Not verified on the opened page.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Hyperscience: 2025 Gartner MQ for IDP",
+              "url": "https://www.hyperscience.ai/resource/2025-gartner-magic-quadrant-for-intelligent-document-processing-solutions/"
+            }
+          ]
+        },
+        {
+          "name": "Tungsten TotalAgility (formerly Kofax)",
+          "vendor": "Tungsten Automation",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "AI-powered document intelligence and workflow orchestration platform that automates data extraction, orchestrates workflows and surfaces insights from document-heavy processes.",
+          "why_include": "Tungsten's press release (8 Sep 2025) says it was recognised as a Leader in the 2025 Gartner Magic Quadrant for IDP, and describes the company as serving 25,000+ global customers (vendor-stated). The 'second-edition Leader' claim was not found and is dropped.",
+          "suggested_departments": [
+            "24 Accounts Payable & Receivable",
+            "56 Business Operations & Process Excellence",
+            "Insurance Underwriting & Claims",
+            "46 Enterprise Applications & ERP"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "UiPath Autopilot",
+          "enterprise_data_note": "Not verified; no data-training policy found.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Tungsten Automation press release, 8 Sep 2025",
+              "url": "https://www.tungstenautomation.com/press-releases/2025/tungsten-recognized-as-a-leader-in-2025-gartner-mq-for-intelligent-document-processing-solutions"
+            }
+          ]
+        },
+        {
+          "name": "Azure Document Intelligence and Google Cloud Document AI",
+          "vendor": "Microsoft / Google",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "Cloud document-extraction services. Azure Document Intelligence (in Foundry Tools) builds intelligent document processing solutions from forms and documents; Document AI offers generative-AI custom extractors, splitters and classifiers.",
+          "why_include": "Both are first-party hyperscaler services that teams on Azure or Google Cloud can use under existing contracts (product pages opened). The earlier Gartner Peer Insights claim was not verified and is removed; no analyst placement or customer count is verified.",
+          "suggested_departments": [
+            "49 Data Engineering & Data Platforms",
+            "51 AI, Machine Learning & Automation",
+            "24 Accounts Payable & Receivable",
+            "53 Enterprise Architecture & Integration"
+          ],
+          "suggested_tier": "Specialist",
+          "overlaps_with": "Azure AI Foundry; Gemini Enterprise Agent Platform",
+          "enterprise_data_note": "Not verified on the opened pages.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Microsoft Learn: Azure Document Intelligence overview",
+              "url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview"
+            },
+            {
+              "title": "Google Cloud Document AI",
+              "url": "https://cloud.google.com/document-ai"
+            }
+          ]
+        },
+        {
+          "name": "Coveo AI-Relevance Platform",
+          "vendor": "Coveo",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "Enterprise AI search, generative answering and passage-retrieval platform for service, workplace, website and commerce, with integrations for Salesforce, ServiceNow, Zendesk, SAP, Sitecore, Optimizely and others.",
+          "why_include": "Coveo's page says it is a Leader in the 2026 Gartner Magic Quadrant for Search and Product Discovery for the third consecutive year. Its Q1 FY2026 results (31 Jul 2025) name SAP, UKG and AMD as adopters, say SAP expanded its use, and say generative AI solutions drove about 50% of new business that quarter.",
+          "suggested_departments": [
+            "37 Customer Support & Contact Center",
+            "36 Customer Success",
+            "32 Digital & Performance Marketing",
+            "45 IT Infrastructure & End-User Computing"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Glean",
+          "enterprise_data_note": "Not verified on the opened pages.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Coveo Q1 fiscal 2026 results",
+              "url": "https://ir.coveo.com/en/news-events/press-releases/detail/450/coveo-reports-first-quarter-fiscal-2026-financial-results"
+            },
+            {
+              "title": "Coveo: 2026 Gartner MQ Search and Product Discovery",
+              "url": "https://coveo.com/en/resources/reports/gartner-magic-quadrant-search-product-discovery"
+            }
+          ]
+        },
+        {
+          "name": "Phrase Localization Platform (Phrase TMS)",
+          "vendor": "Phrase",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "Translation management system and localisation platform with AI translation, quality evaluation and AI agents that automate localisation workflows.",
+          "why_include": "Phrase's page says Forrester named it a Leader in its first Wave: Translation Management Systems, Q3 2025, with the highest possible scores in 21 of 26 criteria among 12 providers, and that reference customers said AI agents automated 99% of workflows (all vendor-reported). No customer count verified.",
+          "suggested_departments": [
+            "31 Marketing & Brand",
+            "39 Product Management",
+            "41 Software Engineering - Applications",
+            "37 Customer Support & Contact Center",
+            "Corporate Communications & Public Relations"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Not verified on the opened page.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Phrase: Forrester Wave TMS Q3 2025",
+              "url": "https://phrase.com/resources/forrester-wave-translation-management-systems-q3-2025/"
+            }
+          ]
+        },
+        {
+          "name": "DeepL (Translator, Voice, Write, Agent)",
+          "vendor": "DeepL",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "Language AI for text and document translation, writing, live speech translation (DeepL Voice) and an autonomous workplace agent (DeepL Agent, generally available 5 Nov 2025), with a Customization Hub for glossaries and style rules.",
+          "why_include": "DeepL's 23 Jul 2025 press release says over 200,000 business customers use it and names Inetum, Cybozu and Brioche Pasquier as DeepL Voice adopters (vendor-stated). The 5 Nov 2025 release confirms DeepL Agent GA and the Customization Hub. No analyst report was found.",
+          "suggested_departments": [
+            "6 Legal Affairs",
+            "31 Marketing & Brand",
+            "37 Customer Support & Contact Center",
+            "13 Learning & Development",
+            "Corporate Communications & Public Relations"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "Microsoft Teams Copilot",
+          "enterprise_data_note": "Training terms were not verified on the opened pages.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "DeepL press release, 23 Jul 2025",
+              "url": "https://www.deepl.com/en/press-release/deepl-expands-real-time-voice-translation-capabilities-with-new-features-and-upcoming-zoom-integration"
+            },
+            {
+              "title": "DeepL Agent and Customization Hub, 5 Nov 2025",
+              "url": "https://tools.prnewswire.com/en-us/live/20823/release/20251105EN15316"
+            }
+          ]
+        },
+        {
+          "name": "Optimizely Opal",
+          "vendor": "Optimizely",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "Agent orchestration platform inside Optimizely One (content management, content marketing, experimentation, commerce, personalization) that can also orchestrate across other stacks.",
+          "why_include": "Optimizely's 19 Nov 2025 release says it was named a Leader in The Forrester Wave: Digital Experience Platforms, Q4 2025 (evaluating Optimizely One and Opal), and a Leader in the 2025 Gartner MQs for Digital Experience Platforms and Content Marketing Platforms. It says it serves thousands of enterprise customers (vendor-stated). The Gartner placements are vendor-reported only.",
+          "suggested_departments": [
+            "31 Marketing & Brand",
+            "32 Digital & Performance Marketing",
+            "39 Product Management",
+            "Pricing & Revenue Management"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Adobe GenStudio",
+          "enterprise_data_note": "Not verified on the opened page.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Optimizely press release, Forrester DXP Wave Q4 2025",
+              "url": "https://www.optimizely.com/company/press/forrester-dxp-wave-2025/"
+            }
+          ]
+        },
+        {
+          "name": "Fireflies.ai and Otter.ai (AI meeting assistants)",
+          "vendor": "Fireflies.ai / Otter.ai",
+          "category": "Knowledge, documents, meetings, translation and content operations AI",
+          "what_it_is": "Meeting recording, transcription and summary assistants that work across Zoom, Teams and Meet. Fireflies adds AskFred search; Otter adds SSO/SAML, SCIM, audit trails and meeting agents.",
+          "why_include": "Widely used, so shadow adoption is a governance issue; no analyst report or customer count was verified. Teaching points: DPA-level training opt-outs and BAA availability (HIPAA is an Enterprise add-on on both). Fireflies' comparison page notes an Aug 2025 class action against Otter over recording consent and training use (competitor-reported, unverified).",
+          "suggested_departments": [
+            "28 Sales - Enterprise & Key Accounts",
+            "12 Talent Acquisition",
+            "54 Project & Program Management Office",
+            "48 Security Governance, Risk & Privacy"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "Zoom AI Companion 3.0",
+          "enterprise_data_note": "Otter says it is SOC 2 Type II certified and HIPAA compliant with BAA availability, that its third-party AI providers do not train on customer data, and that it de-identifies data before its own training; Fireflies says it does not use customer data to train AI models (vendor claims).",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Otter.ai: Enterprise AI governance",
+              "url": "https://otter.ai/blog/enterprise-ai-governance"
+            },
+            {
+              "title": "Fireflies: Fireflies vs. Otter (Jun 2026)",
+              "url": "https://fireflies.ai/blog/fireflies-vs-otter"
+            }
+          ]
+        },
+        {
+          "name": "Workato (Enterprise Orchestration, Agent Studio, AI Control Plane)",
+          "vendor": "Workato",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Enterprise iPaaS and agent orchestration platform: low-code workflows, Agent Studio, enterprise MCP servers and an AI gateway/governance layer, connecting 17,000+ apps. Cloud service alongside Salesforce, Workday, ServiceNow and similar systems.",
+          "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for iPaaS (seventh consecutive time, furthest in vision, per vendor release dated 21 May 2025; 4.9 Gartner Peer Insights rating). Homepage claims Fortune 500 trust, 4.7 G2, 17,000+ connectable apps and agents for 100,000+ employees (all vendor-stated).",
+          "suggested_departments": [
+            "53 Enterprise Architecture & Integration",
+            "51 AI, Machine Learning & Automation",
+            "56 Business Operations & Process Excellence",
+            "45 IT Infrastructure & End-User Computing",
+            "30 Sales Operations & Revenue Operations"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Power Automate (different vendor; iPaaS peer, not a duplicate)",
+          "enterprise_data_note": "Not verified; opened pages describe governance and security controls but give no model-training statement.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Workato Named a Leader in the 2025 Gartner Magic Quadrant for iPaaS (Silicon UK, press release)",
+              "url": "https://www.silicon.co.uk/press-release/workato-named-a-leader-in-the-2025-gartner-magic-quadrant-for-ipaas"
+            },
+            {
+              "title": "Workato homepage",
+              "url": "https://www.workato.com/"
+            }
+          ]
+        },
+        {
+          "name": "OutSystems (Mentor, Agent Workbench)",
+          "vendor": "OutSystems",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Enterprise low-code and agentic application platform: Mentor AI-assisted development, Agent Workbench for coordinating agents and apps, data fabric, with governance built into apps and agents.",
+          "why_include": "OutSystems page states Gartner named it a Leader in the 2026 Magic Quadrant for AI-Augmented Low-Code Application Platforms for the 10th consecutive year, furthest in Completeness of Vision (vendor-stated; exact publication date not confirmed on the opened page).",
+          "suggested_departments": [
+            "41 Software Engineering - Applications",
+            "46 Enterprise Applications & ERP",
+            "51 AI, Machine Learning & Automation",
+            "57 Business Transformation & Change Management",
+            "56 Business Operations & Process Excellence"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Not verified; page cites enterprise policies and governance but no training-data statement.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "OutSystems Gartner Magic Quadrant page",
+              "url": "https://www.outsystems.com/1/low-code-application-platforms-gartner/"
+            },
+            {
+              "title": "OutSystems AI page",
+              "url": "https://www.outsystems.com/ai/"
+            }
+          ]
+        },
+        {
+          "name": "Appian Platform (AI Agents and Agent Studio)",
+          "vendor": "Appian",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Low-code process automation and case management platform with AI agents, generative AI, data fabric, RPA and document processing.",
+          "why_include": "Leader in the 2025 Gartner Magic Quadrant for Enterprise Low-Code Application Platforms for the third consecutive year, and a 2025 Gartner Peer Insights Customers' Choice (99% willingness to recommend, 52 reviews); site also shows Leader in Gartner BOAT. All per Appian's own release.",
+          "suggested_departments": [
+            "56 Business Operations & Process Excellence",
+            "24 Accounts Payable & Receivable",
+            "25 Procurement & Strategic Sourcing",
+            "Insurance Underwriting & Claims",
+            "51 AI, Machine Learning & Automation"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "ServiceNow Now Assist (partial, workflow automation)",
+          "enterprise_data_note": "Not verified from opened pages.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Appian Recognized as a Leader in the 2025 Gartner Magic Quadrant for Enterprise LCAP",
+              "url": "https://appian.com/about/explore/press-releases/2025/appian-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant"
+            }
+          ]
+        },
+        {
+          "name": "Pega Blueprint and Pega Platform",
+          "vendor": "Pegasystems",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Pega Blueprint is a generative AI design tool that turns goals and documents into agent-driven workflows and apps on the Pega platform.",
+          "why_include": "Pega release dated 12 May 2026: named a Leader in the Gartner Magic Quadrant for Process Intelligence among 13 vendors; Pega site features a Deutsche Telekom Blueprint case study. The Gartner process intelligence MQ is adjacent evidence, not an agent-builder evaluation.",
+          "suggested_departments": [
+            "56 Business Operations & Process Excellence",
+            "38 Customer Experience & Service Design",
+            "37 Customer Support & Contact Center",
+            "57 Business Transformation & Change Management",
+            "Insurance Underwriting & Claims"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "ServiceNow Now Assist (partial)",
+          "enterprise_data_note": "Not verified from opened pages.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Pega Named a Leader in Gartner Magic Quadrant for Process Intelligence",
+              "url": "https://www.pega.com/node/466461"
+            }
+          ]
+        },
+        {
+          "name": "Kore.ai Agent Platform",
+          "vendor": "Kore.ai",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Multi-agent and conversational AI platform for customer service, employee self-service (HR, IT) and process automation, with no-code and pro-code builders, multi-LLM support and guardrails.",
+          "why_include": "Leader in the 2025 Gartner Magic Quadrant for Conversational AI Platforms, rated highest for Ability to Execute (vendor release, 26 Aug 2025); release header also cites Forrester Wave Conversational AI Platforms for Employee Services Q3 2026 Leader and partnerships with Microsoft and AWS.",
+          "suggested_departments": [
+            "37 Customer Support & Contact Center",
+            "11 Human Resources Business Partnering",
+            "45 IT Infrastructure & End-User Computing",
+            "38 Customer Experience & Service Design"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Genesys Cloud CX (AI Studio, AI Guides) (partial)",
+          "enterprise_data_note": "Not verified; release mentions LLM guardrails only.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Kore.ai named a Leader in Gartner Magic Quadrant for Conversational AI Platforms",
+              "url": "https://www.kore.ai/news/kore-ai-named-a-leader-in-gartner-magic-quadrant-for-conversational-ai-platforms"
+            }
+          ]
+        },
+        {
+          "name": "Sierra",
+          "vendor": "Sierra",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Conversational AI agent platform for customer experience; Ghostwriter builds agents from SOPs and transcripts, deployed across chat, SMS, email, voice, WhatsApp and ChatGPT with outcome-based pricing.",
+          "why_include": "TechCrunch (21 Nov 2025): reached $100M ARR in 21 months; customers named include Deliveroo, Discord, Ramp, Rivian, SoFi, Tubi, ADT, Bissell, Vans, Cigna and SiriusXM. No analyst evaluation verified.",
+          "suggested_departments": [
+            "37 Customer Support & Contact Center",
+            "38 Customer Experience & Service Design",
+            "36 Customer Success"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Intercom Fin (competitor, not a duplicate)",
+          "enterprise_data_note": "Not verified; homepage mentions built-in guardrails but no training-data posture.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Bret Taylor's Sierra reaches $100M ARR in under two years (TechCrunch)",
+              "url": "https://techcrunch.com/2025/11/21/bret-taylors-sierra-reaches-100m-arr-in-under-two-years/"
+            },
+            {
+              "title": "Sierra homepage",
+              "url": "https://sierra.ai/"
+            }
+          ]
+        },
+        {
+          "name": "ElevenLabs Agents (ElevenAgents)",
+          "vendor": "ElevenLabs",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Voice and conversational agent platform plus text-to-speech models; configure, deploy and monitor agents in 90+ languages across voice, chat and email via web platform and API.",
+          "why_include": "Company states enterprises are 55% of revenue, used at five of the ten largest tech companies, five of ten largest insurers and four of ten largest telecoms; Stripe, Deutsche Telekom, Admiral and others rolled out ElevenAgents since Feb 2026; 15M+ conversations weekly; $22B valuation tender. All company-stated, relayed by Unite.AI (AI-generated article).",
+          "suggested_departments": [
+            "37 Customer Support & Contact Center",
+            "13 Learning & Development",
+            "31 Marketing & Brand",
+            "38 Customer Experience & Service Design"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Amazon Connect Customer (partial)",
+          "enterprise_data_note": "Not verified from opened pages.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "ElevenLabs Closes $300M Employee Tender Offer at $22B Valuation (Unite.AI)",
+              "url": "https://www.unite.ai/elevenlabs-closes-300m-employee-tender-offer-at-22b-valuation/"
+            },
+            {
+              "title": "ElevenAgents product page",
+              "url": "https://elevenlabs.io/agents"
+            }
+          ]
+        },
+        {
+          "name": "n8n",
+          "vendor": "n8n",
+          "category": "Agent builders, automation, low-code and voice AI",
+          "what_it_is": "Workflow automation and AI agent platform with visual canvas supporting no-code, low-code and pro-code; self-hostable or cloud, with enterprise tier.",
+          "why_include": "Pulse 2.0 (12 May 2026), reporting the company announcement: 1,400+ enterprise customers, 1.7M monthly builders, SAP investment at $5.2B valuation with n8n embedded in SAP Joule Studio. Site claims Fortune 500 use. No analyst evaluation verified.",
+          "suggested_departments": [
+            "51 AI, Machine Learning & Automation",
+            "45 IT Infrastructure & End-User Computing",
+            "47 Cybersecurity Operations",
+            "56 Business Operations & Process Excellence"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Power Automate (peer); SAP Joule (embedded partner, not a duplicate)",
+          "enterprise_data_note": "Pulse 2.0 says the platform lets organisations keep data sovereignty (self-hosting); no model-training statement verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "n8n valuation doubles to $5.2 billion as SAP invests (Pulse 2.0)",
+              "url": "https://pulse2.com/n8n-valuation-doubles-to-5-2-billion-as-sap-makes-strategic-investment-and-embeds-platform-into-joule-studio/"
+            },
+            {
+              "title": "n8n homepage",
+              "url": "https://n8n.io/"
+            }
+          ]
+        },
+        {
+          "name": "Braze (BrazeAI, BrazeAI Decisioning Studio and Agents)",
+          "vendor": "Braze",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Cross-channel customer engagement platform (email, push, SMS/RCS, WhatsApp) with BrazeAI for campaign building, content creation, optimisation and 1:1 decisioning (including OfferFit capability, acquired), plus a Braze Data Platform.",
+          "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs (third consecutive year, 11 vendors evaluated, per Braze blog dated 24 Sep 2025). Names HBO Max, Overstock, Dairy Queen and Canva as customers (vendor-stated).",
+          "suggested_departments": [
+            "32 Digital & Performance Marketing",
+            "31 Marketing & Brand",
+            "36 Customer Success",
+            "38 Customer Experience & Service Design"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Salesforce Einstein",
+          "enterprise_data_note": "Not verified; no data-training statement found on opened pages.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Braze named a Leader in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs",
+              "url": "https://www.braze.com/resources/articles/braze-named-leader-2025-gartner-magic-quadrant"
+            }
+          ]
+        },
+        {
+          "name": "Sprinklr AI (AI Agents, Copilot, AI+ Studio)",
+          "vendor": "Sprinklr",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Unified-CXM platform covering social publishing, listening, marketing and service, with AI agents, a Copilot and an AI+ Studio across social, insights and contact-centre workflows.",
+          "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Content Marketing Platforms (sixth year, per April 2025 press release); Leader in Forrester Wave Social Suites Q4 2024 and Strong Performer in Forrester Wave CCaaS Platforms Q2 2025 (per Sprinklr). Home page names Uber, Deutsche Telekom, Northwestern Mutual, Acer and Aramex as customer stories (vendor-stated).",
+          "suggested_departments": [
+            "31 Marketing & Brand",
+            "33 Market Research & Competitive Intelligence",
+            "37 Customer Support & Contact Center",
+            "Corporate Communications & Public Relations"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Zendesk AI",
+          "enterprise_data_note": "Not verified; Sprinklr lists a Security & Data Privacy page that was not opened.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Sprinklr home page",
+              "url": "https://www.sprinklr.com/"
+            },
+            {
+              "title": "Sprinklr Named a Leader in the 2025 Gartner Magic Quadrant for Content Marketing Platforms (press release)",
+              "url": "https://www.silicon.co.uk/press-release/sprinklr-named-a-leader-in-the-2025-gartner-magic-quadrant-for-content-marketing-platforms-for-the-sixth-consecutive-year"
+            }
+          ]
+        },
+        {
+          "name": "Klaviyo K:AI (Composer and Customer Agent)",
+          "vendor": "Klaviyo",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "B2C CRM and marketing platform whose K:AI layer includes Composer (audits and builds flows and campaigns from a prompt) and Customer Agent (AI support and sales agent), over Klaviyo's data platform.",
+          "why_include": "Klaviyo's page states 'Trusted by 205,000+ brands' (vendor-stated) and lists an Enterprise offering and Professional services. No analyst or named large-enterprise evidence verified.",
+          "suggested_departments": [
+            "32 Digital & Performance Marketing",
+            "31 Marketing & Brand",
+            "37 Customer Support & Contact Center",
+            "Merchandising & Store Operations"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "HubSpot AI",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Klaviyo AI (K:AI) overview",
+              "url": "https://www.klaviyo.com/solutions/ai"
+            }
+          ]
+        },
+        {
+          "name": "Bloomreach (Loomi AI, Engagement, Discovery)",
+          "vendor": "Bloomreach",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Agentic personalisation platform combining commerce search, marketing automation/ESP and a Shopping Agent, with Loomi AI marketing agent and Loomi Connect for custom agents.",
+          "why_include": "Named a Visionary in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs (press release 2 Oct 2025). Its site also cites the 2026 Gartner Critical Capabilities for Multichannel Marketing Hubs (a Critical Capabilities note, not the 2026 Magic Quadrant). States 1,400+ brands including American Eagle, Sonepar and Pandora (vendor-stated).",
+          "suggested_departments": [
+            "32 Digital & Performance Marketing",
+            "Merchandising & Store Operations",
+            "31 Marketing & Brand",
+            "39 Product Management"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Adobe GenStudio",
+          "enterprise_data_note": "Not verified on opened pages.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Bloomreach Named a Visionary in the 2025 Gartner Magic Quadrant for Multichannel Marketing Hubs",
+              "url": "https://www.bloomreach.com/en/news/2025/bloomreach-named-a-visionary-gartner-magic-quadrant/"
+            }
+          ]
+        },
+        {
+          "name": "Twilio Segment (CDP with Connections, Unify, Protocols, Engage)",
+          "vendor": "Twilio",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Customer data platform (Connections, Unify, Protocols, Engage audiences and journeys) that feeds AI models and agents with unified, consented profiles.",
+          "why_include": "Niche Player in the 2026 Gartner Magic Quadrant for CDPs (second consecutive year), with 700+ prebuilt connectors and OneTrust consent integration, per CX Today (9 Feb 2026). Caveats from the same source: Twilio declined to supply supplemental information, and Engage Premier was announced for sunset in June 2025. Treat Engage as at risk. 'CustomerAI' removed from the name since not shown on opened pages.",
+          "suggested_departments": [
+            "49 Data Engineering & Data Platforms",
+            "32 Digital & Performance Marketing",
+            "48 Security Governance, Risk & Privacy",
+            "Data Governance & Stewardship"
+          ],
+          "suggested_tier": "Specialist",
+          "overlaps_with": "Salesforce Einstein",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Twilio Segment page",
+              "url": "https://www.twilio.com/en-us/segment"
+            },
+            {
+              "title": "Gartner Magic Quadrant for CDPs 2026: The Rundown (CX Today)",
+              "url": "https://www.cxtoday.com/customer-analytics-intelligence/gartner-magic-quadrant-cdp-2026/"
+            }
+          ]
+        },
+        {
+          "name": "Tealium (Customer Data Hub, AI and Predictive)",
+          "vendor": "Tealium",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Customer data orchestration platform covering collection, CDP, enrichment and consent, feeding models and agents with real-time governed customer context.",
+          "why_include": "Gartner CDP Magic Quadrant: Leader in 2025, dropped to Challenger in 2026, with Gartner noting slowing customer acquisition and ARR growth (per CX Today). Tealium's own site still says '2x Gartner Magic Quadrant Leader', 850+ enterprise customers and 1,300+ integrations (vendor-stated).",
+          "suggested_departments": [
+            "49 Data Engineering & Data Platforms",
+            "48 Security Governance, Risk & Privacy",
+            "32 Digital & Performance Marketing",
+            "Data Governance & Stewardship"
+          ],
+          "suggested_tier": "Specialist",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Vendor positions consent enforcement as central; training posture for its AI features not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Tealium home page",
+              "url": "https://tealium.com/"
+            },
+            {
+              "title": "Gartner Magic Quadrant for CDPs 2026: The Rundown (CX Today)",
+              "url": "https://www.cxtoday.com/customer-analytics-intelligence/gartner-magic-quadrant-cdp-2026/"
+            }
+          ]
+        },
+        {
+          "name": "Amperity (Stitch identity resolution and GenAI)",
+          "vendor": "Amperity",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Retail- and consumer-focused customer data platform whose Stitch identity resolution uses up to 45 AI models, with GenAI integrated across the platform.",
+          "why_include": "Niche Player in the 2026 Gartner CDP Magic Quadrant for the second year, praised for identity unification and GenAI vision; Gartner flags net revenue retention lagging peers and an uncertain move to consumption pricing (per CX Today). Named-customer evidence not verified and no vendor page opened.",
+          "suggested_departments": [
+            "49 Data Engineering & Data Platforms",
+            "32 Digital & Performance Marketing",
+            "Merchandising & Store Operations",
+            "50 Business Intelligence & Analytics"
+          ],
+          "suggested_tier": "Specialist",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Gartner Magic Quadrant for CDPs 2026: The Rundown (CX Today)",
+              "url": "https://www.cxtoday.com/customer-analytics-intelligence/gartner-magic-quadrant-cdp-2026/"
+            }
+          ]
+        },
+        {
+          "name": "Runway (Gen-4.5, Aleph, enterprise platform)",
+          "vendor": "Runway",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Generative video and image platform with enterprise tooling (API, custom model weights licensing, Runway Ads) used for ads, VFX and brand campaigns.",
+          "why_include": "Enterprise page cites Under Armour (via agency Tool of North America), Salomon, Sonos, Coca-Cola work via Silverside AI, BBC Studios and Amazon Prime's House of David. Runway reports business more than doubled in 2026 and NRR above 300%, one Fortune 20 customer up 17x (company-reported, unaudited, per ContentGrip 25 Aug 2026). No analyst quadrant found.",
+          "suggested_departments": [
+            "31 Marketing & Brand",
+            "32 Digital & Performance Marketing",
+            "Corporate Communications & Public Relations",
+            "13 Learning & Development"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Adobe Firefly",
+          "enterprise_data_note": "Runway's enterprise page states SOC 2 Type 2 and 'We don't train on your data'; ContentGrip reports full ownership of outputs.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Runway Enterprise",
+              "url": "https://runway.com/enterprise"
+            },
+            {
+              "title": "Runway's enterprise numbers (ContentGrip, 25 Aug 2026)",
+              "url": "https://www.contentgrip.com/runway-enterprise-ai-video/"
+            }
+          ]
+        },
+        {
+          "name": "Algolia AI Search (Agent Studio, Ask AI, Generative Experiences)",
+          "vendor": "Algolia",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "Search and product-discovery platform with AI search, recommendations, personalisation, RAG-based Generative Experiences, Agent Studio, Ask AI and an MCP server, embedded in commerce and app front ends.",
+          "why_include": "Algolia states 18,000+ customers in 150+ countries, highlights Walgreens doubling search conversion, and lists the 2026 Gartner Magic Quadrant for Search and Product Discovery among recognitions (vendor page; placement tier not verified).",
+          "suggested_departments": [
+            "32 Digital & Performance Marketing",
+            "39 Product Management",
+            "41 Software Engineering - Applications",
+            "Merchandising & Store Operations"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Not verified; Algolia says assistants are grounded in the customer's own product data.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Algolia home page",
+              "url": "https://www.algolia.com/"
+            }
+          ]
+        },
+        {
+          "name": "Shopify Sidekick and Agentic Storefronts",
+          "vendor": "Shopify",
+          "category": "Marketing, creative, commerce and customer-data AI",
+          "what_it_is": "AI commerce assistant built into the Shopify admin (design, product copy, photos, discounts, email campaigns, reporting), alongside Agentic Storefronts that surface merchant products in AI assistants.",
+          "why_include": "AI capability inside a commerce platform enterprise brands already run (page says 'Trusted by enterprise brands' and links an Enterprise offering). Sidekick testimonials are small brands (Blurrd, Tuckernuck, Jaded London); large-enterprise adoption and Plus-specific entitlements not verified.",
+          "suggested_departments": [
+            "Merchandising & Store Operations",
+            "32 Digital & Performance Marketing",
+            "31 Marketing & Brand",
+            "Pricing & Revenue Management"
+          ],
+          "suggested_tier": "Core",
+          "overlaps_with": "none",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "low",
+          "sources": [
+            {
+              "title": "Shopify Sidekick",
+              "url": "https://www.shopify.com/sidekick"
+            }
+          ]
+        },
+        {
+          "name": "Okta (Okta for AI Agents / identity security fabric)",
+          "vendor": "Okta",
+          "category": "Engineering, IT operations, identity and risk AI (second pass)",
+          "what_it_is": "Workforce and customer identity platform (SSO, MFA, lifecycle, governance, privileged access) that also manages AI agent and non-human identities via Okta for AI Agents and Cross App Access. Lives in the Okta and Auth0 admin consoles.",
+          "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Access Management for the ninth consecutive year (13 vendors evaluated, announced 18 Nov 2025) and a Gartner Peer Insights Customers' Choice for the sixth consecutive year. Agent identity is the core new risk when departments deploy agents.",
+          "suggested_departments": [
+            "47 Cybersecurity Operations",
+            "48 Security Governance, Risk & Privacy",
+            "45 IT Infrastructure & End-User Computing",
+            "51 AI, Machine Learning & Automation",
+            "AI Governance & Responsible AI Office"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Microsoft Purview (partial, adjacent identity and governance)",
+          "enterprise_data_note": "Not verified; no training-data statement was read.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Okta named a leader in 2025 Gartner Magic Quadrant for Access Management",
+              "url": "https://www.okta.com/en-sg/newsroom/press-releases/okta-named-a-leader-in-2025-gartner-magic-quadrant/"
+            }
+          ]
+        },
+        {
+          "name": "Wiz (AI-APP, Defend, Red/Blue/Green agents)",
+          "vendor": "Wiz",
+          "category": "Engineering, IT operations, identity and risk AI (second pass)",
+          "what_it_is": "Cloud security platform linking code, cloud and runtime in one security graph, with Red (attack paths), Blue (SecOps investigation) and Green (fix PRs) agents plus AI application security posture. Lives in the Wiz console and developer IDE/CI.",
+          "why_include": "Vendor-stated: trusted by more than 65% of Fortune 100 companies and 845 customer reviews rated #1 in cloud and AI security. These are vendor claims only; no independent analyst placement was opened. Fills a cloud-security gap beyond the listed SIEMs.",
+          "suggested_departments": [
+            "47 Cybersecurity Operations",
+            "43 Cloud Infrastructure & Platform Engineering",
+            "44 DevOps & Site Reliability Engineering",
+            "48 Security Governance, Risk & Privacy"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Microsoft Security Copilot (partial)",
+          "enterprise_data_note": "Not verified; the opened page makes no training-data statement.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "Wiz homepage",
+              "url": "https://www.wiz.io/"
+            }
+          ]
+        },
+        {
+          "name": "Snyk AI Security Platform (Snyk Code, DeepCode AI, Evo)",
+          "vendor": "Snyk",
+          "category": "Engineering, IT operations, identity and risk AI (second pass)",
+          "what_it_is": "Developer-first application security suite (SAST, SCA, container, IaC, DAST) with DeepCode AI fixes and Evo security for AI agents and AI-generated code. Lives in IDEs, pull requests, CI/CD and the Snyk web UI.",
+          "why_include": "Named a Leader in the 2025 Gartner Magic Quadrant for Application Security Testing (Snyk blog, 14 Oct 2025). Directly relevant to teams using Copilot, Cursor and Claude Code.",
+          "suggested_departments": [
+            "41 Software Engineering - Applications",
+            "42 Quality Engineering & Testing",
+            "44 DevOps & Site Reliability Engineering",
+            "47 Cybersecurity Operations"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "GitHub Copilot (adjacent only)",
+          "enterprise_data_note": "Not verified; the opened page states only regional data hosting for enterprise plans.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Snyk Named a Leader in the 2025 Gartner Magic Quadrant for AST",
+              "url": "https://snyk.io/blog/snyk-named-a-leader-in-the-2025-gartner-r-magic-quadrant-tm-for-application/"
+            }
+          ]
+        },
+        {
+          "name": "PagerDuty AI agents (SRE Agent, Advance, AIOps)",
+          "vendor": "PagerDuty",
+          "category": "Engineering, IT operations, identity and risk AI (second pass)",
+          "what_it_is": "Incident management and on-call platform with an SRE Agent that learns from related incidents, recommends and executes diagnostics and remediations, and generates self-updating runbooks, plus Scribe and Shift agents. Lives in the PagerDuty Operations Cloud and Slack/Teams.",
+          "why_include": "Fall '25 release (Oct 2025, 150+ enhancements) launched the end-to-end AI agent suite. Vendor page lists customers including TUI, Zoom, Spotify, DraftKings, Vodafone and Fox Corporation. The earlier 15,351-customer figure and Gartner claim were not verified and are dropped.",
+          "suggested_departments": [
+            "44 DevOps & Site Reliability Engineering",
+            "43 Cloud Infrastructure & Platform Engineering",
+            "45 IT Infrastructure & End-User Computing",
+            "59 Business Continuity & Disaster Recovery"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Datadog Bits AI (partial)",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "medium",
+          "sources": [
+            {
+              "title": "KMWorld: PagerDuty launches end-to-end AI agent suite",
+              "url": "https://www.kmworld.com/Articles/News/News/PagerDuty-launches-end-to-end-AI-agent-suite-improving-operational-resilience-and-developer-productivity-171881.aspx"
+            },
+            {
+              "title": "PagerDuty blog: SRE Agent",
+              "url": "https://www.pagerduty.com/blog/ai/meet-your-virtual-responder-pagerdutys-sre-agent-for-ai-driven-reliability/"
+            }
+          ]
+        },
+        {
+          "name": "Zscaler Zero Trust Exchange (Security for AI, Agentic SecOps)",
+          "vendor": "Zscaler",
+          "category": "Engineering, IT operations, identity and risk AI (second pass)",
+          "what_it_is": "Cloud-delivered SSE/SASE platform securing user, workload and agent traffic, with AI asset management, AI security and agentic SecOps. Lives as an inline cloud proxy plus admin portal.",
+          "why_include": "Leader in the 2025 Gartner Magic Quadrant for Security Service Edge (Gartner report dated 20 May 2025; Zscaler release 23 May 2025), positioned highest on Ability to Execute and a Leader for the fourth consecutive year. Controls which GenAI tools staff can reach.",
+          "suggested_departments": [
+            "47 Cybersecurity Operations",
+            "45 IT Infrastructure & End-User Computing",
+            "48 Security Governance, Risk & Privacy",
+            "53 Enterprise Architecture & Integration"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "Palo Alto Networks Cortex XSIAM (adjacent vendor, different product)",
+          "enterprise_data_note": "Not verified.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Zscaler Recognized as a Leader in the 2025 Gartner Magic Quadrant for SSE",
+              "url": "https://www.zscaler.com/press/zscaler-recognized-leader-2025-gartner-r-magic-quadrant-tm-security-service-edge"
+            }
+          ]
+        },
+        {
+          "name": "Freshservice with Freddy AI",
+          "vendor": "Freshworks",
+          "category": "Engineering, IT operations, identity and risk AI (second pass)",
+          "what_it_is": "ITSM, ITOM, asset and enterprise service management platform with Freddy AI agents for IT and HR requests, incident triage and self-service. Lives in the Freshservice web app.",
+          "why_include": "Named a Leader in the 2026 Gartner Magic Quadrant for IT Service Management Platforms (29 Jul 2026); named customers Amerisure, McLaren Mastercard Formula 1 Team and New Balance; vendor-reported 97.8% CSAT. Gartner sizes the ITSM platform market at nearly $9 billion in 2025.",
+          "suggested_departments": [
+            "45 IT Infrastructure & End-User Computing",
+            "55 Service Delivery & Managed Services",
+            "46 Enterprise Applications & ERP",
+            "16 People Analytics & HR Operations"
+          ],
+          "suggested_tier": "Advanced",
+          "overlaps_with": "ServiceNow Now Assist (same category, different product)",
+          "enterprise_data_note": "Not verified; the opened release makes no training-data statement.",
+          "confidence": "high",
+          "sources": [
+            {
+              "title": "Freshworks named a Leader in the 2026 Gartner MQ for ITSM Platforms",
+              "url": "https://www.freshworks.com/pressrelease/freshworks-named-a-leader-in-the-2026-gartner-magic-quadrant-for-it-service-management-platforms/"
+            }
+          ]
+        }
+      ]
+    },
+    "dropped": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Expand"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "more tools: HR, talent, learning and workplace AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Expand",
+      "agentId": "ab24c5ec33689f962",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928386563,
+      "queuedAt": 1792928386516,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers HR only through Workday AI, SAP Joule, …",
+      "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nYour lens: HR, talent, learning and workplace AI. HRIS and talent-suite AI not yet listed (for example SAP SuccessFactors Joule agents are covered under SAP Joule, but think of Oracle HCM, UKG, ADP, Dayforce, Eightfold, Phenom, HireVue, Paradox, Lattice, Culture Amp, Leapsome), learning platforms with AI (Docebo, Cornersto…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928494821,
+      "tokens": 109406,
+      "toolCalls": 23,
+      "durationMs": 108255,
+      "resultPreview": "{\"categories\":[\"HR, talent, learning and workplace AI\"],\"overview\":\"The handbook covers HR only through Workday AI, SAP Joule, Oracle Fusion agents and LinkedIn Recruiter, so it misses specialist recruiting suites, payroll and HCM agents, learning platforms, AI video for training and the intranet and employee-experience layer. Near-misses skipped: Paradox (Workday acquired it, so it falls under Wo…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "more tools: Finance, accounting, procurement and supply chain AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Expand",
+      "agentId": "aea0936397ef97284",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928386563,
+      "queuedAt": 1792928386517,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers ERP-native finance and supply chain AI …",
+      "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nYour lens: Finance, accounting, procurement and supply chain AI. Close and consolidation platforms with AI (BlackLine, FloQast, Workiva, OneStream, Anaplan, Pigment, Planful, Vena), AP and spend tools (Coupa, Ivalua, GEP, Zip, Ramp, Brex, Tipalti, Bill), treasury and tax (Kyriba, Avalara, Vertex, Bloomberg Tax AI), audit a…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928508977,
+      "tokens": 101121,
+      "toolCalls": 22,
+      "durationMs": 120712,
+      "resultPreview": "{\"categories\":[\"Finance, accounting, procurement and supply chain AI\"],\"overview\":\"The handbook covers ERP-native finance and supply chain AI (SAP Joule, Oracle Fusion agents, Workday, Dynamics 365, Power BI) but misses the best-of-breed platforms where finance, procurement and planning teams actually run close, spend, treasury, tax and planning work. The ten candidates below are finance/procureme…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "more tools: Knowledge, documents, meetings, translation and content operations AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Expand",
+      "agentId": "a1c95bc43afbd00a4",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928494836,
+      "queuedAt": 1792928386517,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers general assistants and suite copilots b…",
+      "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nYour lens: Knowledge, documents, meetings, translation and content operations AI. Enterprise search and knowledge (Glean is already listed; think of Coveo, Guru, Sinequa, Elastic AI, Microsoft Copilot connectors are covered), intelligent document processing (UiPath Document Understanding is partly covered; think of ABBYY, …",
+      "promptFramed": true,
+      "lastProgressAt": 1792928586157,
+      "tokens": 92153,
+      "toolCalls": 19,
+      "durationMs": 91320,
+      "resultPreview": "{\"categories\":[\"Knowledge, documents, meetings, translation and content operations AI\"],\"overview\":\"The handbook covers general assistants and suite copilots but misses the specialist layer under this lens: intelligent document processing (ABBYY, Hyperscience, Tungsten, hyperscaler document APIs), enterprise AI search, translation and localisation, meeting-note tools and AI-native content operatio…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "more tools: Agent builders, automation, low-code and voice AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Expand",
+      "agentId": "a28a90b1eee957364",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928508986,
+      "queuedAt": 1792928386517,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers platform-embedded copilots and a few co…",
+      "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nYour lens: Agent builders, automation, low-code and voice AI. Agent-building and orchestration platforms not yet listed (Microsoft Copilot Studio and Agent 365, ServiceNow AI Agent Studio and AI Control Tower may be covered under their platform entries; think of Salesforce Agentforce Builder is covered, Google Agentspace o…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928602438,
+      "tokens": 97919,
+      "toolCalls": 21,
+      "durationMs": 93452,
+      "resultPreview": "{\"categories\":[\"Agent builders, automation, low-code and voice AI\"],\"overview\":\"The handbook covers platform-embedded copilots and a few contact-centre suites, but misses the independent orchestration and low-code layers where enterprises build and govern their own agents (iPaaS, low-code, process automation), plus conversational and voice agent specialists and agent observability. Nine candidates…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "more tools: Marketing, creative, commerce and customer-data AI",
+      "phaseIndex": 1,
+      "phaseTitle": "Expand",
+      "agentId": "a24e6651b99fa9f03",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928586164,
+      "queuedAt": 1792928386518,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers the suites (Adobe, HubSpot, Salesforce,…",
+      "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nYour lens: Marketing, creative, commerce and customer-data AI. Marketing clouds and CDPs with AI beyond those listed (Adobe GenStudio and AEP are listed; think of Braze, Klaviyo, Iterable, Marketo Engage, Salesforce Marketing Cloud Next is partly covered, Sprinklr, Sprout Social, Hootsuite OwlyGPT, Brandwatch, Semrush and …",
+      "promptFramed": true,
+      "lastProgressAt": 1792928699272,
+      "tokens": 106616,
+      "toolCalls": 16,
+      "durationMs": 113108,
+      "resultPreview": "{\"categories\":[\"Marketing, creative, commerce and customer-data AI\"],\"overview\":\"The handbook covers the suites (Adobe, HubSpot, Salesforce, Canva) but misses the specialist engagement, CDP, commerce-search and generative-video layers that large brands run next to them. The strongest gaps are Braze, Sprinklr and Klaviyo (AI inside marketing and social platforms, with analyst and customer evidence)…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "more tools: Engineering, IT operations, identity and risk AI (second pass)",
+      "phaseIndex": 1,
+      "phaseTitle": "Expand",
+      "agentId": "a06f8ad04a6d7ef6d",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928602447,
+      "queuedAt": 1792928386518,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers coding assistants, SIEM/XDR and observa…",
+      "promptPreview": "You are extending an enterprise AI training handbook. Today is 2026-10-25.\n\nYour lens: Engineering, IT operations, identity and risk AI (second pass). Developer and platform tools not yet listed (OpenAI Codex, Devin, GitLab Duo, Tabnine, JetBrains are listed; think of Sourcegraph Amp, Replit, Lovable, Vercel v0, Warp, Snyk and Semgrep AI, Harness AI, Atlassian Rovo Dev, PagerDuty AI, incident.io, …",
+      "promptFramed": true,
+      "lastProgressAt": 1792928672936,
+      "tokens": 94060,
+      "toolCalls": 16,
+      "durationMs": 70488,
+      "resultPreview": "{\"categories\":[\"Engineering, IT operations, identity and risk AI (second pass)\"],\"overview\":\"The handbook covers coding assistants, SIEM/XDR and observability AI, but misses the identity layer (Okta, SailPoint), cloud and application security (Wiz, Snyk), SASE/SSE (Zscaler), incident response (PagerDuty), mid-market and enterprise ITSM (Freshservice) and trust/GRC automation (Vanta). Several of th…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify: HR, talent, learning and workplace AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a74fbc7dab9951b4a",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928672983,
+      "queuedAt": 1792928494918,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers HR only through Workday AI, SAP Joule, …",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of AI tools another agent proposes adding to an enterprise training handbook (lens: HR, talent, learning and workplace AI). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED tools (a candidate that is one of these under another name must be removed): Gemini; Claude; Microsoft 365 Copilot; ChatGPT Enterprise; Gamma;…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928744341,
+      "tokens": 83786,
+      "toolCalls": 6,
+      "durationMs": 71358,
+      "resultPreview": "{\"candidates\":[{\"name\":\"Synthesia\",\"vendor\":\"Synthesia\",\"category\":\"HR, talent, learning and workplace AI\",\"what_it_is\":\"Enterprise AI video platform that turns scripts and documents into avatar-led training, onboarding and compliance videos in 140+ languages, with roleplay and survey avatar sessions and an API.\",\"why_include\":\"Vendor states it is used by over 90% of the Fortune 100 (self-reported…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify: Finance, accounting, procurement and supply chain AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a80c05fc2da0a90de",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928699278,
+      "queuedAt": 1792928509023,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Best-of-breed finance, procurement and supply chain AI plat…",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of AI tools another agent proposes adding to an enterprise training handbook (lens: Finance, accounting, procurement and supply chain AI). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED tools (a candidate that is one of these under another name must be removed): Gemini; Claude; Microsoft 365 Copilot; ChatGPT Ent…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928765030,
+      "tokens": 80702,
+      "toolCalls": 5,
+      "durationMs": 65752,
+      "resultPreview": "{\"categories\":[\"Finance, accounting, procurement and supply chain AI\"],\"overview\":\"Best-of-breed finance, procurement and supply chain AI platforms that sit beside the ERP-native tools already in the handbook (SAP Joule, Oracle Fusion agents, Workday, Dynamics 365, Power BI). After adversarial checking, eight candidates remain; BlackLine Verity AI and Avalara Agentic Tax were removed for lack of v…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "verify: Knowledge, documents, meetings, translation and content operations AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ab4065a9690526f9b",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928744351,
+      "queuedAt": 1792928586197,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers general assistants and suite copilots b…",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of AI tools another agent proposes adding to an enterprise training handbook (lens: Knowledge, documents, meetings, translation and content operations AI). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED tools (a candidate that is one of these under another name must be removed): Gemini; Claude; Microsoft 365 Cop…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928805812,
+      "tokens": 76167,
+      "toolCalls": 5,
+      "durationMs": 61461,
+      "resultPreview": "{\"categories\":[\"Knowledge, documents, meetings, translation and content operations AI\"],\"overview\":\"The handbook covers general assistants and suite copilots but misses the specialist layer under this lens: intelligent document processing (ABBYY, Hyperscience, Tungsten, hyperscaler document APIs), enterprise AI search, translation and localisation, meeting-note tools and AI-native content operatio…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "verify: Agent builders, automation, low-code and voice AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ad1e9bc2fe673cc88",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928765036,
+      "queuedAt": 1792928602486,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers platform-embedded copilots and a few co…",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of AI tools another agent proposes adding to an enterprise training handbook (lens: Agent builders, automation, low-code and voice AI). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED tools (a candidate that is one of these under another name must be removed): Gemini; Claude; Microsoft 365 Copilot; ChatGPT Enterp…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928815687,
+      "tokens": 82070,
+      "toolCalls": 6,
+      "durationMs": 50651,
+      "resultPreview": "{\"categories\":[\"Agent builders, automation, low-code and voice AI\"],\"overview\":\"The handbook covers platform-embedded copilots and a few contact-centre suites, but misses the independent orchestration and low-code layers where enterprises build and govern their own agents (iPaaS, low-code, process automation), plus conversational and voice agent specialists. Eight candidates remain after fact-chec…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 11,
+      "label": "verify: Engineering, IT operations, identity and risk AI (second pass)",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "ae9588cefaaf07ddd",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928805818,
+      "queuedAt": 1792928673011,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers coding assistants, SIEM/XDR and observa…",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of AI tools another agent proposes adding to an enterprise training handbook (lens: Engineering, IT operations, identity and risk AI (second pass)). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED tools (a candidate that is one of these under another name must be removed): Gemini; Claude; Microsoft 365 Copilot; C…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928863525,
+      "tokens": 73363,
+      "toolCalls": 4,
+      "durationMs": 57707,
+      "resultPreview": "{\"categories\":[\"Engineering, IT operations, identity and risk AI (second pass)\"],\"overview\":\"The handbook covers coding assistants, SIEM/XDR and observability AI, but misses the identity layer (Okta), cloud and application security (Wiz, Snyk), SASE/SSE (Zscaler), incident response (PagerDuty) and mid-market and enterprise ITSM (Freshservice). Several of these ship agents that act on enterprise da…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 12,
+      "label": "verify: Marketing, creative, commerce and customer-data AI",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a4ed6b91f3ba26850",
+      "model": "claude-sonnet-5-5",
+      "state": "done",
+      "startedAt": 1792928815696,
+      "queuedAt": 1792928699311,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "The handbook covers the suites (Adobe, HubSpot, Salesforce,…",
+      "promptPreview": "You are an adversarial fact-checker. Today is 2026-10-25. Below is a list of AI tools another agent proposes adding to an enterprise training handbook (lens: Marketing, creative, commerce and customer-data AI). Try to REFUTE each candidate, efficiently.\n\nALREADY COVERED tools (a candidate that is one of these under another name must be removed): Gemini; Claude; Microsoft 365 Copilot; ChatGPT Enter…",
+      "promptFramed": true,
+      "lastProgressAt": 1792928889392,
+      "tokens": 82390,
+      "toolCalls": 7,
+      "durationMs": 73696,
+      "resultPreview": "{\"categories\":[\"Marketing, creative, commerce and customer-data AI\"],\"overview\":\"The handbook covers the suites (Adobe, HubSpot, Salesforce, Canva) but misses the specialist engagement, CDP, commerce-search and generative-video layers that large brands run next to them. The strongest gaps are Braze, Sprinklr and Klaviyo, then the customer-data layer (Twilio Segment, Tealium, Amperity), rated in Ga…"
+    }
+  ],
+  "totalTokens": 1079753,
+  "totalToolCalls": 150
+}
