@@ -130,3 +130,10 @@
   const f = document.getElementById('dept-finder');
   if (f) f.addEventListener('change', () => { if (f.value) location.href = (document.querySelector('meta[name="site-root"]') || {}).content + f.value; });
 })();
+
+/* Offline support: register the service worker (same-origin, scope = site root) */
+(function () {
+  if (!('serviceWorker' in navigator) || location.protocol !== 'https:') return;
+  const root = (document.querySelector('meta[name="site-root"]') || {}).content || '';
+  addEventListener('load', () => navigator.serviceWorker.register(root + 'sw.js', { scope: root || './' }).catch(() => {}));
+})();

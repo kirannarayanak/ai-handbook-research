@@ -145,7 +145,10 @@ ICONS = {
     "chart": '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
 }
 
-LOGO = """<svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c6cff"/><stop offset=".55" stop-color="#2ee6d6"/><stop offset="1" stop-color="#9dffb0"/></linearGradient></defs><rect x="4" y="4" width="17" height="17" rx="5" fill="url(#lg1)"/><rect x="27" y="4" width="17" height="17" rx="5" fill="currentColor" opacity=".22"/><rect x="4" y="27" width="17" height="17" rx="5" fill="currentColor" opacity=".22"/><rect x="27" y="27" width="17" height="17" rx="5" fill="url(#lg1)"/><path d="M24 14.5l2.4 7.1 7.1 2.4-7.1 2.4L24 33.5l-2.4-7.1-7.1-2.4 7.1-2.4z" fill="#fff"/></svg>"""
+def logo(gid="lg1"):
+    return LOGO_T.replace("lg1", gid)
+
+LOGO_T = """<svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c6cff"/><stop offset=".55" stop-color="#2ee6d6"/><stop offset="1" stop-color="#9dffb0"/></linearGradient></defs><rect x="4" y="4" width="17" height="17" rx="5" fill="url(#lg1)"/><rect x="27" y="4" width="17" height="17" rx="5" fill="currentColor" opacity=".22"/><rect x="4" y="27" width="17" height="17" rx="5" fill="currentColor" opacity=".22"/><rect x="27" y="27" width="17" height="17" rx="5" fill="url(#lg1)"/><path d="M24 14.5l2.4 7.1 7.1 2.4-7.1 2.4L24 33.5l-2.4-7.1-7.1-2.4 7.1-2.4z" fill="#fff"/></svg>"""
 
 import hashlib as _h
 def asset_v(name):
@@ -177,19 +180,19 @@ def nav_html(root):
 <header class="site-header" id="top">
   <a class="skip" href="#main">Skip to content</a>
   <nav class="nav" aria-label="Primary">
-    <a class="brand" href="{root}" aria-label="{esc(C.SITE_NAME)} home"><span class="brand-mark">{LOGO}</span><span class="brand-text">Skill<b>Grid</b></span></a>
+    <a class="brand" href="{root}" aria-label="{esc(C.SITE_NAME)} home"><span class="brand-mark">{logo("lg1")}</span><span class="brand-text">Skill<b>Grid</b></span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">{icon('menu')}</button>
     <ul class="nav-menu" id="nav-menu">
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Learn <span class="caret"></span></button>
         <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Learning path</p><ul>{link('learn/','Start here','The six-chapter path, with progress tracking')}{learn}{link('learn/certifications/','Courses and certifications','Official learning paths and credentials for every tool')}</ul></div></div></li>
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Tools <span class="caret"></span></button>
-        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Catalogue</p><ul>{link('tools/','All 57 tools','Profiles with pricing, data handling and sources')}{link('tools/more/','90 more tools','Widely adopted tools the handbook omits')}{link('learn/certifications/','Courses and certifications','How to learn and get credentialed on each tool')}{link('compare/','Compare tools','Side by side, up to four at once')}</ul></div><div class="dd-col"><p class="dd-head">By family</p><ul class="dd-grid">{tools}</ul></div></div></li>
+        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Catalogue</p><ul>{link('tools/','All 57 tools','Profiles with pricing, data handling and sources')}{link('tools/more/',f'{len(ADD_TOOLS)} more tools','Widely adopted tools the handbook omits')}{link('learn/certifications/','Courses and certifications','How to learn and get credentialed on each tool')}{link('compare/','Compare tools','Side by side, up to four at once')}</ul></div><div class="dd-col"><p class="dd-head">By family</p><ul class="dd-grid">{tools}</ul></div></div></li>
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Departments <span class="caret"></span></button>
-        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Directory</p><ul>{link('departments/','All 60 departments','Use cases, capstones, data rules and KPIs')}{link('departments/more/','41 more functions','Departments the handbook omits')}{link('matrix/','Coverage matrix','Who uses what, at a glance')}</ul></div><div class="dd-col"><p class="dd-head">By cluster</p><ul class="dd-grid">{depts}</ul></div></div></li>
+        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Directory</p><ul>{link('departments/','All 60 departments','Use cases, capstones, data rules and KPIs')}{link('departments/more/',f'{len(ADD_DEPTS)} more functions','Departments the handbook omits')}{link('matrix/','Coverage matrix','Who uses what, at a glance')}</ul></div><div class="dd-col"><p class="dd-head">By cluster</p><ul class="dd-grid">{depts}</ul></div></div></li>
       <li><a class="nav-link" href="{root}matrix/">Matrix</a></li>
       <li><a class="nav-link" href="{root}compare/">Compare</a></li>
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Reference <span class="caret"></span></button>
-        <div class="dd"><div class="dd-col"><ul>{link('faq/','New here? Start with the FAQ','Plain answers to the questions everyone asks first')}{link('glossary/','Glossary','Every term on the site, in plain English')}{link('themes/','Cross-cutting themes','Regulation, residency, cost, verification, adoption')}{link('gaps/','Gaps and renames','Confidence, outdated names, recommendations')}{link('sources/','Sources and method','All 626 pages opened, and how')}{link('about/','About','What this site is and how to use it')}</ul></div></div></li>
+        <div class="dd"><div class="dd-col"><ul>{link('faq/','New here? Start with the FAQ','Plain answers to the questions everyone asks first')}{link('glossary/','Glossary','Every term on the site, in plain English')}{link('themes/','Cross-cutting themes','Regulation, residency, cost, verification, adoption')}{link('gaps/','Gaps and renames','Confidence, outdated names, recommendations')}{link('sources/','Sources and method',f'All {N_SOURCES} pages opened, and how')}{link('about/','About','What this site is and how to use it')}</ul></div></div></li>
     </ul>
     <div class="nav-actions">
       <button class="icon-btn" id="search-btn" aria-label="Search (Ctrl+K)" title="Search (Ctrl+K)">{icon('search')}<kbd class="kbd">⌘K</kbd></button>
@@ -203,13 +206,13 @@ def footer_html(root):
     return f"""
 <footer class="site-footer">
   <div class="wrap foot-grid">
-    <div><a class="brand" href="{root}"><span class="brand-mark">{LOGO}</span><span class="brand-text">Skill<b>Grid</b></span></a>
+    <div><a class="brand" href="{root}"><span class="brand-mark">{logo("lg2")}</span><span class="brand-text">Skill<b>Grid</b></span></a>
       <p class="muted">Companion to the Corporate AI Tools &amp; Training Handbook (60 departments, 57 tools, {esc(C.AS_OF)}). Every profile cites the pages a researcher opened; unverified claims are labelled.</p><p><a class="btn btn-ghost" href="{root}faq/">New here? Read the FAQ {icon('arrow','ico-s')}</a></p></div>
     <div><p class="foot-head">Learn</p><ul>{''.join(f'<li><a href="{root}learn/{c["slug"]}/">{esc(c["title"])}</a></li>' for c in C.CHAPTERS)}</ul></div>
     <div><p class="foot-head">Explore</p><ul><li><a href="{root}tools/">Tools</a></li><li><a href="{root}departments/">Departments</a></li><li><a href="{root}matrix/">Matrix</a></li><li><a href="{root}compare/">Compare</a></li><li><a href="{root}tools/more/">More tools</a></li><li><a href="{root}departments/more/">More functions</a></li></ul></div>
     <div><p class="foot-head">Reference</p><ul><li><a href="{root}faq/">FAQ</a></li><li><a href="{root}glossary/">Glossary</a></li><li><a href="{root}themes/">Themes</a></li><li><a href="{root}gaps/">Gaps and renames</a></li><li><a href="{root}sources/">Sources and method</a></li><li><a href="{root}about/">About</a></li><li><a href="{esc(C.DOC_URL)}" rel="noopener">Long-form document</a></li><li><a href="{esc(C.REPO_URL)}" rel="noopener">Source on GitHub</a></li></ul></div>
   </div>
-  <div class="wrap foot-bottom"><span>Research dated 24-25 October 2026. Not purchase or legal advice.</span><a href="#top">Back to top ↑</a></div>
+  <div class="wrap foot-bottom"><span>Research dated 24-25 October 2026 · site built {BUILD_DATE}. Not purchase or legal advice.</span><a href="#top">Back to top ↑</a></div>
 </footer>
 <div class="palette" id="palette" hidden>
   <div class="palette-box" role="dialog" aria-modal="true" aria-label="Search">
@@ -229,6 +232,13 @@ def page(path, title, body, *, desc="", extra_head="", extra_js=(), kind="page",
             (f'<li><a href="{root}{h}">{esc(t)}</a></li>' if h else f'<li aria-current="page">{esc(t)}</li>') for t, h in crumbs]
         crumb_html = f'<nav class="crumbs wrap" aria-label="Breadcrumb"><ol>{"".join(items)}</ol></nav>'
     scripts = "".join(f'<script src="{root}assets/{s}?v={asset_v(s)}" defer></script>' for s in ("site.js",) + tuple(extra_js))
+    ld = [{"@context": "https://schema.org", "@type": "WebSite", "name": C.SITE_NAME, "alternateName": C.SITE_SUB, "url": BASE_URL, "description": C.TAGLINE}]
+    if crumbs:
+        items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": BASE_URL}] + [{"@type": "ListItem", "position": i + 2, "name": t, **({"item": BASE_URL + h} if h else {})} for i, (t, h) in enumerate(crumbs)]
+        ld.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
+    if kind == "article":
+        ld.append({"@context": "https://schema.org", "@type": "Article", "headline": title, "description": short(desc or C.TAGLINE, 200), "dateModified": BUILD_DATE, "publisher": {"@type": "Organization", "name": C.SITE_NAME}, "mainEntityOfPage": url})
+    ld_html = f'<script type="application/ld+json">{json.dumps(ld, separators=(",", ":"))}</script>'
     doc = f"""<!doctype html>
 <html lang="en" data-theme="auto">
 <head>
@@ -246,6 +256,9 @@ def page(path, title, body, *, desc="", extra_head="", extra_js=(), kind="page",
 <link rel="stylesheet" href="{root}assets/site.css?v={asset_v('site.css')}">
 <script>(function(){{try{{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
 <meta name="site-root" content="{root}">
+<meta property="og:image" content="{BASE_URL}assets/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{BASE_URL}assets/og.png">
+<meta name="color-scheme" content="light dark">
+{ld_html}
 {extra_head}
 </head>
 <body class="kind-{kind}">
@@ -265,6 +278,9 @@ def page(path, title, body, *, desc="", extra_head="", extra_js=(), kind="page",
 
 SITEMAP = []
 SEARCH = []
+import datetime as _dt, time as _t
+BUILD_DATE = _dt.date.today().isoformat()
+BUILD_ID = hex(int(_t.time()))[2:]
 
 def add_search(title, url, kind, snippet, tags=""):
     SEARCH.append({"t": title, "u": url, "k": kind, "s": short(snippet, 140), "g": tags})
@@ -380,7 +396,7 @@ def cert_cards(t, root):
     for i, p in enumerate(paths):
         v = '<span class="badge badge-conf-high">Verified</span>' if p.get("verified") else '<span class="badge badge-conf-low">Not verified</span>'
         meta = "".join(f'<span class="badge">{esc(x)}</span>' for x in (KIND_LABEL.get(p["kind"], p["kind"]), p["level"], p["duration"], p["cost"]) if x and x.lower() != "not stated")
-        out += f'<li class="path-step"><span class="step-n">{i+1}</span><div><h4><a href="{esc(p["url"])}" rel="noopener" target="_blank">{esc(clean(p["title"]))}</a> <span class="muted small">· {esc(clean(p["provider"]))}</span></h4><div class="chips">{meta}{v}</div><p class="small"><b>For:</b> {esc(clean(p["audience"]))}{(" · " + esc(clean(p["note"]))) if p.get("note") else ""}</p></div></li>'
+        out += f'<li class="path-step"><span class="step-n">{i+1}</span><div><h3 class="h4"><a href="{esc(p["url"])}" rel="noopener" target="_blank">{esc(clean(p["title"]))}</a> <span class="muted small">· {esc(clean(p["provider"]))}</span></h3><div class="chips">{meta}{v}</div><p class="small"><b>For:</b> {esc(clean(p["audience"]))}{(" · " + esc(clean(p["note"]))) if p.get("note") else ""}</p></div></li>'
     out += "</ol>"
     return out
 
@@ -424,7 +440,7 @@ def dept_path(d, root):
             credh += f' · <a href="{href}#learn">all paths</a></p>'
         elif href and i > 0:
             credh = f'<p class="small muted">No official credential found; use the vendor documentation on the <a href="{href}#learn">tool page</a>.</p>'
-        out += f'<li class="path-step"><span class="step-n">{i}</span><div><h4>{link} <span class="badge">{esc(hrs)}</span></h4><p class="small">{esc(desc)}</p>{credh}</div></li>'
+        out += f'<li class="path-step"><span class="step-n">{i}</span><div><h3 class="h4">{link} <span class="badge">{esc(hrs)}</span></h3><p class="small">{esc(desc)}</p>{credh}</div></li>'
     out += "</ol>"
     n = len(d["tools"])
     lo, hi = {"Core": (6, 10), "Advanced": (12, 20), "Specialist": (20, 40)}[d["tier"]]
@@ -436,7 +452,8 @@ def dept_path(d, root):
 
 def build_home():
     H = C.HOME
-    stats = "".join(f'<div class="stat"><span class="stat-n" data-count="{esc(n)}">{esc(n)}</span><span class="stat-l">{esc(l)}</span></div>' for n, l in H["stats"])
+    live = {"departments mapped": str(len(DEPTS)), "tools profiled": str(len(TOOLS)), "more tools and functions found": str(len(ADD_TOOLS) + len(ADD_DEPTS)), "sources opened and checked": str(N_SOURCES)}
+    stats = "".join(f'<div class="stat"><span class="stat-n" data-count="{esc(live.get(l, n))}">{esc(live.get(l, n))}</span><span class="stat-l">{esc(l)}</span></div>' for n, l in H["stats"])
     paths = "".join(card(p["href"], p["title"], p["desc"], ic=p["icon"], cls="card-path reveal") for p in H["paths"])
     principles = "".join(f'<div class="prin reveal"><h3>{esc(t)}</h3><p>{esc(d)}</p></div>' for t, d in H["principles"])
     clusters = "".join(card(f"departments/#{c['slug']}", c["name"], short(c["overview"], 120), meta=f'<span>{len(c["depts"])} departments</span>', cls="reveal") for c in CLUSTERS)
@@ -503,7 +520,7 @@ def build_learn():
         take = "".join(f"<li>{esc(x)}</li>" for x in C.CHAPTER_TAKEAWAYS.get(c["slug"], []))
         article = f'<div class="takeaways"><p class="foot-head">If you read nothing else</p><ul class="ticks">{take}</ul></div>' + md(c["body"])
         body = hero(f"Chapter {i+1} of {len(C.CHAPTERS)} · {c['minutes']} min", esc(c["title"]), esc(c["summary"]), cls="hero-sm")
-        body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{article}</article><aside class="side"><div class="side-box"><p class="foot-head">Go deeper</p><ul class="linklist">{links}</ul></div><div class="side-box"><button class="btn btn-primary btn-block" id="mark-done" data-chapter="{c["slug"]}">{icon("check","ico-s")} Mark chapter done</button><p class="muted small">Saved in this browser only.</p></div>{jargon_box(article, "../../")}</aside></div><div class="wrap">{nav}</div></section>'
+        body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{article}</article><div class="side"><div class="side-box"><p class="foot-head">Go deeper</p><ul class="linklist">{links}</ul></div><div class="side-box"><button class="btn btn-primary btn-block" id="mark-done" data-chapter="{c["slug"]}">{icon("check","ico-s")} Mark chapter done</button><p class="muted small">Saved in this browser only.</p></div>{jargon_box(article, "../../")}</div></div><div class="wrap">{nav}</div></section>'
         page(f"learn/{c['slug']}/", c["title"], body, desc=c["summary"], crumbs=[("Learn", "learn/"), (c["title"], None)], kind="article", extra_js=("learn.js",))
         add_search(f"Chapter {i+1}: {c['title']}", f"learn/{c['slug']}/", "Learn", c["summary"])
 
@@ -575,11 +592,11 @@ def build_tool(t, i):
   {sec('caveats', 'Caveats')}<div class="callout callout-warn">{esc(clean(t['caveats']))}</div>
   {sec('sources', 'Sources')}{sources_list(t.get('sources'))}
 </article>
-<aside class="side">
+<div class="side">
   <div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc_html}</ul></div>
   {jargon_html}
   <div class="side-box"><p class="foot-head">Same family</p><ul class="linklist">{related}</ul><a class="small" href="../#{grp['slug']}">All {esc(grp['name'].lower())} →</a></div>
-</aside></div>
+</div></div>
 <div class="wrap">{pager}</div></section>"""
     page(f"tools/{t['slug']}/", t["name"], body, desc=t["what_it_is"], crumbs=[("Tools", "tools/"), (grp["name"], f"tools/#{grp['slug']}"), (t["name"], None)], kind="article")
     add_search(t["name"], f"tools/{t['slug']}/", "Tool", t["what_it_is"], f"t: {t['vendor_short']} {grp['name']}")
@@ -646,11 +663,11 @@ def build_dept(d, i):
   {sec('toolfit', 'Tool-list fit').replace('id="toolfit"', 'id="fit"')}<p>{esc(clean(d['tool_fit_commentary']))}</p>
   {sec('sources', 'Sources')}{sources_list(d.get('sources'))}
 </article>
-<aside class="side">
+<div class="side">
   <div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc_html}</ul></div>
   {jargon_html}
   <div class="side-box"><p class="foot-head">Same cluster</p><ul class="linklist">{sib}</ul></div>
-</aside></div>
+</div></div>
 <div class="wrap">{pager}</div></section>"""
     page(f"departments/{d['slug']}/", f"{d['num2']} {d['name']}", body, desc=f"{d['name']}: {d['app']}", crumbs=[("Departments", "departments/"), (cl["name"], f"departments/#{cl['slug']}"), (f"{d['num2']} {d['name']}", None)], kind="article")
     add_search(f"{d['num2']} {d['name']}", f"departments/{d['slug']}/", "Department", d["app"], f"d: {cl['name']} {d['tier']}")
@@ -703,7 +720,7 @@ def build_certs():
             c = CERTS.get(t["name"])
             if not c: continue
             rows = "".join(f'<tr data-kind="{esc(p["kind"])}" data-level="{esc(p["level"])}"><td><a href="{esc(p["url"])}" rel="noopener" target="_blank">{esc(clean(p["title"]))}</a><br><span class="muted small">{esc(clean(p["provider"]))}</span></td><td>{esc(KIND_LABEL.get(p["kind"], p["kind"]))}</td><td>{esc(p["level"])}</td><td>{esc(p["duration"])}</td><td>{esc(p["cost"])}</td><td>{"<span class=\'badge badge-conf-high\'>Verified</span>" if p.get("verified") else "<span class=\'badge badge-conf-low\'>Not verified</span>"}</td></tr>' for p in c.get("paths", []))
-            cards += f'<details class="more-card cert-card" id="{t["slug"]}" data-name="{esc(t["name"].lower())}" open><summary><div><h3>{esc(t["name"])}</h3><p class="muted small">{esc(short(c.get("summary", ""), 160))}</p></div><div class="card-meta">{conf_badge(c.get("confidence", "medium"))}<span class="badge">{len(c.get("paths", []))} paths</span><a class="chip chip-xs" href="../../tools/{t["slug"]}/#learn">Tool page</a></div></summary><div class="more-body"><div class="table-scroll"><table class="data"><thead><tr><th>Course or credential</th><th>Type</th><th>Level</th><th>Duration</th><th>Cost</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table></div></div></details>'
+            cards += f'<details class="more-card cert-card" id="{t["slug"]}" data-name="{esc(t["name"].lower())}" open><summary><div><h3>{esc(t["name"])}</h3><p class="muted small">{esc(short(c.get("summary", ""), 160))}</p></div><div class="card-meta">{conf_badge(c.get("confidence", "medium"))}<span class="badge">{len(c.get("paths", []))} paths</span></div></summary><div class="more-body"><p class="small"><a href="../../tools/{t["slug"]}/#learn">Open the {esc(t["name"])} profile →</a></p><div class="table-scroll"><table class="data"><thead><tr><th>Course or credential</th><th>Type</th><th>Level</th><th>Duration</th><th>Cost</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table></div></div></details>'
         sections += f'<section class="group" id="{g["slug"]}">{head}<div class="more-list">{cards}</div></section>'
     body = hero("Learning path", "Courses and certifications for every tool", f"{n_paths} official courses, learning paths, documentation hubs and {n_cert} formal certifications across the 57 tools, each opened and checked by a researcher. Start with the foundation course for the tool you have, then the role course, then the credential.", meta=f'<div class="chips">{toc}</div>')
     body += f'<section class="section"><div class="wrap"><div class="filters" id="filters"><input type="search" id="filter-q" placeholder="Filter by tool…" aria-label="Filter"><div class="seg" role="group"><button data-kind="" class="on">All types</button><button data-kind="certification">Certifications</button><button data-kind="course">Courses</button><button data-kind="learning path">Learning paths</button></div></div>{sections}<p class="empty" id="empty" hidden>Nothing matches.</p></div></section>'
@@ -739,7 +756,7 @@ def build_matrix():
   <label class="check"><input type="checkbox" id="m-horiz"> Hide the six general assistants</label>
 </div>
 <p class="muted small" id="m-summary"></p>
-<div class="matrix-scroll"><div id="matrix" role="grid" aria-label="Coverage matrix"></div></div>
+<div class="matrix-scroll"><div id="matrix" aria-label="Coverage matrix"></div></div>
 <div class="legend" id="legend"></div>
 <div class="m-panel" id="m-panel" hidden></div>
 </div></section>
@@ -747,7 +764,9 @@ def build_matrix():
   <div><h2 class="section-title">How to read it</h2><p>A filled cell means the handbook recommends that tool for that department. Darker cells in the high-level view mean more recommendations between a cluster and a tool family. The six general assistants dominate every row; hide them to see the specialist pattern underneath.</p></div>
   <div><h2 class="section-title">What it is for</h2><p>Rationalising licences (which families cover which clusters), planning shared modules (clusters that share families can train together), and spotting gaps (clusters with no specialist platform at all). Confidence and hours live on the detail pages.</p></div>
 </div></section>"""
-    extra = f'<script id="matrix-data" type="application/json">{json.dumps(data, separators=(",", ":"))}</script>'
+    (OUT / "matrix").mkdir(parents=True, exist_ok=True)
+    (OUT / "matrix" / "data.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
+    extra = f'<link rel="preload" href="data.json?v={BUILD_ID}" as="fetch" crossorigin><meta name="data-url" content="data.json?v={BUILD_ID}">'
     page("matrix/", "Matrix", body, desc="Interactive department-by-tool coverage matrix for the 60 departments and 57 tools.", crumbs=[("Matrix", None)], extra_head=extra, extra_js=("matrix.js",), kind="app")
     add_search("Coverage matrix", "matrix/", "Matrix", "Interactive 60 by 57 department-by-tool coverage matrix")
 
@@ -789,7 +808,9 @@ def build_compare():
 <div class="cmp-scroll"><table class="cmp" id="cmp-table"></table></div>
 <p class="empty" id="cmp-empty">Add two or more items to compare.</p>
 </div></section>"""
-    extra = f'<script id="compare-data" type="application/json">{json.dumps({"tools": tools, "depts": depts}, separators=(",", ":"))}</script>'
+    (OUT / "compare").mkdir(parents=True, exist_ok=True)
+    (OUT / "compare" / "data.json").write_text(json.dumps({"tools": tools, "depts": depts}, separators=(",", ":")), encoding="utf-8")
+    extra = f'<link rel="preload" href="data.json?v={BUILD_ID}" as="fetch" crossorigin><meta name="data-url" content="data.json?v={BUILD_ID}">'
     page("compare/", "Compare", body, desc="Compare handbook AI tools or departments side by side: pricing, data handling, confidence, fit.", crumbs=[("Compare", None)], extra_head=extra, extra_js=("compare.js",), kind="app")
     add_search("Compare tools and departments", "compare/", "Compare", "Side-by-side comparison of up to four tools or departments")
 
@@ -799,7 +820,7 @@ def build_reference():
     html_ = md(C.THEMES_MD)
     toc = "".join(f'<li><a href="#{slugify(h)}">{esc(h)}</a></li>' for h in re.findall(r"^## (.+)$", C.THEMES_MD, flags=re.M))
     html_ = re.sub(r"<h2>(.+?)</h2>", lambda m: f'<h2 id="{slugify(html.unescape(m.group(1)))}">{m.group(1)}</h2>', html_)
-    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{html_}</article><aside class="side"><div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc}</ul></div></aside></div></section>'
+    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{html_}</article><div class="side"><div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc}</ul></div></div></div></section>'
     page("themes/", "Cross-cutting themes", body, desc="Regulation, data residency, licensing cost models, hallucination and prompt injection, shadow AI, adoption, accessibility and hours.", crumbs=[("Reference", None), ("Themes", None)], kind="article")
     add_search("Cross-cutting themes", "themes/", "Reference", "Regulation, residency, cost, verification, adoption, accessibility, hours")
     # gaps
@@ -812,7 +833,7 @@ def build_reference():
     heads.insert(2, "Handbook names that are out of date")
     toc = "".join(f'<li><a href="#{"renames" if h.startswith("Handbook names") else slugify(h)}">{esc(h)}</a></li>' for h in heads)
     body = hero("Reference", "Gaps, caveats and recommendations", "Where the research is thin, which names have changed, and the decisions that shape a curriculum and a matrix built from it.", cls="hero-sm")
-    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{html_}</article><aside class="side"><div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc}</ul></div></aside></div></section>'
+    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{html_}</article><div class="side"><div class="side-box sticky"><p class="foot-head">On this page</p><ul class="toc">{toc}</ul></div></div></div></section>'
     page("gaps/", "Gaps and renames", body, desc="Confidence ratings, outdated tool names, caveats and recommendations for curriculum and matrix design.", crumbs=[("Reference", None), ("Gaps and renames", None)], kind="article")
     add_search("Gaps, caveats and renames", "gaps/", "Reference", "Confidence table, 20 outdated names, recommendations")
     # sources
@@ -825,7 +846,7 @@ def build_reference():
             inner += f'<details class="src-group"><summary>{esc(g["title"])} <span class="muted">({len(g["items"])})</span></summary><ul class="srcs">' + "".join(f'<li><a href="{esc(u)}" rel="noopener nofollow" target="_blank">{esc(t)}</a> <span class="muted small">{esc(re.sub(r"^https?://(www\.)?", "", u).split("/")[0])}</span></li>' for t, u in g["items"]) + "</ul></details>"
         secs += f'<h2 id="{slugify(s["title"])}">{esc(s["title"])}</h2>{inner}'
     body = hero("Reference", f"Sources and method", f"{N_SOURCES} pages opened and cited, how the research was run, and what each verification label means.", cls="hero-sm")
-    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{md(C.METHOD_MD)}<h2 id="all">Every page cited</h2><input type="search" id="src-filter" class="src-filter" placeholder="Filter sources by title or domain…" aria-label="Filter sources">{secs}</article><aside class="side"><div class="side-box sticky"><p class="foot-head">Sections</p><ul class="toc"><li><a href="#how-the-research-was-done">Method</a></li><li><a href="#verification-labels">Labels</a></li><li><a href="#known-failures">Known failures</a></li>{"".join(f"<li><a href=\'#{slugify(s["title"])}\'>{esc(s["title"].replace("Pages opened for the ", "").capitalize())}</a></li>" for s in SOURCES)}</ul></div></aside></div></section>'
+    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{md(C.METHOD_MD)}<h2 id="all">Every page cited</h2><input type="search" id="src-filter" class="src-filter" placeholder="Filter sources by title or domain…" aria-label="Filter sources">{secs}</article><div class="side"><div class="side-box sticky"><p class="foot-head">Sections</p><ul class="toc"><li><a href="#how-the-research-was-done">Method</a></li><li><a href="#verification-labels">Labels</a></li><li><a href="#known-failures">Known failures</a></li>{"".join(f"<li><a href=\'#{slugify(s["title"])}\'>{esc(s["title"].replace("Pages opened for the ", "").capitalize())}</a></li>" for s in SOURCES)}</ul></div></div></div></section>'
     page("sources/", "Sources and method", body, desc=f"All {N_SOURCES} pages opened in the research, the method, and the verification labels.", crumbs=[("Reference", None), ("Sources", None)], kind="article", extra_js=("sources.js",))
     add_search("Sources and method", "sources/", "Reference", f"All {N_SOURCES} pages opened, method and labels")
     # glossary
@@ -834,7 +855,7 @@ def build_reference():
         letters.setdefault(term[0].upper(), []).append((term, aliases, defn))
     gl = "".join(f'<h2 id="g-{k}">{k}</h2><dl class="gloss">' + "".join(f'<div id="{slugify(t)}"><dt>{esc(t)}' + (f' <span class="muted small">also: {esc(", ".join(a))}</span>' if a else "") + f'</dt><dd>{esc(d)}</dd></div>' for t, a, d in v) + "</dl>" for k, v in letters.items())
     body = hero("Reference", "Glossary", "Every technical term used on this site, explained in one or two plain sentences. The jargon panel on each page pulls from this list.", cls="hero-sm")
-    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose"><input type="search" id="src-filter" class="src-filter" placeholder="Filter terms…" aria-label="Filter glossary"><div class="gloss-wrap">{gl}</div></article><aside class="side"><div class="side-box sticky"><p class="foot-head">Jump to</p><div class="chips">{"".join(f"<a class=\'chip chip-xs\' href=\'#g-{k}\'>{k}</a>" for k in letters)}</div></div></aside></div></section>'
+    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose"><input type="search" id="src-filter" class="src-filter" placeholder="Filter terms…" aria-label="Filter glossary"><div class="gloss-wrap">{gl}</div></article><div class="side"><div class="side-box sticky"><p class="foot-head">Jump to</p><div class="chips">{"".join(f"<a class=\'chip chip-xs\' href=\'#g-{k}\'>{k}</a>" for k in letters)}</div></div></div></div></section>'
     page("glossary/", "Glossary", body, desc="Plain-English definitions of every technical term used on the site.", crumbs=[("Reference", None), ("Glossary", None)], kind="article", extra_js=("sources.js",))
     add_search("Glossary", "glossary/", "Reference", "Plain-English definitions of AI terms used on the site")
     for term, aliases, defn in C.GLOSSARY:
@@ -842,7 +863,7 @@ def build_reference():
     # faq
     faq = "".join(f'<details class="faq" id="q{i+1}"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for i, (q, a) in enumerate(C.FAQ))
     body = hero("Reference", "Questions everyone asks first", "Plain answers about how to use the site, what the labels mean, and where to begin.", cls="hero-sm")
-    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{faq}</article><aside class="side"><div class="side-box"><p class="foot-head">Still unsure?</p><ul class="linklist"><li><a href="../learn/foundations/">Start the first chapter →</a></li><li><a href="../departments/">Find your department →</a></li><li><a href="../glossary/">Look up a term →</a></li></ul></div></aside></div></section>'
+    body += f'<section class="section"><div class="wrap prose-wrap"><article class="prose">{faq}</article><div class="side"><div class="side-box"><p class="foot-head">Still unsure?</p><ul class="linklist"><li><a href="../learn/foundations/">Start the first chapter →</a></li><li><a href="../departments/">Find your department →</a></li><li><a href="../glossary/">Look up a term →</a></li></ul></div></div></div></section>'
     page("faq/", "FAQ", body, desc="Plain answers to the questions people ask first about the site, the labels and where to begin.", crumbs=[("Reference", None), ("FAQ", None)], kind="article")
     add_search("FAQ: questions everyone asks first", "faq/", "Reference", "How to use the site, what labels mean, where to begin")
     for i, (q, a) in enumerate(C.FAQ):
@@ -857,16 +878,24 @@ def build_misc():
     page("404.html", "Not found", body, kind="page")
     SITEMAP.pop()
     (OUT / "search.json").write_text(json.dumps(SEARCH, separators=(",", ":")), encoding="utf-8")
-    (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{esc(u)}</loc></url>" for u in SITEMAP) + "</urlset>", encoding="utf-8")
+    (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{esc(u)}</loc><lastmod>{BUILD_DATE}</lastmod></url>" for u in SITEMAP) + "</urlset>", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}sitemap.xml\n", encoding="utf-8")
     (OUT / "manifest.webmanifest").write_text(json.dumps({"name": f"{C.SITE_NAME} · {C.SITE_SUB}", "short_name": C.SITE_NAME, "start_url": "./", "display": "standalone", "background_color": "#070a16", "theme_color": "#070a16", "icons": [{"src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    page("offline.html", "Offline", hero("Offline", "You are offline", "This page is not stored on your device yet. Pages you have already opened still work; reconnect to load new ones.", actions=btn("", "Home", True), cls="hero-sm"), kind="page")
+    SITEMAP.pop()
 
 def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
     shutil.copytree(HERE / "assets", OUT / "assets")
+    css = (OUT / "assets" / "site.css").read_text(encoding="utf-8")
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\n\s*", "\n", css).strip()
+    (OUT / "assets" / "site.css").write_text(css, encoding="utf-8")
+    sw = (HERE / "sw.js").read_text(encoding="utf-8").replace("__BUILD__", BUILD_ID)
+    (OUT / "sw.js").write_text(sw, encoding="utf-8")
     build_home()
     build_learn()
     build_tools()

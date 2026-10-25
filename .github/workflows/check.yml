@@ -1,0 +1,27 @@
+name: Build check
+
+on:
+  pull_request:
+  push:
+    branches: [main, main-7y595x]
+    paths: ["web/**", "research/**", "requirements.txt", ".github/workflows/check.yml"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Rebuild the site into a temporary folder and compare with docs/
+        run: |
+          python3 web/build.py
+          git status --porcelain docs | head -20
+          if [ -n "$(git status --porcelain docs)" ]; then
+            echo "::warning::docs/ is out of date with web/ and research/. Run python3 web/build.py and commit the result."
+          fi
+      - name: Check internal links and duplicate ids
+        run: python3 web/check.py

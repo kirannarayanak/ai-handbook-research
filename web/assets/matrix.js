@@ -1,6 +1,6 @@
 /* Interactive coverage matrix */
-(function () {
-  const D = JSON.parse(document.getElementById('matrix-data').textContent);
+(async function () {
+  const D = await fetch((document.querySelector('meta[name="data-url"]') || {}).content || 'data.json').then(r => r.json());
   const { esc, siteRoot } = window.AIH;
   const grid = document.getElementById('matrix'), panel = document.getElementById('m-panel'), legend = document.getElementById('legend'), summary = document.getElementById('m-summary');
   const selG = document.getElementById('m-group'), selC = document.getElementById('m-cluster'), horiz = document.getElementById('m-horiz');
@@ -26,7 +26,7 @@
     let h = '<div class="corner"></div>' + gr.map(g => `<div class="mh high">${esc(D.groups[g])}</div>`).join('');
     cl.forEach(c => {
       h += `<a class="rh" href="${siteRoot}departments/#${slug(D.clusters[c])}">${esc(D.clusters[c])} <small>${depts.filter(d => d.c === c).length}</small></a>`;
-      gr.forEach(g => { const n = counts[c + ':' + g] || 0; const a = n ? 0.15 + 0.85 * (n / max) : 0; h += `<div class="cell high" data-k="${c}:${g}" style="background:${n ? `color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, var(--bg-2))` : 'transparent'};color:${a > 0.55 ? '#fff' : 'var(--fg)'}" role="gridcell" tabindex="0" aria-label="${esc(D.clusters[c])} × ${esc(D.groups[g])}: ${n}">${n || ''}</div>`; });
+      gr.forEach(g => { const n = counts[c + ':' + g] || 0; const a = n ? 0.15 + 0.85 * (n / max) : 0; h += `<div class="cell high" data-k="${c}:${g}" style="background:${n ? `color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, var(--bg-2))` : 'transparent'}" role="button" tabindex="0" aria-label="${esc(D.clusters[c])} × ${esc(D.groups[g])}: ${n}">${n ? `<span class="n">${n}</span>` : ''}</div>`; });
     });
     grid.innerHTML = h;
     legend.innerHTML = `<span><i style="background:color-mix(in srgb,var(--accent) 15%,var(--bg-2))"></i>few</span><span><i style="background:color-mix(in srgb,var(--accent) 60%,var(--bg-2))"></i>some</span><span><i style="background:var(--accent)"></i>many</span><span class="muted">Number = department-tool recommendations in the handbook</span>`;
@@ -54,7 +54,7 @@
       tools.forEach(t => {
         const on = set.has(t.i);
         const dim = state.hl && !((state.hl.tool && state.hl.tool === t.s) || (state.hl.dept && state.hl.dept === d.n));
-        h += `<div class="cell ${on ? 'on' : ''} ${dim ? 'dim' : ''}" data-d="${d.n}" data-t="${t.i}" role="gridcell" tabindex="0" aria-label="${pad(d.n)} ${esc(d.name)} × ${esc(t.n)}: ${on ? 'recommended' : 'not listed'}"></div>`;
+        h += `<div class="cell ${on ? 'on' : ''} ${dim ? 'dim' : ''}" data-d="${d.n}" data-t="${t.i}" role="button" tabindex="0" aria-label="${pad(d.n)} ${esc(d.name)} × ${esc(t.n)}: ${on ? 'recommended' : 'not listed'}"></div>`;
       });
     });
     grid.innerHTML = h;

@@ -1,6 +1,6 @@
 /* Side-by-side comparison of tools or departments */
-(function () {
-  const D = JSON.parse(document.getElementById('compare-data').textContent);
+(async function () {
+  const D = await fetch((document.querySelector('meta[name="data-url"]') || {}).content || 'data.json').then(r => r.json());
   const { esc, siteRoot } = window.AIH;
   const q = document.getElementById('cmp-q'), sug = document.getElementById('cmp-suggest'), selWrap = document.getElementById('cmp-selected');
   const table = document.getElementById('cmp-table'), empty = document.getElementById('cmp-empty'), presets = document.getElementById('presets');
