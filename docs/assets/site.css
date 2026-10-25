@@ -234,3 +234,9 @@ table.cmp ul{margin:0;padding-left:1.1em}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 @media print{.site-header,.site-footer,.side,.pager,.hero-actions,.filters{display:none}.prose-wrap{display:block}}
 @media (max-width:420px){.brand-text{font-size:.88rem;line-height:1.1}.nav{gap:6px}}
+/* learning paths */
+.path-steps{list-style:none;margin:1em 0;padding:0;display:grid;gap:10px}
+.path-step{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
+.path-step h4{margin:0 0 6px;font-size:1rem;display:flex;flex-wrap:wrap;gap:8px;align-items:center}.path-step p{margin:6px 0 0}.path-step .chips{margin-top:2px}
+.cert-card summary h3{font-size:1.05rem}
+.cert-card table.data td{font-size:.86rem}

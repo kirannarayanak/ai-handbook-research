@@ -172,9 +172,9 @@ def nav_html(root):
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">{icon('menu')}</button>
     <ul class="nav-menu" id="nav-menu">
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Learn <span class="caret"></span></button>
-        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Learning path</p><ul>{link('learn/','Start here','The six-chapter path, with progress tracking')}{learn}</ul></div></div></li>
+        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Learning path</p><ul>{link('learn/','Start here','The six-chapter path, with progress tracking')}{learn}{link('learn/certifications/','Courses and certifications','Official learning paths and credentials for every tool')}</ul></div></div></li>
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Tools <span class="caret"></span></button>
-        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Catalogue</p><ul>{link('tools/','All 57 tools','Profiles with pricing, data handling and sources')}{link('tools/more/','90 more tools','Widely adopted tools the handbook omits')}{link('compare/','Compare tools','Side by side, up to four at once')}</ul></div><div class="dd-col"><p class="dd-head">By family</p><ul class="dd-grid">{tools}</ul></div></div></li>
+        <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Catalogue</p><ul>{link('tools/','All 57 tools','Profiles with pricing, data handling and sources')}{link('tools/more/','90 more tools','Widely adopted tools the handbook omits')}{link('learn/certifications/','Courses and certifications','How to learn and get credentialed on each tool')}{link('compare/','Compare tools','Side by side, up to four at once')}</ul></div><div class="dd-col"><p class="dd-head">By family</p><ul class="dd-grid">{tools}</ul></div></div></li>
       <li class="has-dd"><button class="nav-link" aria-expanded="false">Departments <span class="caret"></span></button>
         <div class="dd dd-wide"><div class="dd-col"><p class="dd-head">Directory</p><ul>{link('departments/','All 60 departments','Use cases, capstones, data rules and KPIs')}{link('departments/more/','41 more functions','Departments the handbook omits')}{link('matrix/','Coverage matrix','Who uses what, at a glance')}</ul></div><div class="dd-col"><p class="dd-head">By cluster</p><ul class="dd-grid">{depts}</ul></div></div></li>
       <li><a class="nav-link" href="{root}matrix/">Matrix</a></li>
@@ -288,6 +288,77 @@ def sources_list(sources):
 def deflist(pairs):
     return '<dl class="facts">' + "".join(f"<div><dt>{esc(k)}</dt><dd>{v}</dd></div>" for k, v in pairs if v) + "</dl>"
 
+# ---------------------------------------------------------------- certifications / learning paths
+
+CERTS = {}       # tool name -> {summary, recommended_order, paths, confidence, sources}
+CERT_GROUPS = [] # [{group, overview, verification_notes, corrections}]
+_cp = ROOT / "research" / "run_certs.json"
+if _cp.exists():
+    for g in load("research/run_certs.json")["result"]["groups"]:
+        CERT_GROUPS.append({"group": g["group"], "overview": clean(g.get("overview", "")), "verification": clean(g.get("verification_notes", "")), "corrections": len(g.get("removed_or_corrected") or [])})
+        for t in g["tools"]:
+            CERTS[t["tool"]] = t
+
+KIND_LABEL = {"certification": "Certification", "course": "Course", "learning path": "Learning path", "documentation": "Documentation", "community": "Community"}
+
+def cert_cards(t, root):
+    """Render a tool's learning paths as ordered step cards."""
+    c = CERTS.get(t["name"])
+    if not c or not c.get("paths"):
+        return '<p class="muted">No official course or certification was found for this tool at the time of research. Start with the vendor documentation linked in the sources, then the shared foundation module.</p>'
+    order = [clean(x) for x in c.get("recommended_order") or []]
+    paths = list(c["paths"])
+    def rank(p):
+        try: return order.index(clean(p["title"]))
+        except ValueError: return len(order) + {"course": 0, "learning path": 1, "documentation": 2, "certification": 3, "community": 4}.get(p["kind"], 5)
+    paths.sort(key=rank)
+    out = '<ol class="path-steps">'
+    for i, p in enumerate(paths):
+        v = '<span class="badge badge-conf-high">Verified</span>' if p.get("verified") else '<span class="badge badge-conf-low">Not verified</span>'
+        meta = "".join(f'<span class="badge">{esc(x)}</span>' for x in (KIND_LABEL.get(p["kind"], p["kind"]), p["level"], p["duration"], p["cost"]) if x and x.lower() != "not stated")
+        out += f'<li class="path-step"><span class="step-n">{i+1}</span><div><h4><a href="{esc(p["url"])}" rel="noopener" target="_blank">{esc(clean(p["title"]))}</a> <span class="muted small">· {esc(clean(p["provider"]))}</span></h4><div class="chips">{meta}{v}</div><p class="small">{esc(clean(p["audience"]))}{(" " + esc(clean(p["note"]))) if p.get("note") else ""}</p></div></li>'
+    out += "</ol>"
+    return out
+
+def best_credential(name):
+    """The strongest single entry for a tool: a verified certification, else the first verified course."""
+    c = CERTS.get(name)
+    if not c: return None
+    ps = [p for p in c.get("paths", []) if p.get("verified")]
+    for kind in ("certification", "learning path", "course", "documentation", "community"):
+        for p in ps:
+            if p["kind"] == kind: return p
+    return c["paths"][0] if c.get("paths") else None
+
+def dept_path(d, root):
+    """Ordered learning path for a department: foundation, general assistant, productivity, specialist tools."""
+    steps = []
+    hours = TIER_HOURS.get(d["tier"], "")
+    steps.append(("Foundation module", f"{root}learn/foundations/", "Shared by every department: one approved assistant, verification, data classification, agent safety.", "4-6 h Core · 6-8 h Advanced and Specialist", None))
+    ordered = sorted(d["tools"], key=lambda x: (GROUPS.index(next(g for g in GROUPS if g["name"] == TOOL_BY_NAME[x]["group"])) if x in TOOL_BY_NAME else 99, x))
+    for x in ordered:
+        t = TOOL_BY_NAME.get(x)
+        if not t:
+            steps.append((x, None, "Not profiled.", hours, None)); continue
+        gi = GROUPS.index(next(g for g in GROUPS if g["name"] == t["group"]))
+        role = "General assistant: learn this one well first." if gi == 0 else ("Productivity surface: learn inside the documents, sheets and meetings you already use." if gi in (1, 2) else "Specialist platform: train only if your organisation runs it.")
+        steps.append((x, f"{root}tools/{t['slug']}/", role, hours, best_credential(x)))
+    out = '<ol class="path-steps">'
+    for i, (title, href, desc, hrs, cred) in enumerate(steps):
+        link = f'<a href="{href}">{esc(title)}</a>' if href else esc(title)
+        credh = ""
+        if cred:
+            credh = f'<p class="small"><b>Credential:</b> <a href="{esc(cred["url"])}" rel="noopener" target="_blank">{esc(clean(cred["title"]))}</a> <span class="muted">({esc(clean(cred["provider"]))}, {esc(KIND_LABEL.get(cred["kind"], cred["kind"]))})</span> · <a href="{href}#learn">all paths</a></p>'
+        elif href and i > 0:
+            credh = f'<p class="small muted">No official credential found; use the vendor documentation on the <a href="{href}#learn">tool page</a>.</p>'
+        out += f'<li class="path-step"><span class="step-n">{i}</span><div><h4>{link} <span class="badge">{esc(hrs)}</span></h4><p class="small">{esc(desc)}</p>{credh}</div></li>'
+    out += "</ol>"
+    n = len(d["tools"])
+    lo, hi = {"Core": (6, 10), "Advanced": (12, 20), "Specialist": (20, 40)}[d["tier"]]
+    fl, fh = (4, 6) if d["tier"] == "Core" else (6, 8)
+    total = f'{fl + lo * min(n, 3)}-{fh + hi * n} hours'
+    return out, total
+
 # ---------------------------------------------------------------- pages
 
 def build_home():
@@ -386,11 +457,17 @@ def build_tool(t, i):
     meta = f'{conf_badge(t["confidence"])}<span class="badge">{esc(grp["name"])}</span><span class="badge">{len(t["dept_nums"])} departments</span>'
     actions = btn(f"../../compare/?t={t['slug']}", "Compare this tool", True, "scale") + btn("../../matrix/?tool=" + t["slug"], "Show in matrix", False, "grid")
     body = hero(esc(t["vendor_short"]), esc(t["name"]), esc(short(t["what_it_is"], 260)), actions=actions, meta=meta, cls="hero-sm")
-    toc = [("what", "What it is"), ("caps", "Key capabilities"), ("data", "Enterprise data handling"), ("price", "Licensing and pricing"), ("integ", "Integrations"), ("dev", "2025-2026 developments"), ("fit", "Best-fit departments"), ("train", "Training notes"), ("caveats", "Caveats"), ("sources", "Sources")]
+    toc = [("learn", "Learning path and certifications"), ("what", "What it is"), ("caps", "Key capabilities"), ("data", "Enterprise data handling"), ("price", "Licensing and pricing"), ("integ", "Integrations"), ("dev", "2025-2026 developments"), ("fit", "Best-fit departments"), ("train", "Training notes"), ("caveats", "Caveats"), ("sources", "Sources")]
+    cert = CERTS.get(t["name"])
+    cert_intro = f'<p>{esc(clean(cert["summary"]))}</p>' if cert else ""
+    cert_src = ""
+    if cert and cert.get("sources"):
+        cert_src = f'<details class="factcheck"><summary>Pages opened for this learning path ({len(cert["sources"])})</summary>{sources_list(cert["sources"])}</details>'
     toc_html = "".join(f'<li><a href="#{a}">{esc(l)}</a></li>' for a, l in toc)
     body += f"""
 <section class="section"><div class="wrap prose-wrap">
 <article class="prose detail">
+  <h2 id="learn">Learning path and certifications</h2>{cert_intro}{cert_cards(t, "../../")}{cert_src}
   <h2 id="what">What it is</h2><p>{esc(clean(t['what_it_is']))}</p>
   {deflist([("Vendor and product family", esc(t['vendor_full'])), ("Handbook category", esc(t['handbook_category']))])}
   <h2 id="caps">Key capabilities</h2><ul class="ticks">{caps}</ul>
@@ -443,13 +520,15 @@ def build_dept(d, i):
     pager = '<div class="pager">' + (f'<a class="pager-prev" href="../{prev["slug"]}/"><span class="muted">Previous</span><b>{prev["num2"]} {esc(prev["name"])}</b></a>' if prev else "<span></span>") + (f'<a class="pager-next" href="../{nxt["slug"]}/"><span class="muted">Next</span><b>{nxt["num2"]} {esc(nxt["name"])}</b></a>' if nxt else "<span></span>") + "</div>"
     meta = f'{tier_badge(d["tier"])}{conf_badge(d["confidence"])}<span class="badge">{esc(cl["name"])}</span>'
     actions = btn(f"../../compare/?d={d['slug']}", "Compare this department", True, "scale") + btn(f"../../matrix/?dept={d['num2']}", "Show in matrix", False, "grid")
-    toc = [("tools", "Recommended tools"), ("uses", "AI use cases in practice"), ("capstone", "Capstone deliverable"), ("data", "Data risks and rules"), ("kpis", "Adoption KPIs"), ("curriculum", "Curriculum emphasis"), ("fit", "Tool-list fit"), ("sources", "Sources")]
+    toc = [("tools", "Recommended tools"), ("path", "What to learn, in order"), ("uses", "AI use cases in practice"), ("capstone", "Capstone deliverable"), ("data", "Data risks and rules"), ("kpis", "Adoption KPIs"), ("curriculum", "Curriculum emphasis"), ("fit", "Tool-list fit"), ("sources", "Sources")]
+    path_html, path_total = dept_path(d, "../../")
     toc_html = "".join(f'<li><a href="#{a}">{esc(l)}</a></li>' for a, l in toc)
     body = hero(f"Department {d['num2']} · {esc(cl['name'])}", esc(d["name"]), esc(d["app"]), actions=actions, meta=meta, cls="hero-sm")
     body += f"""
 <section class="section"><div class="wrap prose-wrap">
 <article class="prose detail">
   <h2 id="tools">Recommended tools</h2><p class="muted">From the handbook. Tier {esc(d['tier'])}, {TIER_HOURS[d['tier']]} per tool as a planning band.</p><div class="chips chips-lg">{tools}</div>
+  <h2 id="path">What to learn, in order</h2><p class="muted">Foundation first, then the general assistant, then the productivity surfaces, then the specialist platform. Each step links to the tool's official courses and certifications. Planning total: about {path_total} including the shared foundation module, less overlaps within one licence.</p>{path_html}
   <h2 id="uses">AI use cases in practice</h2><ul class="ticks">{uses}</ul>
   <h2 id="capstone">Capstone deliverable</h2><div class="callout callout-info">{esc(clean(d['capstone_deliverable']))}</div>
   <h2 id="data">Data risks and rules</h2><div class="callout callout-warn">{esc(clean(d['data_risks']))}</div>
@@ -497,6 +576,35 @@ def build_more_depts():
     page("departments/more/", "More functions", body, desc=f"{len(ADD_DEPTS)} functions absent from the handbook's 60 departments, with AI-use evidence and tool suggestions.", crumbs=[("Departments", "departments/"), ("More functions", None)], extra_js=("filters.js",))
     for d in ADD_DEPTS:
         add_search(d["name"], f"departments/more/#{d['slug']}", "Additional function", d["workplace_application"], f"d: {d['typical_org_types']}")
+
+def build_certs():
+    """Index of every course and certification, grouped by tool family."""
+    if not CERTS:
+        return
+    n_paths = sum(len(c.get("paths", [])) for c in CERTS.values())
+    n_cert = sum(1 for c in CERTS.values() for p in c.get("paths", []) if p["kind"] == "certification")
+    toc = "".join(f'<a class="chip" href="#{g["slug"]}">{esc(g["name"])}</a>' for g in GROUPS)
+    sections = ""
+    for g in GROUPS:
+        cg = next((x for x in CERT_GROUPS if x["group"] == g["name"]), None)
+        head = f'<div class="group-head"><h2>{esc(g["name"])}</h2>' + (f'<p>{esc(cg["overview"])}</p>' if cg and cg["overview"] else "") + (f'<details class="factcheck"><summary>Fact-check notes · {cg["corrections"]} corrections applied</summary><p>{esc(cg["verification"])}</p></details>' if cg and cg["verification"] else "") + "</div>"
+        cards = ""
+        for t in g["tools"]:
+            c = CERTS.get(t["name"])
+            if not c: continue
+            rows = "".join(f'<tr data-kind="{esc(p["kind"])}" data-level="{esc(p["level"])}"><td><a href="{esc(p["url"])}" rel="noopener" target="_blank">{esc(clean(p["title"]))}</a><br><span class="muted small">{esc(clean(p["provider"]))}</span></td><td>{esc(KIND_LABEL.get(p["kind"], p["kind"]))}</td><td>{esc(p["level"])}</td><td>{esc(p["duration"])}</td><td>{esc(p["cost"])}</td><td>{"<span class=\'badge badge-conf-high\'>Verified</span>" if p.get("verified") else "<span class=\'badge badge-conf-low\'>Not verified</span>"}</td></tr>' for p in c.get("paths", []))
+            cards += f'<details class="more-card cert-card" id="{t["slug"]}" data-name="{esc(t["name"].lower())}" open><summary><div><h3>{esc(t["name"])}</h3><p class="muted small">{esc(short(c.get("summary", ""), 160))}</p></div><div class="card-meta">{conf_badge(c.get("confidence", "medium"))}<span class="badge">{len(c.get("paths", []))} paths</span><a class="chip chip-xs" href="../../tools/{t["slug"]}/#learn">Tool page</a></div></summary><div class="more-body"><div class="table-scroll"><table class="data"><thead><tr><th>Course or credential</th><th>Type</th><th>Level</th><th>Duration</th><th>Cost</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table></div></div></details>'
+        sections += f'<section class="group" id="{g["slug"]}">{head}<div class="more-list">{cards}</div></section>'
+    body = hero("Learning path", "Courses and certifications for every tool", f"{n_paths} official courses, learning paths, documentation hubs and {n_cert} formal certifications across the 57 tools, each opened and checked by a researcher. Start with the foundation course for the tool you have, then the role course, then the credential.", meta=f'<div class="chips">{toc}</div>')
+    body += f'<section class="section"><div class="wrap"><div class="filters" id="filters"><input type="search" id="filter-q" placeholder="Filter by tool…" aria-label="Filter"><div class="seg" role="group"><button data-kind="" class="on">All types</button><button data-kind="certification">Certifications</button><button data-kind="course">Courses</button><button data-kind="learning path">Learning paths</button></div></div>{sections}<p class="empty" id="empty" hidden>Nothing matches.</p></div></section>'
+    page("learn/certifications/", "Courses and certifications", body, desc=f"{n_paths} official courses and {n_cert} certifications for the 57 handbook tools, verified against vendor pages.", crumbs=[("Learn", "learn/"), ("Courses and certifications", None)], extra_js=("filters.js", "certs.js"))
+    add_search("Courses and certifications", "learn/certifications/", "Learn", "Official courses, learning paths and certifications for every tool")
+    for name, c in CERTS.items():
+        t = TOOL_BY_NAME.get(name)
+        if not t: continue
+        for p in c.get("paths", []):
+            if p["kind"] == "certification":
+                add_search(clean(p["title"]), f"learn/certifications/#{t['slug']}", "Certification", f"{p['provider']} · {p['level']} · {name}", f"cert {name}")
 
 def build_matrix():
     data = {
@@ -626,6 +734,7 @@ def main():
     build_more_tools()
     build_departments()
     build_more_depts()
+    build_certs()
     build_matrix()
     build_compare()
     build_reference()
